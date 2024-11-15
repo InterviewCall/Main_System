@@ -77,10 +77,17 @@ export default {
             backgroundPosition: '700px 0',
           },
         },
+
+        rotateInfinite: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        rotateSlow: 'rotateInfinite 30s linear infinite',
       },
     },
   },
