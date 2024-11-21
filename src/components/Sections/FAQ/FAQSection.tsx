@@ -41,7 +41,7 @@ const FAQSection: FC = () => {
                 </div>
                 
                 {/* For smaller screen */}
-                <div className='flex md:hidden space-x-8 mb-5'>
+                <div className='flex flex-col md:hidden space-x-8 mb-5'>
                     {FAQCatogories.map((category, index) => (
                         <button
                             key={index}

@@ -21,7 +21,7 @@ const CourseCurriculam: FC = () => {
           : 'max-h-[625px] overflow-clip'
       )}
     >
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-8">
         {Courses.map((course) => (
           <CourseCard
             key={course.courseName}
@@ -33,20 +33,24 @@ const CourseCurriculam: FC = () => {
         ))}
       </div>
 
-      <div className="bg-yellow-500 bg-opacity-55 flex flex-col w-full gap-1 items-center p-4 rounded-xl relative overflow-clip">
+      <div className="relative md:flex md:flex-col hidden w-full gap-2 items-center p-4 rounded-xl overflow-hidden bg-opacity-55">
+        {/* Golden Background Image */}
         <Image
           src={CourseCurriculamGoldenBack}
-          className="absolute -m-4 object-cover w-full h-full z-40"
+          className="absolute -m-4 object-cover w-full h-full z-10"
           alt="GoldenBack"
         />
-        <p className="md:text-4xl text-sm text-header-grey font-bold z-50">
-          READY FOR FULL STACK DEV ROLE
+
+        {/* Text Content */}
+        <p className="md:text-4xl text-lg text-header-grey font-bold z-20 text-center">
+          READY FOR SOFTWARE ROLES
         </p>
-        <p className="text-header-grey md:text-base text-xs text-center z-50">
-          Covering all modules above makes you ready to apply for Full Stack Web
-          Dev roles
+        <p className="text-header-grey md:text-base text-xs text-center z-20">
+          Covering all modules above makes you ready to apply for Software roles
         </p>
       </div>
+
+      {/* Gradient Overlay */}
       <div
         className={clsx(
           'absolute bg-gradient-to-t from-[#00000083] to-transparent h-full w-full rounded-xl transition-all duration-300',
@@ -54,6 +58,7 @@ const CourseCurriculam: FC = () => {
         )}
       />
 
+      {/* Toggle Button */}
       <div
         className={clsx(
           'absolute md:translate-x-[48%] translate-x-[45%] w-full z-[990]',

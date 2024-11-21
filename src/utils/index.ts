@@ -86,7 +86,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniJobDescTextColor: 'text-[#FF4C65]',
     cardWrapperShadowColor: 'shadow-red-multi',
     cardWrapperBackgroundColor: 'bg-[#FF4C65]',
-    cardWrapperHeight: 'h-[450px]',
+    cardWrapperHeight: 'h-[416px]',
     cardShadowFromColor: 'from-[#ff4c647f]',
     cardShadowViaColor: 'via-[#ff4c6412]',
     cardWrapperRingColor: 'ring-[#FF4C65]',
