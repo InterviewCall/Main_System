@@ -15,12 +15,15 @@ export default {
         'text-red': 'linear-gradient(90.34deg, #FF4C65 0%, #FFFFFF 99.64%)',
         'black-to-blue': 'linear-gradient(to bottom, #000000, #2C3F8E)',
         'card-gradient': 'linear-gradient(45deg, #2A499A, #022B84)',
+        'custom-gradient': 'linear-gradient(90deg, rgba(192, 192, 192, 0), #ffffff, rgba(192, 192, 192, 0))'
       },
       boxShadow: {
         'custom-multi': '10px 0px 40px rgba(11, 36, 99, 1)',
         'blue-multi': '10px 0px 40px rgba(0, 194, 255, 1)',
         'red-multi': '10px 0px 40px rgba(255, 76, 101, 1)',
         'yellow-multi': '10px 0px 40px rgba(236, 194, 49, 1)',
+        'green-multi': '10px 0px 40px rgba(49, 236, 113, 1)',
+        'orange-multi': '10px 0px 40px rgba(236, 113, 49, 1)'
       },
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],

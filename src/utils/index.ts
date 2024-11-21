@@ -1,83 +1,141 @@
-import { AlumniCardType, Course, IHeroStat, Mentor } from '@/types';
+import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, IHeroStat, Learner, MasterClassAlumni, Mentor } from '@/types';
+import A1 from '~/images/Alumni1.png';
+import A2 from '~/images/Alumni2.png';
+import A3 from '~/images/Alumni3.png';
+import A4 from '~/images/Alumni4.png';
+import A5 from '~/images/Alumni5.png';
+import Alumni1 from '~/images/MasterClassAlumni1.png';
+import AlumniPostComp1 from '~/images/MasterClassAlumni1PostComp.png';
+import Alumni2 from '~/images/MasterClassAlumni2.png';
+import AlumniPostComp2 from '~/images/MasterClassAlumni2PostComp.png';
+import Alumni3 from '~/images/MasterClassAlumni3.png';
+import AlumniPostComp3 from '~/images/MasterClassAlumni3PostComp.png';
+import Alumni4 from '~/images/MasterClassAlumni4.png';
+import AlumniPostComp4 from '~/images/MasterClassAlumni4PostComp.png';
 import M1 from '~/images/Mentor1.png';
 import M2 from '~/images/Mentor2.png';
 import M3 from '~/images/Mentor3.png';
-import N1 from '~/images/N1.png';
-import N2 from '~/images/N2.png';
-import N3 from '~/images/N3.png';
+import P4 from '~/images/P4.png';
+import P5 from '~/images/P5.png';
+import P6 from '~/images/P6.png';
+import P7 from '~/images/P7.png';
+import P8 from '~/images/P8.png';
+import P9 from '~/images/P9.png';
 
 
 export const HeroSectionOptions = [
     'Placement Assistance',
-    'MAANG Faculty',
     'AI-infused curriculum',
+    'Faculty from MAANG',
     '1:1 Mentorship',
   ];
   
 export const HeroSectionStats: IHeroStat[] = [
     {
-      count: '95%',
-      title: 'Placement rate',
+      count: '92%',
+      title: {
+        row1: 'Average',
+        row2: 'Placement Rate'
+      },
     },
     {
-      count: '1200+',
-      title: 'Hiring partners',
+      count: '681+',
+      title: {
+        row1: 'Companies',
+        row2: 'Hired From Us'
+      }
     },
     {
-      count: '128%',
-      title: 'Average hike',
+      count: '58LPA',
+      title: {
+        row1: 'Highest',
+        row2: 'Package'
+      },
     },
     {
-      count: '1.5 L+',
-      title: 'Learners',
+      count: '826+',
+      title: {
+        row1: 'Learners',
+        row2: 'Placed'
+      }
     },
 ];
 
-export const AlumniCards: AlumniCardType[] = [
+export const AlumniCards: AlumniCard[] = [
   {
-    cardImage: N3,
-    checkTitle: 'Product Designer',
+    cardImage: A1,
+    alumniName: 'Rounak Goswami',
+    checkTitle: 'SDE - Morgan Stanley',
+    alumniJobDesc: 'Offer - Morgan Stanley',
     videoPath: '/resources/W3.mp4',
-    alumniName: 'FUWAD MUHAMMED',
-    alumniJobDesc: 'Aesthetic & visually astute',
     alumniJobDescTextColor: 'text-[#00C2FF]',
     cardWrapperShadowColor: 'shadow-blue-multi',
     cardWrapperBackgroundColor: 'bg-[#00C2FF]',
-    cardWrapperRingColor: 'ring-[#00C2FF]',
     cardShadowFromColor: 'from-[#00c3ff75]',
     cardShadowViaColor: 'via-[#00c3ff13]',
-    videoPlayButtonBorderColor: 'border-l-[#01b9f19c]',
+    cardWrapperRingColor: 'ring-[#00C2FF]',
+    videoPlayButtonBorderColor: 'border-l-[#01b9f19c]'
   },
 
   {
-    cardImage: N1,
-    checkTitle: 'Marketing',
-    videoPath: '/resources/W2.mp4',
-    alumniName: 'ZAINAB MALIK',
-    alumniJobDesc: 'Execution Expert',
+    cardImage: A2,
+    alumniName: 'Shivansh Yashasvi',
+    checkTitle: 'SDE - ION',
+    alumniJobDesc: 'Offer @Amazon, ION, CISCO',
+    videoPath: '/resources/W3.mp4',
     alumniJobDescTextColor: 'text-[#FF4C65]',
     cardWrapperShadowColor: 'shadow-red-multi',
     cardWrapperBackgroundColor: 'bg-[#FF4C65]',
     cardWrapperHeight: 'h-[450px]',
-    cardWrapperRingColor: 'ring-[#FF4C65]',
     cardShadowFromColor: 'from-[#ff4c647f]',
     cardShadowViaColor: 'via-[#ff4c6412]',
-    videoPlayButtonBorderColor: 'border-l-[#ff4c6493]', 
+    cardWrapperRingColor: 'ring-[#FF4C65]',
+    videoPlayButtonBorderColor: 'border-l-[#ff4c6493]'
   },
 
   {
-    cardImage: N2,
-    checkTitle: 'Accountant',
-    videoPath: '/resources/W1.mp4',
-    alumniName: 'ETHAN THOMPSON',
-    alumniJobDesc: 'Insightful analysis',
+    cardImage: A3,
+    alumniName: 'Abhinay Reddy',
+    checkTitle: 'SDE - Valuefy',
+    alumniJobDesc: 'Offer - Valuefy, Knolskape',
+    videoPath: '/resources/W3.mp4',
     alumniJobDescTextColor: 'text-[#ECC231]',
     cardWrapperShadowColor: 'shadow-yellow-multi',
     cardWrapperBackgroundColor: 'bg-[#ECC231]',
-    cardWrapperRingColor: 'ring-[#ECC231]',
     cardShadowFromColor: 'from-[#ecc3317d]',
-    cardShadowViaColor: 'via-[#ecc3310d]',
-    videoPlayButtonBorderColor: 'border-l-[#ecc3318c]', 
+    cardShadowViaColor: 'via-[#00c3ff13]',
+    cardWrapperRingColor: 'ring-[#ECC231]',
+    videoPlayButtonBorderColor: 'border-l-[#ecc3318c]'
+  },
+
+  {
+    cardImage: A4,
+    alumniName: 'Abhishek Dixit',
+    checkTitle: 'Senior SDE - Meesho',
+    alumniJobDesc: 'Offer - Goldman Sachs, Meesho',
+    videoPath: '/resources/W3.mp4',
+    alumniJobDescTextColor: 'text-[#fa9c02]',
+    cardWrapperShadowColor: 'shadow-orange-multi',
+    cardWrapperBackgroundColor: 'bg-[#ffa000]',
+    cardShadowFromColor: 'from-[#ffa5007d]',
+    cardShadowViaColor: 'via-[#00c3ff13]',
+    cardWrapperRingColor: 'ring-[#ffa000]',
+    videoPlayButtonBorderColor: 'border-l-[#f0c384]'
+  },
+
+  {
+    cardImage: A5,
+    alumniName: 'Fahad Ali',
+    checkTitle: 'Senior SDE - Razorpay',
+    alumniJobDesc: 'Offer - Razorpay',
+    videoPath: '/resources/W3.mp4',
+    alumniJobDescTextColor: 'text-[#03fd9a]',
+    cardWrapperShadowColor: 'shadow-green-multi',
+    cardWrapperBackgroundColor: 'bg-[#03fd9a]',
+    cardShadowFromColor: 'from-[#00c3ff75]',
+    cardShadowViaColor: 'via-[#00c3ff13]',
+    cardWrapperRingColor: 'ring-[#03fd9a]',
+    videoPlayButtonBorderColor: 'border-l-[#75e49a]'
   }
 ];
 
@@ -291,11 +349,11 @@ export const Courses: Course[] = [
 
 //Temporary positioning for the card(medium screen)
 export const mentorCardPositioning = {
-  topPositions: ['top-0', 'top-2', 'top-4'],
-  leftPositions: ['left-16', 'left-28', 'left-40'],
+  topPositions: ['-bottom-24', '-top-5', 'top-4'],
+  leftPositions: ['left-16', 'left-32', 'left-52'],
   zIndexes: ['z-[70]', 'z-[60]', 'z-[50]'],
-  cardHeight: ['375px', '290px', '240px'],
-  cardWidth: ['240px', '220px', '200px']
+  cardHeight: ['415px', '365px', '290px'],
+  cardWidth: ['300px', '270px', '220px']
 };
 
 export const Mentors: Mentor[] = [
@@ -308,7 +366,8 @@ export const Mentors: Mentor[] = [
     mentorImage: M1,
     mentorAlt: 'N1',
     mentorName: 'Supriya Sharma',
-    mentorExperience: 'Software Engineer 3 @Google | Ex Associate @Goldman Sachs Ex Software Engineer @UnitedHealth Group 7 Years of Experience | System Design Instructor & Mentor @InterviewCall'
+    mentorExperience: 'Software Engineer 3 @Google | Ex Associate @Goldman Sachs Ex Software Engineer @UnitedHealth Group 7 Years of Experience | System Design Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/supriya-sharma-901675b1/'
   },
 
   {
@@ -320,7 +379,8 @@ export const Mentors: Mentor[] = [
     mentorImage: M2,
     mentorAlt: 'N2',
     mentorName: 'Vishal Sharma',
-    mentorExperience: 'Software Engineer - Microsoft IND. Ex - Goldman Sachs, Rippling, Directi.9 Years of Experience. System Design Instructor & Mentor @InterviewCall.'
+    mentorExperience: 'Software Engineer - Microsoft IND. Ex - Goldman Sachs, Rippling, Directi.9 Years of Experience. System Design Instructor & Mentor @InterviewCall.',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/vishal-sharma-b698326b/'
   },
 
   {
@@ -332,6 +392,183 @@ export const Mentors: Mentor[] = [
     mentorImage: M3,
     mentorAlt: 'N3',
     mentorName: 'Jyotirmoy Deb',
-    mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall'
+    mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
   }
 ];
+
+export const Learners: Learner[] = [
+  {
+    learnerImage: P4,
+    learnerCompany: 'Google India',
+    learnerRole: 'Software Engineer',
+    learnerImageHeight: 'h-[500px]',
+    companyIcon: 'google',
+    companyRingColor: 'ring-green-600'
+  },
+
+  {
+    learnerImage: P5,
+    learnerCompany: 'Amazon India',
+    learnerRole: 'Software Engineer',
+    learnerImageHeight: 'h-[570px]',
+    companyIcon: 'amazon',
+    companyRingColor: 'ring-[#FF9800]'
+  },
+
+  {
+    learnerImage: P6,
+    learnerCompany: 'Microsoft India',
+    learnerRole: 'Software Engineer',
+    learnerImageHeight: 'h-[500px]',
+    companyIcon: 'microsoft',
+    companyRingColor: 'ring-[#CEA968]'
+  }
+];
+
+export const Events: Event[] = [
+  {
+    eventPersonName: 'Regina Phalange',
+    eventTitle: 'Nail your interviews',
+    eventType: 'Live Event',
+    eventPrice: 499,
+    eventPersonImage: P7,
+    eventPersonNameColor: 'text-[#4DE3ED]'
+  },
+
+  {
+    eventPersonName: 'Shawn Frost',
+    eventTitle: 'Sell your first product online',
+    eventType: 'Live Event',
+    eventPrice: 499,
+    eventPersonImage: P8,
+    eventPersonNameColor: 'text-[#91F2A6]',
+    cardWrapperMDHeight: 'md:h-[450px]',
+    cardWrapperMDWidth: 'md:w-[400px]'
+  },
+
+  {
+    eventPersonName: 'Rochelle Fernandez',
+    eventTitle: 'Learn about no-code tools',
+    eventType: 'Live Event',
+    eventPrice: 499,
+    eventPersonImage: P9,
+    eventPersonNameColor: 'text-[#DF91F2]'
+  }
+];
+
+export const FAQCatogories = ['General', 'Account', 'Payment', 'Support'];
+
+export const QuestionAnswerOfCategory: Record<string, FAQ[]> = {
+  'General': [
+    {
+      question: 'What is your return policy ?',
+      answer: 'We offer a 30-day return policy for all items in original condition.'
+    },
+
+    {
+      question: 'How do I track my order ?',
+      answer: 'You can track your order through the tracking link in your confirmation email.'
+    }
+  ],
+
+  'Account': [
+    {
+      question: 'How do I reset my password ?',
+      answer: 'Go to the login page and click on "Forgot Password" to reset.'
+    },
+
+    {
+      question: 'Can I change my email adddress ?',
+      answer: 'Yes, go to account settings to update your email address.'
+    }
+  ],
+
+  'Payment': [],
+  'Support': []
+};
+
+export const FooterSectionArray: FooterSectionArrayType[] = [
+  {
+    itemName: 'Company',
+    itemArray: ['Contact Us', 'Privacy Policy', 'Hire from us', 'Job Portal']
+  },
+
+  {
+    itemName: 'Product',
+    itemArray: ['FSWD Program', 'Job Switch', 'Masterclass', 'Terms', 'Refund Policy']
+  }
+];
+
+export const verifyEmailFormat = (email: string) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const MasterclassSessionLearn = [
+  'Learn how data science helps e-commerce platforms offer personalised product recommendations.',
+  'Understand how data models forecast customer demand for better inventory management.',
+  'See how customer segmentation improves marketing and boosts retention.',
+  'Discover how data science detects fraud and enhances platform security.'
+];
+
+export const MasterclassMentorQualification = [
+  'Top-rated Data Science instructor, Scaler ',
+  'Ex-Data Scientist, Amazon',
+  'Ex- Data Scientist-II, Meesho'
+];
+
+export const MasterclassDataScienceAbout = [
+  'A structured, guided, and industry-vetted curriculum',
+  'Live classes by faculty who have been there, done that',
+  'Regular 1:1 mentorship from industry veterans',
+  'Practical experience through real-life projects',
+  'Career support via a dedicated recruitment team, alumni network, etc.',
+  'Aspirational peer group of 3,500+ Scaler students & alumni'
+];
+
+export const MasterClassAlumnis: MasterClassAlumni[] = [
+  {
+    alumniImage: Alumni1,
+    alumniName: 'Ankit Pansaga',
+    alumniGradDate: 'September 2021',
+    alumniPreScaler: 'Adobe',
+    alumniPostScaler: AlumniPostComp1,
+    alumniRole: 'Senior Software Engineer'
+  },
+
+  {
+    alumniImage: Alumni2,
+    alumniName: 'Bhaskar Shaw',
+    alumniGradDate: 'October 2021',
+    alumniPreScaler: 'Accenture',
+    alumniPostScaler: AlumniPostComp2,
+    alumniRole: 'Software Engineer II'
+  },
+
+  {
+    alumniImage: Alumni3,
+    alumniName: 'Abinay Bingumalla',
+    alumniGradDate: 'January 2020',
+    alumniPreScaler: 'Relaiance Infocom Limited',
+    alumniPostScaler: AlumniPostComp3,
+    alumniRole: 'Full Stack Engineer'
+  },
+
+  {
+    alumniImage: Alumni4,
+    alumniName: 'Sudhansu Gera',
+    alumniGradDate: 'June 2021',
+    alumniPreScaler: 'Wipro Limited',
+    alumniPostScaler: AlumniPostComp4,
+    alumniRole: 'Software Engineer III'
+  }
+];
+
+export function initiateOtp() {
+  return 'https://auth.otpless.app/auth/v1/initiate/otp';
+}
+
+export function otpVerification() {
+  return 'https://auth.otpless.app/auth/v1/verify/otp';
+}

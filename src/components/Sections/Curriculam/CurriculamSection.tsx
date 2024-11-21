@@ -2,33 +2,34 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 
-import ChooseMentor from '~/images/ChooseMentor.png';
-import Girl from '~/images/Girl.png';
-import HashBack from '~/images/HashBack.png';
-import LiveLearningGlobe from '~/images/LiveLearningGlove.png';
-import LiveLearning from '~/images/LiveLearningSection.png';
-import LogoJust from '~/images/LogoJust.png';
-import Logo from '~/images/Logo.png';
-import MentorText from '~/images/MentorText.png';
-import Meeting from '~/images/Meeting.png';
-import Resume from '~/images/Resume.png';
-import Handshake from '~/images/Handshake.png';
-import P1 from '~/images/P1.png';
-import P2 from '~/images/P2.png';
-import P3 from '~/images/P3.png';
-import Toggle from '~/svg/Toggle.svg';
-import Users from '~/svg/Users.svg';
-import LeftLight from '~/svg/LeftLight.svg';
-import BlueTooth from '~/svg/BlueTooth.svg';
-import RightLight from '~/svg/RightLight.svg';
-import Capture from '~/svg/Capture.svg';
-import Frame from '~/svg/Frame.svg';
-import Triangle from '~/svg/lightning-companies/Triangle.svg';
-import Google from '~/svg/lightning-companies/Google.svg'
+import {
+  BlueTooth,
+  Capture,
+  ChooseMentor,
+  Frame,
+  Girl,
+  Handshake,
+  HashBack,
+  LeftLight,
+  LiveLearning,
+  LiveLearningGlobe,
+  Logo,
+  LogoJust,
+  Meeting,
+  MentorText,
+  P1,
+  P2,
+  P3,
+  Resume,
+  RightLight,
+  Toggle,
+  Triangle,
+  Users,
+} from '@/assets/CurriculamSectionAssets';
 
+import Caraousel from './Caraousel';
 import CourseCurriculam from './CourseCurriculam';
 import MentorContainer from './MentorContainer';
-import Caraousel from './Caraousel';
 
 const CurriculamSection: FC = () => {
   
@@ -46,8 +47,10 @@ const CurriculamSection: FC = () => {
       </div>
 
       <CourseCurriculam />
-
-      <Image src={MentorText} alt='' width={2157} height={122} />
+      <p className='md:hidden block text-5xl font-bold bg-clip-text text-transparent bg-text-gradient'>
+        Meet Mentors & Instructors
+      </p>
+      <Image src={MentorText} alt='' width={2157} height={122} className='md:block hidden' />
 
       <MentorContainer />
 
@@ -338,7 +341,7 @@ const CurriculamSection: FC = () => {
             </div>
             <div className='relative md:block hidden'>
               <Caraousel />
-              <div className='absolute w-24 h-24 left-[47%] -translate-y-4'>
+              <div className='absolute w-24 h-24 md:left-[47%] left-[38%] -translate-y-4'>
                 <Triangle />
               </div>
             </div>

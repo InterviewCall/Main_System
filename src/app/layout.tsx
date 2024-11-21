@@ -7,7 +7,9 @@ import * as React from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import Header from '@/components/Header/Header';
+import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
+import Script from 'next/script';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -58,10 +60,36 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <Script id="meta-pixel-init" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '578021844720285');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=578021844720285&ev=PageView&noscript=1"
+            alt="Facebook Pixel"
+          />
+        </noscript>
+      </head>
       <body className='bg-black'>
         <Header />
         <Toaster position='bottom-center' />
-        <div className='pt-20'>{children}</div>
+        <div className='pt-20 px-[20px]'>{children}</div>
+        <FooterSection />
       </body>
     </html>
   );

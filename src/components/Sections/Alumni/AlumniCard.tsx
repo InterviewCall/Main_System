@@ -38,8 +38,10 @@ const AlumniCard: FC<AlumniCardProps> = ({
     }
   }, [isPlaying]);
   return (
+    <>
     <div
-      className={`relative flex items-center justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor} overflow-clip ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor}`}
+      onClick={() => setIsPlaying(true)}
+      className={`relative flex items-center cursor-pointer justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor} overflow-clip ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor}`}
     >
       {!isPlaying && (
         <div className='absolute top-0 w-full z-30 h-full bg-gradient-to-b from-transparent via-transparent to-[#000000b2]' />
@@ -60,7 +62,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
           loading='lazy'
           width={cardImageWidth}
           height={cardImageHeight}
-          className='object-fill absolute z-40 top-0'
+          className='object-fill absolute z-40 top-0 cursor-pointer'
         />
       )}
       {isPlaying && (
@@ -87,7 +89,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
       )}
       <div className='absolute flex flex-col items-start gap-2 rounded-3xl p-2 bottom-4 left-4 z-50'>
         <p className='text-left bg-clip-text font-bold text-transparent bg-text-gradient text-xl'>
-          {alumniFirstName} <br /> {alumniLastName}
+          {alumniFirstName.toUpperCase()} <br /> {alumniLastName.toUpperCase()}
         </p>
         <p
           className={`text-lg ${alumniJobDescTextColor} encode-sans-expanded-light`}
@@ -96,6 +98,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
         </p>
       </div>
     </div>
+    </>
   );
 };
 

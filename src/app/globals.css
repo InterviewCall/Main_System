@@ -4,5 +4,5 @@
 
 
 .input-field {
-    @apply placeholder:text-neutral-400 text-sm focus:outline-none border-none focus:ring-0 w-full p-0;
+    @apply placeholder:text-neutral-400 text-sm focus:outline-none border-none focus:ring-0 w-full p-3;
 }

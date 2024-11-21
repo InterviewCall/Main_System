@@ -3,14 +3,14 @@ import { FC } from 'react';
 import { CiCalendar } from 'react-icons/ci';
 
 import { CourseCardProps } from '@/types';
-import BlueBack from '~/images/BlueBack.png';
+import CourseCurriculamBlueBack from '~/images/CourseCurriculamBlueBack.png';
 
 const CourseCard: FC<CourseCardProps> = ({ courseName, courseDuration, courseDescription, courseKeyPoints }) => {
   return (
     <div className="flex flex-col gap-4 w-full h-auto">
       <div className="bg-blue-800 flex flex-col w-full gap-4 p-4 rounded-xl relative overflow-clip">
         <Image
-          src={BlueBack}
+          src={CourseCurriculamBlueBack}
           className="absolute object-fill -m-4 scale-105 z-40"
           alt="BlueBack"
         />

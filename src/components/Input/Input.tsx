@@ -5,7 +5,8 @@ import { HeroSectionInputProps } from '@/types';
 const Input: FC<HeroSectionInputProps> = ({ name, type = 'text', placeholder, register, error}) => {
     return (
         <>
-            <div className='px-[14px] py-3 border w-full border-gray-300 rounded-md flex items-center bg-white'>
+            <div className='w-full rounded-md flex bg-white items-center'>
+                <div className='text-black bg-gray-300 md:p-[12px] p-[14px] text-[1rem]'>+91</div>
                 <input
                     {...register(name)}
                     type={type}

@@ -13,7 +13,7 @@ export default function Error({
 }) {
   React.useEffect(() => {
     // eslint-disable-next-line no-console
-    console.error(error);
+    console.log(error);
   }, [error]);
 
   return (

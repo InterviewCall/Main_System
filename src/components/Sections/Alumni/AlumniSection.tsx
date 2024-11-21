@@ -27,20 +27,20 @@ const AlumniSection: FC = () => {
               Alumni
             </p>
           </div>
-          <div className='flex md:flex-row my-12 flex-col items-end px-4 w-full md:gap-24 gap-16'>
-            {AlumniCards.map((card) => (
+          <div className='flex flex-wrap  md:flex-row my-12 flex-col items-end justify-center px-4 w-full md:gap-x-56 md:gap-y-28 gap-16'>
+            {AlumniCards.map((card, index) => (
               <AlumniCard
-                key={card.videoPath}
-                cardImage={card.cardImage}
+                key={index}
                 checkTitle={card.checkTitle}
+                cardImage={card.cardImage}
                 videoPath={card.videoPath}
                 alumniName={card.alumniName}
                 alumniJobDesc={card.alumniJobDesc}
                 alumniJobDescTextColor={card.alumniJobDescTextColor}
                 cardWrapperShadowColor={card.cardWrapperShadowColor}
                 cardWrapperBackgroundColor={card.cardWrapperBackgroundColor}
+                cardWrapperHeight={card.cardWrapperHeight}
                 cardWrapperRingColor={card.cardWrapperRingColor}
-                cardWrapperHeight={card.cardWrapperHeight} 
                 cardShadowFromColor={card.cardShadowFromColor}
                 cardShadowViaColor={card.cardShadowViaColor}
                 videoPlayButtonBorderColor={card.videoPlayButtonBorderColor}
@@ -70,7 +70,7 @@ const AlumniSection: FC = () => {
               key={1}
               className='bg-darkblue flex gap-6 text-white md:text-xl text-base font-medium overflow-clip p-2'
             >
-              {Array.from({ length: 3 }).map((_, i) => (
+              {Array.from({ length: 4 }).map((_, i) => (
                 <p key={i}>Batch starts on 10th Sept 2024. LIMITED SEATS.</p>
               ))}
             </div>

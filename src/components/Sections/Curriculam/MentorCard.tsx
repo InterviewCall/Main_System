@@ -46,7 +46,7 @@ const MentorCard: FC<MentorCardProps> = ({ mentorImage, mentorAlt, mentorName, m
 
         // For Temporary
         <div className={`absolute ${cardWrapperTopPosition} ${cardWrapperLeftPosition} ${cardWrapperZIndex}`}>
-          <div style={{width: `${cardWidth}`, height: `${cardHeight}`, position: 'relative'}}>
+          <div style={{width: `${cardWidth}`, height: `${cardHeight}`}}>
             <Image
               src={mentorImage}
               alt={mentorAlt}

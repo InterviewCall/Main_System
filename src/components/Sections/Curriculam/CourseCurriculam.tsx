@@ -6,7 +6,7 @@ import { FC, useState } from 'react';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 
 import { Courses } from '@/utils';
-import GoldenBack from '~/images/GoldenBack.png';
+import CourseCurriculamGoldenBack from '~/images/CourseCurriculamGoldenBack.png';
 
 import CourseCard from './CourseCard';
 
@@ -15,7 +15,7 @@ const CourseCurriculam: FC = () => {
   return (
     <div
       className={clsx(
-        'relative grid grid-cols-1 border-slate-700 block-border rounded-xl gap-12 transition-all duration-300',
+        'relative grid grid-cols-1 border-[#4E586B] block-border rounded-xl gap-12 transition-all duration-300',
         open
           ? 'md:max-h-[5000px] max-h-[8000px] overflow-visible'
           : 'max-h-[625px] overflow-clip'
@@ -35,7 +35,7 @@ const CourseCurriculam: FC = () => {
 
       <div className="bg-yellow-500 bg-opacity-55 flex flex-col w-full gap-1 items-center p-4 rounded-xl relative overflow-clip">
         <Image
-          src={GoldenBack}
+          src={CourseCurriculamGoldenBack}
           className="absolute -m-4 object-cover w-full h-full z-40"
           alt="GoldenBack"
         />

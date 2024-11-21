@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { GoArrowUpRight } from 'react-icons/go';
+import { GoArrowDown } from 'react-icons/go';
 
 import { DownloadBrochureButtonProps } from '@/types';
 
@@ -12,7 +12,7 @@ const DownloadBrochureButton: FC<DownloadBrochureButtonProps> = ({ buttonTitle }
             {buttonTitle}
           </p>
           <div className='w-9 h-9 rounded-full bg-white flex items-center justify-center'>
-            <GoArrowUpRight className='w-6 h-6' />
+            <GoArrowDown className='w-6 h-6' />
           </div>
         </button>
     );
