@@ -175,7 +175,7 @@ const CurriculamSection: FC = () => {
               <Image
                 src={LiveLearningGlobe}
                 alt="Animated Globe"
-                className="animate-rotateSlow w-[298px] h-[298px] object-cover"
+                className="animate-rotateSlow w-[268px] h-[268px] object-cover"
               />
             </div>
           </div>
