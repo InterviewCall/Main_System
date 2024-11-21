@@ -60,6 +60,7 @@ export default function RootLayout({
   return (
     <html>
       <head>
+        <link rel='icon' href='/favicon.ico' />
         <Script id="meta-pixel-init" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
