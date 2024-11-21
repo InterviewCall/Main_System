@@ -29,7 +29,7 @@ export { default as Amazon } from '~/Logos/Amazon.png';
 export { default as Apple } from '~/Logos/Apple.png';
 export { default as Atlassian } from '~/Logos/Atlassian.png';
 export { default as Google } from '~/Logos/Google.png';
-export { default as Lyft } from '~/Logos/LYFT.png';
+export { default as Lyft } from '~/Logos/Lyft.png';
 export { default as Meta } from '~/Logos/Meta.png';
 export { default as Microsoft } from '~/Logos/Microsoft.png';
 export { default as Netflix } from '~/Logos/Netflix.png';
