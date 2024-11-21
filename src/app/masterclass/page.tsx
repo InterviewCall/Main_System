@@ -48,6 +48,26 @@ const MasterClassPage: FC = () => {
         // };
     }, []);
 
+    useEffect(() => {
+        const preventBackNavigation = () => {
+          // Push the current state back to the history stack
+          window.history.pushState(null, '', window.location.href);
+        };
+    
+        // Push initial state to the history
+        window.history.pushState(null, '', window.location.href);
+    
+        // Continuously prevent navigation by overriding the popstate
+        window.addEventListener('popstate', preventBackNavigation);
+    
+        return () => {
+          // Clean up the event listener on unmount
+          window.removeEventListener('popstate', preventBackNavigation);
+        };
+      }, []);
+    
+    
+
     // useEffect(() => {
     //     const handleRouteChange = () => {
     //         setKey((prevKey) => prevKey + 1); // Increment key to reinitialize
