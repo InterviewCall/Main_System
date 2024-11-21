@@ -68,7 +68,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
         <video
           ref={videoRef}
           loop
-          autoPlay
+          autoPlay={false}
           preload="none"
           src={videoPath}
           className="absolute top-0 w-full h-full object-cover z-999"

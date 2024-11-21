@@ -89,7 +89,7 @@ const MentorContainer: FC = () => {
         </div>
 
         {/* Mentor Cards */}
-        <div className="flex flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="flex flex-row items-center justify-center gap-8 md:gap-0">
           <button
             onClick={handlePrev}
             className="bg-gradient-to-tl flex items-center justify-center from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400"
