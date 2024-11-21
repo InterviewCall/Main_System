@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { FC } from "react";
-import Marquee from "react-fast-marquee";
+import Image from 'next/image';
+import { FC } from 'react';
+import Marquee from 'react-fast-marquee';
 
 import {
   BlueTooth,
@@ -25,11 +25,11 @@ import {
   Toggle,
   Triangle,
   Users,
-} from "@/assets/CurriculamSectionAssets";
+} from '@/assets/CurriculamSectionAssets';
 
-import Caraousel from "./Caraousel";
-import CourseCurriculam from "./CourseCurriculam";
-import MentorContainer from "./MentorContainer";
+import Caraousel from './Caraousel';
+import CourseCurriculam from './CourseCurriculam';
+import MentorContainer from './MentorContainer';
 
 const CurriculamSection: FC = () => {
   return (
@@ -322,7 +322,7 @@ const CurriculamSection: FC = () => {
                     <p key={i} className="text-white text-xl">
                       <span className="md:text-3xl text-base ml-3">
                         GET INDUSTRY READY
-                      </span>{" "}
+                      </span>{' '}
                       Get access to exclusive job openings within our network.
                     </p>
                   ))}

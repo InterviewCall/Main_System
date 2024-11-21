@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { FC } from "react";
-import Marquee from "react-fast-marquee";
+import Image from 'next/image';
+import { FC } from 'react';
+import Marquee from 'react-fast-marquee';
 
-import { AlumniCards } from "@/utils";
-import People from "~/images/People.png";
+import { AlumniCards } from '@/utils';
+import People from '~/images/People.png';
 
-import AlumniCard from "./AlumniCard";
-import DownloadBrochureButton from "./DownloadBrochureButton";
+import AlumniCard from './AlumniCard';
+import DownloadBrochureButton from './DownloadBrochureButton';
 
 const AlumniSection: FC = () => {
   return (
