@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
-import { FooterSectionArray } from '@/utils';
 import Buildings from '~/images/Buildings.png';
 
 import FooterInput from './FooterInput';

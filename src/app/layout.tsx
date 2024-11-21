@@ -10,6 +10,7 @@ import Header from '@/components/Header/Header';
 import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
 import Script from 'next/script';
+import Image from 'next/image';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -74,7 +75,7 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             style={{ display: 'none' }}
