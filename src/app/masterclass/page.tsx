@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { FC, useEffect, useRef } from 'react';
 
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
-
 import { MasterClassAlumnis, MasterclassDataScienceAbout ,MasterclassMentorQualification, MasterclassSessionLearn } from '@/utils';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';

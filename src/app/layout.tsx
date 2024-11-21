@@ -3,14 +3,14 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
+import Script from 'next/script';
 import * as React from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import Header from '@/components/Header/Header';
 import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
-import Script from 'next/script';
-import Image from 'next/image';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them

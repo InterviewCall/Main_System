@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
+
 import ContactInformation from '~/images/Contact-Information.png';
 
 const ContactUs: FC = () => {

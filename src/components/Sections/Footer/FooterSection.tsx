@@ -1,11 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 import Buildings from '~/images/Buildings.png';
 
 import FooterInput from './FooterInput';
-import Link from 'next/link';
 
 const FooterSection: FC = () => {
     return (
