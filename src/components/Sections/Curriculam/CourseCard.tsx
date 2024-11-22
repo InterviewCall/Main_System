@@ -61,16 +61,16 @@ import CourseCurriculamBlueBack from '~/images/CourseCurriculamBlueBack.png';
 const CourseCard: FC<CourseCardProps> = ({ courseName, courseDuration, courseDescription, courseKeyPoints }) => {
   return (
     <div className='flex flex-col gap-4 w-full h-auto'>
-      <div className='flex flex-col w-full gap-4 p-4 rounded-xl relative overflow-hidden'>
+      <div className='flex flex-col w-full h-auto gap-y-3 p-4 rounded-xl relative overflow-clip'>
         <Image
           src={CourseCurriculamBlueBack}
-          className='absolute object-cover -m-4 scale-105 z-10'
+          className='absolute object-cover -m-4  z-10'
           alt='BlueBack'
         />
-        <p className='md:text-3xl text-2xl text-header-grey font-bold z-20'>
+        <p className='md:text-[1.8rem] text-[1.2rem] text-header-grey font-bold z-20'>
           {courseName}
         </p>
-        <p className='md:text-lg text-base text-header-grey flex items-center gap-2 z-20'>
+        <p className='md:text-[1.12rem] text-[0.8rem] text-header-grey flex items-center gap-2 z-20'>
           <span>
             <CiCalendar
               style={{
