@@ -1,14 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { forwardRef, ForwardRefRenderFunction, useEffect, useImperativeHandle,useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
+import { FaRegCirclePause } from 'react-icons/fa6';
 
-import { AlumniCardProps, PlayVideoRef } from '@/types';
+import { AlumniCardProps } from '@/types';
 import Check from '~/images/Check.png';
 
-const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
-  index,
-  startVideo,
+const AlumniCard: FC<AlumniCardProps> = ({
   checkTitle,
   cardImage,
   videoPath,
@@ -25,7 +24,7 @@ const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
   cardShadowFromColor,
   cardShadowViaColor,
   videoPlayButtonBorderColor,
-}, ref) => {
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null!);
   const alumniNameArray = alumniName.split(' ');
@@ -40,15 +39,9 @@ const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
     }
   }, [isPlaying]);
 
-  useImperativeHandle(ref, () => {
-    return {
-      handlePlaying: (playing: boolean) => setIsPlaying(playing) 
-    };
-  }, []);
-
   return (
     <div
-      onClick={() => startVideo(index)}
+      onClick={() => setIsPlaying(!isPlaying)}
       className={`relative flex items-center justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor} overflow-hidden ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor} cursor-pointer`}
     >
       {!isPlaying && (
@@ -73,16 +66,22 @@ const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
         />
       )}
       {isPlaying && (
-        <video
+        <>
+          <video
           ref={videoRef}
           loop
           autoPlay={false}
           preload='none'
           src={videoPath}
-          className='absolute top-0 w-full h-full object-cover z-999'
+          className='absolute top-0 w-full h-full cursor-pointer object-cover z-30'
         >
-          Your browser does not support the video tag.
-        </video>
+            Your browser does not support the video tag.
+          </video>
+
+          <button className='absolute z-40'>
+            <FaRegCirclePause color='white' size={60} />
+          </button>
+        </>
       )}
       {!isPlaying && (
         <button
@@ -105,4 +104,4 @@ const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
   );
 };
 
-export default forwardRef(AlumniCard);
+export default AlumniCard;
