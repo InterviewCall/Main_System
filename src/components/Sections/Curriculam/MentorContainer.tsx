@@ -52,6 +52,10 @@ const MentorContainer: FC = () => {
     <>
       {/* Desktop View */}
       <div className='relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-12 py-20 rounded-xl md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+
+      <div className='top-outline absolute top-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
+      <div className='bottom-outline absolute bottom-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
+      
         {/* Mentor Details */}
         <div className='flex flex-col gap-y-8 h-fit'>
           <p
