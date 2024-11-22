@@ -64,7 +64,7 @@ const MasterClassPage: FC = () => {
 
       {/* Webinar Embed */}
       <div
-        className='fixed top-[25%] right-4 md:right-16 w-64 h-28 z-10 rounded-md wj-embed-wrapper'
+        className='md:fixed md:top-[18%] md:right-16 w-64 h-28 z-10 rounded-md wj-embed-wrapper'
         data-webinar-hash='31ywotn'
         ref={scriptContainerRef}
       ></div>
