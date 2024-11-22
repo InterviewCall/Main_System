@@ -67,10 +67,10 @@ const CourseCard: FC<CourseCardProps> = ({ courseName, courseDuration, courseDes
           className='absolute object-cover -m-4  z-10'
           alt='BlueBack'
         />
-        <p className='md:text-[1.8rem] text-[1.2rem] text-header-grey font-bold z-20'>
+        <p className='md:text-[1.1rem] text-[1.2rem] text-header-grey font-bold z-20'>
           {courseName}
         </p>
-        <p className='md:text-[1.12rem] text-[0.8rem] text-header-grey flex items-center gap-2 z-20'>
+        <p className='md:text-[1rem] text-[0.8rem] text-header-grey flex items-center gap-2 z-20'>
           <span>
             <CiCalendar
               style={{
@@ -83,7 +83,7 @@ const CourseCard: FC<CourseCardProps> = ({ courseName, courseDuration, courseDes
         </p>
       </div>
       <div className='bg-slate-800 flex flex-col w-full gap-4 bg-opacity-40 p-4 rounded-xl'>
-        <p className='md:text-lg text-base text-header-grey'>🤔 Why learn this</p>
+        <p className='md:text-[1.1rem] text-base text-header-grey'>🤔 Why learn this</p>
         <p className='text-header-grey font-light md:text-lg text-base'>
           {courseDescription}
         </p>
