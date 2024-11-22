@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import Marquee from 'react-fast-marquee';
 
+import { PlayVideoRef } from '@/types';
 import { AlumniCards } from '@/utils';
 import People from '~/images/People.png';
 
@@ -9,6 +12,24 @@ import AlumniCard from './AlumniCard';
 import DownloadBrochureButton from './DownloadBrochureButton';
 
 const AlumniSection: FC = () => {
+  const videoRef1 = useRef<PlayVideoRef>(null!);
+  const videoRef2 = useRef<PlayVideoRef>(null!);
+  const videoRef3 = useRef<PlayVideoRef>(null!);
+  const videoRef4 = useRef<PlayVideoRef>(null!);
+  const videoRef5 = useRef<PlayVideoRef>(null!);
+
+  const videoRefArray = [videoRef1, videoRef2, videoRef3, videoRef4, videoRef5];
+
+  function handleVideoStart(videoIndex: number) {
+    videoRefArray.forEach((_, index) => {
+      if(index == videoIndex) {
+        videoRefArray[index].current?.handlePlaying(true);
+      }
+      else {
+        videoRefArray[index].current?.handlePlaying(false);
+      }
+    })
+  }
   return (
     <div className='flex flex-col gap-20 bg-black-to-blue md:pt-24 pt-12 overflow-x-hidden'>
       {/* Brochure Download Section */}
@@ -38,6 +59,9 @@ const AlumniSection: FC = () => {
             {AlumniCards.slice(0, 3).map((card, index) => (
               <AlumniCard
                 key={index}
+                index={index}
+                ref={videoRefArray[index]}
+                startVideo={(videoIndex) => handleVideoStart(videoIndex)}
                 checkTitle={card.checkTitle}
                 cardImage={card.cardImage}
                 videoPath={card.videoPath}
@@ -59,6 +83,9 @@ const AlumniSection: FC = () => {
               {AlumniCards.slice(3, 5).map((card, index) => (
                 <AlumniCard
                   key={index}
+                  index={index}
+                  ref={videoRefArray[index]}
+                  startVideo={(videoIndex) => handleVideoStart(videoIndex)}
                   checkTitle={card.checkTitle}
                   cardImage={card.cardImage}
                   videoPath={card.videoPath}

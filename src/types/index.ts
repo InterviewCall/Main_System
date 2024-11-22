@@ -44,6 +44,7 @@ export interface HeroSectionInputProps {
 }
 
 export interface AlumniCardProps {
+    index: number
     checkTitle: string
     cardImage: StaticImageData
     videoPath: string
@@ -60,6 +61,7 @@ export interface AlumniCardProps {
     cardShadowFromColor: string
     cardShadowViaColor: string
     videoPlayButtonBorderColor: string
+    startVideo: (index: number) => void
 }
 
 export type DownloadBrochureButtonProps = {
@@ -186,4 +188,8 @@ export interface VerifyOtpResponse {
     description: string
 }
 
-export type PageSwipe = 'mern' | 'job-switch' | 'masterclass'
+export type PageSwipe = 'mern' | 'job-switch' | 'masterclass';
+
+export interface PlayVideoRef {
+    handlePlaying: (playing: boolean) => void
+}

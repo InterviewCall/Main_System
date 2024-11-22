@@ -61,6 +61,7 @@ export default function RootLayout({
     <html>
       <head>
         <link rel='icon' href='/favicon.ico' />
+        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82326" async></script>
         <Script id='meta-pixel-init' strategy='afterInteractive'>
           {`
             !function(f,b,e,v,n,t,s)

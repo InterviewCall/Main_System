@@ -1,12 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { FC, useEffect, useRef, useState } from 'react';
+import { forwardRef, ForwardRefRenderFunction, useEffect, useImperativeHandle,useRef, useState } from 'react';
 
-import { AlumniCardProps } from '@/types';
+import { AlumniCardProps, PlayVideoRef } from '@/types';
 import Check from '~/images/Check.png';
 
-const AlumniCard: FC<AlumniCardProps> = ({
+const AlumniCard: ForwardRefRenderFunction<PlayVideoRef, AlumniCardProps> = ({
+  index,
+  startVideo,
   checkTitle,
   cardImage,
   videoPath,
@@ -23,7 +25,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
   cardShadowFromColor,
   cardShadowViaColor,
   videoPlayButtonBorderColor,
-}) => {
+}, ref) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null!);
   const alumniNameArray = alumniName.split(' ');
@@ -38,9 +40,15 @@ const AlumniCard: FC<AlumniCardProps> = ({
     }
   }, [isPlaying]);
 
+  useImperativeHandle(ref, () => {
+    return {
+      handlePlaying: (playing: boolean) => setIsPlaying(playing) 
+    };
+  }, []);
+
   return (
     <div
-      onClick={() => setIsPlaying(true)}
+      onClick={() => startVideo(index)}
       className={`relative flex items-center justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor} overflow-hidden ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor} cursor-pointer`}
     >
       {!isPlaying && (
@@ -78,7 +86,6 @@ const AlumniCard: FC<AlumniCardProps> = ({
       )}
       {!isPlaying && (
         <button
-          onClick={() => setIsPlaying(true)}
           className='absolute w-14 h-14 flex items-center justify-center bg-white rounded-full z-50'
         >
           <div
@@ -98,4 +105,4 @@ const AlumniCard: FC<AlumniCardProps> = ({
   );
 };
 
-export default AlumniCard;
+export default forwardRef(AlumniCard);
