@@ -30,7 +30,7 @@ const HeroSection: FC = () => {
           </div>
 
           {/* Stats Section - Desktop */}
-          <div className='md:w-[700px] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+          <div className='md:w-[850px] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
             <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
               {HeroSectionStats.map((stat, index) => (
                 <HeroStat
