@@ -14,7 +14,7 @@ const EventSection: FC = () => {
                 Explore InterviewCall Events
             </p>
 
-            <div className='flex md:flex-row flex-col relative w-full md:gap-0 gap-12 items-center justify-evenly'>
+            <div className='flex md:flex-row flex-col relative w-full md:gap-x-16 gap-12 items-center justify-center'>
                 {Events.map((event, index) => (
                     <EventCard
                         key={index}
