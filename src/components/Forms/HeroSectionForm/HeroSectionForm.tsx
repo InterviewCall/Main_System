@@ -60,8 +60,6 @@ const HeroSectionForm: FC = () => {
   };
 
   async function sendOtp() {
-    console.log(process.env.NEXT_PUBLIC_CLIENT_ID);
-    console.log(process.env.NEXT_PUBLIC_CLIENT_SECRET);
     setIsLoading(true);
     setStartTime(!startTime);
     if (stepOtp) {
