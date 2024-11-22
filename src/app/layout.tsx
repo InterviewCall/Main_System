@@ -90,7 +90,7 @@ export default function RootLayout({
       <body className='bg-black'>
         <Header />
         <Toaster position='top-center' />
-        <div className='pt-20 md:px-[20px]'>{children}</div>
+        <div className='pt-20'>{children}</div>
         <FooterSection />
       </body>
     </html>

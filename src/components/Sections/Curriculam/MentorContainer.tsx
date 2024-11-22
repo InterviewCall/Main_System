@@ -51,7 +51,7 @@ const MentorContainer: FC = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className='relative w-full bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-12 py-20 rounded-xl md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+      <div className='relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-12 py-20 rounded-xl md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
         {/* Mentor Details */}
         <div className='flex flex-col gap-y-8 h-fit'>
           <p
@@ -92,7 +92,7 @@ const MentorContainer: FC = () => {
         <div className='flex flex-row items-center justify-center gap-8 md:gap-0'>
           <button
             onClick={handlePrev}
-            className='bg-gradient-to-tl flex items-center justify-center from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
+            className='bg-gradient-to-tl flex items-center justify-center translate-x-6 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
           >
             <MdOutlineChevronLeft
               style={{
@@ -123,7 +123,7 @@ const MentorContainer: FC = () => {
 
           <button
             onClick={handleNext}
-            className='bg-gradient-to-tl flex items-center justify-center from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
+            className='bg-gradient-to-tl flex items-center justify-center -translate-x-6 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
           >
             <MdOutlineChevronRight
               style={{

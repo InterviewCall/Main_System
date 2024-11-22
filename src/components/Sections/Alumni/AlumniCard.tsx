@@ -88,7 +88,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
           className='absolute w-14 h-14 flex items-center justify-center bg-white rounded-full z-50'
         >
           <div
-            className={`w-0 h-0 ml-1 border-t-[10px] border-b-[10px] border-l-[20px] ${videoPlayButtonBorderColor}`}
+            className={`w-0 h-0 ml-1 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[20px] ${videoPlayButtonBorderColor}`}
           />
         </button>
       )}
