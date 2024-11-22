@@ -106,7 +106,7 @@ const CourseCurriculam: FC = () => {
       className={clsx(
         'relative grid grid-cols-1 border-[#4E586B] block-border rounded-xl gap-8 transition-all duration-300',
         open
-          ? 'md:max-h-[5000px] max-h-[10000px] overflow-visible'
+          ? 'md:max-h-[5000px] max-h-[13000px] overflow-visible'
           : 'max-h-[650px] overflow-hidden'
       )}
     >
@@ -122,7 +122,7 @@ const CourseCurriculam: FC = () => {
         ))}
       </div>
 
-      <div className='relative flex flex-col w-full gap-4 items-center p-4 rounded-xl overflow-hidden bg-opacity-55'>
+      <div className='relative flex flex-col w-full gap-4 items-center p-4 rounded-xl overflow-hidden bg-opacity-55 md:mx-8 sm:mx-4 mx-2'>
         {/* Golden Background Image */}
         <Image
           src={CourseCurriculamGoldenBack}
@@ -150,8 +150,8 @@ const CourseCurriculam: FC = () => {
       {/* Toggle Button */}
       <div
         className={clsx(
-          'absolute left-1/2 transform  w-full z-[990]',
-          open ? '-bottom-6' : '-bottom-0'
+          'absolute left-1/2 transform -translate-x-1/2 w-full z-[990] flex justify-center',
+          open ? '-bottom-6' : 'bottom-6'
         )}
       >
         <button
