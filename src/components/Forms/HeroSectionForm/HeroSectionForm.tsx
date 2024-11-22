@@ -2,8 +2,10 @@
 
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import OTPInput from 'react-otp-input';
 
 import Loader from '@/components/Sections/Hero/Loader';
@@ -13,7 +15,6 @@ import {
   HeroSectionFormData,
   RequestOtp,
   ResponseOtp,
-  VerifyOtpRequest,
   VerifyOtpResponse,
 } from '@/types';
 import { initiateOtp, otpVerification } from '@/utils';
@@ -26,6 +27,7 @@ const HeroSectionForm: FC = () => {
   const [requestId, setRequestId] = useState('');
   const [errorOtp, setErrorOtp] = useState<string | undefined>('');
   const [startTime, setStartTime] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -39,8 +41,11 @@ const HeroSectionForm: FC = () => {
   });
 
   const verifyOtp: SubmitHandler<HeroSectionFormData> = async () => {
+    if(!otp) return;
+
+    setIsLoading(true);
+
     try {
-      const response: AxiosResponse<VerifyOtpResponse, VerifyOtpRequest> =
         await axios.post(
           otpVerification(),
           { requestId: requestId, otp: otp },
@@ -52,7 +57,10 @@ const HeroSectionForm: FC = () => {
             },
           }
         );
-      console.log(response.data.requestId);
+        toast.success('Verified Successfully');
+        setStepOtp(false);
+        setIsLoading(false);
+        router.push('/fullstack-web-development-demo-class');
     } catch (error) {
       const otpError = error as AxiosError<VerifyOtpResponse>;
       setErrorOtp(otpError.response?.data.description);
@@ -60,6 +68,8 @@ const HeroSectionForm: FC = () => {
   };
 
   async function sendOtp() {
+    if(!getValues('phoneNumber')) return;
+
     setIsLoading(true);
     setStartTime(!startTime);
     if (stepOtp) {
