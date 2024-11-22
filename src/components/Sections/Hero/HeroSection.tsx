@@ -8,21 +8,21 @@ import HeroStat from './HeroStat';
 
 const HeroSection: FC = () => {
   return (
-    <div className="flex flex-col md:flex-row px-4 md:px-24 bg-black md:pt-24 py-8 gap-8">
+    <div className='flex flex-col md:flex-row px-4 md:px-24 bg-black md:pt-24 py-8 gap-8'>
       {/* Left Content */}
-      <div className="md:w-1/2 w-full">
-        <div className="flex flex-col gap-8">
+      <div className='md:w-1/2 w-full'>
+        <div className='flex flex-col gap-8'>
           {/* Title and Subtitle */}
-          <div className="flex flex-col gap-6">
-            <h1 className="text-gradient text-3xl md:text-[50px] md:leading-[74px] font-bold">
+          <div className='flex flex-col gap-6'>
+            <h1 className='text-gradient text-3xl md:text-[50px] md:leading-[74px] font-bold'>
               Full Stack Web Development with Placement Assistance
             </h1>
-            <h2 className="text-base md:text-lg text-white font-light">
+            <h2 className='text-base md:text-lg text-white font-light'>
               Choose MERN stack or Spring Boot and acquire expertise through
               practical application and real-world projects.
             </h2>
             {/* Options - Desktop */}
-            <div className="hidden md:flex flex-wrap items-start gap-2">
+            <div className='hidden md:flex flex-wrap items-start gap-2'>
               {HeroSectionOptions.map((option, index) => (
                 <HeroOption key={option} option={option} index={index} />
               ))}
@@ -30,8 +30,8 @@ const HeroSection: FC = () => {
           </div>
 
           {/* Stats Section - Desktop */}
-          <div className="hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi">
-            <div className="bg-primaryblue py-8 rounded-2xl flex justify-between items-center">
+          <div className='hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
               {HeroSectionStats.map((stat, index) => (
                 <HeroStat
                   key={index}
@@ -46,19 +46,19 @@ const HeroSection: FC = () => {
       </div>
 
       {/* Right Form */}
-      <div className="md:w-1/2 w-full">
+      <div className='md:w-1/2 w-full'>
         <HeroSectionForm />
       </div>
 
       {/* Options and Stats - Mobile */}
-      <div className="flex flex-col gap-6 md:hidden">
-        <div className="flex flex-wrap items-start gap-2">
+      <div className='flex flex-col gap-6 md:hidden'>
+        <div className='flex flex-wrap items-start gap-2'>
           {HeroSectionOptions.map((option, index) => (
             <HeroOption key={option} option={option} index={index} />
           ))}
         </div>
-        <div className="bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[2px] rounded-xl shadow-custom-multi">
-          <div className="bg-primaryblue p-4 rounded-xl flex justify-between items-center">
+        <div className='bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[2px] rounded-xl shadow-custom-multi'>
+          <div className='bg-primaryblue p-4 rounded-xl flex justify-between items-center'>
             {HeroSectionStats.map((stat, index) => (
               <HeroStat
                 key={index}

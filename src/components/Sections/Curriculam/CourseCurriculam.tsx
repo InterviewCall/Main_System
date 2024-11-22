@@ -21,7 +21,7 @@ const CourseCurriculam: FC = () => {
           : 'max-h-[625px] overflow-clip'
       )}
     >
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-8">
+      <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-8'>
         {Courses.map((course) => (
           <CourseCard
             key={course.courseName}
@@ -33,19 +33,19 @@ const CourseCurriculam: FC = () => {
         ))}
       </div>
 
-      <div className="relative md:flex md:flex-col hidden w-full gap-2 items-center p-4 rounded-xl overflow-hidden bg-opacity-55">
+      <div className='relative md:flex md:flex-col hidden w-full gap-2 items-center p-4 rounded-xl overflow-hidden bg-opacity-55'>
         {/* Golden Background Image */}
         <Image
           src={CourseCurriculamGoldenBack}
-          className="absolute -m-4 object-cover w-full h-full z-10"
-          alt="GoldenBack"
+          className='absolute -m-4 object-cover w-full h-full z-10'
+          alt='GoldenBack'
         />
 
         {/* Text Content */}
-        <p className="md:text-4xl text-lg text-header-grey font-bold z-20 text-center">
+        <p className='md:text-4xl text-lg text-header-grey font-bold z-20 text-center'>
           READY FOR SOFTWARE ROLES
         </p>
-        <p className="text-header-grey md:text-base text-xs text-center z-20">
+        <p className='text-header-grey md:text-base text-xs text-center z-20'>
           Covering all modules above makes you ready to apply for Software roles
         </p>
       </div>

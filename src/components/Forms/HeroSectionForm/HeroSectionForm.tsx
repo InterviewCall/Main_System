@@ -95,22 +95,22 @@ const HeroSectionForm: FC = () => {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#306EBD] p-[3px] rounded-2xl relative">
+    <div className='w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#306EBD] p-[3px] rounded-2xl relative'>
       {isLoading && <Loader />}
       <div
         className={`bg-gradient-to-tr from-[#000] to-[#020304] py-6 px-4 md:py-10 md:px-10 rounded-xl flex flex-col gap-6 ${
           isLoading ? 'blur-[3px]' : ''
         }`}
       >
-        <p className="text-xl md:text-3xl text-white font-semibold text-center">
-          Book a <span className="text-teal">Free</span> Live Demo Class
+        <p className='text-xl md:text-3xl text-white font-semibold text-center'>
+          Book a <span className='text-teal'>Free</span> Live Demo Class
         </p>
-        <div className="flex flex-col gap-8">
+        <div className='flex flex-col gap-8'>
           <div>
             {!stepOtp ? (
               <>
-                <div className="flex items-center bg-white rounded-md">
-                  <div className="bg-gray-300 p-3 md:p-4 text-black text-lg rounded-l-md">
+                <div className='flex items-center bg-white rounded-md'>
+                  <div className='bg-gray-300 p-3 md:p-4 text-black text-lg rounded-l-md'>
                     +91
                   </div>
                   <input
@@ -121,21 +121,21 @@ const HeroSectionForm: FC = () => {
                         message: 'Invalid Phone Number Format',
                       },
                     })}
-                    placeholder="Enter Phone Number"
-                    className="w-full p-3 md:p-4 text-black outline-none rounded-r-md"
+                    placeholder='Enter Phone Number'
+                    className='w-full p-3 md:p-4 text-black outline-none rounded-r-md'
                   />
                 </div>
                 {errors.phoneNumber && (
-                  <p className="text-red-500 text-sm mt-2">
+                  <p className='text-red-500 text-sm mt-2'>
                     {errors.phoneNumber.message}
                   </p>
                 )}
               </>
             ) : (
-              <div className="flex flex-col items-center gap-6">
-                <p className="text-lg text-white">
+              <div className='flex flex-col items-center gap-6'>
+                <p className='text-lg text-white'>
                   Enter OTP sent to the mobile number{' '}
-                  <span className="block text-sm">
+                  <span className='block text-sm'>
                     #{getValues('phoneNumber')}
                   </span>
                 </p>
@@ -153,25 +153,25 @@ const HeroSectionForm: FC = () => {
                     border: '1px solid gray',
                   }}
                 />
-                {errorOtp && <p className="text-red-400 text-lg">{errorOtp}</p>}
+                {errorOtp && <p className='text-red-400 text-lg'>{errorOtp}</p>}
                 <Timer startTime={startTime} sendOtp={sendOtp} />
               </div>
             )}
           </div>
           <button
             onClick={stepOtp ? handleSubmit(verifyOtp) : sendOtp}
-            className="bg-violet rounded-md p-4 text-white text-lg flex items-center justify-center gap-3 hover:scale-95 transition-transform"
+            className='bg-violet rounded-md p-4 text-white text-lg flex items-center justify-center gap-3 hover:scale-95 transition-transform'
           >
             {stepOtp ? 'Register Now' : 'Continue'}
-            <Image src={Rocket} alt="Rocket" className="mix-blend-screen" />
+            <Image src={Rocket} alt='Rocket' className='mix-blend-screen' />
           </button>
         </div>
-        <p className="text-xs text-white text-center mt-4">
+        <p className='text-xs text-white text-center mt-4'>
           By continuing, you agree to{' '}
-          <span className="text-teal cursor-pointer">
+          <span className='text-teal cursor-pointer'>
             InterviewCall&apos;s Terms
           </span>{' '}
-          and <span className="text-teal cursor-pointer">Privacy Policy</span>.
+          and <span className='text-teal cursor-pointer'>Privacy Policy</span>.
         </p>
       </div>
     </div>

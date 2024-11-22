@@ -44,24 +44,24 @@ const AlumniCard: FC<AlumniCardProps> = ({
       className={`relative flex items-center justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor} overflow-hidden ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor} cursor-pointer`}
     >
       {!isPlaying && (
-        <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-[#000000b2] z-30" />
+        <div className='absolute top-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-[#000000b2] z-30' />
       )}
       <div
         className={`absolute top-0 w-full h-full bg-gradient-to-b ${cardShadowFromColor} ${cardShadowViaColor} to-[#000000b6] z-50`}
       />
-      <div className="absolute flex items-center gap-2 bg-gradient-to-r from-[#1E1C1C] via-[#1e1c1cb0] to-[#1E1C1C] rounded-3xl p-2 top-4 left-4 z-50 text-xs">
-        <Image src={Check} alt="Check" width={20} height={20} />
-        <p className="text-transparent bg-clip-text bg-text-gradient pr-2">
+      <div className='absolute flex items-center gap-2 bg-gradient-to-r from-[#1E1C1C] via-[#1e1c1cb0] to-[#1E1C1C] rounded-3xl p-2 top-4 left-4 z-50 text-xs'>
+        <Image src={Check} alt='Check' width={20} height={20} />
+        <p className='text-transparent bg-clip-text bg-text-gradient pr-2'>
           {checkTitle}
         </p>
       </div>
       {!isPlaying && (
         <Image
           src={cardImage}
-          alt="Card Image"
+          alt='Card Image'
           width={cardImageWidth}
           height={cardImageHeight}
-          className="absolute top-0 w-full h-full object-cover"
+          className='absolute top-0 w-full h-full object-cover'
         />
       )}
       {isPlaying && (
@@ -69,9 +69,9 @@ const AlumniCard: FC<AlumniCardProps> = ({
           ref={videoRef}
           loop
           autoPlay={false}
-          preload="none"
+          preload='none'
           src={videoPath}
-          className="absolute top-0 w-full h-full object-cover z-999"
+          className='absolute top-0 w-full h-full object-cover z-999'
         >
           Your browser does not support the video tag.
         </video>
@@ -79,15 +79,15 @@ const AlumniCard: FC<AlumniCardProps> = ({
       {!isPlaying && (
         <button
           onClick={() => setIsPlaying(true)}
-          className="absolute w-14 h-14 flex items-center justify-center bg-white rounded-full z-50"
+          className='absolute w-14 h-14 flex items-center justify-center bg-white rounded-full z-50'
         >
           <div
             className={`w-0 h-0 ml-1 border-t-[10px] border-b-[10px] border-l-[20px] ${videoPlayButtonBorderColor}`}
           />
         </button>
       )}
-      <div className="absolute bottom-4 left-4 flex flex-col gap-2 z-50">
-        <p className="text-transparent bg-clip-text bg-text-gradient text-xl font-bold">
+      <div className='absolute bottom-4 left-4 flex flex-col gap-2 z-50'>
+        <p className='text-transparent bg-clip-text bg-text-gradient text-xl font-bold'>
           {alumniFirstName.toUpperCase()} <br /> {alumniLastName.toUpperCase()}
         </p>
         <p className={`${alumniJobDescTextColor} text-lg`}>

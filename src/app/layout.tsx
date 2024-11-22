@@ -61,7 +61,7 @@ export default function RootLayout({
     <html>
       <head>
         <link rel='icon' href='/favicon.ico' />
-        <Script id="meta-pixel-init" strategy="afterInteractive">
+        <Script id='meta-pixel-init' strategy='afterInteractive'>
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -77,11 +77,11 @@ export default function RootLayout({
         </Script>
         <noscript>
           <Image
-            height="1"
-            width="1"
+            height='1'
+            width='1'
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=578021844720285&ev=PageView&noscript=1"
-            alt="Facebook Pixel"
+            src='https://www.facebook.com/tr?id=578021844720285&ev=PageView&noscript=1'
+            alt='Facebook Pixel'
           />
         </noscript>
       </head>
