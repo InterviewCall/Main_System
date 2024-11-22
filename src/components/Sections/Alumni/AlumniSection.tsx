@@ -28,7 +28,7 @@ const AlumniSection: FC = () => {
       else {
         videoRefArray[index].current?.handlePlaying(false);
       }
-    })
+    });
   }
   return (
     <div className='flex flex-col gap-20 bg-black-to-blue md:pt-24 pt-12 overflow-x-hidden'>
