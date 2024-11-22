@@ -103,7 +103,7 @@ const HeroSectionForm: FC = () => {
   }
 
   return (
-    <div className='w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#306EBD] p-[3px] rounded-2xl relative'>
+    <div className='w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#000] p-[3px] rounded-2xl relative'>
       {isLoading && <Loader />}
       <div
         className={`bg-gradient-to-tr from-[#000] to-[#020304] py-6 px-4 md:py-10 md:px-10 rounded-xl flex flex-col gap-6 ${
