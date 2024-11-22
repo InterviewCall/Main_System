@@ -60,6 +60,8 @@ const HeroSectionForm: FC = () => {
   };
 
   async function sendOtp() {
+    console.log(process.env.NEXT_PUBLIC_CLIENT_ID);
+    console.log(process.env.NEXT_PUBLIC_CLIENT_SECRET);
     setIsLoading(true);
     setStartTime(!startTime);
     if (stepOtp) {
@@ -79,6 +81,7 @@ const HeroSectionForm: FC = () => {
           headers: {
             clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
             clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+            'Content-Type': 'application/json'
           },
         }
       );
