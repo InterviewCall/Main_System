@@ -15,6 +15,13 @@ import AlumniPostComp4 from '~/images/MasterClassAlumni4PostComp.png';
 import M1 from '~/images/Mentor1.png';
 import M2 from '~/images/Mentor2.png';
 import M3 from '~/images/Mentor3.png';
+import M4 from '~/images/Mentor4.png';
+import M5 from '~/images/Mentor5.png';
+import M6 from '~/images/Mentor6.png';
+import M7 from '~/images/Mentor7.png';
+import M8 from '~/images/Mentor8.png';
+import M9 from '~/images/Mentor9.png';
+import M10 from '~/images/Mentor10.png';
 import P4 from '~/images/P4.png';
 import P5 from '~/images/P5.png';
 import P6 from '~/images/P6.png';
@@ -394,7 +401,98 @@ export const Mentors: Mentor[] = [
     mentorName: 'Jyotirmoy Deb',
     mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
-  }
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
+    cardHeight: mentorCardPositioning.cardHeight[0],
+    cardWidth: mentorCardPositioning.cardWidth[0],
+    mentorImage: M4,
+    mentorAlt: 'N1',
+    mentorName: 'Maria Shah',
+    mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis 14 Years of Experience | Soft Skill Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/coachmariashah/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+    cardHeight: mentorCardPositioning.cardHeight[1],
+    cardWidth: mentorCardPositioning.cardWidth[1],
+    mentorImage: M5,
+    mentorAlt: 'N5',
+    mentorName: 'Mostafizur Rahaman',
+    mentorExperience: 'Ex Software Engineer @The D.E. Shaw Group India | Ex Software Engineer @Waxwing, getgpt.ai, Infosys | 4 Years of Experience | DSA Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/mostafijur-rahaman-21a2aa50/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+    cardHeight: mentorCardPositioning.cardHeight[2],
+    cardWidth: mentorCardPositioning.cardWidth[2],
+    mentorImage: M6,
+    mentorAlt: 'N4',
+    mentorName: 'Saurabh Singh',
+    mentorExperience: 'Software Engineer 3 @Walmart India | Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/singhster/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
+    cardHeight: mentorCardPositioning.cardHeight[0],
+    cardWidth: mentorCardPositioning.cardWidth[0],
+    mentorImage: M7,
+    mentorAlt: 'N3',
+    mentorName: 'Syed Abbas',
+    mentorExperience: 'Software Engineer @NEC Corporation India | Ex Software Engineer @Ecera System | 3 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/syedabbasnec/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+    cardHeight: mentorCardPositioning.cardHeight[1],
+    cardWidth: mentorCardPositioning.cardWidth[1],
+    mentorImage: M8,
+    mentorAlt: 'N5',
+    mentorName: 'Sumit Roy',
+    mentorExperience: 'Software Engineer 2 @Atlassian | Ex Senior Software Engineer @Unacamy | Ex Software Engineer @bigbasket.com, Cyware Labs | & Years of Experience | System Design Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/sroy8091/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+    cardHeight: mentorCardPositioning.cardHeight[2],
+    cardWidth: mentorCardPositioning.cardWidth[2],
+    mentorImage: M9,
+    mentorAlt: 'N2',
+    mentorName: 'Soham Dasgupta',
+    mentorExperience: 'Senior Software Engineer @Microsoft USA | Ex SDE @Amazon USA | Ex Software Engineer @Edgenuiti, @TCS | 9 Years of Experience | Leadershipp Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/sohamdasgupta08/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
+    cardHeight: mentorCardPositioning.cardHeight[0],
+    cardWidth: mentorCardPositioning.cardWidth[0],
+    mentorImage: M10,
+    mentorAlt: 'N5',
+    mentorName: 'Gurtej Singh Rehal',
+    mentorExperience: 'Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/gurtejrehal/'
+  },
 ];
 
 export const Learners: Learner[] = [

@@ -5,34 +5,56 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { FC, useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md';
+import { MdOutlineChevronLeft } from 'react-icons/md';
 
+import Queue from '@/library/Queue';
 import { Mentor } from '@/types';
 import { Mentors } from '@/utils';
 import { mentorCardPositioning } from '@/utils';
 
 import MentorCard from './MentorCard';
 
-const MentorContainer: FC = () => {
-  const [mentorDetails, setMentorDetails] = useState<Mentor[]>(Mentors);
+const queue = new Queue<Mentor[]>();
+const chunkSize = 3;
+for(let index = 0; index < Mentors.length; index += chunkSize) {
+  const chunk = Mentors.slice(index, index + chunkSize);
+  queue.push(chunk);
+}
 
-  function handleNext() {
-    setMentorDetails((prevDetails) => {
-      const newMentorDetails = [...prevDetails];
-      const shiftedMentorDetails = newMentorDetails.shift();
-      if (shiftedMentorDetails) newMentorDetails.push(shiftedMentorDetails);
-      return newMentorDetails.map((mentor, index) => ({
-        ...mentor,
-        cardWrapperTopPosition: mentorCardPositioning.topPositions[index],
-        cardWrapperLeftPosition: mentorCardPositioning.leftPositions[index],
-        cardWrapperZIndex: mentorCardPositioning.zIndexes[index],
-        cardHeight: mentorCardPositioning.cardHeight[index],
-        cardWidth: mentorCardPositioning.cardWidth[index],
-      }));
-    });
-  }
+const MentorContainer: FC = () => {
+  const [mentorDetails, setMentorDetails] = useState<Mentor[]>(queue.top());
+  const [tracker, setTracker] = useState(1);
+
+  // Future reference 
+  // function handleNext() {
+  //   setMentorDetails((prevDetails) => {
+  //     const newMentorDetails = [...prevDetails];
+  //     const shiftedMentorDetails = newMentorDetails.shift();
+  //     if (shiftedMentorDetails) newMentorDetails.push(shiftedMentorDetails);
+  //     return newMentorDetails.map((mentor, index) => ({
+  //       ...mentor,
+  //       cardWrapperTopPosition: mentorCardPositioning.topPositions[index],
+  //       cardWrapperLeftPosition: mentorCardPositioning.leftPositions[index],
+  //       cardWrapperZIndex: mentorCardPositioning.zIndexes[index],
+  //       cardHeight: mentorCardPositioning.cardHeight[index],
+  //       cardWidth: mentorCardPositioning.cardWidth[index],
+  //     }));
+  //   });
+  // }
 
   function handlePrev() {
+    if(tracker == mentorDetails.length) {
+      const shiftElementFromQueue = queue.pop();
+      if(shiftElementFromQueue) queue.push(shiftElementFromQueue);
+      setMentorDetails(queue.top());
+      setTracker(1);
+      return;
+    }
+
+    else {
+      setTracker(tracker + 1);
+    }
+
     setMentorDetails((prevDetails) => {
       const newMentorDetails = [...prevDetails];
       const shiftedMentorDetails = newMentorDetails.pop();
@@ -65,6 +87,10 @@ const MentorContainer: FC = () => {
                 ? 'bg-gradient-to-r from-[#00C2FF] to-white'
                 : mentorDetails[0].mentorAlt === 'N2'
                 ? 'bg-gradient-to-r from-[#ECC231] to-white'
+                : mentorDetails[0].mentorAlt == 'N4'
+                ? 'bg-gradient-to-r from-[#03fd9a] to-white'
+                : mentorDetails[0].mentorAlt == 'N5'
+                ? 'bg-gradient-to-r from-[#0167e3] to-white'
                 : 'bg-gradient-to-r from-[#FF4C65] to-white'
             )}
           >
@@ -93,10 +119,10 @@ const MentorContainer: FC = () => {
         </div>
 
         {/* Mentor Cards */}
-        <div className='flex flex-row items-center justify-center gap-8 md:gap-0'>
+        <div className='flex flex-row items-center justify-center gap-8 md:gap-20'>
           <button
             onClick={handlePrev}
-            className='bg-gradient-to-tl flex items-center justify-center translate-x-6 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
+            className='bg-gradient-to-tl flex items-center justify-center translate-x-16 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
           >
             <MdOutlineChevronLeft
               style={{
@@ -108,9 +134,9 @@ const MentorContainer: FC = () => {
           </button>
 
           <div className='relative w-[300px] md:w-[400px] h-[275px]'>
-            {mentorDetails.map((mentor) => (
+            {mentorDetails.map((mentor, index) => (
               <MentorCard
-                key={mentor.mentorAlt}
+                key={index}
                 mentorImage={mentor.mentorImage}
                 mentorAlt={mentor.mentorAlt}
                 mentorName={mentor.mentorName}
@@ -124,8 +150,9 @@ const MentorContainer: FC = () => {
               />
             ))}
           </div>
-
-          <button
+          
+          {/*For Future reference */}
+          {/* <button
             onClick={handleNext}
             className='bg-gradient-to-tl flex items-center justify-center -translate-x-6 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
           >
@@ -136,7 +163,7 @@ const MentorContainer: FC = () => {
                 height: '24px',
               }}
             />
-          </button>
+          </button> */}
         </div>
       </div>
 
