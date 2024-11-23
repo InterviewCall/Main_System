@@ -82,7 +82,7 @@ const MentorContainer: FC = () => {
         <div className='flex flex-col gap-y-8 h-fit'>
           <p
             className={clsx(
-              'inline-block text-transparent bg-clip-text text-7xl md:text-[4rem] font-bold',
+              'inline-block text-transparent bg-clip-text text-7xl md:text-[3.09rem] font-bold',
               mentorDetails[0].mentorAlt === 'N3'
                 ? 'bg-gradient-to-r from-[#00C2FF] to-white'
                 : mentorDetails[0].mentorAlt === 'N2'
