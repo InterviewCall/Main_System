@@ -2,6 +2,7 @@
 
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FC, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -174,13 +175,20 @@ const HeroSectionForm: FC = () => {
             <Image src={Rocket} alt='Rocket' className='mix-blend-screen' />
           </button>
         </div>
-        <p className='text-xs text-white text-center mt-4'>
-          By continuing, you agree to{' '}
-          <span className='text-teal cursor-pointer'>
-            InterviewCall&apos;s Terms
-          </span>{' '}
-          and <span className='text-teal cursor-pointer'>Privacy Policy</span>.
-        </p>
+        <div className='text-xs text-white flex items-center justify-center mt-4 gap-x-1'>
+          <p>By continuing, you agree to{' '}</p>
+          <Link href='/terms-conditions' className='group'>
+            <div className='text-teal cursor-pointer'>
+              InterviewCall&apos;s Terms
+            </div>
+            <div className='w-full h-[1.5px] bg-teal scale-0 group-hover:scale-100 duration-300 origin-left'></div>
+          </Link>
+          and
+          <Link href='/privacy-policy' className='group'>
+            <div className='text-teal cursor-pointer'>Privacy Policy</div>
+            <div className='w-full h-[1.5px] bg-teal scale-0 group-hover:scale-100 duration-300 origin-left'></div>
+          </Link>
+        </div>
       </div>
     </div>
   );

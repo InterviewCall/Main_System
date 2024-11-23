@@ -23,7 +23,7 @@ const FooterSection: FC = () => {
                                 <div>
                                         <div className='flex flex-col'>
                                             <Link href='/contact-us' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Contact Us</Link>
-                                            <p className='text-xl font-extralight'>Privacy Policy</p>
+                                            <Link href='/privacy-policy' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Privacy Policy</Link>
                                             <p className='text-xl font-extralight'>Hire from us</p>
                                             <p className='text-xl font-extralight'>Job Portal</p>
                                         </div>
@@ -34,9 +34,9 @@ const FooterSection: FC = () => {
                                 <p className='font-semibold text-2xl'>Product</p>
                                 <div>
                                         <div className='flex flex-col'>
-                                            <p className='text-xl font-extralight'>FSWD Program</p>
-                                            <p className='text-xl font-extralight'>Job Switch</p>
-                                            <p className='text-xl font-extralight'>Masterclass</p>
+                                            <Link href='/fullstack-web-development-demo-class' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>FSWD Program</Link>
+                                            <Link href='/job-switch-demo-class' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Job Switch</Link>
+                                            <Link href='/masterclass' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Masterclass</Link>
                                             <Link href='/terms-conditions' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Terms</Link>
                                             <Link href='/refund-policy' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Refund Policy</Link>
                                         </div>
