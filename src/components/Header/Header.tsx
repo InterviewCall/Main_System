@@ -107,7 +107,7 @@ const Header: FC = () => {
         <div className="w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3">
           <Image src={HeaderBanner} alt="" className="w-[23px] h-[23px]" />
           <p className="text-white text-sm">
-            Need Help? Talk to us at <span className="text-lg">9609703212</span>{' '}
+            Need Help? Talk to us at <span className="text-lg">08069640804</span>{' '}
             or{' '}
             <span className="text-lg underline cursor-pointer">
               Request a Call
