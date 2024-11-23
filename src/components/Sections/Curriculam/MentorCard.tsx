@@ -50,8 +50,6 @@ const MentorCard: FC<MentorCardProps> = ({ mentorImage, mentorAlt, mentorName, m
             <Image
               src={mentorImage}
               alt={mentorAlt}
-              width={392}
-              height={560}
               loading='lazy'
             />
           </div>
