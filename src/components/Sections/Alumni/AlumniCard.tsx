@@ -45,10 +45,10 @@ const AlumniCard: FC<AlumniCardProps> = ({
       className={`relative flex items-center justify-center ${cardWrapperShadowColor} ${cardWrapperWidth} ${cardWrapperHeight} rounded-3xl ${cardWrapperBackgroundColor}  ring-offset-4 ring-offset-black ring-4 ${cardWrapperRingColor} cursor-pointer`}
     >
       {!isPlaying && (
-        <div className='absolute bottom-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-[#000000b2] z-30 rounded-e-3xl rounded-s-3xl' />
+        <div className='absolute bottom-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-[#000000b2] z-30 rounded-3xl' />
       )}
       <div
-        className={`absolute bottom-0 w-full h-full bg-gradient-to-b ${cardShadowFromColor} ${cardShadowViaColor} to-[#000000b6] rounded-e-3xl rounded-s-3xl`}
+        className={`absolute bottom-0 w-full h-full bg-gradient-to-b ${cardShadowFromColor} ${cardShadowViaColor} to-[#000000b6] rounded-3xl`}
       />
       <div className='absolute flex items-center gap-2 bg-gradient-to-r from-[#1E1C1C] via-[#1e1c1cb0] to-[#1E1C1C] rounded-3xl p-2 top-4 left-4 z-50 text-xs'>
         <Image src={Check} alt='Check' width={20} height={20} />
@@ -73,7 +73,7 @@ const AlumniCard: FC<AlumniCardProps> = ({
           autoPlay={false}
           preload='none'
           src={videoPath}
-          className='absolute top-0 w-full h-full cursor-pointer object-cover z-30'
+          className='absolute top-0 w-full h-full cursor-pointer object-cover z-30 rounded-3xl'
         >
             Your browser does not support the video tag.
           </video>
