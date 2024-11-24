@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 
 import { AlumniCards } from '@/utils';
-import People from '~/images/People.png';
+import AllMentors from '~/images/AllMentors.png';
 
 import AlumniCard from './AlumniCard';
 import DownloadBrochureButton from './DownloadBrochureButton';
@@ -90,12 +90,12 @@ const AlumniSection: FC = () => {
 
         {/* People Image */}
         <Image
-          src={People}
+          src={AllMentors}
           alt='People'
-          width={1302}
-          height={440}
+          width={1702}
+          height={740}
           loading='lazy'
-          className='px-4 md:px-24 w-full object-contain'
+          className='px-4 md:px-24 w-full translate-y-8 object-cover'
         />
 
         {/* Marquee Section */}
