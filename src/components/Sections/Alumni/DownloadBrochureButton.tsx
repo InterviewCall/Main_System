@@ -7,7 +7,7 @@ import { DownloadBrochureButtonProps } from '@/types';
 
 const DownloadBrochureButton: FC<DownloadBrochureButtonProps> = ({ buttonTitle }) => {
     return (
-        <button className='py-2 px-4 rounded-full flex gap-3 items-center border border-white download-brochure'>
+        <button className='brochure py-2 px-4 rounded-full flex gap-3 items-center border border-white download-brochure'>
           <p className='text-base text-white font-medium'>
             {buttonTitle}
           </p>
