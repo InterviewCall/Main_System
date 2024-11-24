@@ -34,7 +34,7 @@ const MasterClassHeader: FC = () => {
     <div className='fixed md:block hidden z-[999]'>
       <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
         <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
-        <p className='text-white text-sm'>Need Help? Talk to us at <span className='text-lg'>08069640804</span> or <span className='text-lg underline cursor-pointer'>Request a Call</span></p>
+        <p className='text-white text-sm'>Need Help? Talk to us at <span className='text-lg'>08069640804</span> or <span className='advisor text-lg underline cursor-pointer'>Request a Call</span></p>
       </div>
       <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 fixed  h-20 bg-black'>
         <Link href='/'>
