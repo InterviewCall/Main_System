@@ -175,10 +175,10 @@ const HeroSectionForm: FC = () => {
           </div>
           <button
             onClick={stepOtp ? handleSubmit(verifyOtp) : sendOtp}
-            className='bg-violet rounded-md p-4 text-white text-lg flex items-center justify-center gap-3 hover:scale-95 transition-transform'
+            className='bg-violet rounded-md p-3 text-white text-[1rem] font-semibold flex items-center justify-center gap-3 hover:scale-95 transition-transform'
           >
-            {stepOtp ? 'Register Now' : 'Continue'}
-            <Image src={Rocket} alt='Rocket' className='mix-blend-screen' />
+            {stepOtp ? 'CONFIRM REGISTRATION' : 'BOOK FREE LIVE CLASS'}
+            <Image src={Rocket} alt='Rocket' className=' w-10 h-10 object-contain' />
           </button>
         </div>
         <div className='text-xs text-white hidden md:flex items-center justify-center mt-4 md:gap-x-1 gap-0'>
