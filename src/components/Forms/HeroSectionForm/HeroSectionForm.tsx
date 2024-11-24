@@ -18,7 +18,7 @@ import {
   ResponseOtp,
   VerifyOtpResponse,
 } from '@/types';
-import { initiateOtp, otpVerification } from '@/utils';
+import isValidMobileNumber, { initiateOtp, otpVerification } from '@/utils';
 import Rocket from '~/images/Rocket.png';
 
 const HeroSectionForm: FC = () => {
@@ -26,13 +26,13 @@ const HeroSectionForm: FC = () => {
   const [otp, setOtp] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [requestId, setRequestId] = useState('');
+  const [errorNumber, setErrorNumber] = useState('');
   const [errorOtp, setErrorOtp] = useState<string | undefined>('');
   const [startTime, setStartTime] = useState(false);
   const router = useRouter();
 
   const {
     register,
-    formState: { errors },
     handleSubmit,
     getValues,
   } = useForm<HeroSectionFormData>({
@@ -42,9 +42,7 @@ const HeroSectionForm: FC = () => {
   });
 
   const verifyOtp: SubmitHandler<HeroSectionFormData> = async () => {
-    if(!otp) return;
-
-    setIsLoading(true);
+    if(otp) setIsLoading(true);
 
     try {
         await axios.post(
@@ -69,10 +67,15 @@ const HeroSectionForm: FC = () => {
   };
 
   async function sendOtp() {
-    if(!getValues('phoneNumber')) return;
+    if(getValues('phoneNumber')) {
+      if(!isValidMobileNumber(getValues('phoneNumber'))) {
+        setErrorNumber('Request Error : Incorrect Mobile Number');
+        return;
+      }
 
-    setIsLoading(true);
-    setStartTime(!startTime);
+      setIsLoading(true);
+      setStartTime(!startTime);
+    }
     if (stepOtp) {
       setOtp('');
     }
@@ -96,10 +99,10 @@ const HeroSectionForm: FC = () => {
       );
       setIsLoading(false);
       setStepOtp(true);
-      console.log(response.data.requestId);
       setRequestId(response.data.requestId);
     } catch (error) {
-      console.log(error);
+      const otpError = error as AxiosError<ResponseOtp>;
+      setErrorOtp(otpError.response?.data.description);
     }
   }
 
@@ -134,17 +137,19 @@ const HeroSectionForm: FC = () => {
                     className='w-full p-3 md:p-4 text-black outline-none rounded-r-md'
                   />
                 </div>
-                {errors.phoneNumber && (
-                  <p className='text-red-500 text-sm mt-2'>
-                    {errors.phoneNumber.message}
+                {errorNumber && (
+                  <p className='text-red-400 text-lg mt-2'>
+                    {errorNumber}
                   </p>
                 )}
+
+                {errorOtp && <p className='text-red-400 text-lg'>{errorOtp}</p>}
               </>
             ) : (
-              <div className='flex flex-col items-center gap-6'>
+              <div className='flex flex-col items-center justify-center gap-6'>
                 <p className='text-lg text-white'>
                   Enter OTP sent to the mobile number{' '}
-                  <span className='block text-sm'>
+                  <span className='block text-sm text-center'>
                     #{getValues('phoneNumber')}
                   </span>
                 </p>
@@ -152,6 +157,7 @@ const HeroSectionForm: FC = () => {
                   value={otp}
                   numInputs={4}
                   onChange={setOtp}
+                  renderSeparator={<span className='w-6'></span>}
                   renderInput={(props) => <input {...props} />}
                   inputStyle={{
                     width: '50px',
@@ -175,7 +181,7 @@ const HeroSectionForm: FC = () => {
             <Image src={Rocket} alt='Rocket' className='mix-blend-screen' />
           </button>
         </div>
-        <div className='text-xs text-white flex items-center justify-center mt-4 gap-x-1'>
+        <div className='text-xs text-white hidden md:flex items-center justify-center mt-4 md:gap-x-1 gap-0'>
           <p>By continuing, you agree to{' '}</p>
           <Link href='/terms-conditions' className='group'>
             <div className='text-teal cursor-pointer'>
@@ -189,6 +195,16 @@ const HeroSectionForm: FC = () => {
             <div className='w-full h-[1.5px] bg-teal scale-0 group-hover:scale-100 duration-300 origin-left'></div>
           </Link>
         </div>
+
+        {/* For Mobile View */}
+        <p className='text-xs md:hidden block text-white text-center'>
+          By continuing, you agree to{' '}
+          <span onClick={() => router.push('/terms-conditions')} className='text-teal cursor-pointer'>
+            InterviewCall&apos;s Terms
+          </span>{' '}
+          and{' '}
+          <span onClick={() => router.push('/privacy-policy')} className='text-teal cursor-pointer'>Privacy Policy</span>
+        </p>
       </div>
     </div>
   );

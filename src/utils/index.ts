@@ -397,7 +397,7 @@ export const Mentors: Mentor[] = [
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
     mentorImage: M3,
-    mentorAlt: 'N3',
+    mentorAlt: 'N6',
     mentorName: 'Jyotirmoy Deb',
     mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
@@ -669,4 +669,9 @@ export function initiateOtp() {
 
 export function otpVerification() {
   return 'https://auth.otpless.app/auth/v1/verify/otp';
+}
+
+export default function isValidMobileNumber(mobileNumber: string): boolean {
+  const indianMobilePattern = /^[6-9]\d{9}$/;
+  return indianMobilePattern.test(mobileNumber);
 }

@@ -33,7 +33,7 @@ const AlumniSection: FC = () => {
           </div>
 
           {/* Alumni Cards */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-y-16 md:gap-x-28 justify-items-center'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-y-20 md:gap-x-28 justify-items-center'>
             {/* First Row - 3 Cards */}
             {AlumniCards.slice(0, 3).map((card, index) => (
               <AlumniCard
@@ -55,7 +55,7 @@ const AlumniSection: FC = () => {
             ))}
 
             {/* Second Row - 2 Cards */}
-            <div className='col-span-full flex flex-wrap md:flex-nowrap justify-center gap-y-9 gap-x-28'>
+            <div className='col-span-full flex flex-wrap md:flex-nowrap justify-center gap-y-20 gap-x-28'>
               {AlumniCards.slice(3, 5).map((card, index) => (
                 <AlumniCard
                   key={index}

@@ -1,15 +1,23 @@
-class Queue<T> {
+class Dequeue<T> {
     private items: T[] = [];
 
-    push(item: T) {
+    pushBack(item: T) {
         this.items.push(item);
     }
 
-    pop() {
+    pushFront(item: T) {
+        this.items.unshift(item);
+    }
+
+    popBack() {
+        return this.items.pop();
+    }
+
+    popFront() {
         return this.items.shift();
     }
 
-    top() {
+    front() {
         return this.items[0];
     }
 
@@ -22,4 +30,4 @@ class Queue<T> {
     }
 }
 
-export default Queue;
+export default Dequeue;

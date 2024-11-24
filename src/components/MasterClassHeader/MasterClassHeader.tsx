@@ -20,7 +20,7 @@ const MasterClassHeader: FC = () => {
             className='md:w-[201px] min-w-[145px] w-[145px] md:h-[47px] h-[47px] object-contain min-h-[34px]'
           />
         </Link>
-        <div className='flex items-center space-x-8'>
+        <div className='hidden items-center space-x-8'>
           <div>
             <div className='text-[#00FFE0]'>
               Masterclass

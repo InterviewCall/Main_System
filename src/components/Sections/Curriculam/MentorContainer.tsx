@@ -2,46 +2,38 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
-import { redirect } from 'next/navigation';
 import { FC, useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md';
 
-import Queue from '@/library/Queue';
+import Dequeue from '@/library/Dequeue';
 import { Mentor } from '@/types';
 import { Mentors } from '@/utils';
 import { mentorCardPositioning } from '@/utils';
 
 import MentorCard from './MentorCard';
 
-const queue = new Queue<Mentor[]>();
+const queue = new Dequeue<Mentor[]>();
 const chunkSize = 3;
 for(let index = 0; index < Mentors.length; index += chunkSize) {
   const chunk = Mentors.slice(index, index + chunkSize);
-  queue.push(chunk);
+  queue.pushBack(chunk);
 }
 
 const MentorContainer: FC = () => {
-  const [mentorDetails, setMentorDetails] = useState<Mentor[]>(queue.top());
-  const [nextTracker, setNextTracker] = useState(1);
-  const [prevTracker, setPrevTracker] = useState(1);
+  const [mentorDetails, setMentorDetails] = useState<Mentor[]>(queue.front());
+  const [tracker, setTracker] = useState(1);
 
-  // Future reference 
   function handleNext() {
-    if(prevTracker != 1) {
-      setPrevTracker(prevTracker - 1);
-    }
-
-    if(nextTracker == mentorDetails.length) {
-      const shiftElementFromQueue = queue.pop();
-      if(shiftElementFromQueue) queue.push(shiftElementFromQueue);
-      setMentorDetails(queue.top());
-      setPrevTracker(1);
-      setNextTracker(1);
+    if(tracker == mentorDetails.length) {
+      const shiftElementFromQueue = queue.popFront();
+      if(shiftElementFromQueue) queue.pushBack(shiftElementFromQueue);
+      setMentorDetails(queue.front());
+      setTracker(1);
       return;
     }
 
-    setNextTracker(nextTracker + 1);
+    setTracker(tracker + 1);
 
     setMentorDetails((prevDetails) => {
       const newMentorDetails = [...prevDetails];
@@ -59,20 +51,14 @@ const MentorContainer: FC = () => {
   }
 
   function handlePrev() {
-    if(nextTracker != 1) {
-      setNextTracker(nextTracker - 1);
-    }
-
-    if(prevTracker == mentorDetails.length) {
-      const shiftElementFromQueue = queue.pop();
-      if(shiftElementFromQueue) queue.push(shiftElementFromQueue);
-      setMentorDetails(queue.top());
-      setPrevTracker(1);
-      setNextTracker(1);
+    if(tracker == 1) {
+      const shiftElementFromQueue = queue.popBack();
+      if(shiftElementFromQueue) queue.pushFront(shiftElementFromQueue);
+      setMentorDetails(queue.front());
       return;
     }
 
-    setPrevTracker(prevTracker + 1);
+    setTracker(tracker - 1);
 
     setMentorDetails((prevDetails) => {
       const newMentorDetails = [...prevDetails];
@@ -110,6 +96,8 @@ const MentorContainer: FC = () => {
                 ? 'bg-gradient-to-r from-[#03fd9a] to-white'
                 : mentorDetails[0].mentorAlt == 'N5'
                 ? 'bg-gradient-to-r from-[#0167e3] to-white'
+                : mentorDetails[0].mentorAlt == 'N6'
+                ? 'bg-gradient-to-r from-[#c0c0c0] to-white'
                 : 'bg-gradient-to-r from-[#FF4C65] to-white'
             )}
           >
@@ -121,10 +109,10 @@ const MentorContainer: FC = () => {
           </p>
 
           <button
-            onClick={() => redirect(mentorDetails[0].mentorLinkedinProfile)}
-            className='py-2 px-4 rounded-full flex gap-3 items-center border border-white w-fit'
+            onClick={() => window.open(mentorDetails[0].mentorLinkedinProfile, '_blank')}
+            className='py-2 px-4 rounded-full flex gap-3 items-center border border-white w-fit text-white hover:text-blue-600 duration-300'
           >
-            <p className='text-sm md:text-base text-white font-medium'>
+            <p className='text-sm md:text-base font-medium'>
               VISIT LINKEDIN PROFILE
             </p>
             <FaLinkedin
@@ -141,7 +129,7 @@ const MentorContainer: FC = () => {
         <div className='flex flex-row items-center justify-center gap-8 md:gap-0'>
           <button
             onClick={handlePrev}
-            className='bg-gradient-to-tl flex items-center justify-center translate-x-3 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
+            className='bg-gradient-to-tl flex items-center justify-center translate-x-3 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
           >
             <MdOutlineChevronLeft
               style={{
@@ -170,10 +158,9 @@ const MentorContainer: FC = () => {
             ))}
           </div>
           
-          {/*For Future reference */}
           <button
             onClick={handleNext}
-            className='bg-gradient-to-tl flex items-center justify-center -translate-x-4 translate-y-1 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400'
+            className='bg-gradient-to-tl flex items-center justify-center -translate-x-4 translate-y-1 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
           >
             <MdOutlineChevronRight
               style={{
@@ -188,10 +175,10 @@ const MentorContainer: FC = () => {
 
       {/* Mobile View */}
       <div className='flex flex-col md:hidden mx-auto gap-16'>
-        {mentorDetails.map((mentor, index) => (
+        {Mentors.map((mentor, index) => (
           <div
             key={index}
-            className='flex flex-col items-center justify-center gap-4'
+            className='flex flex-col items-center justify-center gap-1'
           >
             <Image
               src={mentor.mentorImage}
@@ -199,7 +186,7 @@ const MentorContainer: FC = () => {
               loading='lazy'
               className='object-cover '
             />
-            <div className='flex flex-col justify-center items-center mb-20'>
+            <div className='flex flex-col justify-center items-center gap-y-3 mb-20'>
               <p
                 className={clsx(
                   'inline-block text-transparent bg-clip-text text-3xl font-bold',
@@ -207,6 +194,12 @@ const MentorContainer: FC = () => {
                     ? 'bg-gradient-to-r from-[#00C2FF] to-white'
                     : mentor.mentorAlt === 'N2'
                     ? 'bg-gradient-to-r from-[#ECC231] to-white'
+                    : mentor.mentorAlt == 'N4'
+                    ? 'bg-gradient-to-r from-[#03fd9a] to-white'
+                    : mentor.mentorAlt == 'N5'
+                    ? 'bg-gradient-to-r from-[#0167e3] to-white'
+                    : mentor.mentorAlt == 'N6'
+                    ? 'bg-gradient-to-r from-[#c0c0c0] to-white'
                     : 'bg-gradient-to-r from-[#FF4C65] to-white'
                 )}
               >
@@ -215,8 +208,11 @@ const MentorContainer: FC = () => {
               <p className='text-header-grey text-sm text-center leading-5 px-[20]'>
                 {mentor.mentorExperience}
               </p>
-              <button className='py-2 px-4 rounded-full flex gap-3 items-center border border-white'>
-                <p className='text-sm text-white font-medium'>
+              <button 
+                onClick={() => window.open(mentor.mentorLinkedinProfile, '_blank')}
+                className='py-2 px-4 rounded-full flex gap-3 items-center border border-white text-white hover:text-blue-600 duration-300'
+              >
+                <p className='text-sm font-medium'>
                   VISIT LINKEDIN PROFILE
                 </p>
                 <FaLinkedin
