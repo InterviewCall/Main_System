@@ -20,7 +20,7 @@ const AlumniSection: FC = () => {
       </div>
 
       {/* Alumni Section */}
-      <div className='flex flex-col items-center px-4 md:px-24'>
+      <div className='flex flex-col items-center'>
         <div className='flex flex-col items-center gap-8'>
           {/* Alumni Title */}
           <div>
@@ -95,7 +95,7 @@ const AlumniSection: FC = () => {
           width={1702}
           height={740}
           loading='lazy'
-          className='px-4 md:px-24 w-full translate-y-8 object-cover'
+          className='w-full translate-y-8 object-cover'
         />
 
         {/* Marquee Section */}
