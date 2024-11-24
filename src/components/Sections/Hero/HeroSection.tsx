@@ -14,7 +14,7 @@ const HeroSection: FC = () => {
         <div className='flex flex-col gap-8'>
           {/* Title and Subtitle */}
           <div className='flex flex-col gap-6'>
-            <h1 className='text-gradient text-3xl md:text-[50px] md:leading-[74px] font-bold'>
+            <h1 className='text-gradient text-3xl md:text-[45px] md:leading-[74px] font-bold'>
               Full Stack Web Development with Placement Assistance
             </h1>
             <h2 className='text-base md:text-lg text-white font-light'>
