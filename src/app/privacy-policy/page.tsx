@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const PrivacyPolicy: FC = () => {
     return (
-        <div className=' text-white'>
+        <div className='text-white'>
             <div className='w-[80%] mt-24 mx-auto'>
                 <p className='text-3xl'>Privacy Policy</p>
 
@@ -441,7 +441,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Contact Us</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-gray-300 mb-20'>
                     <p>
                     If you have any questions or concerns about this Privacy Policy or our data practices, please reach out to us at <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>info@interviewcall.club</span>.
                     </p>

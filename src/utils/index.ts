@@ -105,7 +105,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Abhinay Reddy',
     checkTitle: 'SDE - Valuefy',
     alumniJobDesc: 'Offer - Valuefy, Knolskape',
-    videoPath: '/resources/AlumniVideo3.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Abhinay-Final-Testimonial.mp4',
     alumniJobDescTextColor: 'text-[#ECC231]',
     cardWrapperShadowColor: 'shadow-yellow-multi',
     cardWrapperBackgroundColor: 'bg-[#ECC231]',
