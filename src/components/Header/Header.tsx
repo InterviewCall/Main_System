@@ -109,7 +109,7 @@ const Header: FC = () => {
           <p className='text-white text-sm'>
             Need Help? Talk to us at <span className='text-lg'>08069640804</span>{' '}
             or{' '}
-            <span className='text-lg underline cursor-pointer'>
+            <span className='advisor text-lg underline cursor-pointer'>
               Request a Call
             </span>
           </p>
