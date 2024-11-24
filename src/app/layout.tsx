@@ -87,7 +87,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className='bg-black'>
+      <body>
         <Header />
         <Toaster position='top-center' />
         <div className='pt-20'>{children}</div>

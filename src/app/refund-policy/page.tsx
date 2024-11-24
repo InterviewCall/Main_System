@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const RefundPolicy: FC = () => {
     return (
-        <div className='text-white'>
+        <div className='text-black bg-white'>
             <div className='md:w-[77%] w-[83%] mx-auto'>
                 <div className='text-[#8532c2] text-xl font-[500] md:mt-40 mt-20'>InterviewCall Refund and Placement Assistance Policy</div>
 
