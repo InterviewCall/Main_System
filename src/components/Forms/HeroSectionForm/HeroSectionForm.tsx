@@ -35,6 +35,7 @@ const HeroSectionForm: FC = () => {
     register,
     handleSubmit,
     getValues,
+    reset
   } = useForm<HeroSectionFormData>({
     defaultValues: {
       phoneNumber: '',
@@ -59,8 +60,10 @@ const HeroSectionForm: FC = () => {
         toast.success('Verified Successfully');
         setStepOtp(false);
         setIsLoading(false);
+        reset();
         router.push('/fullstack-web-development-demo-class');
     } catch (error) {
+      setIsLoading(false);
       const otpError = error as AxiosError<VerifyOtpResponse>;
       setErrorOtp(otpError.response?.data.description);
     }
