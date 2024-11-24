@@ -63,6 +63,18 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/favicon.ico' />
         <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82326" async></script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NH58QMDECM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NH58QMDECM');
+          `}
+        </Script>
         <Script id='meta-pixel-init' strategy='afterInteractive'>
           {`
             !function(f,b,e,v,n,t,s)
