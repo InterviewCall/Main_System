@@ -70,18 +70,18 @@ export const HeroSectionStats: IHeroStat[] = [
 
 export const AlumniCards: AlumniCard[] = [
   {
-    cardImage: A1,
-    alumniName: 'Rounak Goswami',
-    checkTitle: 'SDE - Morgan Stanley',
-    alumniJobDesc: 'Offer - Morgan Stanley',
-    videoPath: '/resources/W3.mp4',
-    alumniJobDescTextColor: 'text-[#00C2FF]',
-    cardWrapperShadowColor: 'shadow-blue-multi',
-    cardWrapperBackgroundColor: 'bg-[#00C2FF]',
-    cardShadowFromColor: 'from-[#00c3ff75]',
+    cardImage: A3,
+    alumniName: 'Abhinay Reddy',
+    checkTitle: 'SDE - Valuefy',
+    alumniJobDesc: 'Offer - Valuefy, Knolskape',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Abhinay-Final-Testimonial.mp4',
+    alumniJobDescTextColor: 'text-[#ECC231]',
+    cardWrapperShadowColor: 'shadow-yellow-multi',
+    cardWrapperBackgroundColor: 'bg-[#ECC231]',
+    cardShadowFromColor: 'from-[#ecc3317d]',
     cardShadowViaColor: 'via-[#00c3ff13]',
-    cardWrapperRingColor: 'ring-[#00C2FF]',
-    videoPlayButtonBorderColor: 'border-l-[#01b9f19c]'
+    cardWrapperRingColor: 'ring-[#ECC231]',
+    videoPlayButtonBorderColor: 'border-l-[#ecc3318c]'
   },
 
   {
@@ -101,18 +101,18 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
-    cardImage: A3,
-    alumniName: 'Abhinay Reddy',
-    checkTitle: 'SDE - Valuefy',
-    alumniJobDesc: 'Offer - Valuefy, Knolskape',
-    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Abhinay-Final-Testimonial.mp4',
-    alumniJobDescTextColor: 'text-[#ECC231]',
-    cardWrapperShadowColor: 'shadow-yellow-multi',
-    cardWrapperBackgroundColor: 'bg-[#ECC231]',
-    cardShadowFromColor: 'from-[#ecc3317d]',
+    cardImage: A1,
+    alumniName: 'Rounak Goswami',
+    checkTitle: 'SDE - Morgan Stanley',
+    alumniJobDesc: 'Offer - Morgan Stanley',
+    videoPath: '/resources/W3.mp4',
+    alumniJobDescTextColor: 'text-[#00C2FF]',
+    cardWrapperShadowColor: 'shadow-blue-multi',
+    cardWrapperBackgroundColor: 'bg-[#00C2FF]',
+    cardShadowFromColor: 'from-[#00c3ff75]',
     cardShadowViaColor: 'via-[#00c3ff13]',
-    cardWrapperRingColor: 'ring-[#ECC231]',
-    videoPlayButtonBorderColor: 'border-l-[#ecc3318c]'
+    cardWrapperRingColor: 'ring-[#00C2FF]',
+    videoPlayButtonBorderColor: 'border-l-[#01b9f19c]'
   },
 
   {
