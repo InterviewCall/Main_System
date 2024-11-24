@@ -3,7 +3,7 @@ import { FC } from 'react';
 const TermsAndConditions: FC = () => {
     return (
         <div className='text-white'>
-            <div className='md:w-[1425px] w-[390px] mx-auto'>
+            <div className='md:w-[85%] w-[83%] mx-auto'>
                 <div className='text-center mt-36 text-4xl font-bold'>Terms of Service</div>
 
                 <div className='font-[400] mt-8'>

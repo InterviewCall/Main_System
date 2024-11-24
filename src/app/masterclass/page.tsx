@@ -70,7 +70,7 @@ const MasterClassPage: FC = () => {
       ></div>
 
       {/* Main Content */}
-      <div className='w-full md:w-[70vw]  mt-14 px-4 lg:px-20'>
+      <div className='w-full md:w-[65%]  mt-14 px-4 lg:px-20'>
         {/* Title */}
         <p className='text-2xl md:text-4xl font-bold text-center md:text-left'>
           How E-commerce Platforms like Amazon Use Data Science
@@ -152,7 +152,7 @@ const MasterClassPage: FC = () => {
             What our Learners have to say
           </p>
         </div>
-        <div className='flex flex-wrap mt-7 gap-4 md:gap-8 justify-center'>
+        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-3 justify-center items-center'>
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'
@@ -179,7 +179,7 @@ const MasterClassPage: FC = () => {
             Discover successful alumni
           </p>
         </div>
-        <div className='flex flex-wrap gap-x-10 mt-8 justify-center'>
+        <div className='flex md:flex-row flex-col gap-x-6 mt-8 items-center justify-center'>
           {MasterClassAlumnis.map((alumni, index) => (
             <AlumniCard
               key={index}
