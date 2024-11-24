@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md';
+import { MdOutlineChevronLeft } from 'react-icons/md';
 
 import Dequeue from '@/library/Dequeue';
 import { Mentor } from '@/types';
@@ -50,30 +50,30 @@ const MentorContainer: FC = () => {
     });
   }
 
-  function handlePrev() {
-    if(tracker == 1) {
-      const shiftElementFromQueue = queue.popBack();
-      if(shiftElementFromQueue) queue.pushFront(shiftElementFromQueue);
-      setMentorDetails(queue.front());
-      return;
-    }
+  // function handlePrev() {
+  //   if(tracker == 1) {
+  //     const shiftElementFromQueue = queue.popBack();
+  //     if(shiftElementFromQueue) queue.pushFront(shiftElementFromQueue);
+  //     setMentorDetails(queue.front());
+  //     return;
+  //   }
 
-    setTracker(tracker - 1);
+  //   setTracker(tracker - 1);
 
-    setMentorDetails((prevDetails) => {
-      const newMentorDetails = [...prevDetails];
-      const shiftedMentorDetails = newMentorDetails.pop();
-      if (shiftedMentorDetails) newMentorDetails.unshift(shiftedMentorDetails);
-      return newMentorDetails.map((mentor, index) => ({
-        ...mentor,
-        cardWrapperTopPosition: mentorCardPositioning.topPositions[index],
-        cardWrapperLeftPosition: mentorCardPositioning.leftPositions[index],
-        cardWrapperZIndex: mentorCardPositioning.zIndexes[index],
-        cardHeight: mentorCardPositioning.cardHeight[index],
-        cardWidth: mentorCardPositioning.cardWidth[index],
-      }));
-    });
-  }
+  //   setMentorDetails((prevDetails) => {
+  //     const newMentorDetails = [...prevDetails];
+  //     const shiftedMentorDetails = newMentorDetails.pop();
+  //     if (shiftedMentorDetails) newMentorDetails.unshift(shiftedMentorDetails);
+  //     return newMentorDetails.map((mentor, index) => ({
+  //       ...mentor,
+  //       cardWrapperTopPosition: mentorCardPositioning.topPositions[index],
+  //       cardWrapperLeftPosition: mentorCardPositioning.leftPositions[index],
+  //       cardWrapperZIndex: mentorCardPositioning.zIndexes[index],
+  //       cardHeight: mentorCardPositioning.cardHeight[index],
+  //       cardWidth: mentorCardPositioning.cardWidth[index],
+  //     }));
+  //   });
+  // }
 
   return (
     <>
@@ -126,10 +126,10 @@ const MentorContainer: FC = () => {
         </div>
 
         {/* Mentor Cards */}
-        <div className='flex flex-row items-center justify-center gap-8 md:gap-0'>
+        <div className='flex flex-row items-center justify-center gap-8 md:gap-[8.5rem]'>
           <button
-            onClick={handlePrev}
-            className='bg-gradient-to-tl flex items-center justify-center translate-x-3 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
+            onClick={handleNext}
+            className='bg-gradient-to-tl flex items-center justify-center translate-x-28 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
           >
             <MdOutlineChevronLeft
               style={{
@@ -158,7 +158,7 @@ const MentorContainer: FC = () => {
             ))}
           </div>
           
-          <button
+          {/* <button
             onClick={handleNext}
             className='bg-gradient-to-tl flex items-center justify-center -translate-x-4 translate-y-1 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
           >
@@ -169,7 +169,7 @@ const MentorContainer: FC = () => {
                 height: '24px',
               }}
             />
-          </button>
+          </button> */}
         </div>
       </div>
 
