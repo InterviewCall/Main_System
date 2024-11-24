@@ -6,11 +6,11 @@ const PrivacyPolicy: FC = () => {
             <div className='w-[80%] mt-24 mx-auto'>
                 <p className='text-3xl'>Privacy Policy</p>
 
-                <p className='mt-6 text-gray-200'>Last Updated: 29/10/24</p>
+                <p className='mt-6 text-[#77838f]'>Last Updated: 29/10/24</p>
 
                 <p className='mt-11 text-xl font-semibold'>Introduction</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         At IVYLEAGUE CSFORALL ACADEMY PRIVATE LIMITED (“InterviewCall,” “we,” “our,” or “us”), we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard personal information, including special or sensitive personal data, when you interact with our website, products, and services (collectively referred to as “Services”). 
                     </p>
@@ -26,13 +26,13 @@ const PrivacyPolicy: FC = () => {
                     <br />
 
                     <p>
-                        This Privacy Policy applies to the InterviewCall website, any subdomains under <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>http://interviewcall.club/</span> , and all associated products and services. Please refer to our Terms of Service for additional information on using our products and Services.
+                        This Privacy Policy applies to the InterviewCall website, any subdomains under <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>http://interviewcall.club/</span> , and all associated products and services. Please refer to our Terms of Service for additional information on using our products and Services.
                     </p>
                 </div>
 
                 <p className='mt-11 text-xl font-semibold'>Scope and Applicability of Policy</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         This policy outlines InterviewCall’s, its subsidiaries’, and affiliated companies’ practices for handling personal information and how we collect and use information provided by you during your use or access of our systems, which include online interfaces such as our website and mobile applications (collectively, “Company Systems”).
                     </p>
@@ -68,7 +68,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Information We Collect</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We collect information that you choose to share with us. You decide what information to provide, and we only collect data that you voluntarily submit through the Company Systems. The types of information we may collect include:
                     </p>
@@ -124,7 +124,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Third-Party Information and Integrations</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We may occasionally supplement your information with data received from affiliated entities, business partners, and other third-party sources. For example, if you access or log in to our systems via third-party platforms like Facebook, Twitter, or LinkedIn, we may collect your registration details and other updates from these platforms, integrating them into your Company Systems account.
                     </p>
@@ -146,7 +146,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>How We Use Your Information</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         InterviewCall uses your information to provide, improve, and secure our Services. This includes, but is not limited to:
                     </p>
@@ -196,7 +196,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Sharing of Information</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We only share your personal information in specific circumstances, such as:
                     </p>
@@ -219,7 +219,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Data Security</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We implement reasonable security measures to protect your information against unauthorized access, alteration, and loss. However, please note that no transmission over the internet or electronic storage is entirely secure.
                     </p>
@@ -227,7 +227,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Data Retention</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                     We retain your personal data only as long as necessary to fulfill the purposes outlined in this policy unless a longer retention period is required by law. Upon request, we will delete your data from our systems, subject to applicable legal requirements.
                     </p>
@@ -235,7 +235,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Your Rights</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         Depending on your location, you may have rights regarding your personal data, including:
                     </p>
@@ -292,7 +292,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>International Data Transfers</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         As a global service, InterviewCall may transfer and store your data outside of your country. We take appropriate steps to protect your data in compliance with applicable laws.
                     </p>
@@ -300,15 +300,15 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Consent</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
-                        Your decision to provide Personal Data to InterviewCall is entirely voluntary and is considered granted when you register and create an account on our Company Systems. Please be aware that some options, offers, and services may not be accessible if you choose not to provide the required Personal Data. By signing up, you consent to receive email or newsletter communications from us. Should you wish to discontinue these communications, you can update your preferences using the ‘Unsubscribe’ link in the emails or by contacting us at <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>hello@interviewcall.club</span>
+                        Your decision to provide Personal Data to InterviewCall is entirely voluntary and is considered granted when you register and create an account on our Company Systems. Please be aware that some options, offers, and services may not be accessible if you choose not to provide the required Personal Data. By signing up, you consent to receive email or newsletter communications from us. Should you wish to discontinue these communications, you can update your preferences using the ‘Unsubscribe’ link in the emails or by contacting us at <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>hello@interviewcall.club</span>
                     </p>
                 </div>
 
                 <p className='mt-11 text-xl font-semibold'>How We Use Your Information</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         InterviewCall will use your Personal Data in accordance with this policy. If you prefer that we stop using your Personal Data in this manner, you may request the deactivation of your account via the account settings.
                     </p>
@@ -375,7 +375,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>User Data Collection and Privacy Right</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We utilize various systems for organizing and storing your data, including AWS Relational Database, which serves as the main database for user information, and Google Analytics for monitoring and analyzing website traffic. You have certain rights concerning your Personal Data, including the right to request more information about the data we hold about you and obtain a copy, request corrections to any inaccurate or incomplete data (which you can also update through your user profile), inform us if you object to the collection or use of your Personal Data for certain purposes, and request deletion of some or all of your Personal Data. While we will act promptly on deletion requests, some residual data may be retained in logs and purged within a year. You can also request the deactivation of your account to limit further processing of your data, ask for a copy of your Personal Data in a machine-readable format, and withdraw your consent at any time if your data is processed based on your consent.
                     </p>
@@ -384,7 +384,7 @@ const PrivacyPolicy: FC = () => {
                     <br />
 
                     <p>
-                        We retain your data as long as you have an active account. If you request deletion, it will be completed within thirty (30) days, although some residual data may remain in logs and will be purged within a year. After deletion, your account with InterviewCall will no longer exist. For deletion requests, please contact <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>support@interviewcall.club</span>
+                        We retain your data as long as you have an active account. If you request deletion, it will be completed within thirty (30) days, although some residual data may remain in logs and will be purged within a year. After deletion, your account with InterviewCall will no longer exist. For deletion requests, please contact <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>support@interviewcall.club</span>
                     </p>
 
                     <br />
@@ -425,7 +425,7 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Policy Updates</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
                         We may update this policy periodically. We encourage you to review this policy whenever you use our Services to stay informed about our practices.
                     </p>
@@ -433,31 +433,31 @@ const PrivacyPolicy: FC = () => {
 
                 <p className='mt-11 text-xl font-semibold'>Grievances:</p>
 
-                <div className='mt-5 text-gray-300'>
+                <div className='mt-5 text-[#77838f]'>
                     <p>
-                        If you have any concerns or grievances regarding our policy, the collection or storage of your information, or any other matter related to your personal data provided to us, please reach out to us at <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>hello@interviewcall.club</span> . We will make every reasonable effort to address and resolve your grievance within 30 days from the date of receipt.
+                        If you have any concerns or grievances regarding our policy, the collection or storage of your information, or any other matter related to your personal data provided to us, please reach out to us at <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>hello@interviewcall.club</span> . We will make every reasonable effort to address and resolve your grievance within 30 days from the date of receipt.
                     </p>
                 </div>
 
                 <p className='mt-11 text-xl font-semibold'>Contact Us</p>
 
-                <div className='mt-5 text-gray-300 mb-20'>
+                <div className='mt-5 text-[#77838f] mb-20'>
                     <p>
-                    If you have any questions or concerns about this Privacy Policy or our data practices, please reach out to us at <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>info@interviewcall.club</span>.
+                        If you have any questions or concerns about this Privacy Policy or our data practices, please reach out to us at <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>info@interviewcall.club</span>.
                     </p>
 
                     <br />
                     <br />
 
                     <p>
-                    If you have any security concerns, please contact us at <span className='text-white font-semibold hover:text-blue-600 duration-300 cursor-pointer'>security@interviewcall.club</span>
+                        If you have any security concerns, please contact us at <span className='text-black font-semibold hover:text-blue-600 duration-300 cursor-pointer'>security@interviewcall.club</span>
                     </p>
 
                     <br />
                     <br />
 
                     <p>
-                    This policy should be read alongside any other agreements you may have with InterviewCall and the Terms of Service published on our website. By accepting this policy, you expressly consent to InterviewCall’s use and disclosure of your personal information as outlined herein.
+                        This policy should be read alongside any other agreements you may have with InterviewCall and the Terms of Service published on our website. By accepting this policy, you expressly consent to InterviewCall’s use and disclosure of your personal information as outlined herein.
                     </p>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const FAQSection: FC = () => {
         else setSelectedDropdown(index);
     }
     return (
-        <div className='px-4 md:px-24 py-24 flex flex-col md:space-y-24 space-y-12'>
+        <div className='bg-black px-4 md:px-24 py-24 flex flex-col md:space-y-24 space-y-12'>
             <p className='uppercase font-medium text-white md:text-5xl text-2xl'>
                 Frequently Asked <br />{' '}
                 <span className='text-[#1CFDE4]'>Questions</span>
