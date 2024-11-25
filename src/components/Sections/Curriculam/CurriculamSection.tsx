@@ -26,13 +26,12 @@ import {
   Triangle,
   Users,
 } from '@/assets/CurriculamSectionAssets';
-import AnimatedWrapperImages from '@/components/Caraousel/AnimatedWrapperImages';
+import { Companies } from '@/utils';
 
 // import { Companies } from '@/utils';
 import Caraousel from './Caraousel';
 import CourseCurriculam from './CourseCurriculam';
 import MentorContainer from './MentorContainer';
-import { Companies } from '@/utils';
 
 const CurriculamSection: FC = () => {
   return (

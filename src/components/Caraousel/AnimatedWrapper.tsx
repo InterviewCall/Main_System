@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+
 import Google from '~/Logos/Google.png';
 
 const AnimatedWrapper: React.FC = () => {
