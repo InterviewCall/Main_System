@@ -25,7 +25,7 @@ const MasterClassPage: FC = () => {
       // Create and inject the script
       const script = document.createElement('script');
       script.src =
-        'https://event.webinarjam.com/register/31ywotn/embed-form?formButtonText=Register&formAccentColor=%2329b6f6&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
+        'https://event.webinarjam.com/register/962zwbw/embed-form?formButtonText=REGISTER%20FOR%20FREE&formAccentColor=%23FF516C&formAccentOpacity=1&formBgColor=%23ffffff&formBgOpacity=1';
       script.async = true;
       script.onload = () => {
         console.log('Webinar script loaded successfully');
@@ -65,7 +65,7 @@ const MasterClassPage: FC = () => {
       {/* Webinar Embed */}
       <div
         className='md:fixed md:top-[18%] md:right-16 w-64 h-28 z-10 rounded-md wj-embed-wrapper'
-        data-webinar-hash='31ywotn'
+        data-webinar-hash='962zwbw'
         ref={scriptContainerRef}
       ></div>
 

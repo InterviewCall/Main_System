@@ -26,10 +26,13 @@ import {
   Triangle,
   Users,
 } from '@/assets/CurriculamSectionAssets';
+import AnimatedWrapperImages from '@/components/Caraousel/AnimatedWrapperImages';
 
+// import { Companies } from '@/utils';
 import Caraousel from './Caraousel';
 import CourseCurriculam from './CourseCurriculam';
 import MentorContainer from './MentorContainer';
+import { Companies } from '@/utils';
 
 const CurriculamSection: FC = () => {
   return (
@@ -361,6 +364,33 @@ const CurriculamSection: FC = () => {
                 <Triangle />
               </div>
             </div>
+
+            <div className='md:hidden block'>
+              <div className='relative mask-linear'>
+                <Marquee autoFill direction='right'>
+                    <div className='flex'>
+                      {Companies.map((item, index) => (
+                        <Image key={index} src={item} width={80} height={80} alt='image' />
+                      ))}
+                    </div>
+                </Marquee>
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black to-transparent opacity-50 pointer-events-none"></div> */}
+              </div>
+
+              <div className='relative mask-linear'>
+                <Marquee speed={30} autoFill direction='left'>
+                    <div className='flex'>
+                      {Companies.map((item, index) => (
+                        <Image key={index} src={item} width={80} height={80} alt='image' />
+                      ))}
+                    </div>
+                </Marquee>
+              </div>
+            </div>
+
+            {/* <div className='w-full md:hidden block'>
+              <AnimatedWrapperImages />
+            </div> */}
           </div>
         </div>
       </div>

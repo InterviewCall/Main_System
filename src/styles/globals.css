@@ -256,3 +256,89 @@
 }
 
 
+@layer utilities {
+  .mask-linear {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  @keyframes scrollLeft {
+    to {
+      left: -30vw; /* Set the final position based on viewport width */
+    }
+  }
+
+  @keyframes scrollRight {
+    to {
+      left: -10vw; /* Set the final position based on viewport width */
+    }
+  }
+
+  @keyframes scrollLeftImages {
+    to {
+      left: -50vw; /* Set the final position based on viewport width */
+    }
+  }
+
+  @keyframes scrollRightImages {
+    to {
+      left: -10vw; /* Set the final position based on viewport width */
+    }
+  }
+
+  .itemLeft {
+    width: 9vw;
+    height: 20vh;
+    animation: scrollLeft linear 30s infinite;
+    left: 100%; /* Start at the end of the viewport */
+  }
+
+  @media (max-width: 640px) {
+    @keyframes scrollLeft {
+      to {
+        left: -280vw; /* Set the final position based on viewport width */
+      }
+    }
+    .itemLeft {
+      width: 25vw;
+      height: 15vh;
+    }
+  }
+
+  .itemRight {
+    width: 9vw; /* Adjust width to be a percentage of the viewport */
+    height: 20vh; /* Set height to be a percentage of the viewport height */
+    animation: scrollLeft linear 30s infinite;
+    left: 100%; /* Start at the end of the viewport */
+  }
+
+  .itemLeftImages {
+    /* width: 9vw; Adjust width to be a percentage of the viewport */
+    /* height: 20vh; Set height to be a percentage of the viewport height */
+    width: 10vw;
+    height: 10vw;
+    animation: scrollLeftImages linear 30s infinite;
+    left: 100%; /* Start at the end of the viewport */
+  }
+
+  .itemRightImages {
+    width: 10vw;
+    height: 10vw;
+    animation: scrollLeftImages linear 30s infinite;
+    left: 100%; /* Start at the end of the viewport */
+  }
+}
+
+

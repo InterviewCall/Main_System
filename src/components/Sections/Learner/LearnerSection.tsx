@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
-import { Learners } from '@/utils';
+import AnimatedWrapper from '@/components/Caraousel/AnimatedWrapper';
+// import { Learners } from '@/utils';
 import MeetLearners from '~/images/MeetLearners.png';
 
-import LearnerCard from './LearnerCard';
+// import LearnerCard from './LearnerCard';
 
 const LearnerSection: FC = () => {
   return (
@@ -13,7 +14,11 @@ const LearnerSection: FC = () => {
       <p className='md:hidden block text-5xl font-bold bg-clip-text text-transparent bg-text-gradient'>
         Meet Our Past Learners
       </p>
-      <div className='flex md:flex-row md:justify-evenly flex-col items-end mx-auto md:mx-0 gap-8'>
+
+      <div className='w-full'>
+        <AnimatedWrapper />
+      </div>
+      {/* <div className='flex md:flex-row md:justify-evenly flex-col items-end mx-auto md:mx-0 gap-8'>
         {Learners.map((learner, index) => (
           <LearnerCard
             key={index}
@@ -25,7 +30,7 @@ const LearnerSection: FC = () => {
             learnerImageHeight={learner.learnerImageHeight}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

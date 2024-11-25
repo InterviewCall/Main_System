@@ -6,7 +6,7 @@ const WebinarEmbed = () => {
   useEffect(() => {
     // Dynamically add the external script after the component mounts
     const script = document.createElement('script');
-    script.src = 'https://event.webinarjam.com/register/31ywotn/embed-form?formButtonText=Register&formAccentColor=%2329b6f6&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
+    script.src = 'https://event.webinarjam.com/register/962zwbw/embed-form?formButtonText=REGISTER%20FOR%20FREE&formAccentColor=%23FF516C&formAccentOpacity=1&formBgColor=%23ffffff&formBgOpacity=1';
     script.async = true;
     document.querySelector('.wj-embed-wrapper')?.appendChild(script);
 
@@ -20,7 +20,7 @@ const WebinarEmbed = () => {
   });
 
   return (
-    <div className="wj-embed-wrapper" data-webinar-hash="31ywotn">
+    <div className="wj-embed-wrapper" data-webinar-hash="962zwbw">
       {/* The script will inject content into this wrapper */}
     </div>
   );

@@ -1,3 +1,14 @@
+import {
+  Amazon,
+  Apple,
+  Atlassian,
+  Google,
+  Lyft,
+  Meta,
+  Microsoft,
+  Netflix,
+  Zomato,
+} from '@/assets/CurriculamSectionAssets';
 import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, IHeroStat, Learner, MasterClassAlumni, Mentor } from '@/types';
 import A1 from '~/images/Alumni1.png';
 import A2 from '~/images/Alumni2.png';
@@ -67,7 +78,7 @@ export const HeroSectionStats: IHeroStat[] = [
       }
     },
 ];
-
+// videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Abhinay-Final-Testimonial.mp4',
 export const AlumniCards: AlumniCard[] = [
   {
     cardImage: A3,
@@ -89,7 +100,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Shivansh Yashasvi',
     checkTitle: 'SDE - ION',
     alumniJobDesc: 'Offer @Amazon, ION, CISCO',
-    videoPath: 'https://vimeo.com/1032879783/b2d99a7724?share=copy',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Shivansh-Testimonial-Final.mp4',
     alumniJobDescTextColor: 'text-[#FF4C65]',
     cardWrapperShadowColor: 'shadow-red-multi',
     cardWrapperBackgroundColor: 'bg-[#FF4C65]',
@@ -105,7 +116,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Rounak Goswami',
     checkTitle: 'SDE - Morgan Stanley',
     alumniJobDesc: 'Offer - Morgan Stanley',
-    videoPath: 'https://www.youtube.com/watch?v=ts0jdgB8UC8',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Rounak-Final-Testiminial.mp4',
     alumniJobDescTextColor: 'text-[#00C2FF]',
     cardWrapperShadowColor: 'shadow-blue-multi',
     cardWrapperBackgroundColor: 'bg-[#00C2FF]',
@@ -675,3 +686,23 @@ export default function isValidMobileNumber(mobileNumber: string): boolean {
   const indianMobilePattern = /^[6-9]\d{9}$/;
   return indianMobilePattern.test(mobileNumber);
 }
+
+export const Companies = [Amazon, Apple, Atlassian, Lyft, Zomato, Google, Meta, Microsoft, Netflix, Lyft, Meta, Atlassian];
+
+export const row1 = [
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/7ae42bac3b34999c0db3.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/b2bd91d7b87b2181ca45.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6591cdc0702b32310306.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3b7d9f4b073deb6a9b74.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3cd767dea94a85078ca4.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/a2b3c3709ffedce2a22a.png',
+];
+
+export const row2 = [
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/9dd55e54b5a28658bf4e.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/0384060dcbf73b6a707c.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/35e044b3354aaa0caed5.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/f50ae7cbf6cc805bdadc.png',
+  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png',
+];
