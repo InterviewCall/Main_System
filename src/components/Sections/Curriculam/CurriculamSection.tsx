@@ -366,14 +366,13 @@ const CurriculamSection: FC = () => {
 
             <div className='md:hidden block'>
               <div className='relative mask-linear'>
-                <Marquee autoFill direction='right'>
+                <Marquee speed={30} autoFill direction='right'>
                     <div className='flex'>
                       {Companies.map((item, index) => (
                         <Image key={index} src={item} width={80} height={80} alt='image' />
                       ))}
                     </div>
                 </Marquee>
-                {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black to-transparent opacity-50 pointer-events-none"></div> */}
               </div>
 
               <div className='relative mask-linear'>
