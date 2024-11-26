@@ -108,8 +108,9 @@ const MasterClass: FC = () => {
               first_name: getValues('first_name'),
               email: getValues('email'),
               phone: getValues('phone'),
-              webinar_id: 1,
-              schedule: 1,
+              webinar_id: 6,
+              schedule: 9,
+              phone_country_code: '+91'
             }),
           });
       
