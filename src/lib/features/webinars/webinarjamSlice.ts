@@ -1,5 +1,6 @@
-import { WebinarResponse } from "@/types";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+import { WebinarResponse } from '@/types';
 
 const initialState: WebinarResponse = {
     status: 'error',
@@ -20,7 +21,7 @@ const initialState: WebinarResponse = {
         replay_room_url: '',
         thank_you_url: '',
     }
-}
+};
 
 const WebinarResponseSlice = createSlice({
     name: 'WebinarResponse',
@@ -32,5 +33,5 @@ const WebinarResponseSlice = createSlice({
     }
 });
 
-const { handleResponse } = WebinarResponseSlice.actions;
+export const { handleResponse } = WebinarResponseSlice.actions;
 export default WebinarResponseSlice.reducer;

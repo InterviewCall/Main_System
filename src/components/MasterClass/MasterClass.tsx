@@ -1,62 +1,48 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { FC, FormEvent, useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import axios, { AxiosError, AxiosResponse } from 'axios';
+import Image from 'next/image';
+import { FC, FormEvent, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import OTPInput from 'react-otp-input';
 
-import AlumniCard from "@/components/Sections/MasterClass/AlumniCard";
-import {
-  handleEmail,
-  handleFirstName,
-  handlePhone,
-} from "@/lib/features/webinars/webinarjamRequestSlice";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { RequestOtp, ResponseOtp, WebinarRequest, Channel, VerifyOtpResponse, WebinarResponse } from "@/types";
+import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
+import { Channel, RequestOtp, ResponseOtp, VerifyOtpResponse, WebinarRequest, WebinarResponse } from '@/types';
 import {
     initiateOtp,
-  isValidEmail,
-  isValidMobileNumber,
   MasterClassAlumnis,
   MasterclassMentorQualification,
   MasterclassSessionLearn,
   otpVerification,
   registerWebinarJam,
-} from "@/utils";
-import MasterClassLearnerCard1 from "~/images/MasterClassLearnerCard1.png";
-import MasterClassLearnerCard2 from "~/images/MasterClassLearnerCard2.png";
-import MasterClassLearnerCard3 from "~/images/MasterClassLearnerCard3.png";
-import MasterClassTop from "~/images/MasterclassTop.png";
+} from '@/utils';
+import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
+import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
+import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
+import MasterClassTop from '~/images/MasterclassTop.png';
 
-import Loader from "../Sections/Hero/Loader";
-import OTPInput from "react-otp-input";
-import Timer from "../Sections/Hero/Timer";
-import axios, { AxiosError, AxiosResponse } from "axios";
-import toast from "react-hot-toast";
-import { redirect } from "next/navigation";
+import Timer from '../Sections/Hero/Timer';
 
 const MasterClass: FC = () => {
-  const webinarRequestState = useAppSelector((state) => state.webinarRequest);
   const {
     register,
-    reset,
     handleSubmit,
     getValues,
     formState: { errors },
   } = useForm<WebinarRequest>({
     defaultValues: {
-      first_name: "",
-      email: "",
-      phone: "",
+      first_name: '',
+      email: '',
+      phone: '',
     },
   });
 
-  const [isLoading, setIsLoading] = useState(false);
   const [stepOtp, setStepOtp] = useState(false);
-  const [errorOtp, setErrorOtp] = useState<string | undefined>("");
+  const [errorOtp, setErrorOtp] = useState<string | undefined>('');
   const [otp, setOtp] = useState('');
   const [startTime, setStartTime] = useState(false);
   const [requestId, setRequestId] = useState('');
-  const dispatch = useAppDispatch();
 
 
   async function requestOtp() {
@@ -96,7 +82,7 @@ const MasterClass: FC = () => {
 
   async function verifyOtp(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if(otp) setIsLoading(true);
+    
 
     try {
         await axios.post(
@@ -163,7 +149,7 @@ const MasterClass: FC = () => {
         // });
         // console.log(response.data);
     } catch (error) {
-      setIsLoading(false);
+
       const otpError = error as AxiosError<VerifyOtpResponse>;
       setErrorOtp(otpError.response?.data.description);
     }
@@ -224,7 +210,7 @@ const MasterClass: FC = () => {
           >
             <div className="flex flex-col items-center justify-between gap-y-6 mt-6">
               <p className="text-lg text-black">
-                Enter OTP sent to the mobile number{" "}
+                Enter OTP sent to the mobile number{' '}
                 <span className="block text-sm text-black text-center">
                   #{getValues('phone')}
                 </span>
@@ -236,12 +222,12 @@ const MasterClass: FC = () => {
                 renderSeparator={<span className="w-6"></span>}
                 renderInput={(props) => <input {...props} />}
                 inputStyle={{
-                  width: "50px",
-                  height: "60px",
-                  borderRadius: "8px",
-                  fontSize: "1.5rem",
-                  outline: "none",
-                  border: "1px solid gray",
+                  width: '50px',
+                  height: '60px',
+                  borderRadius: '8px',
+                  fontSize: '1.5rem',
+                  outline: 'none',
+                  border: '1px solid gray',
                 }}
               />
               {errorOtp && <p className="text-red-400 text-lg">{errorOtp}</p>}
@@ -267,8 +253,8 @@ const MasterClass: FC = () => {
                 First Name<span className="text-red-500">*</span>
               </p>
               <input
-                {...register("first_name", {
-                  required: "First Name is Required",
+                {...register('first_name', {
+                  required: 'First Name is Required',
                 })}
                 className="w-full rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
                 placeholder="Enter First Name"
@@ -285,11 +271,11 @@ const MasterClass: FC = () => {
                 Email<span className="text-red-500">*</span>
               </p>
               <input
-                {...register("email", {
-                  required: "Email is Required",
+                {...register('email', {
+                  required: 'Email is Required',
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: "Invalid Email Address",
+                    message: 'Invalid Email Address',
                   },
                 })}
                 className="w-full rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
@@ -309,11 +295,11 @@ const MasterClass: FC = () => {
                   +91
                 </div>
                 <input
-                  {...register("phone", {
-                    required: "Phone Number is Required",
+                  {...register('phone', {
+                    required: 'Phone Number is Required',
                     pattern: {
                       value: /^[6-9]\d{9}$/,
-                      message: "Invalid Phone Number",
+                      message: 'Invalid Phone Number',
                     },
                   })}
                   className="w-full rounded-e-md focus:rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
