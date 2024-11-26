@@ -12,6 +12,7 @@ import Header from '@/components/Header/Header';
 import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
 
+
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ export default function RootLayout({
       <body>
         <Header />
         <Toaster position='top-center' />
-        <div className='pt-20'>{children}</div>
+          <div className='pt-20'>{children}</div>
         <FooterSection />
       </body>
     </html>

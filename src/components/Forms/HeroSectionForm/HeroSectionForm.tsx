@@ -18,7 +18,7 @@ import {
   ResponseOtp,
   VerifyOtpResponse,
 } from '@/types';
-import isValidMobileNumber, { initiateOtp, otpVerification } from '@/utils';
+import { initiateOtp, isValidMobileNumber, otpVerification } from '@/utils';
 import Rocket from '~/images/Rocket.png';
 
 const HeroSectionForm: FC = () => {
@@ -172,7 +172,7 @@ const HeroSectionForm: FC = () => {
                   }}
                 />
                 {errorOtp && <p className='text-red-400 text-lg'>{errorOtp}</p>}
-                <Timer startTime={startTime} sendOtp={sendOtp} />
+                <Timer textColor='text-white' startTime={startTime} requestOtp={sendOtp} />
               </div>
             )}
           </div>

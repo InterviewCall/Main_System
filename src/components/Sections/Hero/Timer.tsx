@@ -3,11 +3,12 @@
 import { FC, useEffect, useRef, useState } from 'react';
 
 interface TimerProps {
-  sendOtp: () => Promise<void>
+  requestOtp: () => Promise<void>
   startTime: boolean
+  textColor: string
 }
 
-const Timer: FC<TimerProps> = ({ sendOtp, startTime }) => {
+const Timer: FC<TimerProps> = ({ requestOtp, startTime, textColor }) => {
     const [diff, setDiff] = useState(60 * 1000);
     const id = useRef<NodeJS.Timeout>(null!);
   
@@ -29,7 +30,7 @@ const Timer: FC<TimerProps> = ({ sendOtp, startTime }) => {
     const time = (Math.ceil(diff / 1000));
     return (
       <div className='text-white'>
-        <p onClick={sendOtp} className={`text-lg ${time == 0 ? 'cursor-pointer text-blue-700 hover:text-blue-500 duration-300 hover:scale-90' : 'cursor-none pointer-events-none'}`}>
+        <p onClick={requestOtp} className={`text-lg ${textColor} ${time == 0 ? 'cursor-pointer text-blue-700 hover:text-blue-500 duration-300 hover:scale-90' : 'cursor-none pointer-events-none'}`}>
             Resend OTP 
             {time != 0 && (
                 <span>({`00:${String(time).padStart(2, '0')}`})</span>

@@ -187,3 +187,37 @@ export interface VerifyOtpResponse {
 }
 
 export type PageSwipe = 'mern' | 'job-switch' | 'masterclass';
+
+export interface WebinarUser {
+    webinar_id: number;
+    webinar_hash: string;
+    user_id: number | null;
+    first_name: string;
+    last_name: string | null;
+    phone_country_code: string | null;
+    phone: string | null;
+    email: string;
+    password: string | null;
+    schedule: number | null;
+    date: string; // ISO 8601 datetime string
+    timezone: string;
+    live_room_url: string;
+    replay_room_url: string;
+    thank_you_url: string;
+}
+  
+export interface WebinarResponse {
+    status: 'success' | 'error'; // Assuming status can be either "success" or "error"
+    user: WebinarUser;
+}
+
+export interface WebinarRequest {
+    api_key: string | undefined
+    webinar_id: number
+    first_name: string
+    email: string
+    schedule: number
+    phone: string
+}
+
+export type MasterclassFormInput = WebinarRequest;

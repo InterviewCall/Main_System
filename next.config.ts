@@ -30,6 +30,10 @@ const nextConfig = {
         hostname: 'assets.algoexpert.io',
         pathname: '/spas/main/prod/**', // Add this for path specificity if needed
       },
+      {
+        protocol: 'https',
+        hostname: 'www.facebook.com', // Add this for Facebook URLs
+      },
     ],
   },
 

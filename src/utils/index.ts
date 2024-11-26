@@ -609,11 +609,6 @@ export const FooterSectionArray: FooterSectionArrayType[] = [
   }
 ];
 
-export const verifyEmailFormat = (email: string) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-
 export const MasterclassSessionLearn = [
   'Learn how data science helps e-commerce platforms offer personalised product recommendations.',
   'Understand how data models forecast customer demand for better inventory management.',
@@ -682,9 +677,18 @@ export function otpVerification() {
   return 'https://auth.otpless.app/auth/v1/verify/otp';
 }
 
-export default function isValidMobileNumber(mobileNumber: string): boolean {
+export function registerWebinarJam() {
+  return 'https://api.webinarjam.com/webinarjam/register';
+}
+
+export function isValidMobileNumber(mobileNumber: string): boolean {
   const indianMobilePattern = /^[6-9]\d{9}$/;
   return indianMobilePattern.test(mobileNumber);
+}
+
+export function isValidEmail(email: string): boolean {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
 }
 
 export const Companies = [Amazon, Apple, Atlassian, Lyft, Zomato, Google, Meta, Microsoft, Netflix, Lyft, Meta, Atlassian];
