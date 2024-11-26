@@ -6,7 +6,8 @@ export const makeStore = () => {
     return configureStore({
         reducer: {
             webinarResponse: WebinarResponseReducer
-        }
+        },
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
     });
 };
 
