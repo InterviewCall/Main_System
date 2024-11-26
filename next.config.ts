@@ -7,6 +7,18 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+  async rewrites() {
+    if (process.env.NODE_ENV === 'development') {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'https://api.webinarjam.com/:path*',
+        },
+      ];
+    }
+    return [];
+  },
+
   images: {
     remotePatterns: [
       {

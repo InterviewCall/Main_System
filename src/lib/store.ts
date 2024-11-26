@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import WebinarRequestReducer from './features/webinars/webinarjamRequestSlice';
+import WebinarResponseReducer from './features/webinars/webinarjamResponseSlice';
 
 export const makeStore = () => {
     return configureStore({
         reducer: {
-            webinarRequest: WebinarRequestReducer
+            webinarResponse: WebinarResponseReducer
         }
     });
 };

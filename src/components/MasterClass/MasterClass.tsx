@@ -8,14 +8,15 @@ import toast from 'react-hot-toast';
 import OTPInput from 'react-otp-input';
 
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
-import { Channel, RequestOtp, ResponseOtp, VerifyOtpResponse, WebinarRequest, WebinarResponse } from '@/types';
+import { registerForWebinar } from '@/lib/features/webinars/webinarjamResponseSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { Channel, RequestOtp, ResponseOtp, VerifyOtpResponse, WebinarRequest } from '@/types';
 import {
     initiateOtp,
   MasterClassAlumnis,
   MasterclassMentorQualification,
   MasterclassSessionLearn,
   otpVerification,
-  registerWebinarJam,
 } from '@/utils';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
@@ -25,6 +26,8 @@ import MasterClassTop from '~/images/MasterclassTop.png';
 import Timer from '../Sections/Hero/Timer';
 
 const MasterClass: FC = () => {
+  const webinarResponse = useAppSelector((state) => state.webinarResponse);
+  const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
@@ -71,7 +74,6 @@ const MasterClass: FC = () => {
             success: 'OTP Generated',
             error: 'Something went wrong, try again'
         });
-        await response;
         setRequestId(response.data.requestId);
         setStepOtp(true);
       } catch (error) {
@@ -98,38 +100,17 @@ const MasterClass: FC = () => {
         );
         setStepOtp(false);
 
-        const response = await fetch(registerWebinarJam(), {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              api_key: process.env.NEXT_PUBLIC_API_KEY,
-              first_name: getValues('first_name'),
-              email: getValues('email'),
-              phone: getValues('phone'),
-              webinar_id: 6,
-              schedule: 9,
-              phone_country_code: '+91'
-            }),
-          });
-      
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-      
-          const data: WebinarResponse = await response.json();
-      
-          toast.promise(
-            Promise.resolve(data),
-            {
-              loading: 'Loading',
-              success: 'Verified Successfully',
-              error: 'Something went wrong, try again',
-            }
-          );
-      
-          console.log(data);
+        const requestObject: WebinarRequest = {
+          api_key: process.env.NEXT_PUBLIC_API_KEY,
+          webinar_id: 1,
+          first_name: getValues('first_name'),
+          email: getValues('email'),
+          schedule: 1,
+          phone: getValues('phone')
+        };
+
+        await dispatch(registerForWebinar(requestObject));
+        console.log(webinarResponse);
 
         // const response: AxiosResponse<WebinarResponse> = await axios.post(registerWebinarJam(), {
         //     api_key: process.env.NEXT_PUBLIC_API_KEY,
