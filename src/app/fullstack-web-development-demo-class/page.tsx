@@ -22,11 +22,11 @@ const MasterClassPage: FC = () => {
     <div className='bg-white relative'>
       {/* Top Image */}
       <div className='w-full mt-8 md:block hidden'>
-        <Image src={FSWD_MD} alt='MasterClassTop' />
+        <Image src={FSWD_MD} alt='MasterClassTop' loading='lazy' />
       </div>
 
       <div className='w-full md:hidden block'>
-        <Image src={FSWD_SM} alt='MasterClassTop' />
+        <Image src={FSWD_SM} alt='MasterClassTop' loading='lazy' />
       </div>
 
       <MasterclassForm />
@@ -40,7 +40,7 @@ const MasterClassPage: FC = () => {
 
         {/* Session Details */}
         <div className='flex flex-col md:flex-row mt-4 gap-3 md:gap-x-5'>
-          <p className='text-[#5a6273] flex text-sm gap-x-3'>
+          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>STARTS ON:</span>
             <span>November 19, 2024 7:30 PM (IST)</span>
           </p>
@@ -114,7 +114,7 @@ const MasterClassPage: FC = () => {
             What our Learners have to say
           </p>
         </div>
-        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-5 justify-center items-center'>
+        <div className='flex md:flex-row flex-col md:ml-16  mt-7 gap-4 md:gap-5 justify-center items-center'>
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'

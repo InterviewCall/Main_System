@@ -201,7 +201,7 @@ const MasterclassForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className="bg-white w-full md:max-w-[29vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[9.8rem] md:right-[2rem] p-8"
+            className="bg-white w-full md:max-w-[33vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[9.8rem] md:right-[2rem] p-8"
             noValidate
           >
             <div className="w-full flex flex-col gap-y-1">

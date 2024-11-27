@@ -24,11 +24,11 @@ const MasterClassPage: FC = () => {
     <div className='bg-white relative'>
       {/* Top Image */}
       <div className='w-full mt-8 md:block hidden'>
-        <Image src={JobSwitch_MD} alt='MasterClassTop' layout='responsive' />
+        <Image src={JobSwitch_MD} alt='MasterClassTop' loading='lazy' />
       </div>
 
       <div className='w-full md:hidden block'>
-        <Image src={JobSwitch_SM} alt='MasterClassTop' layout='responsive' />
+        <Image src={JobSwitch_SM} alt='MasterClassTop' loading='lazy' />
       </div>
 
       {/* Webinar Embed */}
@@ -49,7 +49,7 @@ const MasterClassPage: FC = () => {
 
         {/* Session Details */}
         <div className='flex flex-col md:flex-row mt-4 gap-3 md:gap-x-5'>
-          <p className='text-[#5a6273] flex text-sm gap-x-3'>
+          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>STARTS ON:</span>
             <span>November 19, 2024 7:30 PM (IST)</span>
           </p>
