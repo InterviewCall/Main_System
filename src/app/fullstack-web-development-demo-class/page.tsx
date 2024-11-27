@@ -118,20 +118,23 @@ const MasterClassPage: FC = () => {
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'
-            width={300}
+            width={250}
             height={200}
+            className='shadow-[16px_14px_15px_-3px_rgba(0,0,0,0.1)] rounded-md'
           />
           <Image
             src={MasterClassLearnerCard2}
             alt='Learner 2'
-            width={300}
+            width={250}
             height={200}
+            className='shadow-[16px_14px_15px_-3px_rgba(0,0,0,0.1)] rounded-md'
           />
           <Image
             src={MasterClassLearnerCard3}
             alt='Learner 3'
-            width={300}
+            width={250}
             height={200}
+            className='shadow-[16px_14px_15px_-3px_rgba(0,0,0,0.1)] rounded-md'
           />
         </div>
 
