@@ -208,7 +208,7 @@ const FSWDForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className="bg-white w-full md:max-w-[31vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[17%] md:right-[2%] p-8"
+            className="bg-white w-full md:max-w-[31vw] flex flex-col gap-y-2 md:fixed md:top-[17%] md:right-[2%] p-8"
             noValidate
           >
             <div className='w-full flex flex-col gap-y-1'>
