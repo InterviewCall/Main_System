@@ -704,7 +704,7 @@ export function otpVerification() {
 }
 
 export function registerWebinarJam() {
-  return 'https://api.webinarjam.com/webinarjam/webinar';
+  return 'https://api.webinarjam.com/webinarjam/register';
 }
 
 export function isValidMobileNumber(mobileNumber: string): boolean {

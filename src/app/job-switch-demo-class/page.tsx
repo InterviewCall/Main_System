@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
-import MasterclassForm from '@/components/Forms/MasterclassForm/MasterclassForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import {
   MasterClassAlumnis,
@@ -30,15 +29,6 @@ const MasterClassPage: FC = () => {
       <div className='w-full md:hidden block'>
         <Image src={JobSwitch_SM} alt='MasterClassTop' loading='lazy' />
       </div>
-
-      {/* Webinar Embed */}
-      {/* <div
-        className='md:fixed md:top-[18%] md:right-16 w-64 h-28 z-10 rounded-md wj-embed-wrapper'
-        data-webinar-hash='31ywotn'
-        ref={scriptContainerRef}
-      ></div> */}
-
-      <MasterclassForm />
 
       {/* Main Content */}
       <div className='w-full md:w-[65%] mt-14 px-4 md:pl-16'>

@@ -1,7 +1,7 @@
 'use client';
 
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { FC, FormEvent, useState } from 'react';
+import { FC, FormEvent, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import OTPInput from 'react-otp-input';
@@ -15,6 +15,30 @@ import { initiateOtp, otpVerification } from '@/utils';
 const MasterclassForm: FC = () => {
   const webinarResponse = useAppSelector((state) => state.webinarResponse);
   const dispatch = useAppDispatch();
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm<WebinarRequest>({
+    defaultValues: {
+      first_name: '',
+      email: '',
+      phone: '',
+    },
+  });
+
+  const [stepOtp, setStepOtp] = useState(false);
+  const [errorOtp, setErrorOtp] = useState<string | undefined>('');
+  const [otp, setOtp] = useState('');
+  const [startTime, setStartTime] = useState(false);
+  const [requestId, setRequestId] = useState('');
+
+  useEffect(() => {
+    if(webinarResponse.user.thank_you_url) {
+      window.open(webinarResponse.user.thank_you_url, '_blank');
+    }
+  }, [webinarResponse.user.thank_you_url]);
 
   async function requestOtp() {
     setStartTime(!startTime);
@@ -78,31 +102,10 @@ const MasterclassForm: FC = () => {
         };
 
         await dispatch(registerForWebinar(requestObject));
-        console.log(webinarResponse);
-
-        // const response: AxiosResponse<WebinarResponse> = await axios.post(registerWebinarJam(), {
-        //     api_key: process.env.NEXT_PUBLIC_API_KEY,
-        //     first_name: getValues('first_name'),
-        //     email: getValues('email'),
-        //     phone: getValues('phone'),
-        //     webinar_id: 1,
-        //     schedule: 1
-        // }, {
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // });
-        // toast.promise(Promise.resolve(response), {
-        //     loading: 'Loading',
-        //     success: 'Verified Successfully',
-        //     error: 'Something went wrong, try again'
-        // });
-        // console.log(response.data);
-    } catch (error) {
-
-      const otpError = error as AxiosError<VerifyOtpResponse>;
-      setErrorOtp(otpError.response?.data.description);
-    }
+      } catch (error) {
+        const otpError = error as AxiosError<VerifyOtpResponse>;
+        setErrorOtp(otpError.response?.data.description);
+      }
   }
 
   const sendOtp: SubmitHandler<WebinarRequest> = async () => {
@@ -138,31 +141,12 @@ const MasterclassForm: FC = () => {
         setErrorOtp(otpError.response?.data.description);
       }
   };
-
-  const {
-    register,
-    handleSubmit,
-    getValues,
-    formState: { errors },
-  } = useForm<WebinarRequest>({
-    defaultValues: {
-      first_name: '',
-      email: '',
-      phone: '',
-    },
-  });
-
-  const [stepOtp, setStepOtp] = useState(false);
-  const [errorOtp, setErrorOtp] = useState<string | undefined>('');
-  const [otp, setOtp] = useState('');
-  const [startTime, setStartTime] = useState(false);
-  const [requestId, setRequestId] = useState('');
     return (
         <div>
         {stepOtp ? (
           <form
             onSubmit={verifyOtp}
-            className="bg-white w-full overflow-x-hidden md:max-w-[29vw] h-[38vh] flex flex-col items-center justify-between md:fixed md:top-[9.8rem] md:right-[2rem] p-8"
+            className="bg-white w-full overflow-x-hidden md:max-w-[29vw] h-[38vh] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8"
           >
             <div className="flex flex-col items-center justify-between gap-y-6 mt-6">
               <p className="text-lg text-black">
@@ -201,7 +185,7 @@ const MasterclassForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className="bg-white w-full md:max-w-[33vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[9.8rem] md:right-[2rem] p-8"
+            className="bg-white w-full md:max-w-[31vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[17%] md:right-[2%] p-8"
             noValidate
           >
             <div className="w-full flex flex-col gap-y-1">

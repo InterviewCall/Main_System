@@ -1,11 +1,11 @@
-'use client';
+
 
 import { FC } from 'react';
 
 import StoreProvider from '@/app/StoreProvider';
 import MasterClass from '@/components/MasterClass/MasterClass';
 
-const MasterClassPage: FC = () => {
+const Page: FC = () => {
   return (
     <StoreProvider>
       <MasterClass />
@@ -13,4 +13,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default MasterClassPage;
+export default Page;

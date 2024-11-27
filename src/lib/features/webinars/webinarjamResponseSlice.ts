@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
 
 import { WebinarRequest, WebinarResponse } from '@/types';
-import { registerWebinarJam } from '@/utils';
+// import { registerWebinarJam } from '@/utils';
 
 const initialState: WebinarResponse = {
     status: 'error',
@@ -26,9 +26,9 @@ const initialState: WebinarResponse = {
     }
 };
 
-export const registerForWebinar = createAsyncThunk<AxiosResponse<WebinarResponse>, WebinarRequest>('/webinar/register', async (data) => {
+export const registerForWebinar = createAsyncThunk<AxiosResponse<WebinarResponse>, WebinarRequest>('/api/register', async (data) => {
     try {
-        const response: Promise<AxiosResponse<WebinarResponse>> = axios.post(registerWebinarJam(), data);
+        const response: Promise<AxiosResponse<WebinarResponse>> = axios.post('/api/register', data);
         toast.promise(response, {
             loading: 'Loading',
             success: 'Registration Completed',
