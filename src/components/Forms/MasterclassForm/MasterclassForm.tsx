@@ -146,12 +146,12 @@ const MasterclassForm: FC = () => {
         {stepOtp ? (
           <form
             onSubmit={verifyOtp}
-            className="bg-white w-full overflow-x-hidden md:max-w-[29vw] h-[38vh] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8"
+            className='bg-white w-full overflow-x-hidden md:max-w-[29vw] h-[38vh] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8'
           >
-            <div className="flex flex-col items-center justify-between gap-y-6 mt-6">
-              <p className="text-lg text-black">
+            <div className='flex flex-col items-center justify-between gap-y-6 mt-6'>
+              <p className='text-lg text-black'>
                 Enter OTP sent to the mobile number{' '}
-                <span className="block text-sm text-black text-center">
+                <span className='block text-sm text-black text-center'>
                   #{getValues('phone')}
                 </span>
               </p>
@@ -159,7 +159,7 @@ const MasterclassForm: FC = () => {
                 value={otp}
                 numInputs={4}
                 onChange={setOtp}
-                renderSeparator={<span className="w-6"></span>}
+                renderSeparator={<span className='w-6'></span>}
                 renderInput={(props) => <input {...props} />}
                 inputStyle={{
                   width: '50px',
@@ -170,14 +170,14 @@ const MasterclassForm: FC = () => {
                   border: '1px solid gray',
                 }}
               />
-              {errorOtp && <p className="text-red-400 text-lg">{errorOtp}</p>}
-              {/* <Timer startTime={startTime} textColor="text-black" requestOtp={requestOtp} /> */}
+              {errorOtp && <p className='text-[#FF516C] text-lg'>{errorOtp}</p>}
+              {/* <Timer startTime={startTime} textColor='text-black' requestOtp={requestOtp} /> */}
               
             </div>
-            <Timer startTime={startTime} textColor="text-black" requestOtp={requestOtp} />
+            <Timer startTime={startTime} textColor='text-black' requestOtp={requestOtp} />
             <button
-              type="submit"
-              className="w-full bg-red-400 p-4 rounded-lg text-white hover:scale-95 duration-300"
+              type='submit'
+              className='w-full bg-[#FF516C] p-4 rounded-lg text-white hover:scale-95 duration-300'
             >
               Register Now
             </button>
@@ -185,30 +185,30 @@ const MasterclassForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className="bg-white w-full md:max-w-[31vw] h-auto flex flex-col gap-y-7 md:fixed md:top-[17%] md:right-[2%] p-8"
+            className='bg-white w-full rounded-lg md:max-w-[30vw] h-auto flex flex-col gap-y-4 md:fixed md:top-[19%] md:right-[2%] p-8'
             noValidate
           >
-            <div className="w-full flex flex-col gap-y-1">
-              <p className="text-lg">
-                First Name<span className="text-red-500">*</span>
+            <div className='w-full flex flex-col gap-y-1'>
+              <p className='text-lg'>
+                First Name<span className='text-red-500'>*</span>
               </p>
               <input
                 {...register('first_name', {
                   required: 'First Name is Required',
                 })}
-                className="w-full rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
-                placeholder="Enter First Name"
-                type="text"
+                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                placeholder='Enter First Name'
+                type='text'
               />
               {errors.first_name && (
-                <p className="text-red-400 text-sm">
+                <p className='text-[#FF516C] text-sm'>
                   {errors.first_name.message}
                 </p>
               )}
             </div>
-            <div className="w-full flex flex-col gap-y-1">
-              <p className="text-lg">
-                Email<span className="text-red-500">*</span>
+            <div className='w-full flex flex-col gap-y-1'>
+              <p className='text-lg'>
+                Email<span className='text-red-500'>*</span>
               </p>
               <input
                 {...register('email', {
@@ -218,20 +218,20 @@ const MasterclassForm: FC = () => {
                     message: 'Invalid Email Address',
                   },
                 })}
-                className="w-full rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
-                placeholder="Enter Email"
-                type="email"
+                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                placeholder='Enter Email'
+                type='email'
               />
               {errors.email && (
-                <p className="text-red-400 text-sm">{errors.email.message}</p>
+                <p className='text-[#FF516C] text-sm'>{errors.email.message}</p>
               )}
             </div>
-            <div className="w-full flex flex-col gap-y-1">
-              <p className="text-lg">
-                Phone No<span className="text-red-500">*</span>
+            <div className='w-full flex flex-col gap-y-1'>
+              <p className='text-lg'>
+                Phone No<span className='text-red-500'>*</span>
               </p>
-              <div className="flex">
-                <div className="bg-gray-300 p-3 md:p-3 text-black text-lg rounded-l-md">
+              <div className='flex'>
+                <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-l-md'>
                   +91
                 </div>
                 <input
@@ -242,21 +242,21 @@ const MasterclassForm: FC = () => {
                       message: 'Invalid Phone Number',
                     },
                   })}
-                  className="w-full rounded-e-md focus:rounded-md border-0 p-3 shadow-[5px_5px_49px_9px_rgba(204,204,204,0.77)] focus:ring-2 focus:ring-black"
-                  placeholder="Enter Phone Number"
-                  type="text"
+                  className='w-full rounded-e-md focus:rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                  placeholder='Enter Phone Number'
+                  type='text'
                 />
               </div>
               {errors.phone && (
-                <p className="text-red-400 text-sm">{errors.phone.message}</p>
+                <p className='text-[#FF516C] text-sm'>{errors.phone.message}</p>
               )}
             </div>
 
             <button
-              type="submit"
-              className="w-full bg-red-400 p-4 rounded-lg text-white hover:scale-95 duration-300"
+              type='submit'
+              className='w-full bg-[#FF516C] mt-3 p-4 rounded-lg text-white hover:scale-95 duration-300'
             >
-              Register Now
+              Register For Free
             </button>
           </form>
         )}

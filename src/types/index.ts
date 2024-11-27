@@ -212,7 +212,7 @@ export interface WebinarRequest {
     first_name: string
     email: string
     schedule: number
-    phone: string
+    phone?: string
 }
 
 export type MasterclassFormInput = WebinarRequest;
