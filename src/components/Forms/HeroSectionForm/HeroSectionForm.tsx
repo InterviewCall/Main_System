@@ -3,8 +3,8 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { FC, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import OTPInput from 'react-otp-input';
@@ -30,6 +30,17 @@ const HeroSectionForm: FC = () => {
   const [errorOtp, setErrorOtp] = useState<string | undefined>('');
   const [startTime, setStartTime] = useState(false);
   const router = useRouter();
+  const [page, setPage] = useState('mern');
+  const pathName = usePathname();
+  useEffect(() => {
+    if (pathName.length == 1) {
+      setPage('/fullstack-web-development-demo-class');
+    } else {
+      if (pathName == '/job-switch') {
+        setPage('/job-switch-demo-class');
+      }
+    }
+  }, [pathName, page]);
 
   const {
     register,
@@ -61,7 +72,7 @@ const HeroSectionForm: FC = () => {
         setStepOtp(false);
         setIsLoading(false);
         reset();
-        router.push('/fullstack-web-development-demo-class');
+        router.push(page);
     } catch (error) {
       setIsLoading(false);
       const otpError = error as AxiosError<VerifyOtpResponse>;
