@@ -145,11 +145,6 @@ export interface FooterSectionArrayType {
 
 export interface MasterClassAlumni {
     alumniImage: StaticImageData
-    alumniName: string
-    alumniGradDate: string
-    alumniPreScaler: string
-    alumniPostScaler: StaticImageData
-    alumniRole: string
 }
 
 export type MasterClassAlumniCardProps = MasterClassAlumni;

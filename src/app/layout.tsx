@@ -12,6 +12,8 @@ import Header from '@/components/Header/Header';
 import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
 
+import StoreProvider from './StoreProvider';
+
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -102,8 +104,10 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <Toaster position='top-center' />
+        <StoreProvider>
+          <Toaster position='top-center' />
           <div className='pt-20'>{children}</div>
+        </StoreProvider>
         <FooterSection />
       </body>
     </html>

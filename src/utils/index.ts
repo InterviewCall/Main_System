@@ -16,13 +16,13 @@ import A3 from '~/images/Alumni3.png';
 import A4 from '~/images/Alumni4.png';
 import A5 from '~/images/Alumni5.png';
 import Alumni1 from '~/images/MasterClassAlumni1.png';
-import AlumniPostComp1 from '~/images/MasterClassAlumni1PostComp.png';
 import Alumni2 from '~/images/MasterClassAlumni2.png';
-import AlumniPostComp2 from '~/images/MasterClassAlumni2PostComp.png';
 import Alumni3 from '~/images/MasterClassAlumni3.png';
-import AlumniPostComp3 from '~/images/MasterClassAlumni3PostComp.png';
 import Alumni4 from '~/images/MasterClassAlumni4.png';
-import AlumniPostComp4 from '~/images/MasterClassAlumni4PostComp.png';
+import AlumniMobile1 from '~/images/MasterClassAlumniMobile1.png';
+import AlumniMobile2 from '~/images/MasterClassAlumniMobile2.png';
+import AlumniMobile3 from '~/images/MasterClassAlumniMobile3.png';
+import AlumniMobile4 from '~/images/MasterClassAlumniMobile4.png';
 import M1 from '~/images/Mentor1.png';
 import M2 from '~/images/Mentor2.png';
 import M3 from '~/images/Mentor3.png';
@@ -33,6 +33,8 @@ import M7 from '~/images/Mentor7.png';
 import M8 from '~/images/Mentor8.png';
 import M9 from '~/images/Mentor9.png';
 import M10 from '~/images/Mentor10.png';
+import M11 from '~/images/Mentor11.png';
+import M12 from '~/images/Mentor12.png';
 import P4 from '~/images/P4.png';
 import P5 from '~/images/P5.png';
 import P6 from '~/images/P6.png';
@@ -407,11 +409,11 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: M3,
-    mentorAlt: 'N6',
-    mentorName: 'Jyotirmoy Deb',
-    mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
-    mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
+    mentorImage: M10,
+    mentorAlt: 'N5',
+    mentorName: 'Gurtej Singh Rehal',
+    mentorExperience: 'Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/gurtejrehal/'
   },
 
   {
@@ -498,11 +500,37 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
     cardHeight: mentorCardPositioning.cardHeight[0],
     cardWidth: mentorCardPositioning.cardWidth[0],
-    mentorImage: M10,
+    mentorImage: M3,
+    mentorAlt: 'N6',
+    mentorName: 'Jyotirmoy Deb',
+    mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 11 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+    cardHeight: mentorCardPositioning.cardHeight[1],
+    cardWidth: mentorCardPositioning.cardWidth[1],
+    mentorImage: M11,
+    mentorAlt: 'N1',
+    mentorName: 'Sunyul Hossen',
+    mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express Offers - Amazon London, D.E. Shaw Luxembourg | Uber Highest Placement of 1.47 Crore | Interview Strategist @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/shssn/'
+  },
+
+  {
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+    cardHeight: mentorCardPositioning.cardHeight[2],
+    cardWidth: mentorCardPositioning.cardWidth[2],
+    mentorImage: M12,
     mentorAlt: 'N5',
-    mentorName: 'Gurtej Singh Rehal',
-    mentorExperience: 'Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
-    mentorLinkedinProfile: 'https://www.linkedin.com/in/gurtejrehal/'
+    mentorName: 'Ankit Gupta',
+    mentorExperience: 'Software Engineer 2 @Atlassian India | Ex - Software Engineer @Decision Fiction | 5 Years of Experience | Web Dev Mentor @InterviewCall',
+    mentorLinkedinProfile: 'https://www.linkedin.com/in/i-ankit25/'
   },
 ];
 
@@ -633,39 +661,37 @@ export const MasterclassDataScienceAbout = [
 
 export const MasterClassAlumnis: MasterClassAlumni[] = [
   {
-    alumniImage: Alumni1,
-    alumniName: 'Ankit Pansaga',
-    alumniGradDate: 'September 2021',
-    alumniPreScaler: 'Adobe',
-    alumniPostScaler: AlumniPostComp1,
-    alumniRole: 'Senior Software Engineer'
+    alumniImage: Alumni1
   },
 
   {
     alumniImage: Alumni2,
-    alumniName: 'Bhaskar Shaw',
-    alumniGradDate: 'October 2021',
-    alumniPreScaler: 'Accenture',
-    alumniPostScaler: AlumniPostComp2,
-    alumniRole: 'Software Engineer II'
   },
 
   {
     alumniImage: Alumni3,
-    alumniName: 'Abinay Bingumalla',
-    alumniGradDate: 'January 2020',
-    alumniPreScaler: 'Relaiance Infocom Limited',
-    alumniPostScaler: AlumniPostComp3,
-    alumniRole: 'Full Stack Engineer'
   },
 
   {
     alumniImage: Alumni4,
-    alumniName: 'Sudhansu Gera',
-    alumniGradDate: 'June 2021',
-    alumniPreScaler: 'Wipro Limited',
-    alumniPostScaler: AlumniPostComp4,
-    alumniRole: 'Software Engineer III'
+  }
+];
+
+export const MasterClassAlumnisMobile: MasterClassAlumni[] = [
+  {
+    alumniImage: AlumniMobile1
+  },
+
+  {
+    alumniImage: AlumniMobile2,
+  },
+
+  {
+    alumniImage: AlumniMobile3,
+  },
+
+  {
+    alumniImage: AlumniMobile4,
   }
 ];
 
@@ -678,7 +704,7 @@ export function otpVerification() {
 }
 
 export function registerWebinarJam() {
-  return 'https://api.webinarjam.com/webinarjam/register';
+  return 'https://api.webinarjam.com/webinarjam/webinar';
 }
 
 export function isValidMobileNumber(mobileNumber: string): boolean {

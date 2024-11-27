@@ -1,92 +1,63 @@
 'use client';
 
 import Image from 'next/image';
-import { FC, useEffect, useRef } from 'react';
+import { FC } from 'react';
 
+import MasterclassForm from '@/components/Forms/MasterclassForm/MasterclassForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import {
   MasterClassAlumnis,
+  MasterClassAlumnisMobile,
   MasterclassMentorQualification,
   MasterclassSessionLearn,
 } from '@/utils';
+import JobSwitch_SM from '~/images/JobSwitch_Mobile.png';
+import JobSwitch_MD from '~/images/JobSwitch_Programme.png';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
 import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
-import MasterClassTop from '~/images/MasterclassTop.png';
 
 const MasterClassPage: FC = () => {
-  const scriptContainerRef = useRef<HTMLDivElement | null>(null);
 
-  const injectScript = () => {
-    if (scriptContainerRef.current) {
-      // Clear any existing script content
-      scriptContainerRef.current.innerHTML = '';
-
-      // Create and inject the script
-      const script = document.createElement('script');
-      script.src =
-        'https://event.webinarjam.com/register/31ywotn/embed-form?formButtonText=Register&formAccentColor=%2329b6f6&formAccentOpacity=0.95&formBgColor=%23ffffff&formBgOpacity=1';
-      script.async = true;
-      script.onload = () => {
-        console.log('Webinar script loaded successfully');
-      };
-
-      script.onerror = () => {
-        console.error('Failed to load webinar script');
-      };
-      scriptContainerRef.current.appendChild(script);
-    }
-  };
-
-  useEffect(() => {
-    injectScript();
-  }, []);
-
-  useEffect(() => {
-    const preventBackNavigation = () => {
-      window.history.pushState(null, '', window.location.href);
-    };
-
-    window.history.pushState(null, '', window.location.href);
-    window.addEventListener('popstate', preventBackNavigation);
-
-    return () => {
-      window.removeEventListener('popstate', preventBackNavigation);
-    };
-  }, []);
 
   return (
     <div className='bg-white relative'>
       {/* Top Image */}
-      <div className='w-full'>
-        <Image src={MasterClassTop} alt='MasterClassTop' layout='responsive' />
+      <div className='w-full mt-8 md:block hidden'>
+        <Image src={JobSwitch_MD} alt='MasterClassTop' layout='responsive' />
+      </div>
+
+      <div className='w-full md:hidden block'>
+        <Image src={JobSwitch_SM} alt='MasterClassTop' layout='responsive' />
       </div>
 
       {/* Webinar Embed */}
-      <div
+      {/* <div
         className='md:fixed md:top-[18%] md:right-16 w-64 h-28 z-10 rounded-md wj-embed-wrapper'
         data-webinar-hash='31ywotn'
         ref={scriptContainerRef}
-      ></div>
+      ></div> */}
+
+      <MasterclassForm />
 
       {/* Main Content */}
-      <div className='w-full md:w-[65%]  mt-14 px-4 lg:px-20'>
+      <div className='w-full md:w-[65%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-2xl md:text-4xl font-bold text-center md:text-left'>
+        <p className='text-2xl md:text-3xl font-bold text-center md:text-left'>
           How E-commerce Platforms like Amazon Use Data Science
         </p>
 
         {/* Session Details */}
         <div className='flex flex-col md:flex-row mt-4 gap-3 md:gap-x-5'>
-          <p className='text-[#5a6273] flex gap-x-3'>
+          <p className='text-[#5a6273] flex text-sm gap-x-3'>
             <span className='font-semibold'>STARTS ON:</span>
             <span>November 19, 2024 7:30 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex gap-x-3'>
+          <p className='text-[#5a6273] flex text-sm gap-x-3'>
             <span className='font-semibold'>ENDS ON:</span>
             <span>November 19, 2024 10:00 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex gap-x-3'>
+          <p className='text-[#5a6273] flex text-sm gap-x-3'>
             <span className='font-semibold'>VENUE:</span>
             <span>Online</span>
           </p>
@@ -152,7 +123,7 @@ const MasterClassPage: FC = () => {
             What our Learners have to say
           </p>
         </div>
-        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-3 justify-center items-center'>
+        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-5 justify-center items-center'>
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'
@@ -179,18 +150,23 @@ const MasterClassPage: FC = () => {
             Discover successful alumni
           </p>
         </div>
-        <div className='flex md:flex-row flex-col gap-x-6 mt-8 items-center justify-center'>
-          {MasterClassAlumnis.map((alumni, index) => (
-            <AlumniCard
-              key={index}
-              alumniImage={alumni.alumniImage}
-              alumniName={alumni.alumniName}
-              alumniGradDate={alumni.alumniGradDate}
-              alumniPreScaler={alumni.alumniPreScaler}
-              alumniPostScaler={alumni.alumniPostScaler}
-              alumniRole={alumni.alumniRole}
-            />
-          ))}
+        <div className='flex md:flex-row flex-col gap-y-6 items-center justify-center'>
+            <div className='md:hidden block'>
+              {MasterClassAlumnisMobile.map((alumni, index) => (
+                <AlumniCard 
+                  key={index}
+                  alumniImage={alumni.alumniImage}
+                />
+              ))}
+            </div>
+            <div className='md:flex gap-x-6 hidden'>
+              {MasterClassAlumnis.map((alumni, index) => (
+                <AlumniCard
+                  key={index}
+                  alumniImage={alumni.alumniImage}
+                />
+              ))}
+            </div>
         </div>
       </div>
     </div>
