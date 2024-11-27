@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import JobSwitchForm from '@/components/Forms/JobSwitchForm/JobSwitchForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import {
   MasterClassAlumnis,
@@ -29,6 +30,8 @@ const MasterClassPage: FC = () => {
       <div className='w-full md:hidden block'>
         <Image src={JobSwitch_SM} alt='MasterClassTop' loading='lazy' />
       </div>
+
+      <JobSwitchForm />
 
       {/* Main Content */}
       <div className='w-full md:w-[65%] mt-14 px-4 md:pl-16'>

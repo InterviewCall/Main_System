@@ -216,3 +216,10 @@ export interface WebinarRequest {
 }
 
 export type MasterclassFormInput = WebinarRequest;
+
+export interface EverWebinarRequest extends WebinarRequest {
+    timezone: string
+    date: string
+}
+
+export type EverWebinarResponse = WebinarResponse;

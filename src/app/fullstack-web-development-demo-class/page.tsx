@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import FSWDForm from '@/components/Forms/FSWDForm/FSWDForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import {
   MasterClassAlumnis,
@@ -27,6 +28,8 @@ const MasterClassPage: FC = () => {
       <div className='w-full md:hidden block'>
         <Image src={FSWD_SM} alt='MasterClassTop' loading='lazy' />
       </div>
+
+      <FSWDForm />
 
       {/* Main Content */}
       <div className='w-full md:w-[65%] mt-14 px-4 md:pl-16'>

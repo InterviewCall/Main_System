@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import EverWebinarResponseReducer from './features/webinars/everwebinarResponse';
 import WebinarResponseReducer from './features/webinars/webinarjamResponseSlice';
 
 export const makeStore = () => {
     return configureStore({
         reducer: {
-            webinarResponse: WebinarResponseReducer
+            webinarResponse: WebinarResponseReducer,
+            everWebinarResponse: EverWebinarResponseReducer
         },
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
     });

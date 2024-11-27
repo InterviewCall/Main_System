@@ -707,6 +707,36 @@ export function registerWebinarJam() {
   return 'https://api.webinarjam.com/webinarjam/register';
 }
 
+export function registerEverWebinar() {
+  return 'https://api.webinarjam.com/everwebinar/register';
+}
+
+export const getGmtOffset = (timezone: string): string => {
+  const date = new Date();
+
+    // Create a new DateTimeFormat instance for the selected timezone
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: timezone,
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZoneName: 'short'
+    });
+
+    // Use the formatter to get a formatted time
+    const timeParts = formatter.formatToParts(date);
+
+    // Extract the time zone offset from the parts
+    const timeZonePart = timeParts.find(part => part.type === 'timeZoneName');
+    
+    // Format the GMT offset
+    if (timeZonePart) {
+      const offset = timeZonePart.value; // This will give something like "GMT+5:30"
+      return offset; 
+    }
+
+    return 'GMT+00:00'; 
+};
+
 export function isValidMobileNumber(mobileNumber: string): boolean {
   const indianMobilePattern = /^[6-9]\d{9}$/;
   return indianMobilePattern.test(mobileNumber);

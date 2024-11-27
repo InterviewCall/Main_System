@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios, { AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
 
-import { WebinarRequest, WebinarResponse } from '@/types';
+import { EverWebinarRequest, EverWebinarResponse } from '@/types';
 // import { registerWebinarJam } from '@/utils';
 
-const initialState: WebinarResponse = {
+const initialState: EverWebinarResponse = {
     status: 'error',
     user: {
         webinar_id: 1,
@@ -26,9 +26,9 @@ const initialState: WebinarResponse = {
     }
 };
 
-export const registerForWebinar = createAsyncThunk<AxiosResponse<WebinarResponse>, WebinarRequest>('/api/webinarjam/register', async (data) => {
+export const registerForEverWebinar = createAsyncThunk<AxiosResponse<EverWebinarResponse>, EverWebinarRequest>('/api/everwebinar/register', async (data) => {
     try {
-        const response: Promise<AxiosResponse<WebinarResponse>> = axios.post('/api/webinarjam/register', data);
+        const response: Promise<AxiosResponse<EverWebinarResponse>> = axios.post('/api/everwebinar/register', data);
         toast.promise(response, {
             loading: 'Loading',
             success: 'Registration Completed',
@@ -40,12 +40,12 @@ export const registerForWebinar = createAsyncThunk<AxiosResponse<WebinarResponse
     }
 });
 
-const WebinarResponseSlice = createSlice({
-    name: 'webinarResponse',
+const EverWebinarResponseSlice = createSlice({
+    name: 'everWebinarResponse',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(registerForWebinar.fulfilled, (state, action) => {
+        builder.addCase(registerForEverWebinar.fulfilled, (state, action) => {
             if(action.payload.data.status != 'success' || !action.payload) return;
 
             state.status = action.payload.data.status;
@@ -54,4 +54,4 @@ const WebinarResponseSlice = createSlice({
     }
 });
 
-export default WebinarResponseSlice.reducer;
+export default EverWebinarResponseSlice.reducer;
