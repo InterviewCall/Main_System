@@ -146,7 +146,7 @@ const MasterclassForm: FC = () => {
         {stepOtp ? (
           <form
             onSubmit={verifyOtp}
-            className='bg-white w-full overflow-x-hidden md:max-w-[29vw] h-[38vh] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8'
+            className='bg-white w-full overflow-x-hidden md:max-w-[29vw] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8'
           >
             <div className='flex flex-col items-center justify-between gap-y-6 mt-6'>
               <p className='text-lg text-black'>

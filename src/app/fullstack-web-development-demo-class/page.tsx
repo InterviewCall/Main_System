@@ -34,7 +34,7 @@ const MasterClassPage: FC = () => {
       {/* Main Content */}
       <div className='w-full md:w-[55%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-[1.5rem] leading-7 md:text-[1.8rem] md:leading-[0] font-bold text-center md:text-left'>
+        <p className='text-[1.5rem] leading-7 md:text-[1.8rem] md:leading-[1.3] font-bold text-center md:text-left'>
           How E-commerce Platforms like Amazon Use Data Science
         </p>
 
@@ -114,7 +114,7 @@ const MasterClassPage: FC = () => {
             What our Learners have to say
           </p>
         </div>
-        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-5 justify-center items-center'>
+        <div className='md:pl-6 flex md:flex-row flex-col  mt-7 gap-4 md:gap-5 justify-center items-center'>
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'
