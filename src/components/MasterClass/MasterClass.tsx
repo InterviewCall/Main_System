@@ -110,7 +110,7 @@ const MasterClass: FC = () => {
             What our Learners have to say
           </p>
         </div>
-        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-7 md:mb-7 justify-center items-center'>
+        <div className='flex md:flex-row flex-col  mt-7 gap-4 md:gap-5 justify-center items-center'>
           <Image
             src={MasterClassLearnerCard1}
             alt='Learner 1'
