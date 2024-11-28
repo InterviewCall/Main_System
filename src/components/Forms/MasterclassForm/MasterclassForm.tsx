@@ -185,13 +185,10 @@ const MasterclassForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className='bg-white w-full rounded-lg md:max-w-[32vw] h-auto flex flex-col gap-y-4 md:fixed md:top-[23%] md:right-[2%] p-8 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
+            className='bg-white w-full rounded-lg md:max-w-[30vw] h-auto flex flex-col gap-y-4 md:fixed md:top-[29%] md:right-[2%] p-6 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
             noValidate
           >
             <div className='w-full flex flex-col gap-y-1'>
-              <p className='text-lg'>
-                First Name<span className='text-[#FF516C]'>*</span>
-              </p>
               <input
                 {...register('first_name', {
                   required: 'First Name is Required',
@@ -207,9 +204,6 @@ const MasterclassForm: FC = () => {
               )}
             </div>
             <div className='w-full flex flex-col gap-y-1'>
-              <p className='text-lg'>
-                Email<span className='text-red-500'>*</span>
-              </p>
               <input
                 {...register('email', {
                   required: 'Email is Required',
@@ -227,9 +221,6 @@ const MasterclassForm: FC = () => {
               )}
             </div>
             <div className='w-full flex flex-col gap-y-1'>
-              <p className='text-lg'>
-                Phone No<span className='text-red-500'>*</span>
-              </p>
               <div className='flex gap-2'>
                 <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
                   +91
