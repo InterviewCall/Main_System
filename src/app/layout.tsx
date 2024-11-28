@@ -65,8 +65,7 @@ export default function RootLayout({
     <html>
       <head>
         <link rel='icon' href='/favicon.ico' />
-        {/* Google Tag Manager */}
-        {/* <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -74,7 +73,7 @@ export default function RootLayout({
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-PJQTQV8P');
           `}
-        </Script> */}
+        </Script>
         <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82326" async></script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NH58QMDECM"
@@ -113,7 +112,6 @@ export default function RootLayout({
         </noscript>
       </head>
       <body>
-        {/* Google Tag Manager noscript
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTQV8P"
@@ -121,7 +119,7 @@ export default function RootLayout({
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
-        </noscript> */}
+        </noscript>
         <Header />
         <StoreProvider>
           <Toaster position='top-center' />
