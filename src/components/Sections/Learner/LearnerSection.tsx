@@ -19,11 +19,15 @@ const LearnerSection: FC = () => {
       <div className='w-full'>
         <div className='relative mask-linear'>
           <Marquee speed={30} autoFill direction='left'>
-            <div className='flex'>
               {PastLearners.map((learner, index) => (
-                <Image key={index} src={learner.learnerImage} alt='learnerImage' width={150} height={150} loading='lazy' />
+                <Image 
+                  key={index} 
+                  src={learner.learnerImage} 
+                  alt='learnerImage' 
+                  loading='lazy' 
+                  className='mx-4 md:w-[8vw] w-[24vw]'
+                />
               ))}
-            </div>
           </Marquee>
         </div>
       </div>

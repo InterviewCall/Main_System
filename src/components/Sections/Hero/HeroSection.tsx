@@ -8,7 +8,7 @@ import HeroStat from './HeroStat';
 
 const HeroSection: FC = () => {
   return (
-    <div className='flex flex-col md:flex-row px-4 md:px-24 bg-black md:pt-24 py-8 gap-8'>
+    <div className='flex flex-col mt-5 md:flex-row px-4 md:px-24 bg-black md:pt-24 py-8 gap-8'>
       {/* Left Content */}
       <div className='md:w-1/2 w-full'>
         <div className='flex flex-col gap-8'>

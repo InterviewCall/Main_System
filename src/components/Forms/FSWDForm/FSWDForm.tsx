@@ -127,9 +127,9 @@ const FSWDForm: FC = () => {
 
             <button
               type='submit'
-              className='w-full bg-[#FF516C] mt-1 p-4 rounded-lg text-white hover:scale-95 duration-300'
+              className='w-full bg-[#FF516C] mt-1 p-4 rounded-lg text-white hover:scale-95 duration-300 uppercase font-bold'
             >
-              Register Free
+              Register For Free
             </button>
           </form>
       </div>

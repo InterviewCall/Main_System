@@ -146,7 +146,7 @@ const MasterclassForm: FC = () => {
         {stepOtp ? (
           <form
             onSubmit={verifyOtp}
-            className='bg-white w-full overflow-x-hidden md:max-w-[29vw] flex flex-col items-center justify-between md:fixed md:top-[17%] md:right-[2%] p-8'
+            className='bg-white w-full overflow-x-hidden md:max-w-[29vw] flex flex-col gap-y-5 items-center justify-between md:fixed md:top-[26%] md:right-[2%] p-8'
           >
             <div className='flex flex-col items-center justify-between gap-y-6 mt-6'>
               <p className='text-lg text-black'>
@@ -177,9 +177,9 @@ const MasterclassForm: FC = () => {
             <Timer startTime={startTime} textColor='text-black' requestOtp={requestOtp} />
             <button
               type='submit'
-              className='w-full bg-[#FF516C] p-4 rounded-lg text-white hover:scale-95 duration-300'
+              className='w-full bg-[#FF516C] p-4 rounded-lg text-white hover:scale-95 duration-300 uppercase font-bold'
             >
-              Register Now
+              Register For Free
             </button>
           </form>
         ) : (
@@ -245,7 +245,7 @@ const MasterclassForm: FC = () => {
 
             <button
               type='submit'
-              className='w-full bg-[#FF516C] mt-3 p-4 rounded-lg text-white hover:scale-95 duration-300'
+              className='w-full bg-[#FF516C] mt-3 p-4 rounded-lg text-white hover:scale-95 duration-300 uppercase font-bold'
             >
               Register For Free
             </button>

@@ -212,7 +212,7 @@ const HeroSectionForm: FC = () => {
 
         {/* For Mobile View */}
         <p className='text-xs md:hidden block text-white text-center'>
-          By continuing, you agree to{' '}
+          By continuing, you agree to{' '} <br />
           <span onClick={() => router.push('/terms-conditions')} className='text-teal cursor-pointer'>
             InterviewCall&apos;s Terms
           </span>{' '}

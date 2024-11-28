@@ -1,3 +1,6 @@
+import { BsTwitterX } from 'react-icons/bs';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaSpotify, FaYoutube } from 'react-icons/fa';
+
 import {
   Amazon,
   Apple,
@@ -9,7 +12,7 @@ import {
   Netflix,
   Zomato,
 } from '@/assets/CurriculamSectionAssets';
-import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, IHeroStat, Learner, MasterClassAlumni, Mentor, PastLearner } from '@/types';
+import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, Icon, IHeroStat, Learner, MasterClassAlumni, Mentor, PastLearner } from '@/types';
 import A1 from '~/images/Alumni1.png';
 import A2 from '~/images/Alumni2.png';
 import A3 from '~/images/Alumni3.png';
@@ -790,5 +793,37 @@ export const PastLearners: PastLearner[] = [
 
   {
     learnerImage: PastLearner1
+  }
+];
+
+export const FooterIcons: Icon[] = [
+  {
+    iconName: FaFacebookF,
+    iconLink: 'https://www.facebook.com/people/InterviewCall/61564708864260/',
+  },
+
+  {
+    iconName: FaYoutube,
+    iconLink: 'https://www.youtube.com/@InterviewCall'
+  },
+
+  {
+    iconName: BsTwitterX,
+    iconLink: 'https://x.com/interviewCall24'
+  },
+
+  {
+    iconName: FaLinkedin,
+    iconLink: 'https://www.linkedin.com/company/interviewcall/'
+  },
+
+  {
+    iconName: FaInstagram,
+    iconLink: 'https://www.instagram.com/interviewcall.club/'
+  },
+
+  {
+    iconName: FaSpotify,
+    iconLink: 'https://open.spotify.com/show/6LtpSAX4VBGzunKSkyzfDD?si=0f4a6bfac28f4b70'
   }
 ];

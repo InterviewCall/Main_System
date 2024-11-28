@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { FieldError, UseFormRegister } from 'react-hook-form';
+import { IconType } from 'react-icons/lib';
 import { z } from 'zod';
 
 export interface IHeroStat {
@@ -181,7 +182,7 @@ export interface VerifyOtpResponse {
     description: string
 }
 
-export type PageSwipe = 'mern' | 'job-switch' | 'masterclass';
+export type PageSwipe = 'Full Stack - MERN' | 'Job Switch' | 'Masterclass' | '';
 
 export interface WebinarUser {
     webinar_id: number;
@@ -226,4 +227,9 @@ export type EverWebinarResponse = WebinarResponse;
 
 export type PastLearner = {
     learnerImage: StaticImageData
+}
+
+export interface Icon {
+    iconName: IconType,
+    iconLink: string
 }

@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
+// import { BsTwitterX } from 'react-icons/bs';
+// import { FaFacebookF, FaInstagram, FaLinkedin, FaSpotify, FaYoutube } from 'react-icons/fa';
+import { FooterIcons } from '@/utils';
 import Buildings from '~/images/Buildings.png';
 
 import FooterInput from './FooterInput';
@@ -34,9 +36,6 @@ const FooterSection: FC = () => {
                                 <p className='font-semibold text-2xl'>Product</p>
                                 <div>
                                         <div className='flex flex-col'>
-                                            <Link href='/fullstack-web-development-demo-class' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>FSWD Program</Link>
-                                            <Link href='/job-switch-demo-class' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Job Switch</Link>
-                                            <Link href='/masterclass' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Masterclass</Link>
                                             <Link href='/terms-conditions' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Terms</Link>
                                             <Link href='/refund-policy' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Refund Policy</Link>
                                         </div>
@@ -60,25 +59,29 @@ const FooterSection: FC = () => {
                 <div className='col-span-2 flex flex-col gap-8 bg-gradient-to-b from-[#003BD1] to-[#0010A4] p-8 rounded-xl'>
                     <p className='font-bold text-3xl text-white'>Support</p>
                     <p className='text-white font-extralight'>
-                        Have a questions?{' '}
-                        <span className='font-bold underline italic'>Get in touch</span> or
+                        Have a questions?{' '} <br />
+                        <span>Get in touch</span> or
                         check out our{' '}
-                        <span className='font-bold underline italic'>Help Center</span>.{' '}
+                        <Link href='/contact-us' className='font-bold underline italic cursor-pointer hover:text-[1.13rem] duration-300'>Help Center</Link>.{' '}
                     </p>
                     <p className='text-white font-extralight'>
                         You can also text our support team at{' '}
-                        <span className='font-bold underline italic'>(+91) 6295797609</span> or
+                        <span className='font-bold italic'>08069640804</span> <br /> <br />
                         email us at{' '}
-                        <span className='font-bold underline italic'>support@interviewcall.club</span>
+                        <span className='font-bold italic'>support@interviewcall.club</span>
                     </p>
-                    <div className='flex gap-6 items-center mt-auto'>
-                    <FaFacebookF className='text-white text-2xl' />
-                    <FaYoutube className='text-white text-2xl' />
-                    <FaTwitter className='text-white text-2xl' />
-                    <FaLinkedin className='text-white text-2xl' />
-                    <FaInstagram className='text-white text-2xl' />
+                    <div className='flex gap-6 items-center justify-center mt-auto'>
+                        {FooterIcons.map((IconComponent, index) => (
+                            <Link 
+                                href={IconComponent.iconLink} 
+                                key={index} 
+                                className='text-white text-2xl cursor-pointer hover:scale-150 duration-300'
+                            >
+                                <IconComponent.iconName />
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-            </div>
         </div>
         <Image
             src={Buildings}
