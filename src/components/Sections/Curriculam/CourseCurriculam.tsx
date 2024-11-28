@@ -110,7 +110,7 @@ const CourseCurriculam: FC = () => {
     if(pathName == '/job-switch') {
       setCourses(JobSwitchCourses);
     }
-    else if(pathName == '/fullStack-mern') {
+    else if(pathName == '/fullstack-mern') {
       setCourses(MernCourses);
     }
   }, [pathName]);
