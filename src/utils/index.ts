@@ -9,7 +9,7 @@ import {
   Netflix,
   Zomato,
 } from '@/assets/CurriculamSectionAssets';
-import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, IHeroStat, Learner, MasterClassAlumni, Mentor } from '@/types';
+import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, IHeroStat, Learner, MasterClassAlumni, Mentor, PastLearner } from '@/types';
 import A1 from '~/images/Alumni1.png';
 import A2 from '~/images/Alumni2.png';
 import A3 from '~/images/Alumni3.png';
@@ -41,6 +41,7 @@ import P6 from '~/images/P6.png';
 import P7 from '~/images/P7.png';
 import P8 from '~/images/P8.png';
 import P9 from '~/images/P9.png';
+import PastLearner1 from '~/images/PastLearner1.png';
 
 
 export const HeroSectionOptions = [
@@ -133,7 +134,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Abhishek Dixit',
     checkTitle: 'Senior SDE - Meesho',
     alumniJobDesc: 'Offer - Goldman Sachs, Meesho',
-    videoPath: '/resources/W3.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
     alumniJobDescTextColor: 'text-[#fa9c02]',
     cardWrapperShadowColor: 'shadow-orange-multi',
     cardWrapperBackgroundColor: 'bg-[#ffa000]',
@@ -148,7 +149,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Fahad Ali',
     checkTitle: 'Senior SDE - Razorpay',
     alumniJobDesc: 'Offer - Razorpay',
-    videoPath: '/resources/W3.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
     alumniJobDescTextColor: 'text-[#03fd9a]',
     cardWrapperShadowColor: 'shadow-green-multi',
     cardWrapperBackgroundColor: 'bg-[#03fd9a]',
@@ -749,20 +750,45 @@ export function isValidEmail(email: string): boolean {
 
 export const Companies = [Amazon, Apple, Atlassian, Lyft, Zomato, Google, Meta, Microsoft, Netflix, Lyft, Meta, Atlassian];
 
-export const row1 = [
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/7ae42bac3b34999c0db3.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/b2bd91d7b87b2181ca45.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6591cdc0702b32310306.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3b7d9f4b073deb6a9b74.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/3cd767dea94a85078ca4.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/a2b3c3709ffedce2a22a.png',
-];
 
-export const row2 = [
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/9dd55e54b5a28658bf4e.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/0384060dcbf73b6a707c.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/35e044b3354aaa0caed5.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/f50ae7cbf6cc805bdadc.png',
-  'https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png',
+export const PastLearners: PastLearner[] = [
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  },
+
+  {
+    learnerImage: PastLearner1
+  }
 ];

@@ -9,6 +9,7 @@ import {
   Frame,
   Girl,
   Handshake,
+  HandshakeMobile,
   HashBack,
   LeftLight,
   LiveLearning,
@@ -331,7 +332,7 @@ const CurriculamSection: FC = () => {
                 </Marquee>
               </div>
 
-              <div className='col-span-7 relative object-contain space-y-4 md:space-y-0 bg-purple-800 p-8 rounded-xl flex flex-col md:flex-row justify-between'>
+              <div className='hidden col-span-7 relative object-contain space-y-4 md:space-y-0 bg-purple-800 p-8 rounded-xl md:flex flex-col md:flex-row justify-between'>
                 <Image
                   src={Handshake}
                   alt='Handshake'
@@ -356,6 +357,7 @@ const CurriculamSection: FC = () => {
                   </p>
                 </div>
               </div>
+              <Image src={HandshakeMobile} alt='HandshakeMobile' loading='lazy' className='md:hidden block' />
             </div>
             <div className='relative md:block hidden'>
               <Caraousel />

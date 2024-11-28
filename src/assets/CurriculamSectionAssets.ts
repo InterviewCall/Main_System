@@ -2,6 +2,7 @@
 export { default as ChooseMentor } from '~/images/ChooseMentor.png';
 export { default as Girl } from '~/images/Girl.png';
 export { default as Handshake } from '~/images/Handshake.png';
+export { default as HandshakeMobile} from '~/images/HandshakeMobile.png';
 export { default as HashBack } from '~/images/HashBack.png';
 export { default as LiveLearningGlobe } from '~/images/LiveLearningGlove.png';
 export { default as LiveLearning } from '~/images/LiveLearningSection.png';

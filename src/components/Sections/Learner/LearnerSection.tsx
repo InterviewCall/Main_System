@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { FC } from 'react';
+import Marquee from 'react-fast-marquee';
 
-import AnimatedWrapper from '@/components/Caraousel/AnimatedWrapper';
+import { PastLearners } from '@/utils';
 // import { Learners } from '@/utils';
 import MeetLearners from '~/images/MeetLearners.png';
 
@@ -16,7 +17,15 @@ const LearnerSection: FC = () => {
       </p>
 
       <div className='w-full'>
-        <AnimatedWrapper />
+        <div className='relative mask-linear'>
+          <Marquee speed={30} autoFill direction='left'>
+            <div className='flex'>
+              {PastLearners.map((learner, index) => (
+                <Image key={index} src={learner.learnerImage} alt='learnerImage' width={150} height={150} loading='lazy' />
+              ))}
+            </div>
+          </Marquee>
+        </div>
       </div>
       {/* <div className='flex md:flex-row md:justify-evenly flex-col items-end mx-auto md:mx-0 gap-8'>
         {Learners.map((learner, index) => (

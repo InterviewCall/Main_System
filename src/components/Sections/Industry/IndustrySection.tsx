@@ -5,6 +5,7 @@ import CardImageOne from '~/images/IndustrySectionCardImageOne.png';
 import CardImageThree from '~/images/IndustrySectionCardImageThree.png';
 import CardImageTwo from '~/images/IndustrySectionCardImageTwo.png';
 import industrySectionImage from '~/images/industrySectionImage.png';
+import industrySectionImageMobile from '~/images/industrySectionImageMobile.png';
 
 const IndustrySection: FC = () => {
     return (
@@ -18,7 +19,8 @@ const IndustrySection: FC = () => {
             What top tech companies search for?
           </p>
         </div>
-        <Image src={industrySectionImage} alt='IndustrySectionImage' />
+        <Image src={industrySectionImageMobile} alt='industrySectionImageMobile' loading='lazy' className='md:hidden block' />
+        <Image src={industrySectionImage} alt='IndustrySectionImage' loading='lazy' className='md:block hidden' />
       </div>
       <div className='flex flex-col space-y-12'>
         <div className='space-y-2'>
