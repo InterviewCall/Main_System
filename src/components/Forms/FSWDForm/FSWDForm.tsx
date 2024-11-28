@@ -65,6 +65,7 @@ const FSWDForm: FC = () => {
   };
 
   if (!isClient) {
+    // Avoid rendering the TimezoneSelect component until we are on the client
     return null;
   }
     return (
