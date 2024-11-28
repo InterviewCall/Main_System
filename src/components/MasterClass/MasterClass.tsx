@@ -28,29 +28,29 @@ const MasterClass: FC = () => {
       <MasterclassForm />
 
       {/* Main Content */}
-      <div className='w-full md:w-[65%] mt-14 px-4 md:pl-16'>
+      <div className='w-full md:w-[55%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-2xl md:text-3xl font-bold text-center md:text-left'>
+        <p className='text-[1.5rem] leading-7 md:text-[1.8rem] md:leading-[0] font-bold text-center md:text-left'>
           How E-commerce Platforms like Amazon Use Data Science
         </p>
 
         {/* Session Details */}
-        <div className='flex flex-col md:flex-row mt-4 gap-3 md:gap-x-5'>
+        <div className='flex flex-col md:flex-row mt-8 gap-3 md:gap-x-5'>
           <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>STARTS ON:</span>
             <span>November 19, 2024 7:30 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex text-sm gap-x-3'>
+          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>ENDS ON:</span>
             <span>November 19, 2024 10:00 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex text-sm gap-x-3'>
+          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>VENUE:</span>
             <span>Online</span>
           </p>
         </div>
 
-        <div className='w-full h-[1px] bg-[#5a6273] mt-10'></div>
+        <div className='w-full h-[1px] bg-[#5a6273] mt-8'></div>
 
         {/* About Section */}
         <div className='bg-[#f3fafe] w-full mt-20 p-3'>

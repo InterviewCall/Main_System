@@ -72,7 +72,7 @@ const FSWDForm: FC = () => {
         <div>
           <form
             onSubmit={handleSubmit(registerWebinar)}
-            className='bg-[#FFFFFF] rounded-lg w-full md:max-w-[30vw] h-auto flex flex-col gap-y-5 md:fixed md:top-[19%] md:right-[2%] p-8'
+            className='bg-[#FFFFFF] rounded-lg w-full md:max-w-[32vw] h-auto flex flex-col gap-y-5 md:fixed md:top-[24%] md:right-[2%] p-8 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
             noValidate
           >
             <div className='w-full flex flex-col gap-y-1'>
@@ -81,7 +81,7 @@ const FSWDForm: FC = () => {
 
             <div className='w-full flex flex-col gap-y-1'>
                 <p className='text-lg'>
-                    Date & Time<span className='text-red-500'>*</span>
+                    Date & Time<span className='text-[#FF516C]'>*</span>
                 </p>
                 <DatePicker
                     selected={startDate}
@@ -90,7 +90,7 @@ const FSWDForm: FC = () => {
                     showPopperArrow
                     dateFormat='yyyy-MM-dd HH:mm'
                     timeFormat='HH:mm'
-                    className='w-full'
+                    className='w-full ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 border-none rounded-md'
                 />
             </div>
             <div className='w-full flex flex-col gap-y-1'>
@@ -98,7 +98,7 @@ const FSWDForm: FC = () => {
                 {...register('first_name', {
                   required: 'First Name is Required',
                 })}
-                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                className='w-full rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                 placeholder='Enter First Name'
                 type='text'
               />
@@ -117,7 +117,7 @@ const FSWDForm: FC = () => {
                     message: 'Invalid Email Address',
                   },
                 })}
-                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                className='w-full rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                 placeholder='Enter Email'
                 type='email'
               />
@@ -128,7 +128,7 @@ const FSWDForm: FC = () => {
 
             <button
               type='submit'
-              className='w-full bg-[#FF516C] p-4 rounded-lg text-white hover:scale-95 duration-300'
+              className='w-full bg-[#FF516C] mt-3 p-4 rounded-lg text-white hover:scale-95 duration-300'
             >
               Register Free
             </button>

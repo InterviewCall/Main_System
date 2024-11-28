@@ -185,18 +185,18 @@ const MasterclassForm: FC = () => {
         ) : (
           <form
             onSubmit={handleSubmit(sendOtp)}
-            className='bg-white w-full rounded-lg md:max-w-[30vw] h-auto flex flex-col gap-y-4 md:fixed md:top-[19%] md:right-[2%] p-8'
+            className='bg-white w-full rounded-lg md:max-w-[32vw] h-auto flex flex-col gap-y-4 md:fixed md:top-[23%] md:right-[2%] p-8 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
             noValidate
           >
             <div className='w-full flex flex-col gap-y-1'>
               <p className='text-lg'>
-                First Name<span className='text-red-500'>*</span>
+                First Name<span className='text-[#FF516C]'>*</span>
               </p>
               <input
                 {...register('first_name', {
                   required: 'First Name is Required',
                 })}
-                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                className='w-full rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                 placeholder='Enter First Name'
                 type='text'
               />
@@ -218,7 +218,7 @@ const MasterclassForm: FC = () => {
                     message: 'Invalid Email Address',
                   },
                 })}
-                className='w-full rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                className='w-full rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                 placeholder='Enter Email'
                 type='email'
               />
@@ -230,8 +230,8 @@ const MasterclassForm: FC = () => {
               <p className='text-lg'>
                 Phone No<span className='text-red-500'>*</span>
               </p>
-              <div className='flex'>
-                <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-l-md'>
+              <div className='flex gap-2'>
+                <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
                   +91
                 </div>
                 <input
@@ -242,7 +242,7 @@ const MasterclassForm: FC = () => {
                       message: 'Invalid Phone Number',
                     },
                   })}
-                  className='w-full rounded-e-md focus:rounded-md border-0 p-3 focus:ring-2 focus:ring-[#D5DEE5] placeholder:text-[#999999]'
+                  className='w-full rounded-md focus:rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                   placeholder='Enter Phone Number'
                   type='text'
                 />
