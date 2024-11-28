@@ -1,13 +1,20 @@
+'use client';
+
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 import CardImageOne from '~/images/IndustrySectionCardImageOne.png';
 import CardImageThree from '~/images/IndustrySectionCardImageThree.png';
 import CardImageTwo from '~/images/IndustrySectionCardImageTwo.png';
 import industrySectionImage from '~/images/industrySectionImage.png';
+import industrySectionImageJobSwitch from '~/images/industrySectionImageJobSwitch.png';
 import industrySectionImageMobile from '~/images/industrySectionImageMobile.png';
+import industrySectionImageMobileJobSwitch from '~/images/industrySectionImageMobileJobSwitch.png';
 
 const IndustrySection: FC = () => {
+  const pathName = usePathname();
+
     return (
         <div className='bg-white px-4 md:px-24 md:pt-24 py-4 flex flex-col md:space-y-24 space-y-12'>
       <div className='flex flex-col space-y-12'>
@@ -19,8 +26,8 @@ const IndustrySection: FC = () => {
             What top tech companies search for?
           </p>
         </div>
-        <Image src={industrySectionImageMobile} alt='industrySectionImageMobile' loading='lazy' className='md:hidden block' />
-        <Image src={industrySectionImage} alt='IndustrySectionImage' loading='lazy' className='md:block hidden' />
+        <Image src={pathName == '/job-switch' ? industrySectionImageMobileJobSwitch : industrySectionImageMobile} alt='industrySectionImageMobile' loading='lazy' className='md:hidden block' />
+        <Image src={pathName == '/job-switch' ? industrySectionImageJobSwitch : industrySectionImage} alt='IndustrySectionImage' loading='lazy' className='md:block hidden' />
       </div>
       <div className='flex flex-col space-y-12'>
         <div className='space-y-2'>

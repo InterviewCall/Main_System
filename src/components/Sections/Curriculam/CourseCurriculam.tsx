@@ -91,22 +91,35 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
-import { FC, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { FC, useEffect, useState } from 'react';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 
-import { Courses } from '@/utils';
+import { Course } from '@/types';
+import { JobSwitchCourses, MernCourses } from '@/utils';
 import CourseCurriculamGoldenBack from '~/images/CourseCurriculamGoldenBack.png';
 
 import CourseCard from './CourseCard';
 
 const CourseCurriculam: FC = () => {
+  const pathName = usePathname();
   const [open, setOpen] = useState(false);
+  const[Courses, setCourses] = useState<Course[]>([]);
+
+  useEffect(() => {
+    if(pathName == '/job-switch') {
+      setCourses(JobSwitchCourses);
+    }
+    else if(pathName == '/fullStack-mern') {
+      setCourses(MernCourses);
+    }
+  }, [pathName]);
   return (
     <div
       className={clsx(
         'relative grid grid-cols-1 border-[#4E586B] block-border rounded-xl gap-8 transition-all duration-300',
         open
-          ? 'md:max-h-[8000px] max-h-[13000px] overflow-visible'
+          ? 'md:max-h-[9000px] max-h-[15000px] overflow-visible'
           : 'max-h-[650px] overflow-hidden'
       )}
     >

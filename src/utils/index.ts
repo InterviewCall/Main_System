@@ -171,7 +171,7 @@ export const AlumniCards: AlumniCard[] = [
   }
 ];
 
-export const Courses: Course[] = [
+export const JobSwitchCourses: Course[] = [
   {
     courseName: 'Java/CPP + OOP',
     courseDuration: '2 Weeks',
@@ -225,7 +225,7 @@ export const Courses: Course[] = [
 
   {
     courseName: 'Full Stack Web Developement (Level 1)',
-    courseDuration: '1 Month',
+    courseDuration: '4 Weeks',
     courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
     courseKeyPoints: [
       'Structural Tags, Lists d Links, Media',
@@ -240,16 +240,16 @@ export const Courses: Course[] = [
       'Tooltip, Model and & Carousel, Popover, Toast',
       'Utilities, Forms, Grids, Intro to Git',
       'Git push and git pull, Branching and Merging',
-      'Intro to JS, Syntax, Variables, Scopes',
-      'Hoisting, Control Flow Statements'
     ],
   },
 
   {
     courseName: 'Full Stack Web Developement (Level 2)',
-    courseDuration: '1 Month',
+    courseDuration: '4 Weeks',
     courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
     courseKeyPoints: [
+      'Intro to JS, Syntax, Variables, Scopes',
+      'Hoisting, Control Flow Statements',
       'Nested Loops and Functions',
       'Function Bindings and Clousers, JS Array',
       'JS Objects, Advanced Arrays, JSON',
@@ -265,77 +265,191 @@ export const Courses: Course[] = [
 
   {
     courseName: 'Full Stack Web Developement (Level 3)',
-    courseDuration: '1 Month',
-    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets, along with react for building dynamic front-end application',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
     courseKeyPoints: [
       'Intro to MongoDB, Integration with Backend',
       'Intro to Cookies & Authentication',
       'Implementation with Node and Express',
-      'Passport JS, Web Sockets, Intro to React',
-      'Directory Structure, JSX, React Component'
+      'Passport JS, Web Sockets',
     ],
   },
 
   {
     courseName: 'Full Stack Web Developement (Level 4)',
-    courseDuration: '1 Month',
-    courseDescription: 'You will learn to build React apps with Class/Functional Component, State, Props, Hooks, and Redux for efficient state management and naigation',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
     courseKeyPoints: [
-      'Class based Components',
+      'Introduction to React',
+      'Directory Structure',
+      'JSX',
+      'React Components',
+      'Class Based Components',
       'Functional Based Components',
-      'Life Cycle Methods, Props, State, Hooks Intro',
-      'Forms, APIs & Events, Routers & Lists, Redux'
+      'LifeCycle Methods'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 5)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
+    courseKeyPoints: [
+      'Props',
+      'State',
+      'JSX',
+      'Hooks Intro',
+      'Forms',
+      'API\'s and Events',
+      'Routers and Lists',
+      'Redux',
+      'Capstone Projects'
     ],
   },
 
   {
     courseName: 'System Design LLD + HLD (Level 1)',
-    courseDuration: '2 Weeks',
-    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseDuration: '1 Week',
+    courseDescription: 'Understanding design interview essentials—like depth analysis, cryptographic hash functions, network protocols, and scaling—is crucial for system design roles. It enhances your interview skills and overall design expertise.',
     courseKeyPoints: [
-      'Top-down steps for Design Interviews',
+      'Steps for design interview',
       'Depth and Bredth Analysis',
       'Cryptographic Hash Functions',
-      'Network Protocols, Web Server',
-      'Hash Index, Scaling, Horizontal vs Vertical',
-      'For Data Size, For Throughut',
-      'For Fault Tolerance, Foe Geolocation',
-      'For Hotspots'
+      'Network Protocols',
+      'Web Server, Hash Index',
+      'Scaling, Horizontal vs Vertical',
+      'For data Size & throughput',
+      'For fault tolerance'
     ],
   },
 
   {
     courseName: 'System Design LLD + HLD (Level 2)',
-    courseDuration: '2 Weeks',
-    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets, along with react for building dynamic front-end application',
+    courseDuration: '1 Week',
+    courseDescription: 'Essential for ensuring service accuracy and performance, focusing on correctness, availability, and efficient throughput. Understanding proxies and load balancing enhances scalability and reliability.',
     courseKeyPoints: [
-      'Corectness, Availablity, Throughput',
-      'Response Time, SLOs and SLAs, Proxy',
-      'Reverse and Forward, Load Balancing',
-      'Replication, Single Leader, Multi Leader',
-      'Leaderless, CAP Theorem, CDN, Cache',
-      'Reads and Writes, LRU Cache, Strategies'
+      'For geolocation & hotspot',
+      'Correctness, Availability',
+      'Throughput, Response Time',
+      'SLO\'s and SLA\'',
+      'Proxy',
+      'Reverse and Forward',
+      'Load balancing',
+      'Replication'
     ],
   },
 
   {
     courseName: 'System Design LLD + HLD (Level 3)',
-    courseDuration: '2 Weeks',
-    courseDescription: 'You will learn to build React apps with Class/Functional Component, State, Props, Hooks, and Redux for efficient state management and naigation',
+    courseDuration: '1 Week',
+    courseDescription: 'Learning these concepts helps optimize system performance, scalability, and data management in applications. They are essential for building efficient and reliable architectures.',
     courseKeyPoints: [
-      'Sharding, Consistent Hashing Storage',
-      'Key-Value Stores, Relatinal Database',
-      'Tree Index, SQL, Normalization and Keys',
-      'Acid Transactions, Big Data, NoSQL',
-      'URL Shortner, Instagram, Uber',
-      'Twitter Messaging/Chat Services'
+      'Single & Multi Leader',
+      'Leaderless, CAP Theorem',
+      'CDN & Cache',
+      'Reads and Writes',
+      'LRU Cache',
+      'Strategies',
+      'Sharding, Consistent Hashing',
+      'Storage'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 4)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Learning these concepts is vital for effective data management and designing robust applications. They enable you to handle data integrity, scalability, and real-world system challenges efficiently.',
+    courseKeyPoints: [
+      'Key-Value Stores',
+      'Relational Database and Tree Index',
+      'SQL, Normalization & Keys',
+      'ACID Transactions, Big Data',
+      'No SQL, URL Shortener',
+      'Instagram, Uber, Twitter',
+      'Messaging/Chat Service'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 5)',
+    courseDuration: '1 Week',
+    courseDescription: 'Learning about inverted indexes and MapReduce is vital for efficient data handling and building scalable search engines, essential in today\'s data-driven world.',
+    courseKeyPoints: [
+      'Inverted Index',
+      'External Sort Merge',
+      'K-way External Sort-Merge',
+      'Distributed File System',
+      'Map-reduce Framework',
+      'Distributed Sorting',
+      'Search Engine'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 6)',
+    courseDuration: '1 Week',
+    courseDescription: 'Understanding graph processors and recommendation systems enhances personalized experiences and data processing efficiency in applications like Netflix.',
+    courseKeyPoints: [
+      'Graph Processor',
+      'Typeahead Suggestions',
+      'K-way External Sort-Merge',
+      'Recommendation Systems',
+      'Stream Processing',
+      'APM',
+      'Social Connections',
+      'Netflix'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 7)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Learning these topics equips you to design effective APIs and models, crucial for apps like Google Maps and YouTube, while understanding UML and design patterns ensures scalable software solutions.',
+    courseKeyPoints: [
+      'Google Maps',
+      'Trending Topics',
+      'YouTube',
+      'Object Modeling and API design',
+      'UML, Design patterns',
+      'Distributed Sorting',
+      'Composite Pattern'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 8)',
+    courseDuration: '1 Week',
+    courseDescription: 'Learning design patterns like Decorator, Facade, and Observer improves code quality and maintainability, providing solutions to common software design problems.',
+    courseKeyPoints: [
+      'Decorator pattern',
+      'Facade Pattern',
+      'Visitor Pattern',
+      'Flyweight Pattern',
+      'Proxy Pattern',
+      'Command Pattern',
+      'Observer Pattern'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 9)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Learning these design patterns and principles equips you to build flexible, scalable software. They enhance code maintainability, improve API efficiency, and ensure better collaboration among developers.',
+    courseKeyPoints: [
+      'Strategy Pattern',
+      'State Pattern',
+      'Factory Pattern',
+      'Singleton Pattern',
+      'RESTful API design',
+      'Distributed Sorting',
+      'SOLID principles'
     ],
   },
 
   {
     courseName: 'Soft Skills (Level 1)',
-    courseDuration: '1 Month',
-    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning spoken English enhances communication, builds confidence, and improves clarity through pronunciation and practice.',
     courseKeyPoints: [
       'Spoken English',
       'Common Mistakes & How to Correct Them',
@@ -347,8 +461,8 @@ export const Courses: Course[] = [
 
   {
     courseName: 'Soft Skills (Level 2)',
-    courseDuration: '1 Month',
-    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning these skills improves communication by building confidence, overcoming limiting beliefs, fostering connections, enhancing listening, and using effective body language.',
     courseKeyPoints: [
       'Building Confidence, Limiting Beliefs',
       'Building Rapport, Connect before you speak',
@@ -359,8 +473,231 @@ export const Courses: Course[] = [
   
   {
     courseName: 'Soft Skills (Level 3)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Interview preparation techniques helps you avoid common mistakes, effectively answer behavioral questions, manage stress, and make strong first impressions, ultimately boosting your chances of success.',
+    courseKeyPoints: [
+      'Interview Preparations, Common Mistakes',
+      'Behavioral Question Framework',
+      'Managing Interview stress, NLP Technique',
+      'Power of Fist Impression',
+      'Mock Interviews'
+    ],
+  }
+];
+
+export const MernCourses: Course[] = [
+  {
+    courseName: 'Java/CPP + OOP',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Mastering core java concepts like data types, control structures, and OOP will set the stage and tackling advanced topics and building scalable web applications.',
+    courseKeyPoints: [
+      'Introduction to Java/C++, Input Output',
+      'Data Types, Operators, Conditions, Loops',
+      'Patterns Problems, Functions, 1D - 2D Array',
+      'Strings, Memory Management, OOP',
+      'Java Collections/C++ STL'
+    ], 
+  },
+
+  {
+    courseName: 'Data Structures & Algorithms (Level 1)',
     courseDuration: '1 Month',
+    courseDescription: 'These will sharpen your problem-solving skills. These concepts help you write efficient code and tackle complex coding challenges, preparing you advanced web developement tasks and technical interviews.',
+    courseKeyPoints: [
+      'Time/Space Complexity',
+      'Arrays/Strings : Adhoc',
+      'Hashmaps',
+      'Two Pointers/Sliding Window',
+      'Bit Manipulation',
+      'Big Numbers',
+      'Building Data Structures with OOP'
+    ],
+  },
+
+  {
+    courseName: 'Data Structures & Algorithms (Level 2)',
+    courseDuration: '1 Month',
+    courseDescription: 'These will equip you with the skills to solve complex problems and optimize web applications, preparing you for advanced developement and technical interviews.',
+    courseKeyPoints: [
+      'Stacks, Queues, Linked Lists',
+      'Searching/Sortion, Greedy Techniques',
+      'Recursion/Backtracking',
+      'Dynamic Programming'
+    ],
+  },
+
+  {
+    courseName: 'Data Structures & Algorithms (Level 3)',
+    courseDuration: '1 Month',
+    courseDescription: 'These will help you optimize data handling and algorithms, will improve performance, essential for building scalable web apps and excelling in technicqal interviews.',
+    courseKeyPoints: [
+      'Trees - Binary Trees, BST, AVL Tree',
+      'Graphs: DFS/BFS, Dijkstra, Topo Sort',
+      'Euler Tour, Range Queries, Number Theory'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 1)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
+    courseKeyPoints: [
+      'Structural Tags, Lists d Links, Media',
+      'Tables, Forms, Intro to CSS, Selectors, Units',
+      'Background, Borders, Box Model',
+      'CSS Texts and Fonts, Float and Display',
+      'Positioning, Flex, CSS Grids, Combinators',
+      'Animations, Responsive Web Designs',
+      'Intro to Bootstrap, Typography, Colors',
+      'Alerts and Badges, Buttons, Bars & Spinners',
+      'Cards, Lists & Pagination, Navigation & Select',
+      'Tooltip, Model and & Carousel, Popover, Toast',
+      'Utilities, Forms, Grids, Intro to Git',
+      'Git push and git pull, Branching and Merging',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 2)',
+    courseDuration: '4 Weeks',
     courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseKeyPoints: [
+      'Intro to JS, Syntax, Variables, Scopes',
+      'Hoisting, Control Flow Statements',
+      'Nested Loops and Functions',
+      'Function Bindings and Clousers, JS Array',
+      'JS Objects, Advanced Arrays, JSON',
+      'JS DOM, Timing Events & Callbacks',
+      'Ajax Intro, Promises and Error Handling',
+      'Async/Await, ES6',
+      'Intro to Node, JSON and Asynchronous JS',
+      'OOPs, Design Patterns, MVC & Express',
+      'Modules, Routes & Template Rendering',
+      'Express Middleware & FS'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 3)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
+    courseKeyPoints: [
+      'Intro to MongoDB, Integration with Backend',
+      'Intro to Cookies & Authentication',
+      'Implementation with Node and Express',
+      'Passport JS, Web Sockets',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 4)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
+    courseKeyPoints: [
+      'Introduction to React',
+      'Directory Structure',
+      'JSX',
+      'React Components',
+      'Class Based Components',
+      'Functional Based Components',
+      'LifeCycle Methods'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 5)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
+    courseKeyPoints: [
+      'Props',
+      'State',
+      'JSX',
+      'Hooks Intro',
+      'Forms',
+      'API\'s and Events',
+      'Routers and Lists',
+      'Redux',
+      'Capstone Projects'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 1)',
+    courseDuration: '1 Week',
+    courseDescription: 'Understanding design interview essentials—like depth analysis, cryptographic hash functions, network protocols, and scaling—is crucial for system design roles. It enhances your interview skills and overall design expertise.',
+    courseKeyPoints: [
+      'Steps for design interview',
+      'Depth and Bredth Analysis',
+      'Cryptographic Hash Functions',
+      'Network Protocols',
+      'Web Server, Hash Index',
+      'Scaling, Horizontal vs Vertical',
+      'For data Size & throughput',
+      'For fault tolerance'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 2)',
+    courseDuration: '1 Week',
+    courseDescription: 'Essential for ensuring service accuracy and performance, focusing on correctness, availability, and efficient throughput. Understanding proxies and load balancing enhances scalability and reliability.',
+    courseKeyPoints: [
+      'For geolocation & hotspot',
+      'Correctness, Availability',
+      'Throughput, Response Time',
+      'SLO\'s and SLA\'',
+      'Proxy',
+      'Reverse and Forward',
+      'Load balancing',
+      'Replication'
+    ],
+  },
+
+  {
+    courseName: 'System Design LLD + HLD (Level 3)',
+    courseDuration: '1 Week',
+    courseDescription: 'Learning these concepts helps optimize system performance, scalability, and data management in applications. They are essential for building efficient and reliable architectures.',
+    courseKeyPoints: [
+      'Single & Multi Leader',
+      'Leaderless, CAP Theorem',
+      'CDN & Cache',
+      'Reads and Writes',
+      'LRU Cache',
+      'Strategies',
+      'Sharding, Consistent Hashing',
+      'Storage'
+    ],
+  },
+
+  {
+    courseName: 'Soft Skills (Level 1)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning spoken English enhances communication, builds confidence, and improves clarity through pronunciation and practice.',
+    courseKeyPoints: [
+      'Spoken English',
+      'Common Mistakes & How to Correct Them',
+      'Pronunciation & Accent, MTI, Breathing',
+      'Impromptu Speaking, Inflection, Tone',
+      'Pacing, Peer Practice, Q&A'
+    ],
+  },
+
+  {
+    courseName: 'Soft Skills (Level 2)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Learning these skills improves communication by building confidence, overcoming limiting beliefs, fostering connections, enhancing listening, and using effective body language.',
+    courseKeyPoints: [
+      'Building Confidence, Limiting Beliefs',
+      'Building Rapport, Connect before you speak',
+      'Listening and Assertive Communication',
+      'Body Language'
+    ],
+  },
+  
+  {
+    courseName: 'Soft Skills (Level 3)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'Interview preparation techniques helps you avoid common mistakes, effectively answer behavioral questions, manage stress, and make strong first impressions, ultimately boosting your chances of success.',
     courseKeyPoints: [
       'Interview Preparations, Common Mistakes',
       'Behavioral Question Framework',
