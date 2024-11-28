@@ -6,9 +6,12 @@ import { z } from 'zod';
 
 export interface IHeroStat {
     count: string
+    jobSwitchCount?: string
     title: {
         row1: string,
+        jobSwitchrow1?: string
         row2: string
+        jobSwitchRow2?: string
     }
 }
 

@@ -1,6 +1,6 @@
 import AlumniSection from '@/components/Sections/Alumni/AlumniSection';
 import CurriculamSection from '@/components/Sections/Curriculam/CurriculamSection';
-import EventSection from '@/components/Sections/Event/EventSection';
+// import EventSection from '@/components/Sections/Event/EventSection';
 import FAQSection from '@/components/Sections/FAQ/FAQSection';
 import HeroSection from '@/components/Sections/Hero/HeroSection';
 import IndustrySection from '@/components/Sections/Industry/IndustrySection';
@@ -14,7 +14,7 @@ export default function Home() {
       <IndustrySection />
       <CurriculamSection />
       <LearnerSection />
-      <EventSection />
+      {/* <EventSection /> */}
       <FAQSection />
     </div>
   );

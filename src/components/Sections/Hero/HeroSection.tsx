@@ -1,4 +1,7 @@
-import { FC } from 'react';
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { FC, useEffect, useState } from 'react';
 
 import HeroSectionForm from '@/components/Forms/HeroSectionForm/HeroSectionForm';
 import { HeroSectionOptions, HeroSectionStats } from '@/utils';
@@ -7,6 +10,20 @@ import HeroOption from './HeroOption';
 import HeroStat from './HeroStat';
 
 const HeroSection: FC = () => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const pathName = usePathname();
+
+  useEffect(() => {
+    if(pathName == '/fullstack-mern') {
+      setTitle('Full Stack Web Development with Placement Assistance');
+      setDescription('Choose MERN stack or Spring Boot and acquire expertise through practical application and real-world projects.');
+    }
+    else if(pathName == '/job-switch') {
+      setTitle('Job Switch Bootcamp with Placement Assistance');
+      setDescription('Acquire in-demand skills and real-world expertise through practical application and projects tailored to help you switch careers or advance in your current domain.');
+    }
+  }, [pathName]);
   return (
     <div className='flex flex-col mt-5 md:flex-row px-4 md:px-24 bg-black md:pt-24 py-8 gap-8'>
       {/* Left Content */}
@@ -15,11 +32,10 @@ const HeroSection: FC = () => {
           {/* Title and Subtitle */}
           <div className='flex flex-col gap-6'>
             <h1 className='text-gradient text-3xl md:text-[45px] md:leading-[74px] font-bold'>
-              Full Stack Web Development with Placement Assistance
+              {title}
             </h1>
             <h2 className='text-base md:text-lg text-white font-light'>
-              Choose MERN stack or Spring Boot and acquire expertise through
-              practical application and real-world projects.
+              {description}
             </h2>
             {/* Options - Desktop */}
             <div className='hidden md:flex flex-wrap items-start gap-2'>

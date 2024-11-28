@@ -57,30 +57,38 @@ export const HeroSectionOptions = [
 export const HeroSectionStats: IHeroStat[] = [
     {
       count: '92%',
+      jobSwitchCount: '128%',
       title: {
         row1: 'Average',
-        row2: 'Placement Rate'
+        row2: 'Placement Rate',
+        jobSwitchRow2: 'Salary Hike'
       },
     },
     {
       count: '681+',
+      jobSwitchCount: '681+',
       title: {
         row1: 'Companies',
-        row2: 'Hired From Us'
+        row2: 'Hired From Us',
+        jobSwitchRow2: 'Hired From Us'
       }
     },
     {
       count: '58LPA',
+      jobSwitchCount: '58LPA',
       title: {
         row1: 'Highest',
-        row2: 'Package'
+        row2: 'Package',
+        jobSwitchRow2: 'Package'
       },
     },
     {
       count: '826+',
+      jobSwitchCount: '826+',
       title: {
         row1: 'Learners',
-        row2: 'Placed'
+        row2: 'Placed',
+        jobSwitchRow2: 'Placed'
       }
     },
 ];
