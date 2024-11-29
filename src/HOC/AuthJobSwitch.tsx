@@ -22,7 +22,7 @@ const AuthJobSwitch = (WrappedComponent: FC) => {
                 else {
                     setValue(requestId);
                 }
-              }
+            }
         }, [router]);
 
         if(!value || !isMounted) {

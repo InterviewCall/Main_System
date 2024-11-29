@@ -19,28 +19,12 @@ import {
 } from '@/utils';
 import JobSwitch_SM from '~/images/JobSwitch_Mobile.png';
 import JobSwitch_MD from '~/images/JobSwitch_Programme.png';
+import MasterClassDemo from '~/images/MasterclassDemo.png';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
 import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 const MasterClassPage: FC = () => {
-  // const router = useRouter();
-  // const [isClient, setIsClient] = useState(false);
-
-  // // Ensure localStorage is accessed only on the client-side
-  // useEffect(() => {
-  //   setIsClient(true);
-
-  //   if (typeof window !== 'undefined') {
-  //     const requestId = localStorage.getItem('requestId');
-  //     if(requestId == null) {
-  //       router.replace('/job-switch');
-  //       toast.error('You haven\'t booked yet, Redirecting to the booking page...');
-  //     }
-  //   }
-  // }, [router]);
-
-  // Ensure the component renders only after it's client-side
 
   return (
     <div className='bg-white relative'>
@@ -159,6 +143,49 @@ const MasterClassPage: FC = () => {
           />
         </div>
 
+        <br />
+        <br />
+
+        <Image src={MasterClassDemo} alt='' />
+
+        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+          <p className='text-xl md:text-2xl text-[#085294] font-bold'>
+            About InterviewCall Job Switch Bootcamp -
+          </p>
+        </div>
+
+        <div className='mt-3 text-[#5a6273] text-sm md:text-base'>
+          InterviewCall Job Switch Bootcamp is an immersive, hands-on training program designed for professionals who are ready to make a career shift into web development or elevate their current tech roles to secure higher-paying positions. Whether you&apos;re looking to transition from a non-tech background or level up your expertise in a tech field, our bootcamp offers the perfect blend of foundational knowledge, advanced skills, and real-world experience to make you job-ready in the rapidly growing tech industry.
+          <br />
+          <br />
+          Our Job Switch Bootcamp provides:
+          <br/>
+          <br />
+          Comprehensive Curriculum: From programming basics to advanced full-stack web development, our structured modules ensure that you gain proficiency in essential technologies such as C++, JavaScript, React, Node.js, MongoDB, and more. Whether you&apos;re just starting or looking to enhance your existing skills, the program is designed to take you step by step, ensuring mastery over each concept.
+          <br />
+          <br />
+          Industry-Leading Instructors: Learn from experienced instructors who have worked at top tech companies like Amazon, Google, and Microsoft. Their real-world insights and mentorship will guide you throughout your learning journey, ensuring you stay updated with industry trends and best practices.
+          <br />
+          <br />
+          AI Integration & DevOps: Stay ahead of the curve with lessons on integrating Generative AI into your applications and applying DevOps principles. These cutting-edge skills are increasingly in demand and will help you stand out in a competitive job market.
+          <br />
+          <br />
+          Interview & Placement Support: Our bootcamp goes beyond just teaching. We provide comprehensive interview preparation, including mock interviews, resume building, and personal branding through LinkedIn optimization. Our dedicated placement team works tirelessly to connect you with over 550+ companies actively hiring for tech talent.
+          <br />
+          <br />
+          Job Guarantee & Flexibility: We&apos;re committed to your success! The program includes 12 months of placement support, and if you don&apos;t land a job within this period, we offer a 100% refund. Plus, our flexible payment plans and EMI options ensure that you can focus on your learning without worrying about finances.
+          <br />
+          <br />
+          Scholarships & Financial Assistance: To make this career-boosting opportunity accessible to as many professionals as possible, we offer scholarships of up to ₹20,000, along with affordable payment plans, ensuring that cost isn&apos;t a barrier to your career transformation.
+          <br />
+          <br />
+          Why Choose InterviewCall Job Switch Bootcamp? <br /> <br />
+          Designed for Professionals: Whether you are in AI/ML, data science, project management, or another tech or non-tech field, our program is tailor-made to help you switch to web development or secure better roles in your current field.
+          Real-World Projects: Learn by doing! You&apos;ll work on hands-on projects, case studies, and real-world assignments that simulate industry conditions, giving you the practical experience employers are looking for.
+          Flexible Learning: Attend live interactive classes, access recorded sessions, and benefit from 1:1 teaching assistant support—all designed to fit your schedule.
+          Take the next step in your career today. Join the InterviewCall Job Switch Bootcamp and unlock new opportunities in the tech industry!
+        </div>
+
         {/* Alumni Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
@@ -188,4 +215,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default AuthJobSwitch(MasterClassPage);
+export default (MasterClassPage);

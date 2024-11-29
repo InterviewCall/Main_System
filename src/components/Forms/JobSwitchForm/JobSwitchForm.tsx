@@ -72,7 +72,7 @@ const JobSwitchForm: FC = () => {
         <div>
           <form
             onSubmit={handleSubmit(registerWebinar)}
-            className='bg-[#FFFFFF] rounded-lg w-full md:max-w-[30vw] h-auto flex flex-col gap-y-5 md:fixed md:top-[24%] md:right-[2%] p-5 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
+            className='bg-[#FFFFFF] rounded-lg w-full md:max-w-[27vw] h-auto flex flex-col flex-wrap gap-y-5 md:fixed md:top-[24%] md:right-[2%] p-5 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
             noValidate
           >
             <div className='w-full flex flex-col gap-y-1'>
