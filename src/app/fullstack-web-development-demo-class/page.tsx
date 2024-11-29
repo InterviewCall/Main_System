@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 // import { useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
