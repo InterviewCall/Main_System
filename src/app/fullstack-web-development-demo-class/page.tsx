@@ -28,9 +28,12 @@ const MasterClassPage: FC = () => {
   useEffect(() => {
     setIsClient(true);
 
-    if (typeof window !== 'undefined' && !localStorage.getItem('requestId')) {
-      router.replace('/fullstack-mern');
-      toast.error('You haven\'t booked yet, Redirecting to the booking page...');
+    if (typeof window !== 'undefined') {
+      const requestId = localStorage.getItem('requestId');
+      if(requestId == null) {
+        router.replace('/job-switch');
+        toast.error('You haven\'t booked yet, Redirecting to the booking page...');
+      }
     }
   }, [router]);
 
