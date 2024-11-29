@@ -141,11 +141,11 @@ const MasterClassPage: FC = () => {
         <br />
         <br />
 
-        <Image src={MasterClassDemo} alt='' />
+        <Image src={MasterClassDemo} alt='MasterClassDemo' />
 
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
-            About InterviewCall Job Switch Bootcamp -
+            About InterviewCall Job Switch Bootcamp
           </p>
         </div>
 

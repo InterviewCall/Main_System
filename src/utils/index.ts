@@ -986,6 +986,22 @@ export const FooterSectionArray: FooterSectionArrayType[] = [
   }
 ];
 
+export const FSDWMasterclassSessionLearn = [
+  'Full Stack Development Essentials – Master key front-end and back-end technologies like HTML, CSS, JavaScript, React, Node.js, and MongoDB.',
+  'Job Market Insights – Understand the demand for full stack developers and explore career opportunities with top tech companies.',
+  'Interview Preparation – Get ready for tech interviews with a focus on coding assessments, system design, and impressing hiring managers.',
+  'DevOps Practices – Learn how to streamline development processes, improve collaboration, and deploy applications efficiently with modern DevOps tools.', 
+  'AI Integration – Discover how to incorporate AI into your web development projects to build smarter applications and stay ahead of the curve in the evolving tech landscape.',
+  'Building Your Portfolio – Learn how to create a standout portfolio with real-world projects that demonstrate your skills to potential employers.',
+  'Career Growth Strategies – Find out how to continuously upskill and stay competitive in the fast-changing tech industry.'
+];
+
+export const FSDWMasterclassMentorQualification = [
+  'Ex - Software Engineer @Goldman Sachs Poland',
+  'Ex - Software Engineer @Adobe, American Express',
+  'Offer Holder - Amazon London, The D.E. Shaw Group Luxembourg, Uber'
+];
+
 export const JobSwitchMasterclassSessionLearn = [
   'Explore the Bootcamp Curriculum: Learn about key web development skills, including C++, JavaScript, React, and Node.js.',
   '⁠Understand Career Paths: Discover opportunities in full-stack development and software engineering.',
