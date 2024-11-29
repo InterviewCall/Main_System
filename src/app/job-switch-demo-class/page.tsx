@@ -1,16 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-// import { useRouter } from 'next/navigation';
-// import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 
-// import toast from 'react-hot-toast';
-// import toast from 'react-hot-toast';
 import JobSwitchForm from '@/components/Forms/JobSwitchForm/JobSwitchForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import AuthJobSwitch from '@/HOC/AuthJobSwitch';
-// import AuthJobSwitch from '@/HOC/AuthJobSwitch';
 import {
   JobSwitchMasterclassMentorQualification,
   JobSwitchMasterclassSessionLearn,
@@ -215,4 +210,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default (MasterClassPage);
+export default AuthJobSwitch(MasterClassPage);
