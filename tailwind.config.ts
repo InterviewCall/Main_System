@@ -85,12 +85,25 @@ export default {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+
+        shine: {
+          '0%': {
+            left: '-100%'
+          },
+          '20%': {
+            left: '100%'
+          },
+          '100%': {
+            left: '100%'
+          }
+        }
         
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
         rotateSlow: 'rotateInfinite 30s linear infinite',
+        shine: 'shine 3s linear infinite'
       },
     },
   },

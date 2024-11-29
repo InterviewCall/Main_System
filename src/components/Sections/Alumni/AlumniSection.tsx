@@ -13,17 +13,14 @@ import DownloadBrochureButton from './DownloadBrochureButton';
 
 const AlumniSection: FC = () => {
   const [downloadButtonName, setDownloadButtonName] = useState('');
-  const [buttonTitle, setButtonTitle] = useState('');
   const pathName = usePathname();
 
   useEffect(() => {
     if(pathName == '/fullstack-mern') {
       setDownloadButtonName('Full Stack Web Development Brochure');
-      setButtonTitle('DOWNLOAD MERN BROCHURE');
     }
     else if(pathName == '/job-switch') {
       setDownloadButtonName('Job Switch Bootcamp Brochure');
-      setButtonTitle('Download Job Switch Bootcamp Brochure');
     }
   }, [pathName]);
 
@@ -34,7 +31,7 @@ const AlumniSection: FC = () => {
         <p className='md:text-2xl text-lg font-medium text-white text-center'>
           {downloadButtonName}
         </p>
-        <DownloadBrochureButton buttonTitle={buttonTitle} />
+        <DownloadBrochureButton />
       </div>
 
       {/* Alumni Section */}
@@ -118,10 +115,10 @@ const AlumniSection: FC = () => {
 
         {/* Marquee Section */}
         <div className='w-screen bg-darkblue mt-8'>
-          <Marquee className='w-screen'>
+          <Marquee  autoFill className='w-screen'>
             <div className='bg-darkblue flex gap-6 text-white md:text-xl text-base font-medium overflow-clip p-2'>
               {Array.from({ length: 4 }).map((_, i) => (
-                <p key={i}>Batch starts on 10th Sept 2024. LIMITED SEATS.</p>
+                <p key={i}>Batch starts in January 2025.</p>
               ))}
             </div>
           </Marquee>

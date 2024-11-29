@@ -17,7 +17,7 @@ const HeroSection: FC = () => {
   useEffect(() => {
     if(pathName == '/fullstack-mern') {
       setTitle('Full Stack Web Development with Placement Assistance');
-      setDescription('Choose MERN stack or Spring Boot and acquire expertise through practical application and real-world projects.');
+      setDescription('Learn DSA, MERN, System Design, DevOps and AI to become the top 1% developer');
     }
     else if(pathName == '/job-switch') {
       setTitle('Job Switch Bootcamp with Placement Assistance');
