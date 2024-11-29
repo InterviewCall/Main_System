@@ -7,8 +7,6 @@ import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import {
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
-  MasterclassMentorQualification,
-  MasterclassSessionLearn,
 } from '@/utils';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
@@ -82,13 +80,13 @@ const MasterClass: FC = () => {
             What You Will Learn From This Session
           </p>
         </div>
-        <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
+        {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassSessionLearn.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         {/* Mentor Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
@@ -96,13 +94,13 @@ const MasterClass: FC = () => {
             Meet Pulkit Aneja
           </p>
         </div>
-        <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
+        {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassMentorQualification.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         {/* Learners Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
