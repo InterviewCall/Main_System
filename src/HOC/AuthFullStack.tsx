@@ -10,7 +10,9 @@ const AuthJobSwitch = (WrappedComponent: FC) => {
         const [isMounted, setIsMounted] = useState(false);
 
         useEffect(() => {
-            setIsMounted(true);
+            if (typeof window !== 'undefined') {
+                setIsMounted(true);
+            }
         }, []);
         
         useEffect(() => {

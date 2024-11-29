@@ -10,11 +10,14 @@ const AuthJobSwitch = (WrappedComponent: FC) => {
         const [isMounted, setIsMounted] = useState(false);
 
         useEffect(() => {
-            setIsMounted(true);
+            if (typeof window !== 'undefined') {
+                setIsMounted(true);
+              }
         }, []);
-        
+
         useEffect(() => {
             if (!isMounted) return;
+            
             if(!localStorage.getItem('requestId')) {
             router.replace('/job-switch');
             toast.error('You havn\'t booked yet, Redirecting to the booking page...');
