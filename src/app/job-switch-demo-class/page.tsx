@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 // import { useRouter } from 'next/navigation';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
 // import toast from 'react-hot-toast';
@@ -24,12 +24,22 @@ import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 const MasterClassPage: FC = () => {
   const router = useRouter();
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure localStorage is accessed only on the client-side
   useEffect(() => {
-    if(!localStorage.getItem('requestId')) {
+    setIsClient(true);
+
+    if (typeof window !== 'undefined' && !localStorage.getItem('requestId')) {
       router.replace('/job-switch');
-      toast.error('You havn\'t booked yet, Redirecting to the booking page...');
+      toast.error('You haven\'t booked yet, Redirecting to the booking page...');
     }
   }, [router]);
+
+  // Ensure the component renders only after it's client-side
+  if (!isClient) {
+    return null; // Render nothing until it's safe to use localStorage
+  }
 
   return (
     <div className='bg-white relative'>
