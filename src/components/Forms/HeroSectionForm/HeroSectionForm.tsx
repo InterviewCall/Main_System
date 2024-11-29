@@ -33,14 +33,14 @@ const HeroSectionForm: FC = () => {
   const [page, setPage] = useState('mern');
   const pathName = usePathname();
   useEffect(() => {
-    if (pathName.length == 1) {
+    if (pathName == '/fullstack-mern') {
       setPage('/fullstack-web-development-demo-class');
     } else {
       if (pathName == '/job-switch') {
         setPage('/job-switch-demo-class');
       }
     }
-  }, [pathName, page]);
+  }, [pathName]);
 
   const {
     register,
