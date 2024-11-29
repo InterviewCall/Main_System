@@ -103,7 +103,7 @@ export default {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
         rotateSlow: 'rotateInfinite 30s linear infinite',
-        shine: 'shine 3s linear infinite'
+        shine: 'shine 2s linear infinite'
       },
     },
   },

@@ -17,7 +17,7 @@ const AuthFullStack = (WrappedComponent: FC) => {
                 const requestId = localStorage.getItem('requestId');
                 if(requestId == null) {
                   router.replace('/fullstack-mern');
-                  toast.error('You haven\'t booked yet, Redirecting to the booking page...');
+                  toast.error('You haven\'t booked yet, Book Free Live Demo Class by entering your Mobile Number');
                 }
                 else {
                     setValue(requestId);

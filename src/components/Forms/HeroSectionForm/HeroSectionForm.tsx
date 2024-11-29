@@ -190,7 +190,7 @@ const HeroSectionForm: FC = () => {
             onClick={stepOtp ? handleSubmit(verifyOtp) : sendOtp}
             className='bg-violet rounded-md p-3 text-white text-[1rem] font-semibold flex items-center justify-center gap-3 hover:scale-95 transition-transform'
           >
-            {stepOtp ? 'CONFIRM REGISTRATION' : 'BOOK FREE LIVE CLASS'}
+            BOOK FREE LIVE CLASS
             <Image src={Rocket} alt='Rocket' className=' w-10 h-10 object-contain' />
           </button>
         </div>

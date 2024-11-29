@@ -17,7 +17,7 @@ const AuthJobSwitch = (WrappedComponent: FC) => {
                 const requestId = localStorage.getItem('requestId');
                 if(requestId == null) {
                   router.replace('/job-switch');
-                  toast.error('You haven\'t booked yet, Redirecting to the booking page...');
+                  toast.error('You haven\'t booked yet, Book Free Live Demo Class by entering your Mobile Number');
                 }
                 else {
                     setValue(requestId);

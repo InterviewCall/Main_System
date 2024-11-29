@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
-import { FC } from 'react';
+import { usePathname } from 'next/navigation';
+import { FC, useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 
 import {
@@ -35,6 +38,17 @@ import CourseCurriculam from './CourseCurriculam';
 import MentorContainer from './MentorContainer';
 
 const CurriculamSection: FC = () => {
+  const pathName = usePathname();
+  const [programeName, setProgrameName] = useState('');
+
+  useEffect(() => {
+    if(pathName == '/fullstack-mern') {
+      setProgrameName('FULL STACK WEB DEVELOPMENT COURSE');
+    }
+    else if(pathName == '/job-switch') {
+      setProgrameName('JOB SWITCH BOOTCAMP');
+    }
+  }, [pathName]);
   return (
     <div className='bg-gradient-to-b from-darkblue to-black px-4 md:px-24 md:py-24 py-4 flex flex-col space-y-24 overflow-hidden'>
       <div className='flex flex-col md:space-y-12 space-y-4'>
@@ -65,7 +79,7 @@ const CurriculamSection: FC = () => {
       <div className='flex flex-col space-y-12'>
         <div className='space-y-6'>
           <p className='text-ankerblue font-semibold text-base md:text-2xl'>
-            FULL STACK WEB DEVELOPMENT COURSE STRUCTURE
+            {programeName} STRUCTURE
           </p>
           <p className='font-semibold text-2xl md:text-5xl text-white'>
             Your Journey With InterviewCall
