@@ -35,12 +35,10 @@ const HeroSectionForm: FC = () => {
   useEffect(() => {
     if (pathName == '/fullstack-mern') {
       setPage('/fullstack-web-development-demo-class');
-    } else {
-      if (pathName == '/job-switch') {
+    } else if (pathName == '/job-switch') {
         setPage('/job-switch-demo-class');
       }
-    }
-  }, [pathName]);
+    }, [pathName]);
 
   const {
     register,
@@ -114,6 +112,7 @@ const HeroSectionForm: FC = () => {
       setIsLoading(false);
       setStepOtp(true);
       setRequestId(response.data.requestId);
+      localStorage.setItem('requestId', response.data.requestId);
     } catch (error) {
       const otpError = error as AxiosError<ResponseOtp>;
       setErrorOtp(otpError.response?.data.description);

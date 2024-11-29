@@ -1,10 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+// import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 
+// import toast from 'react-hot-toast';
 import JobSwitchForm from '@/components/Forms/JobSwitchForm/JobSwitchForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
+import AuthJobSwitch from '@/HOC/AuthJobSwitch';
 import {
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
@@ -18,7 +21,13 @@ import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
 import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 const MasterClassPage: FC = () => {
-
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if(!localStorage.getItem('requestId')) {
+  //     router.replace('/job-switch');
+  //     toast.error('You havn\'t booked yet, Redirecting to the booking page...');
+  //   }
+  // }, [router]);
 
   return (
     <div className='bg-white relative'>
@@ -169,4 +178,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default MasterClassPage;
+export default AuthJobSwitch(MasterClassPage);
