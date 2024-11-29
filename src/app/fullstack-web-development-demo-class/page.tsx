@@ -1,14 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 // import { useRouter } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
+// import { useRouter } from 'next/navigation';
+import { FC } from 'react';
 
+// import toast from 'react-hot-toast';
 // import toast from 'react-hot-toast';
 import FSWDForm from '@/components/Forms/FSWDForm/FSWDForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
+import AuthFullStack from '@/HOC/AuthFullStack';
 // import AuthFullStack from '@/HOC/AuthFullStack';
 import {
   MasterClassAlumnis,
@@ -21,26 +22,26 @@ import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
 import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 const MasterClassPage: FC = () => {
-  const router = useRouter();
-  const [isClient, setIsClient] = useState(false);
+  // const router = useRouter();
+  // const [isClient, setIsClient] = useState(false);
 
-  // Ensure localStorage is accessed only on the client-side
-  useEffect(() => {
-    setIsClient(true);
+  // // Ensure localStorage is accessed only on the client-side
+  // useEffect(() => {
+  //   setIsClient(true);
 
-    if (typeof window !== 'undefined') {
-      const requestId = localStorage.getItem('requestId');
-      if(requestId == null) {
-        router.replace('/job-switch');
-        toast.error('You haven\'t booked yet, Redirecting to the booking page...');
-      }
-    }
-  }, [router]);
+  //   if (typeof window !== 'undefined') {
+  //     const requestId = localStorage.getItem('requestId');
+  //     if(requestId == null) {
+  //       router.replace('/job-switch');
+  //       toast.error('You haven\'t booked yet, Redirecting to the booking page...');
+  //     }
+  //   }
+  // }, [router]);
 
-  // Ensure the component renders only after it's client-side
-  if (!isClient) {
-    return null; // Render nothing until it's safe to use localStorage
-  }
+  // // Ensure the component renders only after it's client-side
+  // if (!isClient) {
+  //   return null; // Render nothing until it's safe to use localStorage
+  // }
   return (
     <div className='bg-white relative'>
       {/* Top Image */}
@@ -190,4 +191,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default MasterClassPage;
+export default AuthFullStack(MasterClassPage);
