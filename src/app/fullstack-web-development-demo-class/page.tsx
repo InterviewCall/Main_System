@@ -11,8 +11,6 @@ import AuthFullStack from '@/HOC/AuthFullStack';
 import {
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
-  MasterclassMentorQualification,
-  MasterclassSessionLearn,
 } from '@/utils';
 import FSWD_SM from '~/images/FSWD_Mobile.png';
 import FSWD_MD from '~/images/FSWD_Programme.png';
@@ -96,13 +94,13 @@ const MasterClassPage: FC = () => {
             What You Will Learn From This Session
           </p>
         </div>
-        <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
+        {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassSessionLearn.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         {/* Mentor Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
@@ -110,13 +108,13 @@ const MasterClassPage: FC = () => {
             Meet Pulkit Aneja
           </p>
         </div>
-        <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
+        {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassMentorQualification.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         {/* Learners Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>

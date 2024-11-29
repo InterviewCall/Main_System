@@ -9,10 +9,10 @@ import JobSwitchForm from '@/components/Forms/JobSwitchForm/JobSwitchForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import AuthJobSwitch from '@/HOC/AuthJobSwitch';
 import {
+  JobSwitchMasterclassMentorQualification,
+  JobSwitchMasterclassSessionLearn,
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
-  MasterclassMentorQualification,
-  MasterclassSessionLearn,
 } from '@/utils';
 import JobSwitch_SM from '~/images/JobSwitch_Mobile.png';
 import JobSwitch_MD from '~/images/JobSwitch_Programme.png';
@@ -46,7 +46,7 @@ const MasterClassPage: FC = () => {
       <div className='w-full md:w-[60%] mt-14 px-4 md:pl-16'>
         {/* Title */}
         <p className='text-[1.5rem] leading-7 md:text-[1.8rem] md:leading-[1.3] font-bold text-center md:text-left'>
-          How E-commerce Platforms like Amazon Use Data Science
+          The Job Switch Blueprint: Unlock High-Paying Tech Roles with our Job Switch Bootcamp
         </p>
 
         {/* Session Details */}
@@ -74,19 +74,13 @@ const MasterClassPage: FC = () => {
           </p>
         </div>
         <div className='mt-3 text-[#5a6273] text-sm md:text-base'>
-          Did you know that Amazon generates over 35% of its sales through
-          personalised product recommendations? And how do you think that
-          happens? That’s the power of Data Science.
+          This Masterclass is designed for professionals who are looking to transition into the tech industry or enhance their current skills to secure higher-paying roles. Whether you’re coming from a non-technical background or already have experience in tech, this session will give you a clear roadmap to success in web development.
           <br />
           <br />
-          The role of data in e-commerce is pivotal—enabling companies to
-          predict customer demand, segment their audience, and secure platforms
-          from fraud.
+          In this session, you’ll get an in-depth overview of our Job Switch Bootcamp, which covers everything from programming fundamentals to advanced topics like full-stack development, system design, and AI integration. Our experienced instructors will guide you through the key skills needed to thrive in today’s competitive job market, while also preparing you for technical interviews.
           <br />
           <br />
-          This LIVE session will guide you through the cutting-edge applications
-          used by Amazon&apos;s Data Scientists, covering the use of data to
-          forecast trends, optimise operations, and ensure security.
+          If you&apos;re ready to take your career to the next level, this Masterclass will provide valuable insights on how to leverage cutting-edge technologies, improve your problem-solving skills, and enhance your employability.
           <br />
           <br />
         </div>
@@ -98,21 +92,24 @@ const MasterClassPage: FC = () => {
           </p>
         </div>
         <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
-          {MasterclassSessionLearn.map((item, index) => (
+          {JobSwitchMasterclassSessionLearn.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>
           ))}
         </ul>
+        <p className='text-[#5a6273] mt-3 md:ml-8 ml-4'>
+        By the end of the session, you’ll know how our bootcamp can help you upgrade your skills and launch your career in tech.
+        </p>
 
         {/* Mentor Section */}
         <div className='bg-[#f3fafe] w-full mt-2 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
-            Meet Pulkit Aneja
+           Meet Sunyul Hossen
           </p>
         </div>
         <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
-          {MasterclassMentorQualification.map((item, index) => (
+          {JobSwitchMasterclassMentorQualification.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>
               {item}
             </li>

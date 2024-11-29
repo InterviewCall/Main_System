@@ -986,17 +986,19 @@ export const FooterSectionArray: FooterSectionArrayType[] = [
   }
 ];
 
-export const MasterclassSessionLearn = [
-  'Learn how data science helps e-commerce platforms offer personalised product recommendations.',
-  'Understand how data models forecast customer demand for better inventory management.',
-  'See how customer segmentation improves marketing and boosts retention.',
-  'Discover how data science detects fraud and enhances platform security.'
+export const JobSwitchMasterclassSessionLearn = [
+  'Explore the Bootcamp Curriculum: Learn about key web development skills, including C++, JavaScript, React, and Node.js.',
+  '⁠Understand Career Paths: Discover opportunities in full-stack development and software engineering.',
+  'Master Technical Skills: Gain hands-on experience in data structures, algorithms, and API design.',
+  'Prepare for Interviews: Get insights on coding challenges and system design.', 
+  'Leverage AI & DevOps: Understand how to integrate AI and streamline development with DevOps.',
+  'Access Placement Support: Learn about mock interviews, resume building, and connections to 550+ companies.'
 ];
 
-export const MasterclassMentorQualification = [
-  'Top-rated Data Science instructor, Scaler ',
-  'Ex-Data Scientist, Amazon',
-  'Ex- Data Scientist-II, Meesho'
+export const JobSwitchMasterclassMentorQualification = [
+  'Ex - Software Engineer @Goldman Sachs Poland',
+  'Ex - Software Engineer @Adobe, American Express',
+  'Offer Holder - Amazon London, The D.E. Shaw Group Luxembourg, Uber'
 ];
 
 export const MasterclassDataScienceAbout = [
