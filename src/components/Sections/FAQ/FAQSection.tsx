@@ -106,15 +106,15 @@ const FAQSection: FC = () => {
                 <div className='flex flex-col gap-8 md:hidden'>
                     {AllQuestionAnswer.map((item, index) => (
                         <div key={index} className='flex border rounded-md overflow-clip'>
-                            <p className='text-header-grey pt-4 px-4 font-semibold text-xl'>
+                            <p className='text-header-grey pt-3 px-4 font-semibold text-xl'>
                                 {index + 1}
                             </p>
 
                             <div className='flex flex-col w-full'>
-                                <div className='px-8 py-4 w-full text-white relative flex justify-between'>
+                                <div className='px-2 py-4 w-full text-white relative flex justify-between'>
                                     <p>{item.question}</p>
                                     <button onClick={() => handleDropdown(index)}>
-                                        <p className='font-light bg-[#4FA9E2] absolute right-0 top-0 p-4 aspect-square w-14 h-14 flex items-center justify-center'>
+                                        <p className='font-light bg-[#4FA9E2] absolute right-0 top-0 p-4 aspect-square w-14 h-auto flex items-center justify-center'>
                                             {selectedDropdown == index ? (
                                                 <BsDashSquare />
                                             ) : (
