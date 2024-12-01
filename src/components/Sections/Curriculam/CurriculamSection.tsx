@@ -50,7 +50,7 @@ const CurriculamSection: FC = () => {
     }
   }, [pathName]);
   return (
-    <div className='bg-gradient-to-b from-darkblue to-black px-4 md:px-24 md:py-24 py-4 flex flex-col space-y-24 overflow-hidden'>
+    <div className='bg-gradient-to-b from-darkblue to-black px-4 md:px-[4rem] md:py-24 py-4 flex flex-col space-y-24 overflow-hidden'>
       <div className='flex flex-col md:space-y-12 space-y-4'>
         <div className='md:space-y-6 space-y-3'>
           <p className='text-ankerblue font-semibold text-base md:text-2xl'>
