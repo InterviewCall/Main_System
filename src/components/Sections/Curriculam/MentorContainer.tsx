@@ -80,13 +80,13 @@ const MentorContainer: FC = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-20 py-20 rounded-[3rem] md:flex justify-between hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-[3rem] py-20 rounded-[3rem] md:flex justify-between hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
 
       <div className='top-outline absolute top-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
       <div className='bottom-outline absolute bottom-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
 
         {/* Mentor Details */}
-        <div className='flex flex-col gap-y-10 w-fit h-fit'>
+        <div className='flex flex-col gap-y-10 h-fit'>
           <p
             className={clsx(
               'inline-block text-transparent bg-clip-text text-7xl md:text-[3.09rem] font-bold',
@@ -106,7 +106,7 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full text-sm md:text-[15px] leading-6'>
+          <p className='text-header-grey w-full text-sm md:text-[13px] leading-6'>
             {experienceOfMentor.length == 5 ? (
               <>
                 <span>
@@ -178,7 +178,7 @@ const MentorContainer: FC = () => {
             />
           </button>
 
-          <div className='relative w-[300px] md:w-[330px] h-[275px]'>
+          <div className='relative w-[300px] md:w-[327px] h-[275px]'>
             {mentorDetails.map((mentor, index) => (
               <MentorCard
                 key={index}

@@ -719,7 +719,7 @@ export const MernCourses: Course[] = [
 //Temporary positioning for the card(medium screen)
 export const mentorCardPositioning = {
   topPositions: ['-bottom-24', '-top-5', 'top-4'],
-  leftPositions: ['left-4', 'left-20', 'left-40'],
+  leftPositions: ['left-4', 'left-20', 'left-[9.2rem]'],
   zIndexes: ['z-[70]', 'z-[60]', 'z-[50]'],
   cardHeight: ['415px', '365px', '290px'],
   cardWidth: ['300px', '270px', '220px']
@@ -813,7 +813,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M6,
     mentorAlt: 'N4',
     mentorName: 'Saurabh Singh',
-    mentorExperience: 'Software Engineer 3 @Walmart India | India Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Software Engineer 3 @Walmart India | Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/singhster/'
   },
 
