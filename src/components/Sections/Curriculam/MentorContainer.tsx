@@ -106,7 +106,7 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full text-sm md:text-[13px] leading-6'>
+          <p className='text-header-grey w-full text-sm md:text-[14px] leading-6'>
             {experienceOfMentor.length == 5 ? (
               <>
                 <span>
@@ -178,7 +178,7 @@ const MentorContainer: FC = () => {
             />
           </button>
 
-          <div className='relative w-[300px] md:w-[315px] h-[275px]'>
+          <div className='relative w-[300px] md:w-[318px] h-[275px]'>
             {mentorDetails.map((mentor, index) => (
               <MentorCard
                 key={index}
