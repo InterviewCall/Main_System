@@ -719,7 +719,7 @@ export const MernCourses: Course[] = [
 //Temporary positioning for the card(medium screen)
 export const mentorCardPositioning = {
   topPositions: ['-bottom-24', '-top-5', 'top-4'],
-  leftPositions: ['left-4', 'left-20', 'left-[9.2rem]'],
+  leftPositions: ['left-4', 'left-[4.9rem]', 'left-[9.2rem]'],
   zIndexes: ['z-[70]', 'z-[60]', 'z-[50]'],
   cardHeight: ['415px', '365px', '290px'],
   cardWidth: ['300px', '270px', '220px']
