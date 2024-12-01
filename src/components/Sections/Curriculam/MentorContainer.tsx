@@ -80,7 +80,7 @@ const MentorContainer: FC = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-[2.3rem] py-20 rounded-[3rem] md:flex justify-between hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:pl-[3rem] md:pr-[2.3rem] py-20 rounded-[3rem] md:flex justify-between hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
 
       <div className='top-outline absolute top-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
       <div className='bottom-outline absolute bottom-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
@@ -106,7 +106,7 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full text-sm md:text-[13.95px] leading-6'>
+          <p className='text-header-grey w-full text-sm md:text-[13.65px] leading-6'>
             {experienceOfMentor.length == 5 ? (
               <>
                 <span>
