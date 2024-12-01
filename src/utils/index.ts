@@ -865,7 +865,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M11,
     mentorAlt: 'N1',
     mentorName: 'Sunyul Hossen',
-    mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express | Offers - Amazon London, D.E. Shaw Luxembourg , Uber Highest Placement of 1.47 Crore | 2 Years of Experience | Interview Strategist @InterviewCall',
+    mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express | Offers - Amazon London, D.E. Shaw Luxembourg , Uber. Highest Placement of 1.47 Cr | 2 Years of Experience | Interview Strategist @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/shssn/'
   },
 
