@@ -80,7 +80,7 @@ const MentorContainer: FC = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-10 py-20 rounded-[3rem] md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-20 py-20 rounded-[3rem] md:flex justify-between hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
 
       <div className='top-outline absolute top-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
       <div className='bottom-outline absolute bottom-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
@@ -106,7 +106,7 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full text-sm md:text-base leading-6'>
+          <p className='text-header-grey w-full text-sm md:text-[1rem] leading-6'>
             {experienceOfMentor.length == 5 ? (
               <>
                 <span>
@@ -164,7 +164,7 @@ const MentorContainer: FC = () => {
         </div>
 
         {/* Mentor Cards */}
-        <div className='flex flex-row items-center justify-center gap-8 md:gap-[5.2rem]'>
+        <div className='flex flex-row items-center justify-center gap-8 md:gap-[5.7rem]'>
           <button
             onClick={handleNext}
             className='bg-gradient-to-tl flex items-center justify-center translate-x-20 from-black to-[#313036] w-10 h-10 md:w-11 md:h-11 rounded-full ring-2 ring-slate-400 hover:scale-125 duration-300'
