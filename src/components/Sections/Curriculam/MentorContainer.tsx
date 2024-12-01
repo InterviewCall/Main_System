@@ -24,6 +24,8 @@ const MentorContainer: FC = () => {
   const [mentorDetails, setMentorDetails] = useState<Mentor[]>(queue.front());
   const [tracker, setTracker] = useState(1);
 
+  const experienceOfMentor = mentorDetails[0].mentorExperience.split('|');
+
   function handleNext() {
     if(tracker == mentorDetails.length) {
       const shiftElementFromQueue = queue.popFront();
@@ -78,13 +80,13 @@ const MentorContainer: FC = () => {
   return (
     <>
       {/* Desktop View */}
-      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-12 py-20 rounded-[3rem] md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
+      <div className='md:w-[98%] relative bg-gradient-to-br from-[#15111C] to-[#000000] px-4 md:px-10 py-20 rounded-[3rem] md:flex justify-around hidden z-10 drop-shadow-2xl shadow-sm shadow-[#ffffff36]'>
 
       <div className='top-outline absolute top-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
       <div className='bottom-outline absolute bottom-0 left-0 w-full h-[1px] bg-custom-gradient'></div>
 
         {/* Mentor Details */}
-        <div className='flex flex-col gap-y-8 h-fit'>
+        <div className='flex flex-col gap-y-10 h-fit'>
           <p
             className={clsx(
               'inline-block text-transparent bg-clip-text text-7xl md:text-[3.09rem] font-bold',
@@ -104,8 +106,44 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full md:w-[500px] text-sm md:text-base leading-6'>
-            {mentorDetails[0].mentorExperience}
+          <p className='text-header-grey w-full text-sm md:text-base leading-6'>
+            {experienceOfMentor.length == 5 ? (
+              <>
+                <span>
+                  {experienceOfMentor[0]} | {experienceOfMentor[1]}
+                </span>
+
+                <br />
+
+                <span>
+                  {experienceOfMentor[2]}
+                </span>
+
+                <br />
+
+                <span>
+                  {experienceOfMentor[3]} | {experienceOfMentor[4]}
+                </span>
+              </>
+            ) : (
+              <>
+                <span>
+                  {experienceOfMentor[0]}
+                </span>
+
+                <br />
+
+                <span>
+                  {experienceOfMentor[1]}
+                </span>
+
+                <br />
+
+                <span>
+                  {experienceOfMentor[2]} | {experienceOfMentor[3]}
+                </span>
+              </>
+            )}
           </p>
 
           <button

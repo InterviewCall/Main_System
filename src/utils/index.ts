@@ -735,7 +735,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M1,
     mentorAlt: 'N1',
     mentorName: 'Supriya Sharma',
-    mentorExperience: 'Software Engineer 3 @Google | Ex Associate @Goldman Sachs Ex Software Engineer @UnitedHealth Group 8 Years of Experience | System Design Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Senior Software Engineer @Google USA | Ex Associate @Goldman Sachs | Ex Software Engineer @UnitedHealth Group | 8 Years of Experience | System Design Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/supriya-sharma-901675b1/'
   },
 
@@ -748,7 +748,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M3,
     mentorAlt: 'N6',
     mentorName: 'Jyotirmoy Deb',
-    mentorExperience: 'Software Engineer - Apple USA. Ex Software Engineer - AT&T. 15 Years of Experience. Web Dev Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Software Engineer @Apple USA | Ex Software Engineer - AT&T | 15 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
   },
 
@@ -761,7 +761,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M2,
     mentorAlt: 'N2',
     mentorName: 'Vishal Sharma',
-    mentorExperience: 'Software Engineer - Microsoft IND. Ex - Goldman Sachs, Rippling, Directi.9 Years of Experience. System Design Instructor & Mentor @InterviewCall.',
+    mentorExperience: 'Senior Software Engineer @Microsoft India | Ex SWE @Rippling | Ex Senior Strats Analyst @Goldman Sachs, @Directi | 9 Years of Experience | System Design Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/vishal-sharma-b698326b/'
   },
 
@@ -774,7 +774,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M9,
     mentorAlt: 'N2',
     mentorName: 'Soham Dasgupta',
-    mentorExperience: 'Senior Software Engineer @Microsoft USA | Ex SDE @Amazon USA | Ex Software Engineer @Edgenuiti, @TCS | 9 Years of Experience | Leadershipp Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Senior Software Engineer @Microsoft USA | Ex SDE @Amazon USA | Ex Software Engineer @Edgenuity, @TCS | 9 Years of Experience | Leadership Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/sohamdasgupta08/'
   },
 
@@ -787,7 +787,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M10,
     mentorAlt: 'N5',
     mentorName: 'Gurtej Singh Rehal',
-    mentorExperience: 'Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Senior Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/gurtejrehal/'
   },
 
@@ -800,7 +800,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M8,
     mentorAlt: 'N5',
     mentorName: 'Sumit Roy',
-    mentorExperience: 'Software Engineer 2 @Atlassian | Ex Senior Software Engineer @Unacamy | Ex Software Engineer @bigbasket.com, Cyware Labs | & Years of Experience | System Design Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Software Engineer 2 @Atlassian | Ex Senior Software Engineer @Unacademy | Ex Software Engineer @bigbasket.com, Cyware Labs | 7 Years of Experience | System Design Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/sroy8091/'
   },
 
@@ -813,7 +813,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M6,
     mentorAlt: 'N4',
     mentorName: 'Saurabh Singh',
-    mentorExperience: 'Software Engineer 3 @Walmart India | Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Software Engineer 3 @Walmart India | India Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/singhster/'
   },
 
@@ -839,7 +839,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M4,
     mentorAlt: 'N1',
     mentorName: 'Maria Shah',
-    mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis 14 Years of Experience | Soft Skill Instructor & Mentor @InterviewCall',
+    mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis | 14 Years of Experience | Soft Skills Instructor & Mentor @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/coachmariashah/'
   },
 
@@ -865,7 +865,7 @@ export const Mentors: Mentor[] = [
     mentorImage: M11,
     mentorAlt: 'N1',
     mentorName: 'Sunyul Hossen',
-    mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express Offers - Amazon London, D.E. Shaw Luxembourg | Uber Highest Placement of 1.47 Crore | Interview Strategist @InterviewCall',
+    mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express | Offers - Amazon London, D.E. Shaw Luxembourg , Uber Highest Placement of 1.47 Crore | 2 Years of Experience | Interview Strategist @InterviewCall',
     mentorLinkedinProfile: 'https://www.linkedin.com/in/shssn/'
   },
 
