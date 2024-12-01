@@ -106,7 +106,7 @@ const MentorContainer: FC = () => {
             {mentorDetails[0].mentorName}
           </p>
 
-          <p className='text-header-grey w-full text-sm md:text-[14px] leading-6'>
+          <p className='text-header-grey w-full text-sm md:text-[13.95px] leading-6'>
             {experienceOfMentor.length == 5 ? (
               <>
                 <span>
