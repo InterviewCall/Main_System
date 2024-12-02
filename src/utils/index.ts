@@ -1,51 +1,8 @@
 import { BsTwitterX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaSpotify, FaYoutube } from 'react-icons/fa';
 
-import {
-  Amazon,
-  Apple,
-  Atlassian,
-  Google,
-  Lyft,
-  Meta,
-  Microsoft,
-  Netflix,
-  Zomato,
-} from '@/assets/CurriculamSectionAssets';
-import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, Icon, IHeroStat, Learner, MasterClassAlumni, Mentor, PastLearner } from '@/types';
-import A1 from '~/images/Alumni1.png';
-import A2 from '~/images/Alumni2.png';
-import A3 from '~/images/Alumni3.png';
-import A4 from '~/images/Alumni4.png';
-import A5 from '~/images/Alumni5.png';
-import Alumni1 from '~/images/MasterClassAlumni1.png';
-import Alumni2 from '~/images/MasterClassAlumni2.png';
-import Alumni3 from '~/images/MasterClassAlumni3.png';
-import Alumni4 from '~/images/MasterClassAlumni4.png';
-import AlumniMobile1 from '~/images/MasterClassAlumniMobile1.png';
-import AlumniMobile2 from '~/images/MasterClassAlumniMobile2.png';
-import AlumniMobile3 from '~/images/MasterClassAlumniMobile3.png';
-import AlumniMobile4 from '~/images/MasterClassAlumniMobile4.png';
-import M1 from '~/images/Mentor1.png';
-import M2 from '~/images/Mentor2.png';
-import M3 from '~/images/Mentor3.png';
-import M4 from '~/images/Mentor4.png';
-import M5 from '~/images/Mentor5.png';
-import M6 from '~/images/Mentor6.png';
-import M7 from '~/images/Mentor7.png';
-import M8 from '~/images/Mentor8.png';
-import M9 from '~/images/Mentor9.png';
-import M10 from '~/images/Mentor10.png';
-import M11 from '~/images/Mentor11.png';
-import M12 from '~/images/Mentor12.png';
-import P4 from '~/images/P4.png';
-import P5 from '~/images/P5.png';
-import P6 from '~/images/P6.png';
-import P7 from '~/images/P7.png';
-import P8 from '~/images/P8.png';
-import P9 from '~/images/P9.png';
-import PastLearner1 from '~/images/PastLearner1.png';
-
+import * as MainAssests from '@/assets/MainAssests';
+import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, Icon, IHeroStat, Learner, MasterClassAlumni, Mentor } from '@/types';
 
 export const HeroSectionOptions = [
     'Placement Assistance',
@@ -95,7 +52,7 @@ export const HeroSectionStats: IHeroStat[] = [
 // videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Abhinay-Final-Testimonial.mp4',
 export const AlumniCards: AlumniCard[] = [
   {
-    cardImage: A3,
+    cardImage: MainAssests.A3,
     alumniName: 'Abhinay Reddy',
     checkTitle: 'SDE - Valuefy',
     alumniJobDesc: 'Offer - Valuefy, Knolskape',
@@ -110,7 +67,7 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
-    cardImage: A2,
+    cardImage: MainAssests.A2,
     alumniName: 'Shivansh Yashasvi',
     checkTitle: 'SDE - ION',
     alumniJobDesc: 'Offer @Amazon, ION, CISCO',
@@ -126,7 +83,7 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
-    cardImage: A1,
+    cardImage: MainAssests.A1,
     alumniName: 'Rounak Goswami',
     checkTitle: 'SDE - Morgan Stanley',
     alumniJobDesc: 'Offer - Morgan Stanley',
@@ -141,7 +98,7 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
-    cardImage: A4,
+    cardImage: MainAssests.A4,
     alumniName: 'Abhishek Dixit',
     checkTitle: 'Senior SDE - Meesho',
     alumniJobDesc: 'Offer - Goldman Sachs, Meesho',
@@ -156,7 +113,7 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
-    cardImage: A5,
+    cardImage: MainAssests.A5,
     alumniName: 'Fahad Ali',
     checkTitle: 'Senior SDE - Razorpay',
     alumniJobDesc: 'Offer - Razorpay',
@@ -732,7 +689,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
     cardHeight: mentorCardPositioning.cardHeight[0],
     cardWidth: mentorCardPositioning.cardWidth[0],
-    mentorImage: M1,
+    mentorImage: MainAssests.M1,
     mentorAlt: 'N1',
     mentorName: 'Supriya Sharma',
     mentorExperience: 'Senior Software Engineer @Google USA | Ex Associate @Goldman Sachs | Ex Software Engineer @UnitedHealth Group | 8 Years of Experience | System Design Instructor & Mentor @InterviewCall',
@@ -745,7 +702,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
     cardHeight: mentorCardPositioning.cardHeight[1],
     cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: M3,
+    mentorImage: MainAssests.M3,
     mentorAlt: 'N6',
     mentorName: 'Jyotirmoy Deb',
     mentorExperience: 'Software Engineer @Apple USA | Ex Software Engineer - AT&T | 15 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
@@ -758,7 +715,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: M2,
+    mentorImage: MainAssests.M2,
     mentorAlt: 'N2',
     mentorName: 'Vishal Sharma',
     mentorExperience: 'Senior Software Engineer @Microsoft India | Ex SWE @Rippling | Ex Senior Strats Analyst @Goldman Sachs, @Directi | 9 Years of Experience | System Design Instructor & Mentor @InterviewCall',
@@ -771,7 +728,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
     cardHeight: mentorCardPositioning.cardHeight[0],
     cardWidth: mentorCardPositioning.cardWidth[0],
-    mentorImage: M9,
+    mentorImage: MainAssests.M9,
     mentorAlt: 'N2',
     mentorName: 'Soham Dasgupta',
     mentorExperience: 'Senior Software Engineer @Microsoft USA | Ex SDE @Amazon USA | Ex Software Engineer @Edgenuity, @TCS | 9 Years of Experience | Leadership Instructor & Mentor @InterviewCall',
@@ -784,7 +741,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
     cardHeight: mentorCardPositioning.cardHeight[1],
     cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: M10,
+    mentorImage: MainAssests.M10,
     mentorAlt: 'N5',
     mentorName: 'Gurtej Singh Rehal',
     mentorExperience: 'Senior Software Engineer @Meta London | Ex SDE 2 @Microsoft | Ex Software Engineer @Amazon, @TCS | 5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
@@ -797,7 +754,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: M8,
+    mentorImage: MainAssests.M8,
     mentorAlt: 'N5',
     mentorName: 'Sumit Roy',
     mentorExperience: 'Software Engineer 2 @Atlassian | Ex Senior Software Engineer @Unacademy | Ex Software Engineer @bigbasket.com, Cyware Labs | 7 Years of Experience | System Design Instructor & Mentor @InterviewCall',
@@ -810,7 +767,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
     cardHeight: mentorCardPositioning.cardHeight[0],
     cardWidth: mentorCardPositioning.cardWidth[0],
-    mentorImage: M6,
+    mentorImage: MainAssests.M6,
     mentorAlt: 'N4',
     mentorName: 'Saurabh Singh',
     mentorExperience: 'Software Engineer 3 @Walmart India | Ex Software Engineer @Infosys | 5.5 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
@@ -823,7 +780,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
     cardHeight: mentorCardPositioning.cardHeight[1],
     cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: M12,
+    mentorImage: MainAssests.M12,
     mentorAlt: 'N5',
     mentorName: 'Ankit Gupta',
     mentorExperience: 'Software Engineer 2 @Atlassian India | Ex - Software Engineer @Decision Fiction | 5 Years of Experience | Web Dev Mentor @InterviewCall',
@@ -836,7 +793,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: M4,
+    mentorImage: MainAssests.M4,
     mentorAlt: 'N1',
     mentorName: 'Maria Shah',
     mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis | 14 Years of Experience | Soft Skills Instructor & Mentor @InterviewCall',
@@ -849,7 +806,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
     cardHeight: mentorCardPositioning.cardHeight[0],
     cardWidth: mentorCardPositioning.cardWidth[0],
-    mentorImage: M5,
+    mentorImage: MainAssests.M5,
     mentorAlt: 'N5',
     mentorName: 'Mostafizur Rahaman',
     mentorExperience: 'Ex Software Engineer @The D.E. Shaw Group India | Ex Software Engineer @Waxwing, getgpt.ai, Infosys | 4 Years of Experience | DSA Instructor & Mentor @InterviewCall',
@@ -862,7 +819,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
     cardHeight: mentorCardPositioning.cardHeight[1],
     cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: M11,
+    mentorImage: MainAssests.M11,
     mentorAlt: 'N1',
     mentorName: 'Sunyul Hossen',
     mentorExperience: 'Ex Software Engineer @Goldman Sachs Poland, Adobe, American Express | Offers - Amazon London, D.E. Shaw Luxembourg , Uber. Highest CTC of 1.47 Cr | 2 Years of Experience | Interview Strategist @InterviewCall',
@@ -875,7 +832,7 @@ export const Mentors: Mentor[] = [
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: M7,
+    mentorImage: MainAssests.M7,
     mentorAlt: 'N3',
     mentorName: 'Syed Abbas',
     mentorExperience: 'Software Engineer @NEC Corporation India | Ex Software Engineer @Ecera System | 3 Years of Experience | Web Dev Instructor & Mentor @InterviewCall',
@@ -885,7 +842,7 @@ export const Mentors: Mentor[] = [
 
 export const Learners: Learner[] = [
   {
-    learnerImage: P4,
+    learnerImage: MainAssests.P4,
     learnerCompany: 'Google India',
     learnerRole: 'Software Engineer',
     learnerImageHeight: 'h-[500px]',
@@ -894,7 +851,7 @@ export const Learners: Learner[] = [
   },
 
   {
-    learnerImage: P5,
+    learnerImage: MainAssests.P5,
     learnerCompany: 'Amazon India',
     learnerRole: 'Software Engineer',
     learnerImageHeight: 'h-[570px]',
@@ -903,7 +860,7 @@ export const Learners: Learner[] = [
   },
 
   {
-    learnerImage: P6,
+    learnerImage: MainAssests.P6,
     learnerCompany: 'Microsoft India',
     learnerRole: 'Software Engineer',
     learnerImageHeight: 'h-[500px]',
@@ -918,7 +875,7 @@ export const Events: Event[] = [
     eventTitle: 'Nail your interviews',
     eventType: 'Live Event',
     eventPrice: 499,
-    eventPersonImage: P7,
+    eventPersonImage: MainAssests.P7,
     eventPersonNameColor: 'text-[#4DE3ED]'
   },
 
@@ -927,7 +884,7 @@ export const Events: Event[] = [
     eventTitle: 'Sell your first product online',
     eventType: 'Live Event',
     eventPrice: 499,
-    eventPersonImage: P8,
+    eventPersonImage: MainAssests.P8,
     eventPersonNameColor: 'text-[#91F2A6]',
     cardWrapperMDHeight: 'md:h-[450px]',
     cardWrapperMDWidth: 'md:w-[400px]'
@@ -938,7 +895,7 @@ export const Events: Event[] = [
     eventTitle: 'Learn about no-code tools',
     eventType: 'Live Event',
     eventPrice: 499,
-    eventPersonImage: P9,
+    eventPersonImage: MainAssests.P9,
     eventPersonNameColor: 'text-[#DF91F2]'
   }
 ];
@@ -1028,37 +985,37 @@ export const MasterclassDataScienceAbout = [
 
 export const MasterClassAlumnis: MasterClassAlumni[] = [
   {
-    alumniImage: Alumni1
+    alumniImage: MainAssests.Alumni1
   },
 
   {
-    alumniImage: Alumni2,
+    alumniImage: MainAssests.Alumni2,
   },
 
   {
-    alumniImage: Alumni3,
+    alumniImage: MainAssests.Alumni3,
   },
 
   {
-    alumniImage: Alumni4,
+    alumniImage: MainAssests.Alumni4,
   }
 ];
 
 export const MasterClassAlumnisMobile: MasterClassAlumni[] = [
   {
-    alumniImage: AlumniMobile1
+    alumniImage: MainAssests.AlumniMobile1
   },
 
   {
-    alumniImage: AlumniMobile2,
+    alumniImage: MainAssests.AlumniMobile2,
   },
 
   {
-    alumniImage: AlumniMobile3,
+    alumniImage: MainAssests.AlumniMobile3,
   },
 
   {
-    alumniImage: AlumniMobile4,
+    alumniImage: MainAssests.AlumniMobile4,
   }
 ];
 
@@ -1114,49 +1071,39 @@ export function isValidEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
-export const Companies = [Amazon, Apple, Atlassian, Lyft, Zomato, Google, Meta, Microsoft, Netflix, Lyft, Meta, Atlassian];
+export const CompaniesRow1 = [MainAssests.C1, MainAssests.C2, MainAssests.C3, MainAssests.C4, MainAssests.C5, MainAssests.C6, MainAssests.C7, MainAssests.C8, MainAssests.C9, MainAssests.C10, MainAssests.C11, MainAssests.C12, MainAssests.C13, MainAssests.C14, MainAssests.C15];
+export const CompaniesRow2 = [MainAssests.C16, MainAssests.C17, MainAssests.C18, MainAssests.C19, MainAssests.C20, MainAssests.C21, MainAssests.C22, MainAssests.C23, MainAssests.C24, MainAssests.C25, MainAssests.C26, MainAssests.C27, MainAssests.C28, MainAssests.C29, MainAssests.C30];
+export const CompaniesRow3 = [MainAssests.C31, MainAssests.C32, MainAssests.C33, MainAssests.C34, MainAssests.C35, MainAssests.C36, MainAssests.C37, MainAssests.C38, MainAssests.C39, MainAssests.C40, MainAssests.C41, MainAssests.C42, MainAssests.C43, MainAssests.C44, MainAssests.C45];
 
 
-export const PastLearners: PastLearner[] = [
-  {
-    learnerImage: PastLearner1
-  },
+export const PastLearnersRow1 = [
+ MainAssests.PastLearner1,
+ MainAssests.PastLearner2,
+ MainAssests.PastLearner3,
+ MainAssests.PastLearner4,
+ MainAssests.PastLearner5,
+ MainAssests.PastLearner6,
+ MainAssests.PastLearner7,
+ MainAssests.PastLearner8,
+ MainAssests.PastLearner9,
+ MainAssests.PastLearner10,
+ MainAssests.PastLearner11,
+ MainAssests.PastLearner12
+];
 
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  },
-
-  {
-    learnerImage: PastLearner1
-  }
+export const PastLearnersRow2 = [
+  MainAssests.PastLearner13,
+  MainAssests.PastLearner14,
+  MainAssests.PastLearner15,
+  MainAssests.PastLearner16,
+  MainAssests.PastLearner17,
+  MainAssests.PastLearner18,
+  MainAssests.PastLearner19,
+  MainAssests.PastLearner20,
+  MainAssests.PastLearner21,
+  MainAssests.PastLearner22,
+  MainAssests.PastLearner23,
+  MainAssests.PastLearner24
 ];
 
 export const FooterIcons: Icon[] = [

@@ -228,10 +228,6 @@ export interface EverWebinarRequest extends WebinarRequest {
 
 export type EverWebinarResponse = WebinarResponse;
 
-export type PastLearner = {
-    learnerImage: StaticImageData
-}
-
 export interface Icon {
     iconName: IconType,
     iconLink: string

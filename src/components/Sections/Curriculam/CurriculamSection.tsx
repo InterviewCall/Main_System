@@ -30,9 +30,8 @@ import {
   Triangle,
   Users,
 } from '@/assets/CurriculamSectionAssets';
-import { Companies } from '@/utils';
+import {CompaniesRow1, CompaniesRow2, CompaniesRow3 } from '@/utils';
 
-// import { Companies } from '@/utils';
 import Caraousel from './Caraousel';
 import CourseCurriculam from './CourseCurriculam';
 import MentorContainer from './MentorContainer';
@@ -381,23 +380,23 @@ const CurriculamSection: FC = () => {
             </div>
 
             <div className='md:hidden block'>
-              <div className='relative mask-linear'>
+              <div className='relative mask-linear mt-12'>
                 <Marquee speed={30} autoFill direction='right'>
-                    <div className='flex'>
-                      {Companies.map((item, index) => (
-                        <Image key={index} src={item} width={80} height={80} alt='image' />
-                      ))}
-                    </div>
+                  {CompaniesRow1.map((item, index) => (
+                    <Image key={index} src={item} width={80} height={80} alt='image' />
+                  ))}
                 </Marquee>
-              </div>
 
-              <div className='relative mask-linear'>
                 <Marquee speed={30} autoFill direction='left'>
-                    <div className='flex'>
-                      {Companies.map((item, index) => (
-                        <Image key={index} src={item} width={80} height={80} alt='image' />
-                      ))}
-                    </div>
+                  {CompaniesRow2.map((item, index) => (
+                    <Image key={index} src={item} width={80} height={80} alt='image' />
+                  ))}
+                </Marquee>
+
+                <Marquee speed={30} autoFill direction='right'>
+                  {CompaniesRow3.map((item, index) => (
+                    <Image key={index} src={item} width={80} height={80} alt='image' />
+                  ))}
                 </Marquee>
               </div>
             </div>

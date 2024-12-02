@@ -2,11 +2,8 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 
-import { PastLearners } from '@/utils';
-// import { Learners } from '@/utils';
+import { PastLearnersRow1, PastLearnersRow2 } from '@/utils';
 import MeetLearners from '~/images/MeetLearners.png';
-
-// import LearnerCard from './LearnerCard';
 
 const LearnerSection: FC = () => {
   return (
@@ -17,12 +14,24 @@ const LearnerSection: FC = () => {
       </p>
 
       <div className='w-full'>
-        <div className='relative mask-linear'>
-          <Marquee speed={30} autoFill direction='left'>
-              {PastLearners.map((learner, index) => (
+        <div className='relative mask-linear flex flex-col md:gap-y-12 gap-y-8'>
+          <Marquee speed={30} pauseOnHover autoFill direction='left'>
+              {PastLearnersRow1.map((learnerImage, index) => (
                 <Image 
                   key={index} 
-                  src={learner.learnerImage} 
+                  src={learnerImage} 
+                  alt='learnerImage' 
+                  loading='lazy' 
+                  className='mx-4 md:w-[8vw] w-[24vw]'
+                />
+              ))}
+          </Marquee>
+
+          <Marquee speed={30} pauseOnHover autoFill direction='right'>
+              {PastLearnersRow2.map((learnerImage, index) => (
+                <Image 
+                  key={index} 
+                  src={learnerImage} 
                   alt='learnerImage' 
                   loading='lazy' 
                   className='mx-4 md:w-[8vw] w-[24vw]'
@@ -31,19 +40,6 @@ const LearnerSection: FC = () => {
           </Marquee>
         </div>
       </div>
-      {/* <div className='flex md:flex-row md:justify-evenly flex-col items-end mx-auto md:mx-0 gap-8'>
-        {Learners.map((learner, index) => (
-          <LearnerCard
-            key={index}
-            learnerImage={learner.learnerImage}
-            learnerCompany={learner.learnerCompany}
-            learnerRole={learner.learnerRole}
-            companyIcon={learner.companyIcon}
-            companyRingColor={learner.companyRingColor}
-            learnerImageHeight={learner.learnerImageHeight}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };
