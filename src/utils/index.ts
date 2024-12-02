@@ -1071,9 +1071,9 @@ export function isValidEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
-export const CompaniesRow1 = [MainAssests.C1, MainAssests.C2, MainAssests.C3, MainAssests.C4, MainAssests.C5, MainAssests.C6, MainAssests.C7, MainAssests.C8, MainAssests.C9, MainAssests.C10, MainAssests.C11, MainAssests.C12, MainAssests.C13, MainAssests.C14, MainAssests.C15];
-export const CompaniesRow2 = [MainAssests.C16, MainAssests.C17, MainAssests.C18, MainAssests.C19, MainAssests.C20, MainAssests.C21, MainAssests.C22, MainAssests.C23, MainAssests.C24, MainAssests.C25, MainAssests.C26, MainAssests.C27, MainAssests.C28, MainAssests.C29, MainAssests.C30];
-export const CompaniesRow3 = [MainAssests.C31, MainAssests.C32, MainAssests.C33, MainAssests.C34, MainAssests.C35, MainAssests.C36, MainAssests.C37, MainAssests.C38, MainAssests.C39, MainAssests.C40, MainAssests.C41, MainAssests.C42, MainAssests.C43, MainAssests.C44, MainAssests.C45];
+export const CompaniesRow1 = [MainAssests.Apple, MainAssests.Amazon, MainAssests.Atlassian, MainAssests.C1, MainAssests.C2, MainAssests.C3, MainAssests.C4, MainAssests.C5, MainAssests.C6, MainAssests.C7, MainAssests.C8, MainAssests.C9, MainAssests.C10, MainAssests.C11, MainAssests.C12, MainAssests.C13, MainAssests.C14, MainAssests.C15];
+export const CompaniesRow2 = [MainAssests.Google, MainAssests.Lyft, MainAssests.Meta, MainAssests.C16, MainAssests.C17, MainAssests.C18, MainAssests.C19, MainAssests.C20, MainAssests.C21, MainAssests.C22, MainAssests.C23, MainAssests.C24, MainAssests.C25, MainAssests.C26, MainAssests.C27, MainAssests.C28, MainAssests.C29, MainAssests.C30];
+export const CompaniesRow3 = [MainAssests.Microsoft, MainAssests.Netflix, MainAssests.Zomato, MainAssests.C31, MainAssests.C32, MainAssests.C33, MainAssests.C34, MainAssests.C35, MainAssests.C36, MainAssests.C37, MainAssests.C38, MainAssests.C39, MainAssests.C40, MainAssests.C41, MainAssests.C42, MainAssests.C43, MainAssests.C44, MainAssests.C45];
 
 
 export const PastLearnersRow1 = [
@@ -1136,4 +1136,61 @@ export const FooterIcons: Icon[] = [
     iconName: FaSpotify,
     iconLink: 'https://open.spotify.com/show/6LtpSAX4VBGzunKSkyzfDD?si=0f4a6bfac28f4b70'
   }
+];
+
+export const AllCompanies = [
+  MainAssests.Amazon,
+  MainAssests.Apple,
+  MainAssests.Atlassian,
+  MainAssests.Google,
+  MainAssests.Lyft,
+  MainAssests.Meta,
+  MainAssests.Microsoft,
+  MainAssests.Netflix,
+  MainAssests.Zomato,
+  MainAssests.C1,
+  MainAssests.C2,
+  MainAssests.C3,
+  MainAssests.C4,
+  MainAssests.C5,
+  MainAssests.C6,
+  MainAssests.C7,
+  MainAssests.C8,
+  MainAssests.C9,
+  MainAssests.C10,
+  MainAssests.C11,
+  MainAssests.C12,
+  MainAssests.C13,
+  MainAssests.C14,
+  MainAssests.C15,
+  MainAssests.C16,
+  MainAssests.C17,
+  MainAssests.C18,
+  MainAssests.C19,
+  MainAssests.C20,
+  MainAssests.C21,
+  MainAssests.C22,
+  MainAssests.C23,
+  MainAssests.C24,
+  MainAssests.C25,
+  MainAssests.C26,
+  MainAssests.C27,
+  MainAssests.C28,
+  MainAssests.C29,
+  MainAssests.C30,
+  MainAssests.C31,
+  MainAssests.C32,
+  MainAssests.C33,
+  MainAssests.C34,
+  MainAssests.C35,
+  MainAssests.C36,
+  MainAssests.C37,
+  MainAssests.C38,
+  MainAssests.C39,
+  MainAssests.C40,
+  MainAssests.C41,
+  MainAssests.C42,
+  MainAssests.C43,
+  MainAssests.C44,
+  MainAssests.C45
 ];

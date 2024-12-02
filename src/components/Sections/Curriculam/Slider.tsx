@@ -6,21 +6,11 @@ import { FC } from 'react';
 import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import {
-  Amazon,
-  Apple,
-  Atlassian,
-  Google,
-  Lyft,
-  Meta,
-  Microsoft,
-  Netflix,
-  Zomato,
-} from '@/assets/CurriculamSectionAssets';
+import { AllCompanies } from '@/utils';
 
 const Slider: FC = () => {
     return (
-        <div className="md:mt-40 mt-10 cursor-not-allowed">
+        <div className="md:mt-64 mt-10 mask-linear cursor-not-allowed">
             <Swiper
                 effect={'coverflow'}
                 grabCursor={false}
@@ -41,33 +31,11 @@ const Slider: FC = () => {
                 }}
                 modules={[EffectCoverflow, Autoplay]}
             >
-                <SwiperSlide>
-                    <Image src={Atlassian} alt="Atlassian"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Google} alt="Google"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Netflix} alt="Netflix"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Meta} alt="Meta"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Apple} alt="Apple"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Amazon} alt="Amazon"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Lyft} alt="Lyft"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Microsoft} alt="Microsoft"  />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={Zomato} alt="Zomato"  />
-                </SwiperSlide>
+                {AllCompanies.map((company, index) => (
+                    <SwiperSlide key={index}>
+                        <Image src={company} alt='companyImage' />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

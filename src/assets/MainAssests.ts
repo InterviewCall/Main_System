@@ -99,16 +99,28 @@ import PastLearner22 from '~/pastLearners/pastLearner22.png';
 import PastLearner23 from '~/pastLearners/pastLearner23.png';
 import PastLearner24 from '~/pastLearners/pastLearner24.png';
 
+import {
+    Amazon,
+    Apple,
+    Atlassian,
+    Google,
+    Lyft,
+    Meta,
+    Microsoft,
+    Netflix,
+    Zomato,
+} from './CurriculamSectionAssets';
+
 export {
   A1, A2, A3, A4, A5,
   Alumni1, Alumni2, Alumni3, Alumni4, AlumniMobile1, AlumniMobile2, AlumniMobile3, AlumniMobile4,
-  C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20,
+Amazon,   Apple, Atlassian,   C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20,
   C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38, C39,
   C40, C41, C42, C43, C44, C45,
-  M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12,
-  P4, P5, P6, P7, P8, P9,
+Google, Lyft,   M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12,
+Meta, Microsoft, Netflix,   P4, P5, P6, P7, P8, P9,
   PastLearner1, PastLearner2, PastLearner3, PastLearner4, PastLearner5, PastLearner6, PastLearner7,
   PastLearner8, PastLearner9, PastLearner10, PastLearner11, PastLearner12, PastLearner13,
   PastLearner14, PastLearner15, PastLearner16, PastLearner17, PastLearner18, PastLearner19,
-  PastLearner20, PastLearner21, PastLearner22, PastLearner23, PastLearner24
-};
+  PastLearner20, PastLearner21, PastLearner22, PastLearner23, PastLearner24,
+Zomato};
