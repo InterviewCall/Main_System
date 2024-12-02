@@ -36,7 +36,7 @@ const Header: FC = () => {
       <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet flex items-center justify-center gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
-            Need Help? Talk to us at <span className='text-lg'>08069640804</span>
+            Need Help? Talk to us at <span className='text-lg underline'><a href="tel:08069640804">08069640804</a></span>
           </p>
       </div>
       <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 md:hidden h-20 bg-black'>

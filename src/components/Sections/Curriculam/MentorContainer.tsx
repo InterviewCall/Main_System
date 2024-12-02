@@ -212,7 +212,7 @@ const MentorContainer: FC = () => {
       </div>
 
       {/* Mobile View */}
-      <div className='flex flex-col md:hidden mx-auto gap-16'>
+      <div className='flex flex-col md:hidden mx-auto gap-1'>
         {Mentors.map((mentor, index) => (
           <div
             key={index}
