@@ -8,10 +8,10 @@ const DownloadBrochureButton: FC = () => {
     const pathName = usePathname();
     const [downloadBrochure, setDownloadBrochure] = useState('');
     useEffect(() => {
-      if(pathName == 'fullstack-mern') {
+      if(pathName == '/fullstack-mern') {
         setDownloadBrochure('brochure');
       }
-      else if(pathName == 'job-switch') {
+      else if(pathName == '/job-switch') {
         setDownloadBrochure('js-download');
       }
     }, [pathName]);
