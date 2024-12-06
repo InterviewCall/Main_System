@@ -4,7 +4,7 @@ const TermsAndConditions: FC = () => {
     return (
         <div className='text-black bg-white'>
             <div className='md:w-[85%] w-[83%] mx-auto'>
-                <div className='text-center mt-36 text-4xl font-bold'>Terms of Service</div>
+                <div className='text-center pt-36 text-4xl font-bold'>Terms of Service</div>
 
                 <div className='font-[400] mt-8'>
                     <p>

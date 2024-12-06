@@ -3,7 +3,7 @@ import { FC } from 'react';
 const PrivacyPolicy: FC = () => {
     return (
         <div className='text-black bg-white'>
-            <div className='w-[80%] mt-24 mx-auto'>
+            <div className='w-[80%] pt-24 mx-auto'>
                 <p className='text-3xl'>Privacy Policy</p>
 
                 <p className='mt-6 text-[#77838f]'>Last Updated: 29/10/24</p>

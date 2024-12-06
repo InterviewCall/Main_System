@@ -1,38 +1,36 @@
-'use client';
+// 'use client';
 
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 
 import { AlumniCards } from '@/utils';
 import AllMentors from '~/images/AllMentors.png';
 
 import AlumniCard from './AlumniCard';
-import DownloadBrochureButton from './DownloadBrochureButton';
 
 const AlumniSection: FC = () => {
-  const [downloadButtonName, setDownloadButtonName] = useState('');
-  const pathName = usePathname();
+  // const [downloadButtonName, setDownloadButtonName] = useState('');
+  // const pathName = usePathname();
 
-  useEffect(() => {
-    if(pathName == '/fullstack-mern') {
-      setDownloadButtonName('Full Stack Web Development Brochure');
-    }
-    else if(pathName == '/job-switch') {
-      setDownloadButtonName('Job Switch Bootcamp Brochure');
-    }
-  }, [pathName]);
+  // useEffect(() => {
+  //   if(pathName == '/fullstack-mern') {
+  //     setDownloadButtonName('Full Stack Web Development Brochure');
+  //   }
+  //   else if(pathName == '/job-switch') {
+  //     setDownloadButtonName('Job Switch Bootcamp Brochure');
+  //   }
+  // }, [pathName]);
 
   return (
     <div className='flex flex-col gap-20 bg-black-to-blue md:pt-24 pt-12 overflow-x-hidden'>
       {/* Brochure Download Section */}
-      <div className='flex flex-col items-center gap-6 px-4 md:px-24'>
+      {/* <div className='flex flex-col items-center gap-6 px-4 md:px-24'>
         <p className='md:text-2xl text-lg font-medium text-white text-center'>
           {downloadButtonName}
         </p>
         <DownloadBrochureButton />
-      </div>
+      </div> */}
 
       {/* Alumni Section */}
       <div className='flex flex-col items-center'>

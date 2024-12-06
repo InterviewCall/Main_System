@@ -4,7 +4,7 @@ const RefundPolicy: FC = () => {
     return (
         <div className='text-black bg-white'>
             <div className='md:w-[77%] w-[83%] mx-auto'>
-                <div className='text-[#8532c2] text-xl font-[500] md:mt-40 mt-20'>InterviewCall Refund and Placement Assistance Policy</div>
+                <div className='text-[#8532c2] text-xl font-[500] md:pt-40 pt-20'>InterviewCall Refund and Placement Assistance Policy</div>
 
                 <div className='font-[400] mt-6'>
                     <p className='font-bold'>

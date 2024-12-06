@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import OtpStateReducer from './features/heroSectionOtp/otpSlice';
 import EverWebinarResponseReducer from './features/webinars/everwebinarResponse';
 import WebinarResponseReducer from './features/webinars/webinarjamResponseSlice';
 
@@ -7,7 +8,8 @@ export const makeStore = () => {
     return configureStore({
         reducer: {
             webinarResponse: WebinarResponseReducer,
-            everWebinarResponse: EverWebinarResponseReducer
+            everWebinarResponse: EverWebinarResponseReducer,
+            otpState: OtpStateReducer
         },
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
     });

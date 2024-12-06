@@ -232,3 +232,26 @@ export interface Icon {
     iconName: IconType,
     iconLink: string
 }
+
+export interface FormState {
+    showModal: boolean
+    stepOtp: boolean
+    otp: string
+    isLoading: boolean
+    requestId: string
+    errorNumber: string
+    errorOtp: string | undefined
+    startTime: boolean
+    page: string
+}
+
+export interface OtpVerificationRequest {
+    requestId: string
+    otp: string
+}
+
+export interface ModalFormData {
+    fullName: string
+    email: string
+    phone: string
+}

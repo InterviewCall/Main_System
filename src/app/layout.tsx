@@ -9,6 +9,7 @@ import * as React from 'react';
 import { Toaster } from 'react-hot-toast';
 
 import Header from '@/components/Header/Header';
+import MainContainer from '@/components/MainContainer/MainContainer';
 import FooterSection from '@/components/Sections/Footer/FooterSection';
 import { siteConfig } from '@/constant/config';
 
@@ -123,7 +124,8 @@ export default function RootLayout({
         <Header />
         <StoreProvider>
           <Toaster position='top-center' />
-          <div className='pt-20'>{children}</div>
+          <MainContainer>{children}</MainContainer>
+          {/* <div className='pt-20 bg-white'>{children}</div> */}
         </StoreProvider>
         <FooterSection />
       </body>

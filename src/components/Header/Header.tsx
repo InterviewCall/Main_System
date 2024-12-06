@@ -27,7 +27,10 @@ const Header: FC = () => {
     else if(newPathName[1] == 'masterclass') {
       setPage('Masterclass');
     }
-  }, [pathName, page, routePath]);
+    else {
+      setPage('');
+    }
+  }, [pathName, routePath]);
   return routePath == '/masterclass' ? (
     <MasterClassHeader />
   ) : (

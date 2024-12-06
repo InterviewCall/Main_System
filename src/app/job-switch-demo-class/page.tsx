@@ -5,7 +5,6 @@ import { FC } from 'react';
 
 import JobSwitchForm from '@/components/Forms/JobSwitchForm/JobSwitchForm';
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
-import AuthJobSwitch from '@/HOC/AuthJobSwitch';
 import {
   JobSwitchMasterclassMentorQualification,
   JobSwitchMasterclassSessionLearn,
@@ -37,7 +36,7 @@ const MasterClassPage: FC = () => {
       {/* Main Content */}
       <div className='w-full md:w-[60%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-[1.5rem] leading-7 md:text-[1.8rem] md:leading-[1.3] font-bold text-center md:text-left'>
+        <p className='text-[1.5rem] text-black leading-7 md:text-[1.8rem] md:leading-[1.3] font-bold text-center md:text-left'>
           The Job Switch Blueprint: Unlock High-Paying Tech Roles with our Job Switch Bootcamp
         </p>
 
@@ -210,4 +209,4 @@ const MasterClassPage: FC = () => {
   );
 };
 
-export default AuthJobSwitch(MasterClassPage);
+export default MasterClassPage;
