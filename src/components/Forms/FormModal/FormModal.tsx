@@ -17,7 +17,6 @@ import Timer from './Timer';
 const FormModal: FC = () => {
     const formState = useAppSelector((state) => state.otpState);
     const dispatch = useAppDispatch();
-    console.log(formState.otp);
     const {
         register,
         handleSubmit,
@@ -69,7 +68,9 @@ const FormModal: FC = () => {
             toast.success('Verified Successfully');
             reset();
         } catch (error) {
+            console.log(error);
             const otpError = error as AxiosError<VerifyOtpResponse>;
+            console.log(otpError.response?.data.description);
             dispatch(setErrorOtp(otpError.response?.data.description));
         }
     };

@@ -255,3 +255,13 @@ export interface ModalFormData {
     email: string
     phone: string
 }
+
+export interface VerificationOtpRejected {
+    description: string
+    errorCode: string
+    message: string
+}
+
+export interface VerifyThunkOption {
+    rejectValue: VerificationOtpRejected
+}
