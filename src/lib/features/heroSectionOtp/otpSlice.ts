@@ -26,7 +26,7 @@ export const sendOtpRequest = createAsyncThunk<AxiosResponse<ResponseOtp>, Reque
                 'Content-Type': 'application/json'
             }
         });
-        toast.success('Otp Send Successfully');
+        toast.success('Otp Sent Successfully');
         return response;
     } catch (error) {
         throw error;
