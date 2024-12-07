@@ -37,13 +37,13 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-16 py-4 gap-8 md:gap-[8rem]'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 py-4 gap-8 md:gap-[8rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8 w-full'>
             {/* Title and Subtitle */}
             <div className='flex flex-col gap-6'>
-              <h1 className='text-gradient text-[1.7rem] md:text-[37px] md:leading-[60px] font-bold'>
+              <h1 className='text-gradient text-[1.7rem] md:text-[38px] md:leading-[60px] font-bold'>
                 {title}
               </h1>
               <h2 className='text-base md:text-lg text-white font-light'>
@@ -51,7 +51,7 @@ const HeroSection: FC = () => {
               </h2>
               <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-20'>
                 <button
-                  className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300'
+                  className='relative w-fit py-3 md:py-2 md:px-14 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
