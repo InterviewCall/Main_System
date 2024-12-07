@@ -49,9 +49,9 @@ const HeroSection: FC = () => {
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
-              <div className='w-full flex flex-col md:flex-row gap-y-5 md:justify-between'>
+              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-20'>
                 <button
-                  className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center justify-center border border-white overflow-hidden hover:scale-95 duration-300'
+                  className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   <span className='animate-shine absolute w-full h-full  bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='md:w-[40vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='md:w-[43vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
@@ -109,7 +109,7 @@ const HeroSection: FC = () => {
 
         {/* Right Form */}
         <div className='md:w-1/2 w-full'>
-          <Image src={HeroSectionImage} alt='HeroSectionImage'  />
+          <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' />
         </div>
         
       </div>
