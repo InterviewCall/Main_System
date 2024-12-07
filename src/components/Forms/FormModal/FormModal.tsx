@@ -69,7 +69,7 @@ const FormModal: FC = () => {
     return (
         <div className='fixed w-screen bg-white/40 backdrop-blur-sm mt-10 h-screen z-[999]'>
             {/* Desktop View Button */}
-            <button className={`absolute right-3 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={clearForm}>
+            <button className={`absolute right-4 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={clearForm}>
                 <AiFillCloseCircle size={40} color='white' />
             </button>
 
