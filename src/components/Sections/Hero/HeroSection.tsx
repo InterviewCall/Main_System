@@ -37,10 +37,10 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col mt-5 md:flex-row bg-black md:pt-20 pt-10 md:gap-x-64 md:gap-y-0 gap-y-8 items-center w-[90%] mx-auto'>
+      <div className='flex flex-col mt-5 md:flex-row bg-black md:pt-16 pt-10 md:gap-x-56 md:gap-y-0 gap-y-8 items-center w-[90%] mx-auto'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-8 w-full'>
             {/* Title and Subtitle */}
             <div className='flex flex-col gap-6'>
               <h1 className='text-gradient text-[1.7rem] md:text-[45px] md:leading-[74px] font-bold'>
@@ -49,7 +49,7 @@ const HeroSection: FC = () => {
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
-              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-20'>
+              <div className='w-full flex flex-col md:flex-row gap-y-5 md:justify-between'>
                 <button
                   className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center justify-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
@@ -63,7 +63,7 @@ const HeroSection: FC = () => {
                 </div>
               </div>
               {/* Options - Desktop */}
-              <div className='hidden md:flex flex-wrap items-start gap-2'>
+              <div className='hidden md:flex flex-wrap items-start gap-2 w-full'>
                 {HeroSectionOptions.map((option, index) => (
                   <HeroOption key={option} option={option} index={index} />
                 ))}
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='md:w-[780px] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='w-full hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
@@ -83,28 +83,28 @@ const HeroSection: FC = () => {
                 ))}
               </div>
             </div>
-          </div>
-          
-          {/* Options and Stats - Mobile */}
-          <div className='flex flex-col mt-7 gap-6 md:hidden'>
-            <div className='flex flex-wrap items-start gap-2'>
-              {HeroSectionOptions.map((option, index) => (
-                <HeroOption key={option} option={option} index={index} />
-              ))}
-            </div>
-            <div className='bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[2px] rounded-xl shadow-custom-multi'>
-              <div className='bg-primaryblue p-4 rounded-xl flex justify-between items-center'>
-                {HeroSectionStats.map((stat, index) => (
-                  <HeroStat
-                    key={index}
-                    stats={HeroSectionStats}
-                    stat={stat}
-                    index={index}
-                  />
+
+            {/* Options and Stats - Mobile */}
+            <div className='flex flex-col mt-7 gap-6 md:hidden'>
+              <div className='flex flex-wrap items-start gap-2'>
+                {HeroSectionOptions.map((option, index) => (
+                  <HeroOption key={option} option={option} index={index} />
                 ))}
               </div>
+              <div className='bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[2px] rounded-xl shadow-custom-multi'>
+                <div className='bg-primaryblue p-4 rounded-xl flex justify-between items-center'>
+                  {HeroSectionStats.map((stat, index) => (
+                    <HeroStat
+                      key={index}
+                      stats={HeroSectionStats}
+                      stat={stat}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
         </div>
 
         {/* Right Form */}
