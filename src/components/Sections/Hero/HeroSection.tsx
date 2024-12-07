@@ -37,7 +37,7 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col mt-5 md:flex-row bg-black md:pt-16 pt-10 md:gap-x-56 md:gap-y-0 gap-y-8 items-center w-[90%] mx-auto'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-16 py-4 gap-8 md:gap-56'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8 w-full'>
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='w-full hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='md:w-[40vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
@@ -109,7 +109,7 @@ const HeroSection: FC = () => {
 
         {/* Right Form */}
         <div className='md:w-1/2 w-full'>
-          <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full h-full' />
+          <Image src={HeroSectionImage} alt='HeroSectionImage' />
         </div>
         
       </div>
