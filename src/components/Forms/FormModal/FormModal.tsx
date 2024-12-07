@@ -5,7 +5,7 @@ import { SubmitHandler,useForm } from 'react-hook-form';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import OTPInput from 'react-otp-input';
 
-import { resetForm, sendOtpRequest, setErrorOtp, setIsLoading, setOtp, setStartTime, verifyOtpRequest } from '@/lib/features/heroSectionOtp/otpSlice';
+import { resetForm, sendOtpRequest, setIsLoading, setOtp, setStartTime, verifyOtpRequest } from '@/lib/features/heroSectionOtp/otpSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { Channel, ModalFormData, OtpVerificationRequest, RequestOtp } from '@/types';
 
@@ -48,12 +48,9 @@ const FormModal: FC = () => {
     };
 
     const verifyOtp: SubmitHandler<ModalFormData> = async () => {
-        if(!formState.otp) {
-            dispatch(setErrorOtp('Please Enter Otp'));
-            return;
-        }
-        
-        dispatch(setIsLoading(true));
+        if(!formState.otp) return;
+
+        if(formState.otp) dispatch(setIsLoading(true));
 
         const makeRequest: OtpVerificationRequest = {
             requestId: formState.requestId,
