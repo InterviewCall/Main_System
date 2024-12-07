@@ -37,7 +37,7 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col mt-5 md:flex-row bg-black md:pt-20 pt-10 md:gap-x-48 gap-y-8 items-center w-[90%] mx-auto'>
+      <div className='flex flex-col mt-5 md:flex-row bg-black md:pt-20 pt-10 md:gap-x-64 md:gap-y-0 gap-y-8 items-center w-[90%] mx-auto'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8'>
@@ -51,7 +51,7 @@ const HeroSection: FC = () => {
               </h2>
               <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-20'>
                 <button
-                  className='relative py-3 md:py-2 md:px-24 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center justify-center border border-white overflow-hidden hover:scale-95 duration-300'
+                  className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center justify-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   <span className='animate-shine absolute w-full h-full  bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
@@ -108,7 +108,7 @@ const HeroSection: FC = () => {
         </div>
 
         {/* Right Form */}
-        <div className='md:w-1/2 w-full flex justify-center items-center'>
+        <div className='md:w-1/2 w-full'>
           <Image src={HeroSectionImage} alt='HeroSectionImage' width={550} />
         </div>
         
