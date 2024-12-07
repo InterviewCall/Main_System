@@ -14,7 +14,7 @@ const initialState: FormState = {
     errorOtp: '',
     startTime: false,
     page: '',
-    showModal: true
+    showModal: false
 };
 
 export const sendOtpRequest = createAsyncThunk<AxiosResponse<ResponseOtp>, RequestOtp>('/api/send', async (data) => {
