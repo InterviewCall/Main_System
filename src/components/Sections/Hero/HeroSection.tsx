@@ -30,7 +30,7 @@ const HeroSection: FC = () => {
     } else if (pathName == '/job-switch') {
       setTitle('Level Up Your Career & Grab Your Dream Tech Job');
       setDescription(
-        '6-month program designed by industry leaders to accelerate your switch to top-tier tech roles.'
+        '6-month program designed by industry leaders to accelerate your switch to top product companies.'
       );
     }
   }, [pathName]);
