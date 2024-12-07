@@ -109,7 +109,7 @@ const HeroSection: FC = () => {
 
         {/* Right Form */}
         <div className='md:w-1/2 w-full'>
-          <Image src={HeroSectionImage} alt='HeroSectionImage' />
+          <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full h-full' />
         </div>
         
       </div>
