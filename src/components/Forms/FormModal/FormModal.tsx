@@ -122,7 +122,7 @@ const FormModal: FC = () => {
                         <div className='w-full flex flex-col gap-y-1'>
                             <div className='w-full flex gap-x-4'>
                                 <input
-                                    className='w-[15%] md:w-[10%] rounded-md p-1 md:p-3 border-0 ring-2 ring-[#D5DEE5] placeholder:text-[#999999]'
+                                    className='w-[15%] md:w-[10%] rounded-md p-1 border-0 ring-2 ring-[#D5DEE5] placeholder:text-[#999999]'
                                     value='+91'
                                     disabled
                                 />
