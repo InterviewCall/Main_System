@@ -18,7 +18,7 @@ const DownloadBrochureButton: FC = () => {
     return (
       <button className={`${downloadBrochure} relative w-full py-3 md:py-2 md:px-8 rounded-full flex justify-center gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
         <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
-        <p className='ml-2 text-base font-medium uppercase'>
+        <p className='ml-2 text-sm font-medium uppercase'>
           Download Brochure
         </p>
         <div className='p-1 rounded-full bg-white text-black flex items-center justify-center'>

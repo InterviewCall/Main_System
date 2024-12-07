@@ -54,8 +54,8 @@ const HeroSection: FC = () => {
                   className='relative py-3 md:py-2 md:px-16 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
-                  <span className='animate-shine absolute w-full h-full  bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
-                  <p className='text-base'>Apply Now</p>
+                  <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
+                  <p className='text-sm'>Apply Now</p>
                 </button>
                 
                 <div className='cursor-pointer'>
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='md:w-[43vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
