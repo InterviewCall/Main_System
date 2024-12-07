@@ -16,7 +16,7 @@ const DownloadBrochureButton: FC = () => {
       }
     }, [pathName]);
     return (
-      <button className={`${downloadBrochure} relative md:w-fit w-full py-3 md:py-4 md:px-3 flex justify-center gap-5 bg-white text-black items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
+      <button className={`${downloadBrochure} relative md:w-fit w-full py-3 md:py-4 md:px-11 flex justify-center gap-5 bg-white text-black items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
         {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
         <p className='ml-2 text-[18px] font-[600] uppercase'>
           Download Brochure

@@ -23,14 +23,14 @@ const HeroSection: FC = () => {
 
   useEffect(() => {
     if (pathName == '/fullstack-mern') {
-      setTitle('Full Stack Web Development with Placement Assistance');
+      setTitle('Get Job Ready for Top Tech Companies');
       setDescription(
-        'Learn DSA, MERN, System Design, DevOps and AI to become the top 1% developer'
+        '8-month structured program building all the right skills you need to get placed at top tech companies.'
       );
     } else if (pathName == '/job-switch') {
-      setTitle('Job Switch Bootcamp with Placement Assistance');
+      setTitle('Level Up Your Career & Grab Your Dream Tech Job');
       setDescription(
-        'Acquire in-demand skills and real-world expertise through practical application and projects tailored to help you switch careers or advance in your current domain.'
+        '6-month program designed by industry leaders to accelerate your switch to top-tier tech roles.'
       );
     }
   }, [pathName]);
@@ -49,7 +49,7 @@ const HeroSection: FC = () => {
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
-              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-12'>
+              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-6'>
                 <button
                   className='relative md:w-[35%] w-full py-3 md:py-4 md:px-[2.2rem] uppercase font-[600] flex gap-5 bg-[#1371FF] text-white items-center justify-center overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
