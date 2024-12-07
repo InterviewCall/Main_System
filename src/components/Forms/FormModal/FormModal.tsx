@@ -69,7 +69,7 @@ const FormModal: FC = () => {
     return (
         <div className='fixed w-screen bg-white/40 backdrop-blur-sm mt-10 h-screen z-[999]'>
             {/* Desktop View Button */}
-            <button className={`absolute right-4 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={clearForm}>
+            <button className={`absolute right-3 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={clearForm}>
                 <AiFillCloseCircle size={40} color='white' />
             </button>
 
@@ -83,7 +83,7 @@ const FormModal: FC = () => {
                 </button>
                 <div>
                     <div className='flex flex-col gap-y-2'>
-                        <p className='text-blue-500 font-semibold text-2xl'>Apply Now</p>
+                        <p className='text-[#1371FF] font-semibold text-2xl'>Apply Now</p>
                         <p className='text-black text-lg'>Next Batch Starts In December</p>
                     </div>
                     <form onSubmit={handleSubmit(sendOtp)} className='flex flex-col gap-y-6 mt-3'>
@@ -144,7 +144,7 @@ const FormModal: FC = () => {
                             )}
                         </div>
 
-                        <button type='submit' className='btn btn-primary text-white'>Apply Now</button>
+                        <button type='submit' className='w-full p-3 text-lg rounded-lg bg-[#1371FF] hover:scale-95 duration-300 font-[600] uppercase text-white'>Apply Now</button>
                     </form>
                 </div>
             </div>) : (
@@ -180,7 +180,7 @@ const FormModal: FC = () => {
                             <p className='text-[#FF516C] text-sm'>{formState.errorOtp}</p>
                         )}
                         <div className='w-[70%] pb-5 md:pb-0'>
-                            <button onClick={handleSubmit(verifyOtp)} className='btn btn-success w-full text-white mt-1'>Apply Now</button>
+                            <button onClick={handleSubmit(verifyOtp)} className='p-3 rounded-lg text-lg font-[600] uppercase bg-[#1371FF] w-full text-white mt-1'>Apply Now</button>
                         </div>
                     </div>
                 </div>
