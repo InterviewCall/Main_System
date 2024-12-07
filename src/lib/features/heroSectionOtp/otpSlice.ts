@@ -42,7 +42,7 @@ export const verifyOtpRequest = createAsyncThunk<AxiosResponse<VerifyOtpResponse
                 'Content-Type': 'application/json',
             }
         });
-        toast.success('Otp Verified Successfully');
+        toast.success('Application Received Successfully');
         return response;
     } catch (error) {
         if(axios.isAxiosError(error) && error.response) {
