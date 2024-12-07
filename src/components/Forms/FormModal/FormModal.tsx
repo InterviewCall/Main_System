@@ -1,15 +1,13 @@
 'use client';
 
-import { AxiosError } from 'axios';
 import { FC } from 'react';
 import { SubmitHandler,useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import OTPInput from 'react-otp-input';
 
 import { resetForm, sendOtpRequest, setErrorOtp, setIsLoading, setOtp, setStartTime, verifyOtpRequest } from '@/lib/features/heroSectionOtp/otpSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
-import { Channel, ModalFormData, OtpVerificationRequest, RequestOtp, ResponseOtp, VerifyOtpResponse } from '@/types';
+import { Channel, ModalFormData, OtpVerificationRequest, RequestOtp } from '@/types';
 
 import Loader from './Loader';
 import Timer from './Timer';
@@ -39,46 +37,42 @@ const FormModal: FC = () => {
             dispatch(setOtp(''));
         }
 
-        try {
-            const makeRequest: RequestOtp = {
-                phoneNumber: `91${getValues('phone')}`,
-                expiry: 60,
-                otpLength: 4,
-                channels: [Channel.SMS]
-            };
+        const makeRequest: RequestOtp = {
+            phoneNumber: `91${getValues('phone')}`,
+            expiry: 60,
+            otpLength: 4,
+            channels: [Channel.SMS]
+        };
 
-            await dispatch(sendOtpRequest(makeRequest));
-            toast.success('Otp Send Successfully');
-        } catch (error) {
-            const otpError = error as AxiosError<ResponseOtp>;
-            dispatch(setErrorOtp(otpError.response?.data.description));
-        }
+        await dispatch(sendOtpRequest(makeRequest));
     };
 
     const verifyOtp: SubmitHandler<ModalFormData> = async () => {
-        if(formState.otp) setIsLoading(true);
-
-        try {
-            const makeRequest: OtpVerificationRequest = {
-                requestId: formState.requestId,
-                otp: formState.otp
-            };
-
-            await dispatch(verifyOtpRequest(makeRequest));
-            toast.success('Verified Successfully');
-            reset();
-        } catch (error) {
-            console.log(error);
-            const otpError = error as AxiosError<VerifyOtpResponse>;
-            console.log(otpError.response?.data.description);
-            dispatch(setErrorOtp(otpError.response?.data.description));
+        if(!formState.otp) {
+            dispatch(setErrorOtp('Please Enter Otp'));
+            return;
         }
+        
+        dispatch(setIsLoading(true));
+
+        const makeRequest: OtpVerificationRequest = {
+            requestId: formState.requestId,
+            otp: formState.otp
+        };
+
+        const response = await dispatch(verifyOtpRequest(makeRequest));
+        if(response.meta.requestStatus == 'fulfilled') reset();
     };
+
+    function clearForm() {
+        dispatch(resetForm());
+        reset();
+    }
     
     return (
         <div className='fixed w-screen bg-white/40 backdrop-blur-sm mt-7 h-screen z-[999]'>
             {/* Desktop View Button */}
-            <button className={`absolute right-4 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={() => dispatch(resetForm())}>
+            <button className={`absolute right-4 md:block hidden ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`} onClick={clearForm}>
                 <AiFillCloseCircle size={40} color='white' />
             </button>
 
@@ -87,7 +81,7 @@ const FormModal: FC = () => {
             {!formState.stepOtp ? (
             <div className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-44 mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
                 {/* Modile View Button */}
-                <button className='absolute right-1 top-1 md:hidden block' onClick={() => dispatch(resetForm())}>
+                <button className='absolute right-1 top-1 md:hidden block' onClick={clearForm}>
                     <AiFillCloseCircle size={40} color='gray' />
                 </button>
                 <div>
@@ -158,7 +152,7 @@ const FormModal: FC = () => {
                 </div>
             </div>) : (
                 <div className={`bg-[#FFFFFF] md:w-[30%] w-[95%] h-auto p-3 md:p-8 mx-auto mt-48 md:mt-52 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
-                    <button className='absolute right-0 top-0 md:hidden block'>
+                    <button className='absolute right-0 top-0 md:hidden block' onClick={clearForm}>
                         <AiFillCloseCircle size={40} color='gray' />
                     </button>
                     <div className='flex flex-col items-center gap-y-5 md:gap-y-7 mt-6 md:mt-0'>

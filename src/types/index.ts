@@ -261,7 +261,3 @@ export interface VerificationOtpRejected {
     errorCode: string
     message: string
 }
-
-export interface VerifyThunkOption {
-    rejectValue: VerificationOtpRejected
-}
