@@ -76,7 +76,7 @@ const FormModal: FC = () => {
             {formState.isLoading && <Loader />}
 
             {!formState.stepOtp ? (
-            <div className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-32 mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
+            <div className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-20 mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
                 {/* Modile View Button */}
                 <button className='absolute right-1 top-1 md:hidden block' onClick={clearForm}>
                     <AiFillCloseCircle size={40} color='gray' />
@@ -148,7 +148,7 @@ const FormModal: FC = () => {
                     </form>
                 </div>
             </div>) : (
-                <div className={`bg-[#FFFFFF] md:w-[30%] w-[95%] h-auto p-3 md:p-8 mx-auto mt-48 md:mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
+                <div className={`bg-[#FFFFFF] md:w-[30%] w-[95%] h-auto p-3 md:p-8 mx-auto mt-48 md:mt-24 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
                     <button className='absolute right-0 top-0 md:hidden block' onClick={clearForm}>
                         <AiFillCloseCircle size={40} color='gray' />
                     </button>
