@@ -16,12 +16,12 @@ const DownloadBrochureButton: FC = () => {
       }
     }, [pathName]);
     return (
-      <button className={`${downloadBrochure} relative md:w-fit w-full py-3 md:py-2 md:px-3 rounded-full flex justify-center gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
-        <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
+      <button className={`${downloadBrochure} relative md:w-fit w-full py-3 md:py-2 md:px-3 rounded-full flex justify-center gap-5 bg-white text-black items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
+        {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
         <p className='ml-2 text-[14px] font-medium uppercase'>
           Download Brochure
         </p>
-        <div className='p-1 rounded-full bg-white text-black flex items-center justify-center'>
+        <div className='p-1 rounded-full bg-black text-white flex items-center justify-center'>
           <GoArrowDown className='w-6 h-6' />
         </div>
       </button>

@@ -51,7 +51,7 @@ const HeroSection: FC = () => {
               </h2>
               <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-12'>
                 <button
-                  className='relative md:w-fit w-full py-3 md:py-2 md:px-[2.2rem] uppercase font-medium rounded-full flex gap-5 bg-[#0350C1] text-white items-center justify-center overflow-hidden hover:scale-95 duration-300'
+                  className='relative md:w-[35%] w-full py-3 md:py-2 md:px-[2.2rem] uppercase font-medium rounded-full flex gap-5 bg-[#1371FF] text-white items-center justify-center overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
