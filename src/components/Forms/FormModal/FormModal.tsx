@@ -76,7 +76,7 @@ const FormModal: FC = () => {
             {formState.isLoading && <Loader />}
 
             {!formState.stepOtp ? (
-            <div className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-12 mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
+            <div className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-8 mt-36 rounded-lg relative ${formState.isLoading ? 'blur-sm pointer-events-none' : ''}`}>
                 {/* Modile View Button */}
                 <button className='absolute right-1 top-1 md:hidden block' onClick={clearForm}>
                     <AiFillCloseCircle size={40} color='gray' />
