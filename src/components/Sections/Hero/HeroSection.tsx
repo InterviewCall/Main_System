@@ -37,7 +37,7 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 py-4 gap-8 md:gap-[8rem]'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 pt-16 py-4 gap-8 md:gap-[8rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8 w-full'>
@@ -51,7 +51,7 @@ const HeroSection: FC = () => {
               </h2>
               <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-20'>
                 <button
-                  className='relative w-fit py-3 md:py-2 md:px-14 uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center border border-white overflow-hidden hover:scale-95 duration-300'
+                  className='relative md:w-fit w-full py-3 md:py-2 md:px-[2.2rem] uppercase font-medium rounded-full flex gap-5 bg-black text-white items-center justify-center border border-white overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='md:w-[45vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='md:w-[47vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
