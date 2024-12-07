@@ -37,13 +37,13 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-16 py-4 gap-8 md:gap-56'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-16 py-4 gap-8 md:gap-[8rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8 w-full'>
             {/* Title and Subtitle */}
             <div className='flex flex-col gap-6'>
-              <h1 className='text-gradient text-[1.7rem] md:text-[45px] md:leading-[74px] font-bold'>
+              <h1 className='text-gradient text-[1.7rem] md:text-[37px] md:leading-[60px] font-bold'>
                 {title}
               </h1>
               <h2 className='text-base md:text-lg text-white font-light'>
@@ -55,7 +55,7 @@ const HeroSection: FC = () => {
                   onClick={() => dispatch(setShowModal(true))}
                 >
                   <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
-                  <p className='text-sm'>Apply Now</p>
+                  <p className='text-[14px]'>Apply Now</p>
                 </button>
                 
                 <div className='cursor-pointer'>
@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             </div>
 
             {/* Stats Section - Desktop */}
-            <div className='hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
+            <div className='md:w-[45vw] hidden md:block bg-gradient-to-br from-[#306EBD] to-[#00FFE0] p-[3px] rounded-2xl shadow-custom-multi'>
               <div className='bg-primaryblue py-8 rounded-2xl flex justify-between items-center'>
                 {HeroSectionStats.map((stat, index) => (
                   <HeroStat
