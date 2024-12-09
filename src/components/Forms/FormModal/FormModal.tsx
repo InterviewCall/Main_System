@@ -144,7 +144,7 @@ const FormModal: FC = () => {
                             )}
                         </div>
 
-                        <button type='submit' className='w-full p-3 text-lg rounded-lg bg-[#1371FF] hover:scale-95 duration-300 font-[600] uppercase text-white'>Apply Now</button>
+                        <button type='submit' className='w-full p-3 text-lg rounded-lg bg-[#1371FF] hover:scale-95 duration-300 font-[600] uppercase text-white'>Submit</button>
                     </form>
                 </div>
             </div>) : (
@@ -180,7 +180,7 @@ const FormModal: FC = () => {
                             <p className='text-[#FF516C] text-sm'>{formState.errorOtp}</p>
                         )}
                         <div className='w-[70%] pb-5 md:pb-0'>
-                            <button onClick={handleSubmit(verifyOtp)} className='p-3 rounded-lg text-lg font-[600] uppercase bg-[#1371FF] w-full text-white mt-1'>Apply Now</button>
+                            <button onClick={handleSubmit(verifyOtp)} className='p-3 rounded-lg text-lg font-[600] uppercase bg-[#1371FF] w-full text-white mt-1'>Confirm</button>
                         </div>
                     </div>
                 </div>
