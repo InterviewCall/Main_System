@@ -185,7 +185,7 @@ export interface VerifyOtpResponse {
     description: string
 }
 
-export type PageSwipe = 'Full Stack - MERN' | 'Job Switch' | 'Masterclass' | '';
+export type PageSwipe = 'Full Stack - MERN' | 'Job Switch' | 'Masterclass' | 'Transformer' | '';
 
 export interface WebinarUser {
     webinar_id: number;

@@ -32,6 +32,9 @@ const HeroSection: FC = () => {
       setDescription(
         '6-month program designed by industry leaders to accelerate your switch to top product companies.'
       );
+    } else if (pathName == '/transformer') {
+      setTitle('Upskill & Ace Your Tech Career');
+      setDescription('Program designed by industry leaders to accelerate your switch to top product companies.');
     }
   }, [pathName]);
   return (

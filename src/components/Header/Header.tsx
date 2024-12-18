@@ -26,6 +26,8 @@ const Header: FC = () => {
     }
     else if(newPathName[1] == 'masterclass') {
       setPage('Masterclass');
+    } else if(newPathName[1] == 'transformer') {
+      setPage('Transformer');
     }
     else {
       setPage('');
