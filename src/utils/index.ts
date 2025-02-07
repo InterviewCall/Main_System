@@ -951,11 +951,6 @@ export const FAQCatogories = ['General', 'Account', 'Payment', 'Support'];
 export const QuestionAnswerOfCategory: Record<string, FAQ[]> = {
   'General': [
     {
-      question: 'What is your return policy ?',
-      answer: 'We offer a 30-day return policy for all items in original condition.'
-    },
-
-    {
       question: 'How do I track my order ?',
       answer: 'You can track your order through the tracking link in your confirmation email.'
     }
