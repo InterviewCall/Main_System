@@ -48,6 +48,7 @@ import A2 from '~/images/Alumni2.png';
 import A3 from '~/images/Alumni3.png';
 import A4 from '~/images/Alumni4.png';
 import A5 from '~/images/Alumni5.png';
+import A6 from '~/images/Alumni6.png';
 import Alumni1 from '~/images/MasterClassAlumni1.png';
 import Alumni2 from '~/images/MasterClassAlumni2.png';
 import Alumni3 from '~/images/MasterClassAlumni3.png';
@@ -112,7 +113,7 @@ import {
 } from './CurriculamSectionAssets';
 
 export {
-  A1, A2, A3, A4, A5,
+  A1, A2, A3, A4, A5, A6,
   Alumni1, Alumni2, Alumni3, Alumni4, AlumniMobile1, AlumniMobile2, AlumniMobile3, AlumniMobile4,
 Amazon,   Apple, Atlassian,   C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20,
   C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38, C39,

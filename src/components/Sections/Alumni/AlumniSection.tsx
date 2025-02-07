@@ -69,7 +69,7 @@ const AlumniSection: FC = () => {
 
             {/* Second Row - 2 Cards */}
             <div className='col-span-full flex flex-wrap md:flex-nowrap justify-center gap-y-28 gap-x-28'>
-              {AlumniCards.slice(3, 5).map((card, index) => (
+              {AlumniCards.slice(3, 6).map((card, index) => (
                 <AlumniCard
                   key={index}
                   checkTitle={card.checkTitle}

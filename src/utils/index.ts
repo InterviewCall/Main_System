@@ -113,6 +113,22 @@ export const AlumniCards: AlumniCard[] = [
   },
 
   {
+    cardImage: MainAssests.A6,
+    alumniName: 'Yash Choudhary',
+    checkTitle: 'SDE - PhonePe',
+    alumniJobDesc: 'Offer - PhonePe',
+    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
+    alumniJobDescTextColor: 'text-[#DC143C]',
+    cardWrapperShadowColor: 'shadow-red-multi',
+    cardWrapperBackgroundColor: 'bg-[#DC143C]',
+    cardWrapperHeight: 'h-[416px]',
+    cardShadowFromColor: 'from-[#ff4c647f]',
+    cardShadowViaColor: 'via-[#ff4c6412]',
+    cardWrapperRingColor: 'ring-[#DC143C]',
+    videoPlayButtonBorderColor: 'border-l-[#ff4c6493]'
+  },
+
+  {
     cardImage: MainAssests.A5,
     alumniName: 'Fahad Ali',
     checkTitle: 'Senior SDE - Razorpay',
@@ -125,7 +141,7 @@ export const AlumniCards: AlumniCard[] = [
     cardShadowViaColor: 'via-[#00c3ff13]',
     cardWrapperRingColor: 'ring-[#03fd9a]',
     videoPlayButtonBorderColor: 'border-l-[#75e49a]'
-  }
+  },
 ];
 
 export const JobSwitchCourses: Course[] = [
