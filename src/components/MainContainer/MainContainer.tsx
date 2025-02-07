@@ -7,7 +7,7 @@ interface MainContainerProps {
 const MainContainer: FC<MainContainerProps> = ({ children }) => {
     return (
         <>
-            <div className='pt-20 bg-black'>
+            <div className='pt-20 bg-white'>
                 {children}
             </div>
         </>

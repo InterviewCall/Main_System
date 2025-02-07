@@ -134,60 +134,18 @@ const TermsAndConditions: FC = () => {
                     </p>
                 </div>
 
-                <div className='text-[#8532c2] text-xl font-[500] mt-12'>InterviewCall Refund and Placement Assistance Policy</div>
+                <div className='text-[#8532c2] text-xl font-[500] mt-12'>InterviewCall Placement Assistance Policy</div>
 
                 <div className='font-[400] mt-6'>
                     <p className='font-bold'>
-                        Initial 7-Day Trial 
+                        Clauses to Qualify for Placement Assistance
                     </p>
 
                     <br />
                     <br />
 
                     <p>
-                        – Candidates may opt out from the trial within the first 7 days of the program and request a full refund of their down payment.
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p className='font-bold'>
-                        Performance-Based Refund
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        – Post trial, candidates  remain eligible for a performance-based refund at the end of the program.
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p className='font-bold'>
-                        Eligibility for Performance-Based Refund
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        – To qualify for a full refund, candidates must complete all program requirements within the specified time frame (8 or 10 months, depending on the program they enrolled in).
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p className='font-bold'>
-                        Clauses to Qualify for Performance-Based Refund
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        Candidates must meet the following criteria to be eligible for a refund:
+                        Candidates must meet the following criteria to be eligible for placement assistance:
                     </p>
 
                     <br />
@@ -242,27 +200,11 @@ const TermsAndConditions: FC = () => {
                     <br />
                     <br />
 
-                    <ol className='list-decimal ml-10'>
+                    <ol className=''>
                         <li>
-                            Refund Option: Candidates can request a full refund, processed within 45-60 business days.
-                        </li>
-                        <li>
-                            Extended Assistance Option: Candidates can choose an additional 8 months of self-paced assistance, gaining access to ongoing support and resources for their job search. Candidates who select this option forfeit the right to request a refund.
+                            Extended Assistance Option: Candidates can choose an additional 8 months of self-paced assistance, gaining access to ongoing support and resources for their job search.
                         </li>
                     </ol>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        <span className='font-bold'>
-                            Note:
-                        </span>
-                        {' '}
-                        <span>
-                            For undergraduates and graduates seeking their first full-time job, a package of 5 LPA CTC or above will be considered a successful exit. For working professionals, a job offer of 5 LPA CTC or above (if currently earning less than 5 LPA CTC) or 10 LPA CTC or above (if currently earning between 5 LPA and 10 LPA CTC) will be considered a successful exit.
-                        </span>
-                    </p>
 
                     <br />
                     <br />
@@ -275,9 +217,8 @@ const TermsAndConditions: FC = () => {
                     <br />
 
                     <p>
-                        – On the scheduled screening day (as announced after the program starts), Candidates who fail to complete any of the abovementioned clauses (attendance, assignment submission, assessment completion, project participation, or mock interview clearance) will not be eligible for the performance-based refund.
+                        – On the scheduled screening day (as announced after the program starts), Candidates who fail to complete any of the abovementioned clauses (attendance, assignment submission, assessment completion, project participation, or mock interview clearance) will not be eligible for the placement assistance
                     </p>
-
                     <br />
                     <br />
 
@@ -297,35 +238,6 @@ const TermsAndConditions: FC = () => {
 
                     <p>
                         If candidates still do not secure a job after the 4-month dedicated placement assistance, they may access the 8-month self-paced assistance. However, if they fail to complete the pending clauses within the assigned time (up to 2 additional months), they will not be eligible for further placement assistance.
-                    </p>
-                </div>
-
-                <div className='text-[#8532c2] text-xl font-[500] mt-12'>General Terms for Refund and Placement Policies</div>
-
-                <div className='font-[400] mt-6'>
-                    <p>
-                        – Candidates must submit all refund requests in writing via the designated email or contact method.
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        – Refunds will be processed only if eligibility criteria and timelines are strictly met.
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        – Refunds will be processed only if eligibility criteria and timelines are strictly met.
-                    </p>
-
-                    <br />
-                    <br />
-
-                    <p>
-                        – Refunds will be processed only if eligibility criteria and timelines are strictly met.
                     </p>
                 </div>
 
@@ -944,7 +856,7 @@ const TermsAndConditions: FC = () => {
                     </ol>
                 </div>
 
-                <div className='font-bold mt-6 mb-44'>
+                <div className='font-bold mt-6 pb-44'>
                     <p>
                     These Terms of Service constitute an “electronic record” as defined under applicable law, including the Information Technology Act, 2000, and are generated by a computer system without requiring any physical or digital signatures.
                     </p>
