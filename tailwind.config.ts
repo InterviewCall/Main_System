@@ -21,6 +21,7 @@ export default {
         'custom-multi': '10px 0px 40px rgba(11, 36, 99, 1)',
         'blue-multi': '10px 0px 40px rgba(0, 194, 255, 1)',
         'red-multi': '10px 0px 40px rgba(255, 76, 101, 1)',
+        'red-multi-2': '10px 0px 40px, rgba(130, 41, 63, 0.5)',
         'yellow-multi': '10px 0px 40px rgba(236, 194, 49, 1)',
         'green-multi': '10px 0px 40px rgba(49, 236, 113, 1)',
         'orange-multi': '10px 0px 40px rgba(236, 113, 49, 1)'

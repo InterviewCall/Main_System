@@ -102,7 +102,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Abhishek Dixit',
     checkTitle: 'Senior SDE - Meesho',
     alumniJobDesc: 'Offer - Goldman Sachs, Meesho',
-    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2025/02/coming-soon.mp4',
     alumniJobDescTextColor: 'text-[#fa9c02]',
     cardWrapperShadowColor: 'shadow-orange-multi',
     cardWrapperBackgroundColor: 'bg-[#ffa000]',
@@ -117,7 +117,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Yash Choudhary',
     checkTitle: 'SDE - PhonePe',
     alumniJobDesc: 'Offer - PhonePe',
-    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2025/02/coming-soon.mp4',
     alumniJobDescTextColor: 'text-[#DC143C]',
     cardWrapperShadowColor: 'shadow-red-multi',
     cardWrapperBackgroundColor: 'bg-[#DC143C]',
@@ -133,7 +133,7 @@ export const AlumniCards: AlumniCard[] = [
     alumniName: 'Fahad Ali',
     checkTitle: 'Senior SDE - Razorpay',
     alumniJobDesc: 'Offer - Razorpay',
-    videoPath: 'https://csforall.in/wp-content/uploads/2024/11/Coming-in-December.mp4',
+    videoPath: 'https://csforall.in/wp-content/uploads/2025/02/coming-soon.mp4',
     alumniJobDescTextColor: 'text-[#03fd9a]',
     cardWrapperShadowColor: 'shadow-green-multi',
     cardWrapperBackgroundColor: 'bg-[#03fd9a]',
@@ -193,90 +193,6 @@ export const JobSwitchCourses: Course[] = [
       'Trees - Binary Trees, BST, AVL Tree',
       'Graphs: DFS/BFS, Dijkstra, Topo Sort',
       'Euler Tour, Range Queries, Number Theory'
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 1)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
-    courseKeyPoints: [
-      'Structural Tags, Lists d Links, Media',
-      'Tables, Forms, Intro to CSS, Selectors, Units',
-      'Background, Borders, Box Model',
-      'CSS Texts and Fonts, Float and Display',
-      'Positioning, Flex, CSS Grids, Combinators',
-      'Animations, Responsive Web Designs',
-      'Intro to Bootstrap, Typography, Colors',
-      'Alerts and Badges, Buttons, Bars & Spinners',
-      'Cards, Lists & Pagination, Navigation & Select',
-      'Tooltip, Model and & Carousel, Popover, Toast',
-      'Utilities, Forms, Grids, Intro to Git',
-      'Git push and git pull, Branching and Merging',
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 2)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
-    courseKeyPoints: [
-      'Intro to JS, Syntax, Variables, Scopes',
-      'Hoisting, Control Flow Statements',
-      'Nested Loops and Functions',
-      'Function Bindings and Clousers, JS Array',
-      'JS Objects, Advanced Arrays, JSON',
-      'JS DOM, Timing Events & Callbacks',
-      'Ajax Intro, Promises and Error Handling',
-      'Async/Await, ES6',
-      'Intro to Node, JSON and Asynchronous JS',
-      'OOPs, Design Patterns, MVC & Express',
-      'Modules, Routes & Template Rendering',
-      'Express Middleware & FS'
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 3)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
-    courseKeyPoints: [
-      'Intro to MongoDB, Integration with Backend',
-      'Intro to Cookies & Authentication',
-      'Implementation with Node and Express',
-      'Passport JS, Web Sockets',
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 4)',
-    courseDuration: '2 Weeks',
-    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
-    courseKeyPoints: [
-      'Introduction to React',
-      'Directory Structure',
-      'JSX',
-      'React Components',
-      'Class Based Components',
-      'Functional Based Components',
-      'LifeCycle Methods'
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 5)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
-    courseKeyPoints: [
-      'Props',
-      'State',
-      'JSX',
-      'Hooks Intro',
-      'Forms',
-      'API\'s and Events',
-      'Routers and Lists',
-      'Redux',
-      'Capstone Projects'
     ],
   },
 
@@ -420,6 +336,105 @@ export const JobSwitchCourses: Course[] = [
   },
 
   {
+    courseName: 'Full Stack Web Developement (Level 1)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
+    courseKeyPoints: [
+      'Structural Tags, Lists d Links, Media',
+      'Tables, Forms, Intro to CSS, Selectors, Units',
+      'Background, Borders, Box Model',
+      'CSS Texts and Fonts, Float and Display',
+      'Positioning, Flex, CSS Grids, Combinators',
+      'Animations, Responsive Web Designs',
+      'Intro to Bootstrap & Tailwind, Typography, Colors',
+      'Alerts and Badges, Buttons, Bars & Spinners',
+      'Cards, Lists & Pagination, Navigation & Select',
+      'Tooltip, Model and & Carousel, Popover, Toast',
+      'Utilities, Forms, Grids, Intro to Git',
+      'Git push and git pull, Branching and Merging',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 2)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseKeyPoints: [
+      'Intro to JS, Syntax, Variables, Scopes',
+      'Hoisting, Control Flow Statements',
+      'Nested Loops and Functions',
+      'Function Bindings and Clousers, JS Array',
+      'JS Objects, Advanced Arrays, JSON',
+      'JS DOM, Timing Events & Callbacks',
+      'Ajax Intro, Promises and Error Handling',
+      'Async/Await, ES6',
+      'Intro to Node, JSON and Asynchronous JS',
+      'OOPs, Design Patterns, MVC & Express',
+      'Modules, Routes & Template Rendering',
+      'Express Middleware & FS',
+      'API Handling, Postman'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 3)',
+    courseDuration: '5 Weeks',
+    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
+    courseKeyPoints: [
+      'Introduction to typescript',
+      'Types, Interface, Functions in TypeScript',
+      'Enums, Inferring, Unions',
+      'Class, Generics, Type vs Interfaces, Generics Interface',
+      'Introduction To MongoDB & SQL (MySQL)',
+      'Integeration with Backend',
+      'Intro to Cookies & Authentication',
+      'Implementation with Node and Express',
+      'Passport JS, Web Sockets',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 4)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
+    courseKeyPoints: [
+      'Introduction to React',
+      'Directory Structure',
+      'JSX',
+      'React Components',
+      'Class Based Components',
+      'Functional Based Components',
+      'LifeCycle Methods'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 5)',
+    courseDuration: '5 Weeks',
+    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
+    courseKeyPoints: [
+      'Props',
+      'State',
+      'JSX',
+      'Hooks Intro',
+      'Forms',
+      'API\'s and Events',
+      'Routers and Lists',
+      'Redux',
+      'React Reconcillation',
+      'React.js vs Next.js',
+      'Intro to Next.js, Hydration',
+      'Dynamic Routing',
+      'Intro to GraphQL, LLM',
+      '8 AI-Capstone Projects',
+      'Intro to DevOps',
+      'Project Deployment, CI/CD',
+      'Docker & Containerization',
+      'Intro to AWS, EC2, S3, etc'
+    ],
+  },
+
+  {
     courseName: 'Soft Skills (Level 1)',
     courseDuration: '4 Weeks',
     courseDescription: 'Learning spoken English enhances communication, builds confidence, and improves clarity through pronunciation and practice.',
@@ -511,90 +526,6 @@ export const MernCourses: Course[] = [
   },
 
   {
-    courseName: 'Full Stack Web Developement (Level 1)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
-    courseKeyPoints: [
-      'Structural Tags, Lists d Links, Media',
-      'Tables, Forms, Intro to CSS, Selectors, Units',
-      'Background, Borders, Box Model',
-      'CSS Texts and Fonts, Float and Display',
-      'Positioning, Flex, CSS Grids, Combinators',
-      'Animations, Responsive Web Designs',
-      'Intro to Bootstrap, Typography, Colors',
-      'Alerts and Badges, Buttons, Bars & Spinners',
-      'Cards, Lists & Pagination, Navigation & Select',
-      'Tooltip, Model and & Carousel, Popover, Toast',
-      'Utilities, Forms, Grids, Intro to Git',
-      'Git push and git pull, Branching and Merging',
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 2)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
-    courseKeyPoints: [
-      'Intro to JS, Syntax, Variables, Scopes',
-      'Hoisting, Control Flow Statements',
-      'Nested Loops and Functions',
-      'Function Bindings and Clousers, JS Array',
-      'JS Objects, Advanced Arrays, JSON',
-      'JS DOM, Timing Events & Callbacks',
-      'Ajax Intro, Promises and Error Handling',
-      'Async/Await, ES6',
-      'Intro to Node, JSON and Asynchronous JS',
-      'OOPs, Design Patterns, MVC & Express',
-      'Modules, Routes & Template Rendering',
-      'Express Middleware & FS'
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 3)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
-    courseKeyPoints: [
-      'Intro to MongoDB, Integration with Backend',
-      'Intro to Cookies & Authentication',
-      'Implementation with Node and Express',
-      'Passport JS, Web Sockets',
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 4)',
-    courseDuration: '2 Weeks',
-    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
-    courseKeyPoints: [
-      'Introduction to React',
-      'Directory Structure',
-      'JSX',
-      'React Components',
-      'Class Based Components',
-      'Functional Based Components',
-      'LifeCycle Methods'
-    ],
-  },
-
-  {
-    courseName: 'Full Stack Web Developement (Level 5)',
-    courseDuration: '4 Weeks',
-    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
-    courseKeyPoints: [
-      'Props',
-      'State',
-      'JSX',
-      'Hooks Intro',
-      'Forms',
-      'API\'s and Events',
-      'Routers and Lists',
-      'Redux',
-      'Capstone Projects'
-    ],
-  },
-
-  {
     courseName: 'System Design LLD + HLD (Level 1)',
     courseDuration: '1 Week',
     courseDescription: 'Understanding design interview essentials—like depth analysis, cryptographic hash functions, network protocols, and scaling—is crucial for system design roles. It enhances your interview skills and overall design expertise.',
@@ -639,6 +570,105 @@ export const MernCourses: Course[] = [
       'Strategies',
       'Sharding, Consistent Hashing',
       'Storage'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 1)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn to build responsive, interactive websites using HTML, CSS, JS with Git for version control, ypu will also manage projects efficiently, preparing you for modern web developement.',
+    courseKeyPoints: [
+      'Structural Tags, Lists d Links, Media',
+      'Tables, Forms, Intro to CSS, Selectors, Units',
+      'Background, Borders, Box Model',
+      'CSS Texts and Fonts, Float and Display',
+      'Positioning, Flex, CSS Grids, Combinators',
+      'Animations, Responsive Web Designs',
+      'Intro to Bootstrap & Tailwind, Typography, Colors',
+      'Alerts and Badges, Buttons, Bars & Spinners',
+      'Cards, Lists & Pagination, Navigation & Select',
+      'Tooltip, Model and & Carousel, Popover, Toast',
+      'Utilities, Forms, Grids, Intro to Git',
+      'Git push and git pull, Branching and Merging',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 2)',
+    courseDuration: '4 Weeks',
+    courseDescription: 'You will learn JS fundamentals and advanced concepts like Async/Await, ES6 and DOM manipulation. You will learn Backend Developement with Node.js, Express and MVC enabling you to build dynamic, scalable applications and write efficient maintainable code.',
+    courseKeyPoints: [
+      'Intro to JS, Syntax, Variables, Scopes',
+      'Hoisting, Control Flow Statements',
+      'Nested Loops and Functions',
+      'Function Bindings and Clousers, JS Array',
+      'JS Objects, Advanced Arrays, JSON',
+      'JS DOM, Timing Events & Callbacks',
+      'Ajax Intro, Promises and Error Handling',
+      'Async/Await, ES6',
+      'Intro to Node, JSON and Asynchronous JS',
+      'OOPs, Design Patterns, MVC & Express',
+      'Modules, Routes & Template Rendering',
+      'Express Middleware & FS',
+      'API Handling, Postman'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 3)',
+    courseDuration: '5 Weeks',
+    courseDescription: 'You will learn MongoDB Integration, authentication with Passport JS and real time communication with web sockets',
+    courseKeyPoints: [
+      'Introduction to typescript',
+      'Types, Interface, Functions in TypeScript',
+      'Enums, Inferring, Unions',
+      'Class, Generics, Type vs Interfaces, Generics Interface',
+      'Introduction To MongoDB & SQL (MySQL)',
+      'Integeration with Backend',
+      'Intro to Cookies & Authentication',
+      'Implementation with Node and Express',
+      'Passport JS, Web Sockets',
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 4)',
+    courseDuration: '2 Weeks',
+    courseDescription: 'Essential for creating dynamic, efficient web applications. It enables reusable components, simplifies project setup, and enhances UI development with tools like JSX and state management',
+    courseKeyPoints: [
+      'Introduction to React',
+      'Directory Structure',
+      'JSX',
+      'React Components',
+      'Class Based Components',
+      'Functional Based Components',
+      'LifeCycle Methods'
+    ],
+  },
+
+  {
+    courseName: 'Full Stack Web Developement (Level 5)',
+    courseDuration: '5 Weeks',
+    courseDescription: 'Learning props, state, and React Hooks is vital for data management in React. Capstone projects offer practical experience to apply these concepts and showcase your skills effectively.',
+    courseKeyPoints: [
+      'Props',
+      'State',
+      'JSX',
+      'Hooks Intro',
+      'Forms',
+      'API\'s and Events',
+      'Routers and Lists',
+      'Redux',
+      'React Reconcillation',
+      'React.js vs Next.js',
+      'Intro to Next.js, Hydration',
+      'Dynamic Routing',
+      'Intro to GraphQL, LLM',
+      '8 AI-Capstone Projects',
+      'Intro to DevOps',
+      'Project Deployment, CI/CD',
+      'Docker & Containerization',
+      'Intro to AWS, EC2, S3, etc'
     ],
   },
 
