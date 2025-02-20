@@ -254,19 +254,6 @@ const TermsAndConditions: FC = () => {
                     <br />
                     <br />
 
-                    <p>
-                        <span className='font-bold'>
-                            Note:
-                        </span>
-                        {' '}
-                        <span>
-                            For undergraduates and graduates seeking their first full-time job, a package of 5 LPA CTC or above will be considered a successful exit. For working professionals, a job offer of 5 LPA CTC or above (if currently earning less than 5 LPA CTC) or 10 LPA CTC or above (if currently earning between 5 LPA and 10 LPA CTC) will be considered a successful exit.
-                        </span>
-                    </p>
-
-                    <br />
-                    <br />
-
                     <p className='font-bold'>
                         Failure to Meet Clauses
                     </p>
