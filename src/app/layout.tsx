@@ -75,7 +75,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-PJQTQV8P');
           `}
         </script>
-        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82326" async></script>
+        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82770" async></script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NH58QMDECM"
           strategy="afterInteractive"
