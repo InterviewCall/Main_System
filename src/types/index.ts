@@ -226,7 +226,7 @@ export interface RegisterRequest {
 }
 
 export interface RegisterResponse {
-    data: string
+    message: string
 }
 
 export type MasterclassFormInput = WebinarRequest;

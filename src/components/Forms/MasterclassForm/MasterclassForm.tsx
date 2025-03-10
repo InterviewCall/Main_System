@@ -1,6 +1,6 @@
 'use client';
 
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -8,16 +8,15 @@ import toast from 'react-hot-toast';
 
 // import OTPInput from 'react-otp-input';
 // import Timer from '@/components/Sections/Hero/Timer';
-import { setLink } from '@/lib/features/masterclass/masterclassSlice';
+// import { setLink } from '@/lib/features/masterclass/masterclassSlice';
 // import { registerForWebinar } from '@/lib/features/webinars/webinarjamResponseSlice';
-import { useAppDispatch } from '@/lib/hooks';
+// import { useAppDispatch } from '@/lib/hooks';
 import { RegisterRequest, RegisterResponse } from '@/types';
 // import { initiateOtp, otpVerification } from '@/utils';
 
 const MasterclassForm: FC = () => {
   // const webinarResponse = useAppSelector((state) => state.webinarResponse);
   const router = useRouter();
-  const dispatch = useAppDispatch();
   const {
     register,
     handleSubmit,
@@ -153,22 +152,12 @@ const MasterclassForm: FC = () => {
     };
 
     try {
-      const response: Promise<AxiosResponse<RegisterResponse>> = axios.post('/api/send-email-registration', requestObject);
-      toast.promise(response, {
-        loading: 'Submitting...',
-        success: 'Registered Successfully',
-        error: 'Something went wrong'
-      });
-
-
-      const link = (await response).data.data;
-
-      if(link) {
-        dispatch(setLink(link));
-        router.push('/masterclass-registration');
-      }
+      const response: AxiosResponse<RegisterResponse> = await axios.post('/api/make-registration', requestObject);   
+      toast.success(response.data.message);
+      router.push('/masterclass-registration');
     } catch (error) {
-      throw error;
+      const err = error as AxiosError<RegisterResponse>;
+      toast.error(String(err.response?.data?.message));
     }
   };
     return (

@@ -40,28 +40,20 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'assets.algoexpert.io',
-        pathname: '/spas/main/prod/**', // Add this for path specificity if needed
+        pathname: '/spas/main/prod/**',
       },
       {
         protocol: 'https',
-        hostname: 'www.facebook.com', // Add this for Facebook URLs
+        hostname: 'www.facebook.com',
       },
       {
         protocol: 'https',
         hostname: '**',
-      }
+      },
     ],
   },
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  webpack(config: { module: { rules: any[]; }; }) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg')
@@ -90,9 +82,16 @@ const nextConfig = {
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
 
+    // ✅ Fix TypeORM Import Errors
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'typeorm/driver/react-native/ReactNativeDriver': false,
+      'typeorm/platform/PlatformTools': false,
+      '@sap/hana-client/extension/Stream': false,
+    };
+
     return config;
   },
 };
 
 module.exports = nextConfig;
-
