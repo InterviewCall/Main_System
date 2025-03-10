@@ -29,25 +29,25 @@ const MasterClass: FC = () => {
       <MasterclassForm />
 
       {/* Main Content */}
-      <div className='w-full md:w-[63%] mt-14 px-4 md:pl-16'>
+      <div className='w-full md:w-[67%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='w-full text-[1.5rem] leading-6 md:text-[1.5rem] md:leading-[1.1] font-bold text-center md:text-left'>
+        <p className='w-full text-[1.5rem] leading-6 md:text-[1.46rem] md:leading-[1.1] font-bold text-center md:text-left'>
         What it takes to be a Software Engineer at Microsoft, Google, Amazon
         </p>
 
         {/* Session Details */}
         <div className='flex flex-col mt-8 gap-x-3 gap-y-2 md:gap-x-5 w-full'>
           <div className='flex md:flex-row flex-col gap-x-3 gap-y-2 w-full'>
-            <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
+            <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
               <span className='font-semibold'>STARTS ON:</span>
               <span>Saturday, March 15, 2025 7:30 PM (IST)</span>
             </p>
-            <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
+            <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
               <span className='font-semibold'>ENDS ON:</span>
               <span>Saturday, March 15, 2025 9:30 PM (IST)</span>
             </p>
           </div>
-          <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
+          <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
             <span className='font-semibold'>VENUE:</span>
             <span>Online</span>
           </p>
