@@ -31,21 +31,23 @@ const MasterClass: FC = () => {
       {/* Main Content */}
       <div className='w-full md:w-[63%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-[1.5rem] leading-6 md:text-[1.5rem] md:leading-[1.1] font-bold text-center md:text-left'>
+        <p className='w-full text-[1.5rem] leading-6 md:text-[1.5rem] md:leading-[1.1] font-bold text-center md:text-left'>
         What it takes to be a Software Engineer at Microsoft, Google, Amazon
         </p>
 
         {/* Session Details */}
-        <div className='flex flex-col md:flex-row mt-8 gap-3 md:gap-x-5'>
-          <p className='text-[#5a6273] flex text-[11px] md:text-[12px] gap-x-1'>
-            <span className='font-semibold'>STARTS ON:</span>
-            <span>Saturday, March 15, 2025 7:30 PM (IST)</span>
-          </p>
-          <p className='text-[#5a6273] flex text-[11px] gap-x-1'>
-            <span className='font-semibold'>ENDS ON:</span>
-            <span>Saturday, March 15, 2025 9:30 PM (IST)</span>
-          </p>
-          <p className='text-[#5a6273] flex text-[11px] gap-x-1'>
+        <div className='flex flex-col mt-8 gap-x-3 gap-y-2 md:gap-x-5 w-full'>
+          <div className='flex md:flex-row flex-col gap-x-3 gap-y-2 w-full'>
+            <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
+              <span className='font-semibold'>STARTS ON:</span>
+              <span>Saturday, March 15, 2025 7:30 PM (IST)</span>
+            </p>
+            <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
+              <span className='font-semibold'>ENDS ON:</span>
+              <span>Saturday, March 15, 2025 9:30 PM (IST)</span>
+            </p>
+          </div>
+          <p className='text-[#5a6273] flex text-[15px] md:text-[15px] gap-x-1'>
             <span className='font-semibold'>VENUE:</span>
             <span>Online</span>
           </p>
@@ -59,7 +61,7 @@ const MasterClass: FC = () => {
             About this Masterclass
           </p>
         </div>
-        <div className='mt-3 text-[#5a6273] text-sm md:text-base'>
+        <div className='mt-5 text-[#5a6273] text-sm md:text-base'>
           {/* Did you know that Amazon generates over 35% of its sales through
           personalised product recommendations? And how do you think that
           happens? That’s the power of Data Science.
@@ -78,19 +80,19 @@ const MasterClass: FC = () => {
 
 By 2026, India is expected to create over 3 million new Software Engineering positions! But what’s driving this surge in demand? Software Engineers are the backbone of technological innovation, building scalable systems, optimizing performance, solving complex challenges, and driving digital transformation across industries.
 
-If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! Join industry expert Sunyul Hossen on Friday, 15th March, from 7:30 PM to 9:00 PM as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
+If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! Join industry expert <span><b>Sunyul Hossen</b></span> on Friday, <span><b>15th March</b></span>, from <span><b>7:30 PM</b></span> to <span><b>9:30 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
 
 Register now!
         </div>
 
         {/* Learning Section */}
-        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             What You Will Learn From This Session
           </p>
         </div>
 
-        <div className='mt-2'>
+        <div className='mt-5'>
           <ul className='list-disc pl-3'>
             <li>Skills required to become a Software Engineer at the world’s top companie</li>
             <li>How top engineers approach problem-solving and tackle complex technical challenges</li>
@@ -114,13 +116,13 @@ A systematic approach to breaking down problems and optimizing solutions for rea
         </ul> */}
 
         {/* Mentor Section */}
-        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             Meet Sunyul Hossen
           </p>
         </div>
 
-        <ul className='list-disc pl-3 mt-2'>
+        <ul className='list-disc pl-3 mt-5'>
           <li>Ex - Software Engineer @Goldman Sachs Poland</li>
           <li>Ex - Software Engineer @Adobe, American Express</li>
           <li>Offer Holder - Amazon London, The D.E. Shaw Group Luxembourg, Uber</li>
@@ -134,7 +136,7 @@ A systematic approach to breaking down problems and optimizing solutions for rea
         </ul> */}
 
         {/* Learners Section */}
-        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             What our Learners have to say
           </p>
@@ -164,7 +166,7 @@ A systematic approach to breaking down problems and optimizing solutions for rea
         </div>
 
         {/* Alumni Section */}
-        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             Discover successful alumni
           </p>
