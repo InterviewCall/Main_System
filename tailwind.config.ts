@@ -28,6 +28,9 @@ export default {
       },
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter', 'sans-serif'],
+        mulish: ['Mulish', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         primary: {

@@ -56,7 +56,7 @@ const MasterClass: FC = () => {
         <div className='w-full h-[1px] bg-[#5a6273] mt-8'></div>
 
         {/* About Section */}
-        <div className='bg-[#f3fafe] w-full mt-20 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             About this Masterclass
           </p>
@@ -80,7 +80,7 @@ const MasterClass: FC = () => {
 
 By 2026, India is expected to create over 3 million new Software Engineering positions! But what’s driving this surge in demand? Software Engineers are the backbone of technological innovation, building scalable systems, optimizing performance, solving complex challenges, and driving digital transformation across industries.
 
-If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! Join industry expert <span><b>Sunyul Hossen</b></span> on Friday, <span><b>15th March</b></span>, from <span><b>7:30 PM</b></span> to <span><b>9:30 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
+If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! <br /> Join industry expert <span><b>Sunyul Hossen</b></span> on Friday, <span><b>15th March</b></span>, from <span><b>7:30 PM</b></span> to <span><b>9:30 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
 
 Register now!
         </div>
@@ -188,6 +188,48 @@ A systematic approach to breaking down problems and optimizing solutions for rea
                 />
               ))}
             </div>
+        </div>
+
+        <div className='bg-[#f3fafe] w-full mt-10 p-3'>
+          <p className='text-xl md:text-2xl text-[#085294] font-bold'>
+            About InterviewCall
+          </p>
+        </div>
+
+        <div className='mt-5 text-[#5a6273] text-sm md:text-base pb-10'>
+        <b>About InterviewCall Job Switch Bootcamp</b> - <br />
+        <br />
+        InterviewCall Job Switch Bootcamp is an immersive, hands-on training program designed for professionals who are ready to make a career shift into web development or elevate their current tech roles to secure higher-paying positions. Whether you’re looking to transition from a non-tech background or level up your expertise in a tech field, our bootcamp offers the perfect blend of foundational knowledge, advanced skills, and real-world experience to make you job-ready in the rapidly growing tech industry. <br />
+        <br />
+        <b>Our Job Switch Bootcamp provides:</b> <br />
+        <br />
+        <b>Comprehensive Curriculum:</b> From programming basics to advanced full-stack web development, our structured modules ensure that you gain proficiency in essential technologies such as C++, JavaScript, React, Node.js, MongoDB, and more. Whether you&apos;re just starting or looking to enhance your existing skills, the program is designed to take you step by step, ensuring mastery over each concept. <br />
+        <br />
+        <b>Industry-Leading Instructors:</b> Learn from experienced instructors who have worked at top tech companies like Amazon, Google, and Microsoft. Their real-world insights and mentorship will guide you throughout your learning journey, ensuring you stay updated with industry trends and best practices. <br />
+        <br />
+        <b>AI Integration & DevOps:</b> Stay ahead of the curve with lessons on integrating Generative AI into your applications and applying DevOps principles. These cutting-edge skills are increasingly in demand and will help you stand out in a competitive job market. <br />
+        <br />
+        <b>Interview & Placement Support:</b> Our bootcamp goes beyond just teaching. We provide comprehensive interview preparation, including mock interviews, resume building, and personal branding through LinkedIn optimization. Our dedicated placement team works tirelessly to connect you with over 550+ companies actively hiring for tech talent. <br />
+        <br />
+        <b>Job Guarantee & Flexibility:</b> We’re committed to your success! The program includes 12 months of placement support, and if you don’t land a job within this period, we offer a 100% refund. Plus, our flexible payment plans and EMI options ensure that you can focus on your learning without worrying about finances. <br />
+        <br />
+        <b>Scholarships & Financial Assistance:</b> To make this career-boosting opportunity accessible to as many professionals as possible, we offer scholarships of up to ₹20,000, along with affordable payment plans, ensuring that cost isn’t a barrier to your career transformation. <br />
+        <br />
+        <span className='text-lg'><b>Why Choose InterviewCall Job Switch Bootcamp?</b></span> <br />
+        <br />
+
+        <ul className='list-disc space-y-2 pl-6'>
+          <li>
+          <b>⁠Designed for Professionals:</b> Whether you are in AI/ML, data science, project management, or another tech or non-tech field, our program is tailor-made to help you switch to web development or secure better roles in your current field.
+          </li>
+          <li>
+          <b>Real-World Projects:</b> Learn by doing! You’ll work on hands-on projects, case studies, and real-world assignments that simulate industry conditions, giving you the practical experience employers are looking for.
+          </li>
+          <li>
+          <b>Flexible Learning:</b> Attend live interactive classes, access recorded sessions, and benefit from 1:1 teaching assistant support—all designed to fit your schedule.
+          </li>
+        </ul> <br />
+        Take the next step in your career today. Join the InterviewCall Job Switch Bootcamp and unlock new opportunities in the tech industry!
         </div>
       </div>
     </div>

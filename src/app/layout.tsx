@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
@@ -75,12 +76,12 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-PJQTQV8P');
           `}
         </script>
-        <script id="convertful-api" src="https://app.convertful.com/Convertful.js?owner=82770" async></script>
+        <script id='convertful-api' src='https://app.convertful.com/Convertful.js?owner=82770' async></script>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NH58QMDECM"
-          strategy="afterInteractive"
+          src='https://www.googletagmanager.com/gtag/js?id=G-NH58QMDECM'
+          strategy='afterInteractive'
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id='google-analytics' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -111,13 +112,16 @@ export default function RootLayout({
             alt='Facebook Pixel'
           />
         </noscript>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+        rel="stylesheet" />
       </head>
-      <body className='bg-white'>
+      <body className='bg-white font-inter'>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTQV8P"
-            height="0"
-            width="0"
+            src='https://www.googletagmanager.com/ns.html?id=GTM-PJQTQV8P'
+            height='0'
+            width='0'
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
