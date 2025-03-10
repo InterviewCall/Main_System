@@ -43,7 +43,7 @@ const MasterclassRegistration: FC = () => {
                             </div>
                         </div>
 
-                        <div className='grid xl:grid-cols-2 grid-cols-1 gap-5'>
+                        <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                             <div className='w-full py-6 px-4 border-2 border-[#C5C4C9] rounded-xl flex flex-col justify-center gap-4'>
                                 <p className='text-xl text-[#0D3661] font-bold'>Free masterclass <br /> notes</p>
                                 <p className='text-xl text-[#717171]'>Get important notes and learning material after the masterclass.</p>

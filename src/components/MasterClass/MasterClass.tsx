@@ -22,16 +22,16 @@ const MasterClass: FC = () => {
     <div className='bg-white relative'>
       {/* Top Image */}
       <div className='w-full md:pt-6'>
-        <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' className='xl:block hidden' />
-        <Image src={MasterClassTopMobile} alt='MasterClassTop' loading='lazy' className='xl:hidden block' />
+        <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' className='lg:block hidden' />
+        <Image src={MasterClassTopMobile} alt='MasterClassTop' loading='lazy' className='lg:hidden block' />
       </div>
 
       <MasterclassForm />
 
       {/* Main Content */}
-      <div className='w-full md:w-[60%] mt-14 px-4 md:pl-16'>
+      <div className='w-full md:w-[63%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-[1.5rem] leading-6 md:text-[1.6rem] md:leading-[1.3] font-bold text-center md:text-left'>
+        <p className='text-[1.5rem] leading-6 md:text-[1.5rem] md:leading-[1.1] font-bold text-center md:text-left'>
         What it takes to be a Software Engineer at Microsoft, Google, Amazon
         </p>
 
@@ -93,13 +93,19 @@ Register now!
         <br />
 
         <div>
-        Skills required to become a Software Engineer at the world’s top companies <br />
+          <ul className='list-disc pl-3'>
+            <li>Skills required to become a Software Engineer at the world’s top companie</li>
+            <li>How top engineers approach problem-solving and tackle complex technical challenges</li>
+            <li>How to tackle interview rounds at the world’s top companies</li>
+            <li>A systematic approach to breaking down problems and optimizing solutions for real-world applications</li>
+          </ul>
+        {/* Skills required to become a Software Engineer at the world’s top companies <br />
 
 How top engineers approach problem-solving and tackle complex technical challenges <br />
 
 How to tackle interview rounds at the world’s top companies <br />
 
-A systematic approach to breaking down problems and optimizing solutions for real-world applications
+A systematic approach to breaking down problems and optimizing solutions for real-world applications */}
         </div>
         {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassSessionLearn.map((item, index) => (
