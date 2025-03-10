@@ -37,15 +37,15 @@ const MasterClass: FC = () => {
 
         {/* Session Details */}
         <div className='flex flex-col md:flex-row mt-8 gap-3 md:gap-x-5'>
-          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
+          <p className='text-[#5a6273] flex text-[11px] md:text-[12px] gap-x-1'>
             <span className='font-semibold'>STARTS ON:</span>
             <span>Saturday, March 15, 2025 7:30 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
+          <p className='text-[#5a6273] flex text-[11px] gap-x-1'>
             <span className='font-semibold'>ENDS ON:</span>
             <span>Saturday, March 15, 2025 9:30 PM (IST)</span>
           </p>
-          <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
+          <p className='text-[#5a6273] flex text-[11px] gap-x-1'>
             <span className='font-semibold'>VENUE:</span>
             <span>Online</span>
           </p>
