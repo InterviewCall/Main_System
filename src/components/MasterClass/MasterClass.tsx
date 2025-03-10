@@ -90,9 +90,7 @@ Register now!
           </p>
         </div>
 
-        <br />
-
-        <div>
+        <div className='mt-2'>
           <ul className='list-disc pl-3'>
             <li>Skills required to become a Software Engineer at the world’s top companie</li>
             <li>How top engineers approach problem-solving and tackle complex technical challenges</li>
@@ -116,11 +114,17 @@ A systematic approach to breaking down problems and optimizing solutions for rea
         </ul> */}
 
         {/* Mentor Section */}
-        {/* <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
-            Meet Pulkit Aneja
+            Meet Sunyul Hossen
           </p>
-        </div> */}
+        </div>
+
+        <ul className='list-disc pl-3 mt-2'>
+          <li>Ex - Software Engineer @Goldman Sachs Poland</li>
+          <li>Ex - Software Engineer @Adobe, American Express</li>
+          <li>Offer Holder - Amazon London, The D.E. Shaw Group Luxembourg, Uber</li>
+        </ul>
         {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassMentorQualification.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>

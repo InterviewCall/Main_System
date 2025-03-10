@@ -20,8 +20,8 @@ const MasterclassRegistration: FC = () => {
     // // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, [link]);
     return (
-        <div className='bg-white w-full h-full flex justify-center items-center pt-24 pb-16'>
-            <div className='w-[95%] md:w-[85%] bg-[#F5F5F5] h-[90%] rounded-xl shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]'>
+        <div className='bg-white w-full h-full flex justify-center items-center pt-20 pb-14'>
+            <div className='w-[95%] md:w-[90%] bg-[#F5F5F5] h-[90%] rounded-xl shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]'>
                 <div className='w-full bg-[#EAFFEC] text-[#0D3661] xl:text-2xl text-xl font-bold flex justify-center items-center gap-4 p-3 rounded-t-xl'>
                     <IoIosCheckmarkCircleOutline size={40} className='md:block hidden' />
                     <p className='max-md:text-center'>YAY! You have been successfully registered for this event!</p>
@@ -68,7 +68,7 @@ const MasterclassRegistration: FC = () => {
                     <div className='xl:w-[40%] md:w-[45%] md:block hidden'>
                         <div className='w-full h-full flex justify-center items-center'>
                             <div className='flex flex-col gap-6'>
-                                <div className='flex justify-center'>
+                                <div className='flex justify-center order-3'>
                                     <Image
                                         src={WpGroupQr}
                                         alt='Qr Code' 
@@ -77,7 +77,7 @@ const MasterclassRegistration: FC = () => {
                                     />
                                 </div>
 
-                                <div className='flex items-center justify-center gap-7'>
+                                <div className='flex items-center justify-center gap-7 order-2'>
                                     <div className='bg-[#D1D1D1] h-[1.5px] w-[35%]'></div>
                                     <p className='text-[#696969] text-xl font-semibold'>or</p>
                                     <div className='bg-[#D1D1D1] h-[1.5px] w-[35%]'></div>
@@ -85,7 +85,7 @@ const MasterclassRegistration: FC = () => {
 
                                 <p className='flex justify-center text-[#040A0A] font-semibold'>Click here to join</p>
 
-                                <button onClick={() => window.open('https://chat.whatsapp.com/CyaGIPVVkLP6p6jeZ3EGQG', '_blank')} className='bg-[#1BD742] text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
+                                <button onClick={() => window.open('https://chat.whatsapp.com/CyaGIPVVkLP6p6jeZ3EGQG', '_blank')} className='bg-[#1BD742] order-1 text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
                             </div>
                         </div>
                     </div>
