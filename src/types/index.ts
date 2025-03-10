@@ -219,6 +219,16 @@ export interface WebinarRequest {
     phone?: string
 }
 
+export interface RegisterRequest {
+    fullName: string
+    email: string
+    phone: string
+}
+
+export interface RegisterResponse {
+    data: string
+}
+
 export type MasterclassFormInput = WebinarRequest;
 
 export interface EverWebinarRequest extends WebinarRequest {

@@ -8,19 +8,22 @@ import {
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
 } from '@/utils';
+import MasterClassTop from '~/images/masterclass.png';
+import MasterClassTopMobile from '~/images/masterclass_mobile.png';
 import MasterClassLearnerCard1 from '~/images/MasterClassLearnerCard1.png';
 import MasterClassLearnerCard2 from '~/images/MasterClassLearnerCard2.png';
 import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
-import MasterClassTop from '~/images/MasterclassTop.png';
 
+// import MasterClassTop from '~/images/MasterclassTop.png';
 import MasterclassForm from '../Forms/MasterclassForm/MasterclassForm';
 
 const MasterClass: FC = () => {
   return (
     <div className='bg-white relative'>
       {/* Top Image */}
-      <div className='w-full'>
-        <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' />
+      <div className='w-full md:pt-6'>
+        <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' className='xl:block hidden' />
+        <Image src={MasterClassTopMobile} alt='MasterClassTop' loading='lazy' className='xl:hidden block' />
       </div>
 
       <MasterclassForm />
@@ -28,19 +31,19 @@ const MasterClass: FC = () => {
       {/* Main Content */}
       <div className='w-full md:w-[60%] mt-14 px-4 md:pl-16'>
         {/* Title */}
-        <p className='text-[1.5rem] leading-6 md:text-[1.8rem] md:leading-[1.3] font-bold text-center md:text-left'>
-          How E-commerce Platforms like Amazon Use Data Science
+        <p className='text-[1.5rem] leading-6 md:text-[1.6rem] md:leading-[1.3] font-bold text-center md:text-left'>
+        What it takes to be a Software Engineer at Microsoft, Google, Amazon
         </p>
 
         {/* Session Details */}
         <div className='flex flex-col md:flex-row mt-8 gap-3 md:gap-x-5'>
           <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>STARTS ON:</span>
-            <span>November 19, 2024 7:30 PM (IST)</span>
+            <span>Saturday, March 15, 2025 7:30 PM (IST)</span>
           </p>
           <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>ENDS ON:</span>
-            <span>November 19, 2024 10:00 PM (IST)</span>
+            <span>Saturday, March 15, 2025 9:30 PM (IST)</span>
           </p>
           <p className='text-[#5a6273] flex text-[13px] gap-x-3'>
             <span className='font-semibold'>VENUE:</span>
@@ -57,7 +60,7 @@ const MasterClass: FC = () => {
           </p>
         </div>
         <div className='mt-3 text-[#5a6273] text-sm md:text-base'>
-          Did you know that Amazon generates over 35% of its sales through
+          {/* Did you know that Amazon generates over 35% of its sales through
           personalised product recommendations? And how do you think that
           happens? That’s the power of Data Science.
           <br />
@@ -71,7 +74,13 @@ const MasterClass: FC = () => {
           used by Amazon&apos;s Data Scientists, covering the use of data to
           forecast trends, optimise operations, and ensure security.
           <br />
-          <br />
+          <br /> */}
+
+By 2026, India is expected to create over 3 million new Software Engineering positions! But what’s driving this surge in demand? Software Engineers are the backbone of technological innovation, building scalable systems, optimizing performance, solving complex challenges, and driving digital transformation across industries.
+
+If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! Join industry expert Sunyul Hossen on Friday, 15th March, from 7:30 PM to 9:00 PM as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
+
+Register now!
         </div>
 
         {/* Learning Section */}
@@ -79,6 +88,18 @@ const MasterClass: FC = () => {
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             What You Will Learn From This Session
           </p>
+        </div>
+
+        <br />
+
+        <div>
+        Skills required to become a Software Engineer at the world’s top companies <br />
+
+How top engineers approach problem-solving and tackle complex technical challenges <br />
+
+How to tackle interview rounds at the world’s top companies <br />
+
+A systematic approach to breaking down problems and optimizing solutions for real-world applications
         </div>
         {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassSessionLearn.map((item, index) => (
@@ -89,11 +110,11 @@ const MasterClass: FC = () => {
         </ul> */}
 
         {/* Mentor Section */}
-        <div className='bg-[#f3fafe] w-full mt-2 p-3'>
+        {/* <div className='bg-[#f3fafe] w-full mt-2 p-3'>
           <p className='text-xl md:text-2xl text-[#085294] font-bold'>
             Meet Pulkit Aneja
           </p>
-        </div>
+        </div> */}
         {/* <ul className='list-disc mt-4 ml-6 md:ml-11 text-sm md:text-base'>
           {MasterclassMentorQualification.map((item, index) => (
             <li key={index} className='text-[#5a6273]'>

@@ -112,7 +112,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body>
+      <body className='bg-white'>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PJQTQV8P"
