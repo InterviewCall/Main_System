@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    link: ''
+    loading: false
 };
 
 const masterclassSlice = createSlice({
     name: 'masterclass',
     initialState,
     reducers: {
-        setLink: (state, action) => {
-            state.link = action.payload;
+        setLoading: (state, action) => {
+            state.loading = action.payload;
         }
     }
 });
 
-export const { setLink } = masterclassSlice.actions;
+export const { setLoading } = masterclassSlice.actions;
 export default masterclassSlice.reducer;

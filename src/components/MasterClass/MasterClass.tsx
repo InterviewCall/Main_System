@@ -1,9 +1,11 @@
+'use client';
 
-
+import clsx from 'clsx';
 import Image from 'next/image';
 import { FC } from 'react';
 
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
+// import { useAppSelector } from '@/lib/hooks';
 import {
   MasterClassAlumnis,
   MasterClassAlumnisMobile,
@@ -16,10 +18,12 @@ import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 // import MasterClassTop from '~/images/MasterclassTop.png';
 import MasterclassForm from '../Forms/MasterclassForm/MasterclassForm';
+// import Loader from '../Sections/Hero/Loader';
 
 const MasterClass: FC = () => {
+  // const loading = useAppSelector((state) => state.masterclass.loading);
   return (
-    <div className='bg-white relative'>
+    <div className={clsx('bg-white relative w-full')}>
       {/* Top Image */}
       <div className='w-full md:pt-6'>
         <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' className='lg:block hidden' />

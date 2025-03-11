@@ -1,11 +1,15 @@
 'use client';
 
 import axios, { AxiosError, AxiosResponse } from 'axios';
+import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
+import Loader from '@/components/Sections/Hero/Loader';
+import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 // import OTPInput from 'react-otp-input';
 // import Timer from '@/components/Sections/Hero/Timer';
 // import { setLink } from '@/lib/features/masterclass/masterclassSlice';
@@ -16,6 +20,9 @@ import { RegisterRequest, RegisterResponse } from '@/types';
 
 const MasterclassForm: FC = () => {
   // const webinarResponse = useAppSelector((state) => state.webinarResponse);
+  const loading = useAppSelector((state) => state.masterclass.loading);
+  // const [loading, setLoading] = useState(false);
+  const dispatch = useAppDispatch();
   const router = useRouter();
   const {
     register,
@@ -152,7 +159,9 @@ const MasterclassForm: FC = () => {
     };
 
     try {
-      const response: AxiosResponse<RegisterResponse> = await axios.post('/api/make-registration', requestObject);   
+      dispatch(setLoading(true));
+      const response: AxiosResponse<RegisterResponse> = await axios.post('/api/make-registration', requestObject);
+      dispatch(setLoading(false));   
       toast.success(response.data.message);
       router.push('/masterclass-registration');
     } catch (error) {
@@ -164,9 +173,10 @@ const MasterclassForm: FC = () => {
         <div>
           <form
             onSubmit={handleSubmit(registerMasterclass)}
-            className='bg-white w-full rounded-lg lg:max-w-[29vw] h-auto flex flex-col gap-y-4 lg:fixed lg:top-[26%] lg:right-[2%] p-6 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]'
+            className={clsx(loading && 'backdrop-blur-lg', 'bg-white relative w-full rounded-lg lg:max-w-[29vw] h-auto flex flex-col gap-y-4 lg:fixed lg:top-[26%] lg:right-[2%] p-6 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]')}
             noValidate
           >
+            {loading && <Loader />}
             <div className='w-full flex flex-col gap-y-1'>
               <input
                 {...register('fullName', {
