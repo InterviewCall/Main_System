@@ -11,7 +11,7 @@ const MasterClassHeader: FC = () => {
   return (
     <>
     <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 fixed md:hidden z-[999] h-20 bg-black'>
-        <Link href='/'>
+        <Link href='/job-switch'>
           <Image
             src={Logo}
             alt=''
@@ -37,7 +37,7 @@ const MasterClassHeader: FC = () => {
         <p className='text-white text-sm'>Need Help? Talk to us at <span className='text-lg'>6295797609</span> or <span className='advisor text-lg underline cursor-pointer'>Request a Call</span></p>
       </div>
       <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 fixed  h-20 bg-black'>
-        <Link href='/'>
+        <Link href='/job-switch'>
           <Image
             src={Logo}
             alt=''

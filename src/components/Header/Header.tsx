@@ -45,7 +45,7 @@ const Header: FC = () => {
           </p>
       </div>
       <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 md:hidden h-20 bg-black'>
-        <Link href='/'>
+        <Link href='/job-switch'>
           <Image
             src={Logo}
             alt=''
@@ -86,7 +86,7 @@ const Header: FC = () => {
           </p>
         </div>
         <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 fixed  h-20 bg-black'>
-          <Link href='/'>
+          <Link href='/job-switch'>
             <Image
               src={Logo}
               alt=''
