@@ -25,7 +25,7 @@ import JobswitchImage from '~/images/jobswitchBrochure.png';
 import Loader from '../Sections/Hero/Loader';
 
 const Brochure: FC = () => {
-    const pathName = usePathname();
+  const pathName = usePathname();
   const loading = useAppSelector((state) => state.callback.loading);
   const dispatch = useAppDispatch();
   const {
@@ -70,13 +70,13 @@ const Brochure: FC = () => {
     }
   };
   return (
-    <div id='my_modal_1' className='w-full fixed flex justify-center items-center h-full z-[998] bg-black/70'>
+    <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[998] bg-black/70'>
       {loading && <Loader />}
-      <div className='bg-white flex xl:flex-row flex-col lg:w-[55%] w-[90%] p-6 gap-8 rounded-md relative'>
+      <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 gap-8 rounded-md relative'>
         <button className='absolute right-0 top-0' onClick={() => dispatch(setBrochureModal(false))}>
           <MdCancel size={30} />
         </button>
-        <div className='xl:w-1/2 w-full flex max-xl:justify-center'>
+        <div className='md:w-1/2 w-full flex max-lg:justify-center'>
           <Image
             src={pathName == '/job-switch' ? JobswitchImage : FulstackImage}
             alt='advisor'
@@ -84,7 +84,7 @@ const Brochure: FC = () => {
             height={400}
           />
         </div>
-        <div className='flex flex-col justify-center xl:w-1/2 w-full gap-y-8'>
+        <div className='flex flex-col justify-center lg:w-1/2 w-full gap-y-8'>
           <p className='text-black xl:text-4xl text-xl font-bold'>
             Download Brochure
           </p>

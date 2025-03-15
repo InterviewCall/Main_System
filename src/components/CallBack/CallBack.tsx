@@ -64,21 +64,22 @@ const Callback: FC = () => {
     }
   };
   return (
-    <div id='my_modal_1' className='w-full fixed flex justify-center items-center h-full z-[999] bg-black/70'>
+    <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[999] bg-black/70'>
       {loading && <Loader />}
-      <div className='bg-white flex xl:flex-row flex-col lg:w-[55%] w-[90%] p-6 gap-8 rounded-md relative'>
+      <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 lg:gap-x-6 gap-y-3 items-center rounded-md relative'>
         <button className='absolute right-0 top-0' onClick={() => dispatch(setCallbackModal(false))}>
           <MdCancel size={30} />
         </button>
-        <div className='xl:w-1/2 w-full flex max-xl:justify-center'>
+        <div className='md:w-1/2 w-full flex max-lg:justify-center'>
           <Image
             src={CallbackImage}
             alt='advisor'
-            width={400}
-            height={400}
+            className='w-[90%] object-contain'
+            // width={400}
+            // height={400}
           />
         </div>
-        <div className='flex flex-col justify-center xl:w-1/2 w-full gap-6'>
+        <div className='flex flex-col justify-center lg:w-1/2 w-full gap-6'>
           <p className='text-black xl:text-4xl text-xl font-bold'>
             Talk to our Advisor!
           </p>
