@@ -70,7 +70,7 @@ const Brochure: FC = () => {
     }
   };
   return (
-    <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[998] bg-black/70'>
+    <div id='my_modal_1' className='w-full fixed top-1 flex justify-center items-center h-full z-[998] bg-black/70'>
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 gap-8 rounded-md relative'>
         <button className='absolute right-0 top-0' onClick={() => dispatch(setBrochureModal(false))}>
@@ -89,7 +89,7 @@ const Brochure: FC = () => {
             Download Brochure
           </p>
           {/* <p className='text-black'>Your Topic of Interest *</p> */}
-          <form className='flex flex-col gap-3 w-full' onSubmit={handleSubmit(onSubmit)}>
+          <form className='flex flex-col gap-1 w-full' onSubmit={handleSubmit(onSubmit)}>
             <div className='flex flex-col -translate-y-5 gap-3 w-full'>
               {/* <select
                 defaultValue=''

@@ -37,7 +37,7 @@ const Header: FC = () => {
     <MasterClassHeader />
   ) : (
     <>
-    <div className='md:hidden block fixed z-[999]'>
+    <div className='md:hidden block fixed z-[997]'>
       <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet flex items-center justify-center gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
