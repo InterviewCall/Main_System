@@ -1,7 +1,9 @@
 'use client';
 
+import axios, { AxiosError } from 'axios';
 import { FC } from 'react';
 import { SubmitHandler,useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import OTPInput from 'react-otp-input';
 
@@ -11,8 +13,6 @@ import { Channel, ModalFormData, OtpVerificationRequest, RegisterResponse, Reque
 
 import Loader from './Loader';
 import Timer from './Timer';
-import axios, { AxiosError } from 'axios';
-import toast from 'react-hot-toast';
 
 const FormModal: FC = () => {
     const formState = useAppSelector((state) => state.otpState);
@@ -50,7 +50,7 @@ const FormModal: FC = () => {
             candidateName: getValues('fullName'),
             candidateEmail: getValues('email'),
             candidatePhone: getValues('phone')
-        }
+        };
 
         try {
             await axios.post('/api/apply', requestObject);

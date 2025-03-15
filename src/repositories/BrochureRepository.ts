@@ -1,5 +1,5 @@
-import brochureDb from '@/config/brochureDb';
 import applyDb from '@/config/applyDb';
+// import brochureDb from '@/config/brochureDb';
 import Brochure from '@/models/Brochure';
 
 class BrochureRepository {
