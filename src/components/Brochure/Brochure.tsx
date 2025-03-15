@@ -70,7 +70,7 @@ const Brochure: FC = () => {
     }
   };
   return (
-    <div id='my_modal_1' className='w-full fixed top-1 flex justify-center items-center h-full z-[998] bg-black/70'>
+    <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[998] bg-black/70'>
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 gap-8 rounded-md relative'>
         <button className='absolute right-0 top-0' onClick={() => dispatch(setBrochureModal(false))}>
