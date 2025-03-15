@@ -64,7 +64,7 @@ const Callback: FC = () => {
     }
   };
   return (
-    <div id='my_modal_1' className='w-full fixed top-2 md:top-0 flex justify-center items-center h-full z-[999] bg-black/70'>
+    <div id='my_modal_1' className='w-full fixed top-4 md:top-0 flex justify-center items-center h-full z-[999] bg-black/70'>
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 lg:gap-x-6 gap-y-3 items-center rounded-md relative'>
         <button className='absolute right-0 top-0' onClick={() => dispatch(setCallbackModal(false))}>
