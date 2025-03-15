@@ -99,7 +99,7 @@ const FormModal: FC = () => {
                 <div>
                     <div className='flex flex-col gap-y-2'>
                         <p className='text-[#1371FF] font-semibold text-2xl'>Apply Now</p>
-                        <p className='text-black text-lg'>Next Batch Starts In March First Week</p>
+                        <p className='text-black text-lg'>Next Batch Starts In April First Week</p>
                     </div>
                     <form onSubmit={handleSubmit(sendOtp)} className='flex flex-col gap-y-6 mt-3'>
                         <div className='w-full flex flex-col gap-y-1'>

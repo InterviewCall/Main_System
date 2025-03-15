@@ -164,6 +164,7 @@ const MasterclassForm: FC = () => {
       toast.success(response.data.message);
       router.push('/masterclass-registration');
     } catch (error) {
+      dispatch(setLoading(false)); 
       const err = error as AxiosError<RegisterResponse>;
       toast.error(String(err.response?.data?.message));
     }

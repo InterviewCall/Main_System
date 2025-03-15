@@ -59,6 +59,7 @@ const Callback: FC = () => {
       toast.error(String(err.response?.data?.message));
     } finally {
       reset();
+      dispatch(setLoading(false));
       dispatch(setCallbackModal(false));
     }
   };
