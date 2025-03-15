@@ -44,6 +44,6 @@ class DBConnection {
     }
 }
 
-const db = DBConnection.getInstance(db_uri);
+const masterclassDb = DBConnection.getInstance(db_uri);
 
-export default db;
+export default masterclassDb;

@@ -125,8 +125,8 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-        <Header />
         <StoreProvider>
+          <Header />
           <Toaster position='top-center' />
           <MainContainer>{children}</MainContainer>
           {/* <div className='pt-20 bg-white'>{children}</div> */}

@@ -7,10 +7,12 @@ import OTPInput from 'react-otp-input';
 
 import { resetForm, sendOtpRequest, setIsLoading, setOtp, setStartTime, verifyOtpRequest } from '@/lib/features/heroSectionOtp/otpSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
-import { Channel, ModalFormData, OtpVerificationRequest, RequestOtp } from '@/types';
+import { Channel, ModalFormData, OtpVerificationRequest, RegisterResponse, RequestOtp } from '@/types';
 
 import Loader from './Loader';
 import Timer from './Timer';
+import axios, { AxiosError } from 'axios';
+import toast from 'react-hot-toast';
 
 const FormModal: FC = () => {
     const formState = useAppSelector((state) => state.otpState);
@@ -44,7 +46,20 @@ const FormModal: FC = () => {
             channels: [Channel.SMS]
         };
 
-        await dispatch(sendOtpRequest(makeRequest));
+        const requestObject = {
+            candidateName: getValues('fullName'),
+            candidateEmail: getValues('email'),
+            candidatePhone: getValues('phone')
+        }
+
+        try {
+            await axios.post('/api/apply', requestObject);
+            await dispatch(sendOtpRequest(makeRequest));
+        } catch (error) {
+            dispatch(setIsLoading(false));
+            const err = error as AxiosError<RegisterResponse>;
+            toast.error(String(err.response?.data?.message));
+        }
     };
 
     const verifyOtp: SubmitHandler<ModalFormData> = async () => {

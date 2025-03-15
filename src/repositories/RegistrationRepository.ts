@@ -1,11 +1,11 @@
-import db from '@/config/db';
+import applyDb from '@/config/applyDb';
 import Registration, { ICandidate } from '@/models/Registration';
 
 class RegistrationRepository {
     private registrationModel;
 
     constructor() {
-        db.connect();
+        applyDb.connect();
         this.registrationModel = Registration;
     }
 

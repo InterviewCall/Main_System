@@ -1,5 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import BrochureReducer from './features/brochure/brochure';
+import CallbackSlice from './features/callback/callback';
 import OtpStateReducer from './features/heroSectionOtp/otpSlice';
 import MasterclassReducer from './features/masterclass/masterclassSlice';
 import EverWebinarResponseReducer from './features/webinars/everwebinarResponse';
@@ -11,7 +13,9 @@ export const makeStore = () => {
             webinarResponse: WebinarResponseReducer,
             everWebinarResponse: EverWebinarResponseReducer,
             otpState: OtpStateReducer,
-            masterclass: MasterclassReducer
+            masterclass: MasterclassReducer,
+            callback: CallbackSlice,
+            brochure: BrochureReducer
         },
         middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
     });

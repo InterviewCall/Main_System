@@ -271,3 +271,12 @@ export interface VerificationOtpRejected {
     errorCode: string
     message: string
 }
+
+
+export interface ICandidate extends Document {
+    experienceLevel?: string;
+    programName?: string;
+    candidateName?: string;
+    candidateEmail: string;
+    candidatePhone: string
+}

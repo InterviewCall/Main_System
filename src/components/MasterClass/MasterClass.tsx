@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
+import { useAppSelector } from '@/lib/hooks';
 // import { useAppSelector } from '@/lib/hooks';
 import {
   MasterClassAlumnis,
@@ -18,12 +19,16 @@ import MasterClassLearnerCard3 from '~/images/MasterClassLearnerCard3.png';
 
 // import MasterClassTop from '~/images/MasterclassTop.png';
 import MasterclassForm from '../Forms/MasterclassForm/MasterclassForm';
+import Loader from '../Sections/Hero/Loader';
 // import Loader from '../Sections/Hero/Loader';
 
 const MasterClass: FC = () => {
-  // const loading = useAppSelector((state) => state.masterclass.loading);
+  const loading = useAppSelector((state) => state.masterclass.loading);
   return (
+    <div className={clsx(loading && 'flex justify-center items-center w-full h-full')}>
+      {loading && <Loader />}
     <div className={clsx('bg-white relative w-full')}>
+        {/* <Loader /> */}
       {/* Top Image */}
       <div className='w-full md:pt-6'>
         <Image src={MasterClassTop} alt='MasterClassTop' loading='lazy' className='lg:block hidden' />
@@ -236,6 +241,7 @@ A systematic approach to breaking down problems and optimizing solutions for rea
         Take the next step in your career today. Join the InterviewCall Job Switch Bootcamp and unlock new opportunities in the tech industry!
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
-import Loader from '@/components/Sections/Hero/Loader';
 import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 // import OTPInput from 'react-otp-input';
@@ -176,7 +175,6 @@ const MasterclassForm: FC = () => {
             className={clsx(loading && 'backdrop-blur-lg', 'bg-white relative w-full rounded-lg lg:max-w-[29vw] h-auto flex flex-col gap-y-4 lg:fixed lg:top-[26%] lg:right-[2%] p-6 shadow-[2px_8px_15px_5px_rgba(0,0,0,0.1)]')}
             noValidate
           >
-            {loading && <Loader />}
             <div className='w-full flex flex-col gap-y-1'>
               <input
                 {...register('fullName', {

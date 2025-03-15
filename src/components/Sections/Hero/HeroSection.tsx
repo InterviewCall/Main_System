@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
+import Brochure from '@/components/Brochure/Brochure';
+import Callback from '@/components/CallBack/CallBack';
 import FormModal from '@/components/Forms/FormModal/FormModal';
 import { setShowModal } from '@/lib/features/heroSectionOtp/otpSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
@@ -16,6 +18,8 @@ import HeroStat from './HeroStat';
 
 const HeroSection: FC = () => {
   const showModal = useAppSelector((state) => state.otpState.showModal);
+  const showCallbackModal = useAppSelector((state) => state.callback.showCallbackModal);
+  const showBrochureModal = useAppSelector((state) => state.brochure.showBrochureModal);
   const dispatch = useAppDispatch();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -40,6 +44,9 @@ const HeroSection: FC = () => {
   return (
     <>
       {showModal && <FormModal />}
+      {showCallbackModal && <Callback />}
+      {showBrochureModal && <Brochure />}
+      {/* <Callback /> */}
       <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 pt-16 py-4 gap-8 md:gap-[8rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
