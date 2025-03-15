@@ -11,7 +11,7 @@ const HeaderButton: FC = () => {
       useEffect(() => {
         setTimeout(() => {
             dispatch(setCallbackModal(true));
-        }, 2000);
+        }, 30000);
       // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
     return (
