@@ -1,6 +1,6 @@
 import applyDb from '@/config/applyDb';
 // import brochureDb from '@/config/brochureDb';
-import Brochure from '@/models/Brochure';
+import Brochure, { ICandidate } from '@/models/Brochure';
 
 class BrochureRepository {
     private brochureModel;
@@ -10,14 +10,23 @@ class BrochureRepository {
         this.brochureModel = Brochure;
     }
 
-    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidatePhone: string) {
-        const brochure = await this.brochureModel.create({
+    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidatePhone: string): Promise<ICandidate | null> {
+        const brochure = await this.brochureModel.findOne({
+            $and: [
+                { candidateEmail },
+                { candidatePhone }
+            ]
+        });
+
+        if(brochure) return null;
+
+        const response = await this.brochureModel.create({
             programName,
             candidateName,
             candidateEmail,
             candidatePhone
         });
-        return brochure;
+        return response;
     }
 }
 

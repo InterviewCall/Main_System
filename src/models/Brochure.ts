@@ -27,6 +27,8 @@ const brochureSchema = new Schema<ICandidate>({
     },
 }, { timestamps: true });
 
+brochureSchema.index({ candidateEmail: 1, candidatePhone: 1 });
+
 const Brochure = models.Brochure || model<ICandidate>('Brochure', brochureSchema);
 
 export default Brochure;

@@ -179,7 +179,19 @@ const MasterclassForm: FC = () => {
             <div className='w-full flex flex-col gap-y-1'>
               <input
                 {...register('fullName', {
-                  required: 'Full Name is Required',
+                  required: 'Full Name is required',
+                  minLength: {
+                    value: 2,
+                    message: 'Full Name must be at least 2 characters long',
+                  },
+                  maxLength: {
+                    value: 50,
+                    message: 'Full Name must not exceed 50 characters',
+                  },
+                  pattern: {
+                    value: /^[A-Za-z\s]+$/,
+                    message: 'Full Name should contain only letters and spaces',
+                  },
                 })}
                 className='w-full rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                 placeholder='Enter Full Name'
@@ -217,7 +229,7 @@ const MasterclassForm: FC = () => {
                   {...register('phone', {
                     required: 'Phone Number is Required',
                     pattern: {
-                      value: /^[6-9]\d{9}$/,
+                      value: /^[6-9][0-9]{9}$/,
                       message: 'Invalid Phone Number',
                     },
                   })}

@@ -5,7 +5,7 @@ import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { MdCancel } from 'react-icons/md';
@@ -69,6 +69,18 @@ const Brochure: FC = () => {
       dispatch(setBrochureModal(false));
     }
   };
+
+  function showFormError(errorMsg: string | undefined) {
+    toast.error(errorMsg || '');
+  }
+
+  useEffect(() => {
+    const errorField = errors.fullName || errors.email || errors.mobileNumber;
+    if(errorField) {
+      showFormError(errorField.message);
+    }
+  }, [errors]);
+
   return (
     <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[998] bg-black/70'>
       {loading && <Loader />}
@@ -139,8 +151,8 @@ const Brochure: FC = () => {
                 type='text'
                 placeholder='Enter Full Name'
                 className={clsx(
-                  errors && errors.fullName && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.fullName && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('fullName')}
               />
@@ -149,8 +161,8 @@ const Brochure: FC = () => {
                 type='text'
                 placeholder='Enter Email'
                 className={clsx(
-                  errors && errors.email && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.email && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('email')}
               />
@@ -159,8 +171,8 @@ const Brochure: FC = () => {
                 type='text'
                 placeholder='Enter Phone'
                 className={clsx(
-                  errors && errors.mobileNumber && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.mobileNumber && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('mobileNumber')}
               />

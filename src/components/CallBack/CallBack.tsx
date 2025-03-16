@@ -90,8 +90,8 @@ const Callback: FC = () => {
                 defaultValue=''
                 {...register('selectExperience')}
                 className={clsx(
-                  errors && errors.selectExperience && 'border-red-500',
-                  'focus:ring-0 focus:outline-none w-full text-neutral-400'
+                  errors && errors.selectExperience && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
               >
                 <option className='text-neutral-400' value='' disabled>
@@ -112,8 +112,8 @@ const Callback: FC = () => {
                 defaultValue=''
                 {...register('selectPrograms')}
                 className={clsx(
-                  errors && errors.selectPrograms && 'border-red-500',
-                  'focus:ring-0 focus:outline-none w-full text-neutral-400'
+                  errors && errors.selectPrograms && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
               >
                 <option className='text-neutral-400' value='' disabled>
@@ -134,8 +134,8 @@ const Callback: FC = () => {
                 type='text'
                 placeholder='Enter Full Name'
                 className={clsx(
-                  errors && errors.fullName && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.fullName && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('fullName')}
               />
@@ -144,8 +144,8 @@ const Callback: FC = () => {
                 type='text'
                 placeholder='Enter Email'
                 className={clsx(
-                  errors && errors.email && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.email && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('email')}
               />
@@ -154,8 +154,8 @@ const Callback: FC = () => {
                 type='text'
                 placeholder='Enter Phone'
                 className={clsx(
-                  errors && errors.mobileNumber && 'border-red-500',
-                  'w-full placeholder:text-neutral-400'
+                  errors && errors.mobileNumber && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('mobileNumber')}
               />
