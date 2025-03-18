@@ -250,6 +250,7 @@ const MasterclassForm: FC = () => {
                 onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
                 placeholder='Code'
                 className='md:w-[28%] w-[35%] cursor-pointer'
+                menuPlacement='auto'
                 isSearchable 
                 styles={{
                   control: (provided, state) => ({
