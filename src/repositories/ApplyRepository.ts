@@ -1,21 +1,31 @@
 import applyDb from '@/config/applyDb';
-import ApplyModel from '@/models/ApplyModel';
+import ApplyNow, { ICandidate } from '@/models/ApplyNow';
 
 class ApplyRepository {
-    private applyModel;
+    private applynowModel;
 
     constructor() {
         applyDb.connect();
-        this.applyModel = ApplyModel;
+        this.applynowModel = ApplyNow;
     }
 
-    async createApply(candidateName: string, candidateEmail: string, candidatePhone: string) {
-        const brochure = await this.applyModel.create({
+    async createApply(candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string): Promise<ICandidate | null> {
+        const apply = await this.applynowModel.findOne({
+            $and: [
+                { candidateEmail },
+                { candidatePhone }
+            ]
+        });
+
+        if(apply) return null;
+
+        const response = await this.applynowModel.create({
             candidateName,
             candidateEmail,
+            candidateCountryCode,
             candidatePhone
         });
-        return brochure;
+        return response;
     }
 }
 

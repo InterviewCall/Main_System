@@ -1,16 +1,17 @@
 import { StatusCodes } from 'http-status-codes';
 import { NextRequest, NextResponse } from 'next/server';
 
-import RegistrationRepository from '@/repositories/RegistrationRepository';
-import RegistrationService from '@/services/RegistrationService';
+import MasterclassRepository from '@/repositories/MasterclassRepository';
+import MasterclassService from '@/services/MasterclassService';
 
-const registrationService = new RegistrationService(new RegistrationRepository());
+const masterclassService = new MasterclassService(new MasterclassRepository());
 
 export async function POST(req: NextRequest) {
     try {
-        const { candidateName, candidateEmail, candidatePhone } = await req.json();
+        const { candidateName, candidateEmail, candidateCountryCode, candidatePhone } = await req.json();
+        console.log(candidateCountryCode);
 
-        const newRegistration = await registrationService.createRegistration(candidateName, candidateEmail, candidatePhone);
+        const newRegistration = await masterclassService.createRegistration(candidateName, candidateEmail, candidateCountryCode, candidatePhone);
 
         return NextResponse.json({
             success: true,

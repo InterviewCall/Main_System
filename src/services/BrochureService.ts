@@ -7,9 +7,9 @@ class BrochureService {
         this.brochureRepository = brochureRepository;
     }
 
-    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidatePhone: string) {
+    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string) {
         try {
-            const brochure = await this.brochureRepository.createBrochure(programName, candidateName, candidateEmail, candidatePhone);
+            const brochure = await this.brochureRepository.createBrochure(programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone);
             return brochure;
         } catch (error) {
             throw error;

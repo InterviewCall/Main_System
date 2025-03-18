@@ -8,8 +8,8 @@ const applyService = new ApplyService(new ApplyRepository());
 
 export async function POST(req: NextRequest) {
     try {
-        const { candidateName, candidateEmail, candidatePhone } = await req.json();
-        const applyResponse = await applyService.createApply(candidateName, candidateEmail, candidatePhone);
+        const { candidateName, candidateEmail, candidateCountryCode, candidatePhone } = await req.json();
+        const applyResponse = await applyService.createApply(candidateName, candidateEmail, candidateCountryCode, candidatePhone);
 
         return NextResponse.json({
             success: true,

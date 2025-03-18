@@ -3,19 +3,18 @@ import { Document, model, models, Schema } from 'mongoose';
 export interface ICandidate extends Document {
     candidateName: string;
     candidateEmail: string;
-    candidatePhone: string;
     candidateCountryCode: string
+    candidatePhone: string
 }
 
-const registrationSchema = new Schema<ICandidate>({
+const applynowSchema = new Schema<ICandidate>({
     candidateName: {
         type: String, 
         required: true
     },
     candidateEmail: { 
         type: String, 
-        required: true, 
-        unique: true
+        required: true,
     },
     candidateCountryCode: {
         type: String, 
@@ -24,10 +23,11 @@ const registrationSchema = new Schema<ICandidate>({
     candidatePhone: { 
         type: String, 
         required: true,
-        unique: true
     },
 }, { timestamps: true });
 
-const Registration = models.Registration || model<ICandidate>('Registration', registrationSchema);
+applynowSchema.index({ candidateEmail: 1, candidatePhone: 1 });
 
-export default Registration;
+const ApplyNow = models.ApplyNow || model<ICandidate>('ApplyNow', applynowSchema);
+
+export default ApplyNow;

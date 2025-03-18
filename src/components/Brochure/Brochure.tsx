@@ -3,9 +3,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { MdCancel } from 'react-icons/md';
@@ -17,15 +18,20 @@ import {
   BrochureForm,
   brochureZodSchema,
 } from '@/schemas/brochureSchema';
-import { RegisterResponse } from '@/types';
+import { OptionType, RegisterResponse } from '@/types';
+import { getCountryOptions } from '@/utils';
 // import CallbackImage from '~/images/callback.png';
 import FulstackImage from '~/images/fullstackBrochure.png';
 import JobswitchImage from '~/images/jobswitchBrochure.png';
 
 import Loader from '../Sections/Hero/Loader';
 
+const Select = dynamic(() => import('react-select'), { ssr: false });
+
 const Brochure: FC = () => {
   const pathName = usePathname();
+  const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
+  const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
   const loading = useAppSelector((state) => state.callback.loading);
   const dispatch = useAppDispatch();
   const {
@@ -43,11 +49,21 @@ const Brochure: FC = () => {
     resolver: zodResolver(brochureZodSchema),
   });
 
+    useEffect(() => {
+      setCountryOptions(getCountryOptions());
+    }, []);
+
   const onSubmit: SubmitHandler<BrochureForm> = async () => {
+    if(!selectedCountry) {
+      toast.error('Please Select Your Country Code');
+      return;
+    }
+
     const requestObject = {
       programName: pathName == '/job-switch' ? 'Job Switch' : 'Fullstack-Mern',
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
+      candidateCountryCode: selectedCountry.label,
       candidatePhone: getValues('mobileNumber')
     };
 
@@ -152,7 +168,7 @@ const Brochure: FC = () => {
                 placeholder='Enter Full Name'
                 className={clsx(
                   errors && errors.fullName && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
-                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
+                  'w-full border-0 placeholder:text-neutral-400 rounded-md p-2 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('fullName')}
               />
@@ -162,20 +178,42 @@ const Brochure: FC = () => {
                 placeholder='Enter Email'
                 className={clsx(
                   errors && errors.email && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
-                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
+                  'w-full border-0 rounded-md p-2 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                 )}
                 {...register('email')}
               />
 
-              <input
-                type='text'
-                placeholder='Enter Phone'
-                className={clsx(
-                  errors && errors.mobileNumber && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
-                  'w-full border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
-                )}
-                {...register('mobileNumber')}
-              />
+              <div className='w-full flex gap-x-3'>
+                <Select
+                  options={countryOptions}
+                  value={selectedCountry}
+                  onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
+                  placeholder='Code'
+                  className='w-[28%] cursor-pointer'
+                  isSearchable 
+                  styles={{
+                    control: (provided, state) => ({
+                      ...provided,
+                      border: `2px solid ${state.isFocused ? '#D5DEE5' : '#D5DEE5'}`,
+                      boxShadow: state.isFocused ? 'none' : undefined, 
+                      padding: '0.15rem',
+                      borderRadius: '0.375rem', // rounded-md equivalent
+                      backgroundColor: 'white',
+                      cursor: 'pointer'
+                    }),
+                  }}
+                />
+
+                <input
+                  type='text'
+                  placeholder='Enter Phone'
+                  className={clsx(
+                    errors && errors.mobileNumber && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
+                    'w-[72%] rounded-md border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
+                  )}
+                  {...register('mobileNumber')}
+                />
+              </div>
             </div>
 
             <button type='submit' className='bg-[#b30158] w-full text-white text-sm uppercase py-2 rounded-md hover:scale-95 duration-300'>

@@ -1,16 +1,16 @@
 import applyDb from '@/config/applyDb';
-import Registration, { ICandidate } from '@/models/Registration';
+import Masterclass, { ICandidate } from '@/models/Masterclass';
 
-class RegistrationRepository {
-    private registrationModel;
+class MasterclassRepository {
+    private masterclassModel;
 
     constructor() {
         applyDb.connect();
-        this.registrationModel = Registration;
+        this.masterclassModel = Masterclass;
     }
 
     async createRegistration(candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string): Promise<ICandidate> {
-        const registration = await this.registrationModel.create({
+        const registration = await this.masterclassModel.create({
             candidateName,
             candidateEmail,
             candidateCountryCode,
@@ -20,4 +20,4 @@ class RegistrationRepository {
     }
 }
 
-export default RegistrationRepository;
+export default MasterclassRepository;

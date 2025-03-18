@@ -2,11 +2,15 @@
 
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
+// import { getCodeList } from 'country-list';
+import { CountryCode } from 'libphonenumber-js';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
+// import Select from 'react-select';
 import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 // import OTPInput from 'react-otp-input';
@@ -15,11 +19,17 @@ import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 // import { registerForWebinar } from '@/lib/features/webinars/webinarjamResponseSlice';
 // import { useAppDispatch } from '@/lib/hooks';
 import { RegisterRequest, RegisterResponse } from '@/types';
+import { getCountryOptions } from '@/utils';
 // import { initiateOtp, otpVerification } from '@/utils';
+
+const Select = dynamic(() => import('react-select'), { ssr: false });
+type OptionType = { value: CountryCode; label: string };
 
 const MasterclassForm: FC = () => {
   // const webinarResponse = useAppSelector((state) => state.webinarResponse);
   const loading = useAppSelector((state) => state.masterclass.loading);
+  const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
+  const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
   // const [loading, setLoading] = useState(false);
   const dispatch = useAppDispatch();
   const router = useRouter();
@@ -35,6 +45,12 @@ const MasterclassForm: FC = () => {
       phone: '',
     },
   });
+
+  
+  useEffect(() => {
+    setCountryOptions(getCountryOptions());
+  }, []);
+  
 
   // const [stepOtp, setStepOtp] = useState(false);
   // const [errorOtp, setErrorOtp] = useState<string | undefined>('');
@@ -151,9 +167,15 @@ const MasterclassForm: FC = () => {
   // };
 
   const registerMasterclass: SubmitHandler<RegisterRequest> = async () => {
+    if(!selectedCountry) {
+      toast.error('Please Select Your Country Code');
+      return;
+    }
+
     const requestObject = {
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
+      candidateCountryCode: selectedCountry.label,
       candidatePhone: getValues('phone')
     };
 
@@ -167,6 +189,7 @@ const MasterclassForm: FC = () => {
       dispatch(setLoading(false)); 
       const err = error as AxiosError<RegisterResponse>;
       toast.error(String(err.response?.data?.message));
+      console.log(error);
     }
   };
     return (
@@ -220,27 +243,48 @@ const MasterclassForm: FC = () => {
                 <p className='text-[#FF516C] text-sm'>{errors.email.message}</p>
               )}
             </div>
-            <div className='w-full flex flex-col gap-y-1'>
-              <div className='flex gap-2'>
-                <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
-                  +91
-                </div>
-                <input
-                  {...register('phone', {
-                    required: 'Phone Number is Required',
-                    pattern: {
-                      value: /^[6-9][0-9]{9}$/,
-                      message: 'Invalid Phone Number',
-                    },
-                  })}
-                  className='w-full rounded-md focus:rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
-                  placeholder='Enter Phone Number'
-                  type='text'
-                />
+            <div className='w-full flex gap-x-3 items-center'>
+              <Select
+                options={countryOptions}
+                value={selectedCountry}
+                onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
+                placeholder='Code'
+                className='w-[28%] cursor-pointer'
+                isSearchable 
+                styles={{
+                  control: (provided, state) => ({
+                    ...provided,
+                    border: `2px solid ${state.isFocused ? '#D5DEE5' : '#D5DEE5'}`,
+                    boxShadow: state.isFocused ? 'none' : undefined, 
+                    padding: '0.35rem',
+                    borderRadius: '0.375rem', // rounded-md equivalent
+                    backgroundColor: 'white',
+                    cursor: 'pointer'
+                  }),
+                }}
+              />
+              <div className='w-[72%] flex flex-col gap-y-1'>
+                <div className='flex gap-2'>
+                  {/* <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
+                    +91
+                  </div> */}
+                  <input
+                    {...register('phone', {
+                      required: 'Phone Number is Required',
+                      pattern: {
+                        value: /^[1-9]\d{1,14}$/,
+                        message: 'Invalid Phone Number',
+                      },
+                    })}
+                    className='w-full rounded-md focus:rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
+                    placeholder='Enter Phone Number'
+                    type='text'
+                  />
+                  </div>
+                  {errors.phone && (
+                    <p className='text-[#FF516C] text-sm'>{errors.phone.message}</p>
+                  )}
               </div>
-              {errors.phone && (
-                <p className='text-[#FF516C] text-sm'>{errors.phone.message}</p>
-              )}
             </div>
 
             <button

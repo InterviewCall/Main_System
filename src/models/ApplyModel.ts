@@ -3,6 +3,7 @@ import { Document, model, models, Schema } from 'mongoose';
 export interface ICandidate extends Document {
     candidateName: string;
     candidateEmail: string;
+    candidateCountryCode: string
     candidatePhone: string
 }
 
@@ -12,6 +13,10 @@ const applySchema = new Schema<ICandidate>({
         required: true
     },
     candidateEmail: { 
+        type: String, 
+        required: true,
+    },
+    candidateCountryCode: {
         type: String, 
         required: true,
     },

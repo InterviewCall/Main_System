@@ -1,3 +1,4 @@
+import { CountryCode } from 'libphonenumber-js';
 import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { FieldError, UseFormRegister } from 'react-hook-form';
@@ -280,3 +281,9 @@ export interface ICandidate extends Document {
     candidateEmail: string;
     candidatePhone: string
 }
+
+
+export type OptionType = {
+    value: CountryCode;
+    label: string;
+};

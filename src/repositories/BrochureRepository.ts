@@ -10,7 +10,7 @@ class BrochureRepository {
         this.brochureModel = Brochure;
     }
 
-    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidatePhone: string): Promise<ICandidate | null> {
+    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string): Promise<ICandidate | null> {
         const brochure = await this.brochureModel.findOne({
             $and: [
                 { candidateEmail },
@@ -24,6 +24,7 @@ class BrochureRepository {
             programName,
             candidateName,
             candidateEmail,
+            candidateCountryCode,
             candidatePhone
         });
         return response;
