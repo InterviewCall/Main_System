@@ -249,7 +249,7 @@ const MasterclassForm: FC = () => {
                 value={selectedCountry}
                 onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
                 placeholder='Code'
-                className='w-[28%] cursor-pointer'
+                className='md:w-[28%] w-[35%] cursor-pointer'
                 isSearchable 
                 styles={{
                   control: (provided, state) => ({
@@ -263,7 +263,7 @@ const MasterclassForm: FC = () => {
                   }),
                 }}
               />
-              <div className='w-[72%] flex flex-col gap-y-1'>
+              <div className='md:w-[72%] w-[65%] flex flex-col gap-y-1'>
                 <div className='flex gap-2'>
                   {/* <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
                     +91

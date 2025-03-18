@@ -197,7 +197,7 @@ const FormModal: FC = () => {
                       setSelectedCountry(newValue as OptionType)
                     }
                     placeholder='Code'
-                    className='w-[28%] cursor-pointer'
+                    className='md:w-[28%] w-[35%] cursor-pointer'
                     isSearchable
                     styles={{
                       control: (provided, state) => ({
@@ -221,7 +221,7 @@ const FormModal: FC = () => {
                         message: 'Invalid Phone Number Format',
                       },
                     })}
-                    className='md:w-[72%] w-[85%] rounded-md p-3 border-0 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999] text-black'
+                    className='md:w-[72%] w-[65%] rounded-md p-3 border-0 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999] text-black'
                     placeholder='Enter Phone Number'
                     type='text'
                   />

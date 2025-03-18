@@ -193,7 +193,7 @@ const Callback: FC = () => {
                     setSelectedCountry(newValue as OptionType)
                   }
                   placeholder='Code'
-                  className='w-[28%] cursor-pointer'
+                  className='md:w-[28%] w-[35%] cursor-pointer'
                   isSearchable
                   styles={{
                     control: (provided, state) => ({
@@ -217,7 +217,7 @@ const Callback: FC = () => {
                     errors &&
                       errors.mobileNumber &&
                       'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
-                    'w-[72%] rounded-md border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
+                    'md:w-[72%] w-[65%] rounded-md border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                   )}
                   {...register('mobileNumber')}
                 />
