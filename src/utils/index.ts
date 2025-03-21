@@ -1275,7 +1275,7 @@ export const getCountryOptions = () => {
     const countryList = getCodeList();
 
     if (!countryList || Object.keys(countryList).length === 0) {
-      console.error('getCodeList() returned an empty object.');
+      // console.error('getCodeList() returned an empty object.');
       return [];
     }
 
@@ -1284,7 +1284,7 @@ export const getCountryOptions = () => {
         const upperCaseCode = countryCode.toUpperCase() as CountryCode;
         
         if (!isSupportedCountry(upperCaseCode)) {
-          console.warn(`Skipping unsupported country code: ${upperCaseCode}`);
+          // console.warn(`Skipping unsupported country code: ${upperCaseCode}`);
           return null;
         }
 
@@ -1294,14 +1294,16 @@ export const getCountryOptions = () => {
             value: upperCaseCode,
             label: `${upperCaseCode} (+${callingCode})`,
           };
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
-          console.warn(`Error fetching calling code for ${upperCaseCode}:`, error);
+          // console.warn(`Error fetching calling code for ${upperCaseCode}:`, error);
           return null;
         }
       })
       .filter(Boolean) as OptionType[];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
-    console.error('Error fetching country list:', error);
+    // console.error('Error fetching country list:', error);
     return [];
   }
 };
