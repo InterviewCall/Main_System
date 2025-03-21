@@ -1,3 +1,8 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
 import AlumniSection from '@/components/Sections/Alumni/AlumniSection';
 import CurriculamSection from '@/components/Sections/Curriculam/CurriculamSection';
 import EventSection from '@/components/Sections/Event/EventSection';
@@ -7,6 +12,12 @@ import IndustrySection from '@/components/Sections/Industry/IndustrySection';
 import LearnerSection from '@/components/Sections/Learner/LearnerSection';
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/job-switch');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div>
       <HeroSection />
