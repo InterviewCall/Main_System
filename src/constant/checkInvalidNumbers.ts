@@ -1,0 +1,1 @@
+export const INVALID_NUMBERS = Array.from({ length: 10 }, (_, i) => String(i).repeat(10));

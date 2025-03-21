@@ -1,7 +1,7 @@
 'use client';
 
 import axios, { AxiosError } from 'axios';
-import { getCountryCallingCode } from 'libphonenumber-js';
+import parsePhoneNumberFromString, { getCountryCallingCode } from 'libphonenumber-js';
 import dynamic from 'next/dynamic';
 import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -9,6 +9,7 @@ import toast from 'react-hot-toast';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import OTPInput from 'react-otp-input';
 
+import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
 import {
   resetForm,
   sendOtpRequest,
@@ -62,6 +63,16 @@ const FormModal: FC = () => {
     if(!selectedCountry) {
         toast.error('Please Select Your Country Code');
         return;
+    }
+
+    const callingcode = getCountryCallingCode(selectedCountry.value);
+    const phoneNumber = parsePhoneNumberFromString(
+      `+${callingcode}${getValues('phone')}`
+    );
+  
+    if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
+      toast.error('Please enter a valid phone number');
+      return;
     }
 
     dispatch(setIsLoading(true));
@@ -197,7 +208,32 @@ const FormModal: FC = () => {
                       setSelectedCountry(newValue as OptionType)
                     }
                     placeholder='Code'
-                    className='md:w-[28%] w-[35%] cursor-pointer'
+                    className='md:w-[28%] w-[35%] cursor-pointer md:block hidden'
+                    isSearchable
+                    styles={{
+                      control: (provided, state) => ({
+                        ...provided,
+                        border: `2px solid ${
+                          state.isFocused ? '#D5DEE5' : '#D5DEE5'
+                        }`,
+                        boxShadow: state.isFocused ? 'none' : undefined,
+                        padding: '0.45rem',
+                        borderRadius: '0.375rem', // rounded-md equivalent
+                        backgroundColor: 'white',
+                        cursor: 'pointer',
+                      }),
+                    }}
+                  />
+
+                  <Select
+                    options={countryOptions}
+                    value={selectedCountry}
+                    onChange={(newValue) =>
+                      setSelectedCountry(newValue as OptionType)
+                    }
+                    placeholder='Code'
+                    className='md:w-[28%] w-[35%] cursor-pointer md:hidden block'
+                    menuPlacement='top'
                     isSearchable
                     styles={{
                       control: (provided, state) => ({

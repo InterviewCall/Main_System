@@ -1,5 +1,5 @@
 import { getCodeList } from 'country-list';
-import { CountryCode, getCountryCallingCode } from 'libphonenumber-js';
+import { CountryCode, getCountryCallingCode, isSupportedCountry } from 'libphonenumber-js';
 import { BsTwitterX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaSpotify, FaYoutube } from 'react-icons/fa';
 
@@ -1238,9 +1238,42 @@ export const AllCompanies = [
   MainAssests.C45
 ];
 
+// export const getCountryOptions = () => {
+//   try {
+//     const countryList = getCodeList();
+//     if (!countryList || Object.keys(countryList).length === 0) {
+//       console.error('getCodeList() returned an empty object.');
+//       return [];
+//     }
+
+//     return Object.keys(countryList)
+//       .map((countryCode) => {
+//         const upperCaseCode = countryCode.toUpperCase() as CountryCode;
+
+//         try {
+//           const callingCode = getCountryCallingCode(upperCaseCode);
+//           if (!callingCode) return null; // Skip if calling code is not found
+
+//           return {
+//             value: upperCaseCode,
+//             label: `${upperCaseCode} (+${callingCode})`,
+//           };
+//         } catch (error) {
+//           console.warn(`Error fetching calling code for ${upperCaseCode}:`, error);
+//           return null;
+//         }
+//       })
+//       .filter(Boolean) as OptionType[];
+//   } catch (error) {
+//     console.error('Error fetching country list:', error);
+//     return [];
+//   }
+// };
+
 export const getCountryOptions = () => {
   try {
     const countryList = getCodeList();
+
     if (!countryList || Object.keys(countryList).length === 0) {
       console.error('getCodeList() returned an empty object.');
       return [];
@@ -1249,11 +1282,14 @@ export const getCountryOptions = () => {
     return Object.keys(countryList)
       .map((countryCode) => {
         const upperCaseCode = countryCode.toUpperCase() as CountryCode;
+        
+        if (!isSupportedCountry(upperCaseCode)) {
+          console.warn(`Skipping unsupported country code: ${upperCaseCode}`);
+          return null;
+        }
 
         try {
           const callingCode = getCountryCallingCode(upperCaseCode);
-          if (!callingCode) return null; // Skip if calling code is not found
-
           return {
             value: upperCaseCode,
             label: `${upperCaseCode} (+${callingCode})`,

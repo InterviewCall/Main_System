@@ -3,13 +3,14 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
 // import { getCodeList } from 'country-list';
-import { CountryCode } from 'libphonenumber-js';
+import parsePhoneNumberFromString, { CountryCode, getCountryCallingCode } from 'libphonenumber-js';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
+import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
 // import Select from 'react-select';
 import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
@@ -172,6 +173,16 @@ const MasterclassForm: FC = () => {
       return;
     }
 
+    const callingcode = getCountryCallingCode(selectedCountry.value);
+    const phoneNumber = parsePhoneNumberFromString(
+      `+${callingcode}${getValues('phone')}`
+    );
+  
+    if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
+      toast.error('Please enter a valid phone number');
+      return;
+    }
+
     const requestObject = {
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
@@ -249,8 +260,29 @@ const MasterclassForm: FC = () => {
                 value={selectedCountry}
                 onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
                 placeholder='Code'
-                className='md:w-[28%] w-[35%] cursor-pointer'
-                menuPlacement='auto'
+                className='md:w-[28%] w-[35%] cursor-pointer md:block hidden'
+                menuPlacement='bottom'
+                isSearchable 
+                styles={{
+                  control: (provided, state) => ({
+                    ...provided,
+                    border: `2px solid ${state.isFocused ? '#D5DEE5' : '#D5DEE5'}`,
+                    boxShadow: state.isFocused ? 'none' : undefined, 
+                    padding: '0.35rem',
+                    borderRadius: '0.375rem', // rounded-md equivalent
+                    backgroundColor: 'white',
+                    cursor: 'pointer'
+                  }),
+                }}
+              />
+
+              <Select
+                options={countryOptions}
+                value={selectedCountry}
+                onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
+                placeholder='Code'
+                className='md:w-[28%] w-[35%] cursor-pointer md:hidden block'
+                menuPlacement='top'
                 isSearchable 
                 styles={{
                   control: (provided, state) => ({
