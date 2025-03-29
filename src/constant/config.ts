@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: 'InterviewCall',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    'InterviewCall is your go to go platform for interview preparation. Find expert tips, mock interviews and more!',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'http://localhost:3000',
+  url: 'https://www.interviewcall.club',
 };
