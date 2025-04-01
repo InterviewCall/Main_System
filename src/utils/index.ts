@@ -1019,7 +1019,7 @@ export const QuestionAnswerOfCategory: Record<string, FAQ[]> = {
     {
       question: 'What if I encounter technical issues during a session?',
       answer: 'In case of technical difficulties, please inform your interviewer immediately. We will work to resolve the issue promptly or reschedule if necessary.'
-    }
+    },
   ]
 };
 
