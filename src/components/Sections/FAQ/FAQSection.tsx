@@ -111,7 +111,7 @@ const FAQSection: FC = () => {
                             </p>
 
                             <div className='flex flex-col w-full'>
-                                <div className='px-2 py-4 w-full text-white relative flex justify-between'>
+                                <div className='px-2 py-4 w-full text-white relative flex gap-x-14'>
                                     <p>{item.question}</p>
                                     <button onClick={() => handleDropdown(index)}>
                                         <p className='font-light bg-[#4FA9E2] absolute right-0 top-0 p-4 aspect-square w-14 h-auto flex items-center justify-center'>
