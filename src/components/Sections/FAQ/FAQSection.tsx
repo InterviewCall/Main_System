@@ -14,7 +14,7 @@ for(const key in QuestionAnswerOfCategory) {
 }
 
 const FAQSection: FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('General');
+    const [selectedCategory, setSelectedCategory] = useState('Eligibility');
     const [selectedDropdown, setSelectedDropdown] = useState(0);
 
     function handleDropdown(index: number) {

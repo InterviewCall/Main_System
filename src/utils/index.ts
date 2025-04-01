@@ -948,7 +948,7 @@ export const Events: Event[] = [
   }
 ];
 
-export const FAQCatogories = ['General', 'Account', 'Payment', 'Support'];
+export const FAQCatogories = ['Eligibility', 'Services Offered', 'Scheduling and Availability', 'Pricing and Payment', 'Technical Requirements', 'Support'];
 
 export const QuestionAnswerOfCategory: Record<string, FAQ[]> = {
   'Eligibility': [
