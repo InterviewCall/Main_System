@@ -89,7 +89,7 @@ const MasterClass: FC = () => {
 
 By 2026, India is expected to create over 3 million new Software Engineering positions! But what’s driving this surge in demand? Software Engineers are the backbone of technological innovation, building scalable systems, optimizing performance, solving complex challenges, and driving digital transformation across industries.
 
-<br /> If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! <br /> Join industry expert <span><b>Sunyul Hossen</b></span> on Saturday, <span><b>5th March</b></span>, from <span><b>6:30 PM</b></span> to <span><b>8:00 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
+<br /> If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! <br /> Join industry expert <span><b>Sunyul Hossen</b></span> on Saturday, <span><b>5th April</b></span>, from <span><b>6:30 PM</b></span> to <span><b>8:00 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
 
 Register now!
         </div>
