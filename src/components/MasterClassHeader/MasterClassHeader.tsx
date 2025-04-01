@@ -40,7 +40,7 @@ const MasterClassHeader: FC = () => {
         <Link href='/job-switch'>
           <Image
             src={Logo}
-            alt=''
+            alt='logo'
             width={201}
             height={47}
             className='md:w-[201px] min-w-[145px] w-[145px] md:h-[47px] h-[47px] object-contain min-h-[34px]'
