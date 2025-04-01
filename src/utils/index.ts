@@ -951,27 +951,76 @@ export const Events: Event[] = [
 export const FAQCatogories = ['General', 'Account', 'Payment', 'Support'];
 
 export const QuestionAnswerOfCategory: Record<string, FAQ[]> = {
-  'General': [
+  'Eligibility': [
     {
-      question: 'How do I track my order ?',
-      answer: 'You can track your order through the tracking link in your confirmation email.'
-    }
-  ],
-
-  'Account': [
-    {
-      question: 'How do I reset my password ?',
-      answer: 'Go to the login page and click on "Forgot Password" to reset.'
+      question: 'Who is eligible to use Interviewcall\'s services?',
+      answer: 'Our platform is designed for job seekers across various experience levels, from recent graduates to seasoned professionals'
     },
 
     {
-      question: 'Can I change my email adddress ?',
-      answer: 'Yes, go to account settings to update your email address.'
+      question: 'Do I need prior interview experience to benefit from Interviewcall?',
+      answer: 'No prior interview experience is necessary. Our resources cater to individuals at all stages of their career journey.'
     }
   ],
 
-  'Payment': [],
-  'Support': []
+  'Services Offered': [
+    {
+      question: 'What services does Interviewcall provide?',
+      answer: 'We offer a range of services including mock interviews, resume reviews, and personalized feedback sessions to help you prepare effectively for job interviews.'
+    },
+
+    {
+      question: 'Are the mock interviews conducted live or pre-recorded?',
+      answer: 'Our mock interviews are conducted live by experienced professionals to simulate real interview scenarios.'
+    }
+  ],
+
+  'Scheduling and Availability': [
+    {
+      question: 'How can I schedule a mock interview?',
+      answer: 'After signing up, you can access our scheduling portal to book a session at a time that suits you.'
+    },
+
+    {
+      question: 'What if I need to reschedule my session?',
+      answer: 'You can reschedule your session through our platform, provided you do so at least 24 hours in advance.'
+    }
+  ],
+  'Pricing and Payment': [
+    {
+      question: 'What are the costs associated with Interviewcall\'s services?',
+      answer: 'We offer various packages to suit different needs. Please visit our pricing page for detailed information.'
+    },
+
+    {
+      question: 'Do you offer any discounts or promotions?',
+      answer: 'We periodically offer discounts for new users and referrals. Check our website or subscribe to our newsletter for the latest offers.'
+    }
+  ],
+
+  'Technical Requirements': [
+    {
+      question: 'What do I need for the online sessions?',
+      answer: 'A stable internet connection, a functioning webcam, and a quiet environment are essential for effective sessions.'
+    },
+
+    {
+      question: 'Do I need to install any software?',
+      answer: 'Our sessions are conducted via commonly used video conferencing tools. Necessary instructions will be provided upon booking.'
+    }
+  ],
+
+  'Support': [
+    {
+      question: 'How can I contact Interviewcall for support?',
+      answer: 'For any inquiries or support, please email us at support@interviewcall.com or use the contact number on our website.'
+    },
+
+    {
+      question: 'What if I encounter technical issues during a session?',
+      answer: 'In case of technical difficulties, please inform your interviewer immediately. We will work to resolve the issue promptly or reschedule if necessary.'
+    }
+  ]
 };
 
 export const FooterSectionArray: FooterSectionArrayType[] = [
