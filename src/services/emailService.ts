@@ -1,15 +1,18 @@
-import sender from '@/configs/emailConfig';
-import getAcknowledgmentEmail from '@/constant/acknowledgementEmail';
-import getCandidateDetails from '@/constant/getCandidateDetails';
+import TestEmail from 'emails/TestEmail';
 
-export function sendEmail(candidateName: string, bootcampName: string, mailTo: string) {
-    sender.sendMail({
-        from: String(process.env.NEXT_PUBLIC_EMAIL_ADDRESS),
-        to: mailTo,
-        subject: String(process.env.NEXT_PUBLIC_EMAIL_SUBJECT),
-        html: getAcknowledgmentEmail(candidateName, bootcampName),
-    });
-}
+import sender from '@/configs/emailConfig';
+// import getAcknowledgmentEmail from '@/constant/acknowledgementEmail';
+import getCandidateDetails from '@/constant/getCandidateDetails';
+import { resend } from '@/lib/resend';
+
+// export function sendEmail(candidateName: string, bootcampName: string, mailTo: string) {
+//     sender.sendMail({
+//         from: String(process.env.NEXT_PUBLIC_EMAIL_ADDRESS),
+//         to: mailTo,
+//         subject: String(process.env.NEXT_PUBLIC_EMAIL_SUBJECT),
+//         html: getAcknowledgmentEmail(candidateName, bootcampName),
+//     });
+// }
 
 export function sendEmailForMasterclass(candidateName: string, candidateEmail: string, candidatePhone: string) {
     sender.sendMail({
@@ -18,4 +21,25 @@ export function sendEmailForMasterclass(candidateName: string, candidateEmail: s
         subject: String(process.env.NEXT_PUBLIC_MASTERCLASS_EMAIL_SUBJECT),
         html: getCandidateDetails(candidateName, candidateEmail, candidatePhone),
     });
+}
+
+export async function sendEmail(candidateName: string, mailTo: string) {
+    try {
+        await resend.emails.send({
+            from: 'onboarding@resend.dev',
+            to: mailTo,
+            subject: 'Test',
+            react: TestEmail({ userName: candidateName, testLink: 'https://www.interviewcall.club'})
+        });
+        return {
+            success: true,
+            message: 'Successfully send the mail'
+        };
+    } catch (error) {
+        console.error('Error sending email', error);
+        return {
+            success: false,
+            message: 'Failed to send email'
+        };
+    }
 }
