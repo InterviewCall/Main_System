@@ -29,7 +29,7 @@ export async function sendEmail(candidateName: string, mailTo: string) {
             from: 'onboarding@resend.dev',
             to: mailTo,
             subject: 'Test',
-            react: TestEmail({ userName: candidateName, testLink: 'https://www.interviewcall.club'})
+            html: TestEmail({ userName: candidateName, testLink: 'https://www.interviewcall.club'})
         });
         return {
             success: true,
