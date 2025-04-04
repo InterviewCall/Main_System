@@ -8,10 +8,10 @@ const masterclassService = new MasterclassService(new MasterclassRepository());
 
 export async function POST(req: NextRequest) {
     try {
-        const { candidateName, candidateEmail, candidateCountryCode, candidatePhone } = await req.json();
-        console.log(candidateCountryCode);
+        const { candidateName, candidateEmail, candidatePhone } = await req.json();
+        // console.log(candidateCountryCode);
 
-        const newRegistration = await masterclassService.createRegistration(candidateName, candidateEmail, candidateCountryCode, candidatePhone);
+        const newRegistration = await masterclassService.createRegistration(candidateName, candidateEmail, candidatePhone);
 
         return NextResponse.json({
             success: true,

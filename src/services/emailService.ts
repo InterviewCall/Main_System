@@ -23,13 +23,13 @@ export function sendEmailForMasterclass(candidateName: string, candidateEmail: s
     });
 }
 
-export async function sendEmail(candidateName: string, mailTo: string) {
+export async function sendEmail(date: string, timeSlot: string, maxStartTime: string, mailTo: string) {
     try {
         await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'entrance-test@interviewcall.club',
             to: mailTo,
-            subject: 'Test',
-            html: TestEmail({ userName: candidateName, testLink: 'https://www.interviewcall.club'})
+            subject: 'Exclusive Invitation: InterviewCall Entrance Test',
+            html: TestEmail({ date, timeSlot, maxStartTime, testLink: 'https://www.interviewcall.club'})
         });
         return {
             success: true,

@@ -17,10 +17,6 @@ const masterclassSchema = new Schema<ICandidate>({
         required: true, 
         unique: true
     },
-    candidateCountryCode: {
-        type: String, 
-        required: true,
-    },
     candidatePhone: { 
         type: String, 
         required: true,

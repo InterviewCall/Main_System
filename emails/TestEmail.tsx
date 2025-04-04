@@ -2,8 +2,10 @@
 // import { FC } from 'react';
 
 interface TestProps {
-    userName: string
-    testLink: string
+  date: string
+  timeSlot: string
+  testLink: string
+  maxStartTime: string
 }
 
 // const TestEmail: FC<TestProps> = ({ userName, testLink }) => {
@@ -41,7 +43,7 @@ interface TestProps {
 
 // export default TestEmail;
 
-export default function TestEmail({ userName, testLink }: TestProps) {
+export default function TestEmail({ date, timeSlot, maxStartTime, testLink }: TestProps) {
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -75,11 +77,20 @@ export default function TestEmail({ userName, testLink }: TestProps) {
     </head>
     <body>
       <div class="container">
-        <h2>Hello ${userName},</h2>
-        <p>You have been invited to take an MCQ test. Click the button below to start the test.</p>
+        <h2>Hey there, superstar!</h2>
+        <p>You’ve been handpicked to take on the InterviewCall Entrance Test—your gateway to the next big opportunity!</p>
+        <br />
+        <p><b>Date: ${date}</b></p>
+        <p><b>Time: ${timeSlot}</b></p>
+        <br />
+        <p>Test Duration: 22 minutes <b>(Make sure to before ${maxStartTime} to get full time!)</b></p>
+        <br />
+        <p>Bring your A-game, because this is your moment to shine!</p>
+        <br />
+        <p>Ready to crush it?</p>
         <a href="${testLink}" class="button">Start Test</a>
         <p>If you have any questions, feel free to reach out to us.</p>
-        <p>Best regards,<br>Your Team</p>
+        <p>Best regards,<br>Prithviraj Paul<br>9831649077</p>
       </div>
     </body>
     </html>

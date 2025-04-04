@@ -3,14 +3,14 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
 // import { getCodeList } from 'country-list';
-import parsePhoneNumberFromString, { CountryCode, getCountryCallingCode } from 'libphonenumber-js';
-import dynamic from 'next/dynamic';
+// import parsePhoneNumberFromString, { CountryCode, getCountryCallingCode } from 'libphonenumber-js';
+// import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
-import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
+// import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
 // import Select from 'react-select';
 import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
@@ -20,17 +20,17 @@ import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 // import { registerForWebinar } from '@/lib/features/webinars/webinarjamResponseSlice';
 // import { useAppDispatch } from '@/lib/hooks';
 import { RegisterRequest, RegisterResponse } from '@/types';
-import { getCountryOptions } from '@/utils';
+// import { getCountryOptions } from '@/utils';
 // import { initiateOtp, otpVerification } from '@/utils';
 
-const Select = dynamic(() => import('react-select'), { ssr: false });
-type OptionType = { value: CountryCode; label: string };
+// const Select = dynamic(() => import('react-select'), { ssr: false });
+// type OptionType = { value: CountryCode; label: string };
 
 const MasterclassForm: FC = () => {
   // const webinarResponse = useAppSelector((state) => state.webinarResponse);
   const loading = useAppSelector((state) => state.masterclass.loading);
-  const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
-  const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
+  // const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
+  // const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
   // const [loading, setLoading] = useState(false);
   const dispatch = useAppDispatch();
   const router = useRouter();
@@ -48,9 +48,9 @@ const MasterclassForm: FC = () => {
   });
 
   
-  useEffect(() => {
-    setCountryOptions(getCountryOptions());
-  }, []);
+  // useEffect(() => {
+  //   setCountryOptions(getCountryOptions());
+  // }, []);
   
 
   // const [stepOtp, setStepOtp] = useState(false);
@@ -168,25 +168,25 @@ const MasterclassForm: FC = () => {
   // };
 
   const registerMasterclass: SubmitHandler<RegisterRequest> = async () => {
-    if(!selectedCountry) {
-      toast.error('Please Select Your Country Code');
-      return;
-    }
+    // if(!selectedCountry) {
+    //   toast.error('Please Select Your Country Code');
+    //   return;
+    // }
 
-    const callingcode = getCountryCallingCode(selectedCountry.value);
-    const phoneNumber = parsePhoneNumberFromString(
-      `+${callingcode}${getValues('phone')}`
-    );
+    // const callingcode = getCountryCallingCode(selectedCountry.value);
+    // const phoneNumber = parsePhoneNumberFromString(
+    //   `+${callingcode}${getValues('phone')}`
+    // );
   
-    if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
-      toast.error('Please enter a valid phone number');
-      return;
-    }
+    // if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
+    //   toast.error('Please enter a valid phone number');
+    //   return;
+    // }
 
     const requestObject = {
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
-      candidateCountryCode: selectedCountry.label,
+      // candidateCountryCode: selectedCountry.label,
       candidatePhone: getValues('phone')
     };
 
@@ -255,7 +255,7 @@ const MasterclassForm: FC = () => {
               )}
             </div>
             <div className='w-full flex gap-x-3 items-center'>
-              <Select
+              {/* <Select
                 options={countryOptions}
                 value={selectedCountry}
                 onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
@@ -295,8 +295,8 @@ const MasterclassForm: FC = () => {
                     cursor: 'pointer'
                   }),
                 }}
-              />
-              <div className='md:w-[72%] w-[65%] flex flex-col gap-y-1'>
+              /> */}
+              <div className='w-full flex flex-col gap-y-1'>
                 <div className='flex gap-2'>
                   {/* <div className='bg-gray-300 p-3 md:p-3 text-black text-lg rounded-s-md'>
                     +91

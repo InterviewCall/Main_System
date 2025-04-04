@@ -7,9 +7,9 @@ class MasterclassService {
         this.masterclassRepository = masterclassRepository;
     }
 
-    async createRegistration(candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string) {
+    async createRegistration(candidateName: string, candidateEmail: string, candidatePhone: string) {
         try {
-            const registration = await this.masterclassRepository.createRegistration(candidateName, candidateEmail, candidateCountryCode, candidatePhone);
+            const registration = await this.masterclassRepository.createRegistration(candidateName, candidateEmail, candidatePhone);
             return registration;
         } catch (error) {
             throw error;
