@@ -51,6 +51,7 @@ const FooterSection: FC = () => {
                                 </p>
 
                                 <FooterInput />
+                                <span>Copyright&copy;IVYLEAGUE CSFORALL ACADEMY PRIVATE LIMITED. All rights reserved.</span>
                             </div>
                         </div>
                     </div>
