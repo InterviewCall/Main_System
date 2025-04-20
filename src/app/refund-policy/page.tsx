@@ -8,14 +8,14 @@ const RefundPolicy: FC = () => {
 
                 <div className='font-[400] mt-6'>
                     <p className='font-bold'>
-                        Initial 7-Day Trial 
+                        Initial 14-Day Trial 
                     </p>
 
                     <br />
                     <br />
 
                     <p>
-                        – Candidates may opt out from the trial within the first 7 days of the program and request a full refund of their down payment.
+                        – Candidates may opt out from the trial within the first 14 days of the program and request a full refund of their down payment.
                     </p>
 
                     <br />
