@@ -156,7 +156,7 @@ const FormModal: FC = () => {
             <div className='flex flex-col gap-y-2'>
               <p className='text-[#1371FF] font-semibold text-2xl'>Apply Now</p>
               <p className='text-black text-lg'>
-                Next Batch Starts In April First Week
+                Next Batch Starts In May First Week
               </p>
             </div>
             <form
