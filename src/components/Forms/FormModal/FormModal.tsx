@@ -1,15 +1,12 @@
 'use client';
 
 import axios, { AxiosError } from 'axios';
-import parsePhoneNumberFromString, { getCountryCallingCode } from 'libphonenumber-js';
-import dynamic from 'next/dynamic';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import OTPInput from 'react-otp-input';
 
-import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
 import {
   resetForm,
   sendOtpRequest,
@@ -22,24 +19,16 @@ import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import {
   Channel,
   ModalFormData,
-  OptionType,
   OtpVerificationRequest,
   RegisterResponse,
   RequestOtp,
 } from '@/types';
-import { getCountryOptions } from '@/utils';
 
 import Loader from './Loader';
 import Timer from './Timer';
 
-const Select = dynamic(() => import('react-select'), { ssr: false });
-
 const FormModal: FC = () => {
   const formState = useAppSelector((state) => state.otpState);
-  const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(
-    null
-  );
-  const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
   const dispatch = useAppDispatch();
   const {
     register,
@@ -55,25 +44,25 @@ const FormModal: FC = () => {
     },
   });
 
-  useEffect(() => {
-    setCountryOptions(getCountryOptions());
-  }, []);
+  // useEffect(() => {
+  //   setCountryOptions(getCountryOptions());
+  // }, []);
 
   const sendOtp: SubmitHandler<ModalFormData> = async () => {
-    if(!selectedCountry) {
-        toast.error('Please Select Your Country Code');
-        return;
-    }
+    // if(!selectedCountry) {
+    //     toast.error('Please Select Your Country Code');
+    //     return;
+    // }
 
-    const callingcode = getCountryCallingCode(selectedCountry.value);
-    const phoneNumber = parsePhoneNumberFromString(
-      `+${callingcode}${getValues('phone')}`
-    );
+    // const callingcode = getCountryCallingCode(selectedCountry.value);
+    // const phoneNumber = parsePhoneNumberFromString(
+    //   `+${callingcode}${getValues('phone')}`
+    // );
   
-    if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
-      toast.error('Please enter a valid phone number');
-      return;
-    }
+    // if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
+    //   toast.error('Please enter a valid phone number');
+    //   return;
+    // }
 
     dispatch(setIsLoading(true));
     dispatch(setStartTime(!formState.startTime));
@@ -83,7 +72,7 @@ const FormModal: FC = () => {
     }
 
     const makeRequest: RequestOtp = {
-      phoneNumber: `+${getCountryCallingCode(selectedCountry.value)}${getValues('phone')}`,
+      phoneNumber: `+91${getValues('phone')}`,
       expiry: 60,
       otpLength: 4,
       channels: [Channel.SMS],
@@ -92,7 +81,6 @@ const FormModal: FC = () => {
     const requestObject = {
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
-      candidateCountryCode: selectedCountry.label,
       candidatePhone: getValues('phone'),
     };
 
@@ -202,54 +190,6 @@ const FormModal: FC = () => {
 
               <div className='w-full flex flex-col gap-y-1'>
                 <div className='w-full flex gap-x-4'>
-                  <Select
-                    options={countryOptions}
-                    value={selectedCountry}
-                    onChange={(newValue) =>
-                      setSelectedCountry(newValue as OptionType)
-                    }
-                    placeholder='Code'
-                    className='md:w-[28%] w-[35%] cursor-pointer md:block hidden'
-                    isSearchable
-                    styles={{
-                      control: (provided, state) => ({
-                        ...provided,
-                        border: `2px solid ${
-                          state.isFocused ? '#D5DEE5' : '#D5DEE5'
-                        }`,
-                        boxShadow: state.isFocused ? 'none' : undefined,
-                        padding: '0.45rem',
-                        borderRadius: '0.375rem', // rounded-md equivalent
-                        backgroundColor: 'white',
-                        cursor: 'pointer',
-                      }),
-                    }}
-                  />
-
-                  <Select
-                    options={countryOptions}
-                    value={selectedCountry}
-                    onChange={(newValue) =>
-                      setSelectedCountry(newValue as OptionType)
-                    }
-                    placeholder='Code'
-                    className='md:w-[28%] w-[35%] cursor-pointer md:hidden block'
-                    menuPlacement='top'
-                    isSearchable
-                    styles={{
-                      control: (provided, state) => ({
-                        ...provided,
-                        border: `2px solid ${
-                          state.isFocused ? '#D5DEE5' : '#D5DEE5'
-                        }`,
-                        boxShadow: state.isFocused ? 'none' : undefined,
-                        padding: '0.45rem',
-                        borderRadius: '0.375rem', // rounded-md equivalent
-                        backgroundColor: 'white',
-                        cursor: 'pointer',
-                      }),
-                    }}
-                  />
                   <input
                     {...register('phone', {
                       required: 'Phone Number is Required',
@@ -258,7 +198,7 @@ const FormModal: FC = () => {
                         message: 'Invalid Phone Number Format',
                       },
                     })}
-                    className='md:w-[72%] w-[65%] rounded-md p-3 border-0 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999] text-black'
+                    className='w-full rounded-md p-3 border-0 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999] text-black'
                     placeholder='Enter Phone Number'
                     type='text'
                   />

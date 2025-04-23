@@ -5,7 +5,6 @@ export interface ICandidate extends Document {
     programName: string;
     candidateName: string;
     candidateEmail: string;
-    candidateCountryCode: string
     candidatePhone: string
 }
 
@@ -21,10 +20,6 @@ const brochureSchema = new Schema<ICandidate>({
     candidateEmail: { 
         type: String, 
         required: true, 
-    },
-    candidateCountryCode: {
-        type: String, 
-        required: true,
     },
     candidatePhone: { 
         type: String, 

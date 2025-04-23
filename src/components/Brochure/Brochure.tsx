@@ -3,12 +3,9 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import clsx from 'clsx';
-import parsePhoneNumberFromString from 'libphonenumber-js';
-import { getCountryCallingCode } from 'libphonenumber-js';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { MdCancel } from 'react-icons/md';
@@ -21,20 +18,15 @@ import {
   BrochureForm,
   brochureZodSchema,
 } from '@/schemas/brochureSchema';
-import { OptionType, RegisterResponse } from '@/types';
-import { getCountryOptions } from '@/utils';
+import { RegisterResponse } from '@/types';
 // import CallbackImage from '~/images/callback.png';
 import FulstackImage from '~/images/fullstackBrochure.png';
 import JobswitchImage from '~/images/jobswitchBrochure.png';
 
 import Loader from '../Sections/Hero/Loader';
 
-const Select = dynamic(() => import('react-select'), { ssr: false });
-
 const Brochure: FC = () => {
   const pathName = usePathname();
-  const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
-  const [countryOptions, setCountryOptions] = useState<OptionType[]>([]);
   const loading = useAppSelector((state) => state.callback.loading);
   const dispatch = useAppDispatch();
   const {
@@ -52,23 +44,11 @@ const Brochure: FC = () => {
     resolver: zodResolver(brochureZodSchema),
   });
 
-    useEffect(() => {
-      setCountryOptions(getCountryOptions());
-    }, []);
-
   const onSubmit: SubmitHandler<BrochureForm> = async () => {
-    if(!selectedCountry) {
-      toast.error('Please Select Your Country Code');
-      return;
-    }
 
-    const callingcode = getCountryCallingCode(selectedCountry.value);
-    const phoneNumber = parsePhoneNumberFromString(
-      `+${callingcode}${getValues('mobileNumber')}`
-    );
-  
-    if (!phoneNumber || !phoneNumber.isValid() || INVALID_NUMBERS.includes(phoneNumber?.nationalNumber)) {
-      toast.error('Please enter a valid phone number');
+    const mobile = getValues('mobileNumber');
+    if(INVALID_NUMBERS.includes(mobile)) {
+      toast.error('Please Enter a valid mobile number');
       return;
     }
 
@@ -76,7 +56,6 @@ const Brochure: FC = () => {
       programName: pathName == '/job-switch' ? 'Job Switch' : 'Fullstack-Mern',
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
-      candidateCountryCode: selectedCountry.label,
       candidatePhone: getValues('mobileNumber')
     };
 
@@ -197,53 +176,13 @@ const Brochure: FC = () => {
               />
 
               <div className='w-full flex gap-x-3'>
-                <Select
-                  options={countryOptions}
-                  value={selectedCountry}
-                  onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
-                  placeholder='Code'
-                  className='md:w-[28%] w-[35%] cursor-pointer md:block hidden'
-                  isSearchable 
-                  styles={{
-                    control: (provided, state) => ({
-                      ...provided,
-                      border: `2px solid ${state.isFocused ? '#D5DEE5' : '#D5DEE5'}`,
-                      boxShadow: state.isFocused ? 'none' : undefined, 
-                      padding: '0.15rem',
-                      borderRadius: '0.375rem', // rounded-md equivalent
-                      backgroundColor: 'white',
-                      cursor: 'pointer'
-                    }),
-                  }}
-                />
-
-                <Select
-                  options={countryOptions}
-                  value={selectedCountry}
-                  onChange={(newValue) => setSelectedCountry(newValue as OptionType)}
-                  placeholder='Code'
-                  className='md:w-[28%] w-[35%] cursor-pointer md:hidden block'
-                  menuPlacement='top'
-                  isSearchable 
-                  styles={{
-                    control: (provided, state) => ({
-                      ...provided,
-                      border: `2px solid ${state.isFocused ? '#D5DEE5' : '#D5DEE5'}`,
-                      boxShadow: state.isFocused ? 'none' : undefined, 
-                      padding: '0.15rem',
-                      borderRadius: '0.375rem', // rounded-md equivalent
-                      backgroundColor: 'white',
-                      cursor: 'pointer'
-                    }),
-                  }}
-                />
 
                 <input
                   type='text'
                   placeholder='Enter Phone'
                   className={clsx(
                     errors && errors.mobileNumber && 'focus:ring-red-500 ring-red-500 focus:ring-1 animate-shake',
-                    'md:w-[72%] w-[65%] rounded-md border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
+                    'w-full rounded-md border-0 placeholder:text-neutral-400 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2'
                   )}
                   {...register('mobileNumber')}
                 />

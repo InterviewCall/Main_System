@@ -5,7 +5,6 @@ export interface ICandidate extends Document {
     programName: string;
     candidateName: string;
     candidateEmail: string;
-    candidateCountryCode: string
     candidatePhone: string
 }
 
@@ -26,10 +25,6 @@ const callbackSchema = new Schema<ICandidate>({
         type: String, 
         required: true, 
         unique: true
-    },
-    candidateCountryCode: {
-        type: String, 
-        required: true,
     },
     candidatePhone: { 
         type: String, 
