@@ -114,10 +114,10 @@ const FormModal: FC = () => {
   }
 
   return (
-    <div className='fixed w-screen bg-white/40 backdrop-blur-sm mt-10 h-screen z-[999]'>
+    <div className='fixed w-screen bg-black/40 backdrop-blur-sm top-0 h-screen flex justify-center items-center z-[999]'>
       {/* Desktop View Button */}
       <button
-        className={`absolute right-4 md:block hidden ${
+        className={`absolute top-4 right-7 md:block hidden ${
           formState.isLoading ? 'blur-sm pointer-events-none' : ''
         }`}
         onClick={clearForm}
@@ -129,7 +129,7 @@ const FormModal: FC = () => {
 
       {!formState.stepOtp ? (
         <div
-          className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 mx-auto md:mt-5 mt-36 rounded-lg relative ${
+          className={`bg-[#FFFFFF] md:w-[40%] w-[95%] h-auto p-8 rounded-lg relative ${
             formState.isLoading ? 'blur-sm pointer-events-none' : ''
           }`}
         >
