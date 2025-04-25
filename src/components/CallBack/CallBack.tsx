@@ -75,7 +75,7 @@ const Callback: FC = () => {
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 lg:gap-x-6 gap-y-3 items-center rounded-md relative'>
         <button
-          className='absolute right-0 top-0'
+          className='absolute right-3 top-3'
           onClick={() => dispatch(setCallbackModal(false))}
         >
           <MdCancel size={30} />
