@@ -93,10 +93,10 @@ const Brochure: FC = () => {
     <div id='my_modal_1' className='w-full fixed top-0 flex justify-center items-center h-full z-[998] bg-black/70'>
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 gap-8 rounded-md relative'>
-        <button className='absolute right-3 top-3' onClick={() => dispatch(setBrochureModal(false))}>
+        <button className='absolute md:right-3 md:top-3 top-0 right-0 z-[3]' onClick={() => dispatch(setBrochureModal(false))}>
           <MdCancel size={30} />
         </button>
-        <div className='md:w-1/2 w-full flex max-lg:justify-center'>
+        <div className='md:w-1/2 w-full flex max-lg:justify-center z-[2]'>
           <Image
             src={pathName == '/job-switch' ? JobswitchImage : FulstackImage}
             alt='advisor'
