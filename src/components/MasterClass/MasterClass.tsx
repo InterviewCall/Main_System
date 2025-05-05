@@ -2,7 +2,8 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
-import { FC } from 'react';
+import { useRouter } from 'next/navigation';
+import { FC, useEffect } from 'react';
 
 import AlumniCard from '@/components/Sections/MasterClass/AlumniCard';
 import { useAppSelector } from '@/lib/hooks';
@@ -24,6 +25,10 @@ import Loader from '../Sections/Hero/Loader';
 
 const MasterClass: FC = () => {
   const loading = useAppSelector((state) => state.masterclass.loading);
+  const router = useRouter();
+  useEffect(() => {
+    router.back();
+  }, [router]);
   return (
     <div className={clsx(loading && 'flex justify-center items-center w-full h-full')}>
       {loading && <Loader />}

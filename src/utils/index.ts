@@ -84,20 +84,20 @@ export const AlumniCards: AlumniCard[] = [
     videoPlayButtonBorderColor: 'border-l-[#ff4c6493]'
   },
 
-  {
-    cardImage: MainAssests.A1,
-    alumniName: 'Rounak Goswami',
-    checkTitle: 'SDE - Morgan Stanley',
-    alumniJobDesc: 'Offer - Morgan Stanley',
-    videoPath: 'https://csforall.in/wp-content/uploads/2025/02/Rounak-Goswami-testimonial.mp4',
-    alumniJobDescTextColor: 'text-[#00C2FF]',
-    cardWrapperShadowColor: 'shadow-blue-multi',
-    cardWrapperBackgroundColor: 'bg-[#00C2FF]',
-    cardShadowFromColor: 'from-[#00c3ff75]',
-    cardShadowViaColor: 'via-[#00c3ff13]',
-    cardWrapperRingColor: 'ring-[#00C2FF]',
-    videoPlayButtonBorderColor: 'border-l-[#01b9f19c]'
-  },
+  // {
+  //   cardImage: MainAssests.A1,
+  //   alumniName: 'Rounak Goswami',
+  //   checkTitle: 'SDE - Morgan Stanley',
+  //   alumniJobDesc: 'Offer - Morgan Stanley',
+  //   videoPath: 'https://csforall.in/wp-content/uploads/2025/02/Rounak-Goswami-testimonial.mp4',
+  //   alumniJobDescTextColor: 'text-[#00C2FF]',
+  //   cardWrapperShadowColor: 'shadow-blue-multi',
+  //   cardWrapperBackgroundColor: 'bg-[#00C2FF]',
+  //   cardShadowFromColor: 'from-[#00c3ff75]',
+  //   cardShadowViaColor: 'via-[#00c3ff13]',
+  //   cardWrapperRingColor: 'ring-[#00C2FF]',
+  //   videoPlayButtonBorderColor: 'border-l-[#01b9f19c]'
+  // },
 
   {
     cardImage: MainAssests.A4,
