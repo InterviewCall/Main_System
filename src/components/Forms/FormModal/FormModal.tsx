@@ -149,7 +149,13 @@ const FormModal: FC = () => {
               </p>
             </div>
             <form
-              onSubmit={handleSubmit(sendOtp)}
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSubmit(sendOtp)();
+                if (window.lintrk) {
+                  window.lintrk('track', { conversion_id: 19770860 });
+                }
+              }}
               className='flex flex-col gap-y-6 mt-3'
             >
               <div className='w-full flex flex-col gap-y-1'>

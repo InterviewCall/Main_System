@@ -96,7 +96,13 @@ const Callback: FC = () => {
           <p className='text-black'>Your Topic of Interest *</p>
           <form
             className='flex flex-col gap-1 w-full'
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(onSubmit)();
+              if (window.lintrk) {
+                window.lintrk('track', { conversion_id: 19770860 });
+              }
+            }}
           >
             <div className='flex flex-col -translate-y-5 gap-3 w-full'>
               <select
