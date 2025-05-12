@@ -113,7 +113,6 @@ const Brochure: FC = () => {
             e.preventDefault();
             handleSubmit(onSubmit)();
             if (window.lintrk) {
-              console.log('clicked');
               window.lintrk('track', { conversion_id: 19770860 });
             }
           }}>
