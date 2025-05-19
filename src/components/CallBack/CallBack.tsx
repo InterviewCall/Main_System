@@ -70,7 +70,7 @@ const Callback: FC = () => {
   return (
     <div
       id='my_modal_1'
-      className='w-full fixed top-0 md:top-0 flex justify-center items-center h-[100dvh] z-[998] bg-black/70'
+      className='w-full fixed top-0 md:top-0 flex justify-center items-center h-screen z-[998] bg-black/70'
     >
       {loading && <Loader />}
       <div className='bg-white flex lg:flex-row flex-col lg:w-[60%] w-[90%] p-6 lg:gap-x-6 gap-y-3 items-center rounded-md relative'>
