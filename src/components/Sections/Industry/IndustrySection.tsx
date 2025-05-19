@@ -20,7 +20,7 @@ const IndustrySection: FC = () => {
     if(pathName == '/fullstack-mern') {
       setProgrameName('FULLSTACK WEB DEVELOPMENT');
     }
-    else if(pathName == '/job-switch') {
+    else if(pathName == '/job-switch' || pathName == '/program') {
       setProgrameName('JOB SWITCH');
     }
   }, [pathName]);
@@ -36,8 +36,8 @@ const IndustrySection: FC = () => {
             What top tech companies search for?
           </p>
         </div>
-        <Image src={pathName == '/job-switch' ? industrySectionImageMobileJobSwitch : industrySectionImageMobile} alt='industrySectionImageMobile' loading='lazy' className='md:hidden block' />
-        <Image src={pathName == '/job-switch' ? industrySectionImageJobSwitch : industrySectionImage} alt='IndustrySectionImage' loading='lazy' className='md:block hidden' />
+        <Image src={pathName == '/job-switch' || pathName == '/program' ? industrySectionImageMobileJobSwitch : industrySectionImageMobile} alt='industrySectionImageMobile' loading='lazy' className='md:hidden block' />
+        <Image src={pathName == '/job-switch' || pathName == '/program' ? industrySectionImageJobSwitch : industrySectionImage} alt='IndustrySectionImage' loading='lazy' className='md:block hidden' />
       </div>
       <div className='flex flex-col space-y-12'>
         <div className='space-y-2'>

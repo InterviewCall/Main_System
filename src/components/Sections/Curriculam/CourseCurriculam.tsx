@@ -107,7 +107,7 @@ const CourseCurriculam: FC = () => {
   const[Courses, setCourses] = useState<Course[]>([]);
 
   useEffect(() => {
-    if(pathName == '/job-switch') {
+    if(pathName == '/job-switch' || pathName == '/program') {
       setCourses(JobSwitchCourses);
     }
     else if(pathName == '/fullstack-mern') {

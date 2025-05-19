@@ -7,7 +7,7 @@ import { FC } from 'react';
 import { FooterIcons } from '@/utils';
 import Buildings from '~/images/Buildings.png';
 
-import FooterInput from './FooterInput';
+// import FooterInput from './FooterInput';
 
 const FooterSection: FC = () => {
     return (
@@ -26,8 +26,8 @@ const FooterSection: FC = () => {
                                         <div className='flex flex-col'>
                                             <Link href='/contact-us' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Contact Us</Link>
                                             <Link href='/privacy-policy' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Privacy Policy</Link>
-                                            <p className='text-xl font-extralight'>Hire from us</p>
-                                            <p className='text-xl font-extralight'>Job Portal</p>
+                                            {/* <p className='text-xl font-extralight'>Hire from us</p> */}
+                                            {/* <p className='text-xl font-extralight'>Job Portal</p> */}
                                         </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ const FooterSection: FC = () => {
                                     <br /> insider tips, and special promotions.
                                 </p>
 
-                                <FooterInput />
+                                {/* <FooterInput /> */}
                                 <span>Copyright&copy;IVYLEAGUE CSFORALL ACADEMY PRIVATE LIMITED. All rights reserved.</span>
                             </div>
                         </div>

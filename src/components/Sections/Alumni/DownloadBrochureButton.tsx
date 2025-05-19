@@ -15,7 +15,7 @@ const DownloadBrochureButton: FC = () => {
       if(pathName == '/fullstack-mern') {
         setDownloadBrochure('brochure');
       }
-      else if(pathName == '/job-switch') {
+      else if(pathName == '/job-switch' || pathName == 'program') {
         setDownloadBrochure('js-download');
       }
     }, [pathName]);

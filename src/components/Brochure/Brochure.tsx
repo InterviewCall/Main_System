@@ -53,7 +53,7 @@ const Brochure: FC = () => {
     }
 
     const requestObject = {
-      programName: pathName == '/job-switch' ? 'Job Switch' : 'Fullstack-Mern',
+      programName: pathName == '/job-switch' || pathName == '/program' ? 'Job Switch' : 'Fullstack-Mern',
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
       candidatePhone: getValues('mobileNumber')
@@ -67,7 +67,7 @@ const Brochure: FC = () => {
         error: 'Something went wrong'
       });
       await response;
-      const brochureLink = (pathName == '/job-switch') ? process.env.NEXT_PUBLIC_JOB_SWITCH_BROCHURE : process.env.NEXT_PUBLIC_FULLSTACK_BROCHURE;
+      const brochureLink = (pathName == '/job-switch' || pathName == '/program') ? process.env.NEXT_PUBLIC_JOB_SWITCH_BROCHURE : process.env.NEXT_PUBLIC_FULLSTACK_BROCHURE;
       window.open(brochureLink, '_blank');
     } catch (error) {
       const err = error as AxiosError<RegisterResponse>;

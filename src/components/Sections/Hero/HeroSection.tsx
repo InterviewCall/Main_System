@@ -31,7 +31,7 @@ const HeroSection: FC = () => {
       setDescription(
         '8-month structured program building all the right skills you need to get placed at top tech companies.'
       );
-    } else if (pathName == '/job-switch') {
+    } else if (pathName == '/job-switch' || pathName == '/program') {
       setTitle('Level Up Your Career & Grab Your Dream Tech Job');
       setDescription(
         '6-month program designed by industry leaders to accelerate your switch to top product companies.'
@@ -47,7 +47,7 @@ const HeroSection: FC = () => {
       {showCallbackModal && <Callback />}
       {showBrochureModal && <Brochure />}
       {/* <Callback /> */}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 pt-16 py-4 gap-8 md:gap-[8rem]'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 pt-24 py-4 gap-8 md:gap-[8rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full'>
           <div className='flex flex-col gap-8 w-full'>

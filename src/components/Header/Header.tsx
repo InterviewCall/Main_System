@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
+import Marquee from 'react-fast-marquee';
 
 import { PageSwipe } from '@/types';
 import HeaderBanner from '~/images/HeaderBanner.png';
@@ -18,18 +19,15 @@ const Header: FC = () => {
   const routePath = pathName;
   useEffect(() => {
     const newPathName = routePath.split('/');
-    if(newPathName[1] == 'fullstack-mern') {
+    if (newPathName[1] == 'fullstack-mern') {
       setPage('Full Stack - MERN');
-    }
-    else if(newPathName[1] == 'job-switch') {
+    } else if (newPathName[1] == 'job-switch' || newPathName[1] == 'program') {
       setPage('Job Switch');
-    }
-    else if(newPathName[1] == 'masterclass') {
+    } else if (newPathName[1] == 'masterclass') {
       setPage('Masterclass');
-    } else if(newPathName[1] == 'transformer') {
+    } else if (newPathName[1] == 'transformer') {
       setPage('Transformer');
-    }
-    else {
+    } else {
       setPage('');
     }
   }, [pathName, routePath]);
@@ -37,26 +35,36 @@ const Header: FC = () => {
     <MasterClassHeader />
   ) : (
     <>
-    <div className='md:hidden block fixed z-[997]'>
-      <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet flex items-center justify-center gap-x-3'>
+      <div className='md:hidden block fixed z-[997]'>
+        <Marquee autoFill className='w-screen'>
+          <div className='bg-darkblue flex gap-6 text-white md:text-xl text-base font-medium overflow-clip p-2'>
+            {Array.from({ length: 4 }).map((_, i) => (
+              <p key={i}>Program Price Starts From Rs. 1 Lakh.</p>
+            ))}
+          </div>
+        </Marquee>
+        <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet flex items-center justify-center gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
-            Need Help? Talk to us at <span className='text-lg underline'><a href="tel:6295797609">6295797609</a></span>
+            Need Help? Talk to us at{' '}
+            <span className='text-lg underline'>
+              <a href='tel:6295797609'>6295797609</a>
+            </span>
           </p>
-      </div>
-      <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 md:hidden h-20 bg-black'>
-        <Link href='/job-switch'>
-          <Image
-            src={Logo}
-            alt=''
-            width={201}
-            height={47}
-            className='md:w-[201px] min-w-[145px] w-[145px] md:h-[47px] h-[47px] object-contain min-h-[34px]'
-          />
-        </Link>
+        </div>
+        <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 md:hidden h-20 bg-black'>
+          <Link href='/job-switch'>
+            <Image
+              src={Logo}
+              alt=''
+              width={201}
+              height={47}
+              className='md:w-[201px] min-w-[145px] w-[145px] md:h-[47px] h-[47px] object-contain min-h-[34px]'
+            />
+          </Link>
 
-        {/* For Future Refrence */}
-        {/* <div className='flex items-center space-x-8'>
+          {/* For Future Refrence */}
+          {/* <div className='flex items-center space-x-8'>
           <div className='group'>
             <div className='group'>
               <div
@@ -71,10 +79,19 @@ const Header: FC = () => {
           </div>
         </div> */}
 
-        <HeaderButton />
-      </nav>
+          <HeaderButton />
+        </nav>
       </div>
       <div className='fixed md:block hidden z-[997]'>
+        <div className='w-screen bg-darkblue'>
+          <Marquee autoFill className='w-screen'>
+            <div className='bg-darkblue flex gap-6 text-white md:text-xl text-xs font-medium overflow-clip p-2'>
+              {Array.from({ length: 4 }).map((_, i) => (
+                <p key={i} className='text-base'>Program Price Starts From Rs. 1 Lakh.</p>
+              ))}
+            </div>
+          </Marquee>
+        </div>
         <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
@@ -97,14 +114,8 @@ const Header: FC = () => {
           </Link>
           <div className='hidden md:flex items-center space-x-8'>
             <div className='group'>
-              <div
-                className='text-[#00FFE0]'
-              >
-                {page}
-              </div>
-              <div
-                className='w-full h-[2.5px] bg-[#00FFE0]'
-              ></div>
+              <div className='text-[#00FFE0]'>{page}</div>
+              <div className='w-full h-[2.5px] bg-[#00FFE0]'></div>
             </div>
           </div>
 
