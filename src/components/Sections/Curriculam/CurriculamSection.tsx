@@ -44,7 +44,7 @@ const CurriculamSection: FC = () => {
     if(pathName == '/fullstack-mern') {
       setProgrameName('FULL STACK WEB DEVELOPMENT COURSE');
     }
-    else if(pathName == '/job-switch') {
+    else if(pathName == '/job-switch' || pathName == '/program') {
       setProgrameName('JOB SWITCH BOOTCAMP');
     }
   }, [pathName]);
