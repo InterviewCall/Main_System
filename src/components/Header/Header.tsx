@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
-import Marquee from 'react-fast-marquee';
 
 import { PageSwipe } from '@/types';
 import HeaderBanner from '~/images/HeaderBanner.png';
@@ -36,13 +35,11 @@ const Header: FC = () => {
   ) : (
     <>
       <div className='md:hidden block fixed z-[997]'>
-        <Marquee autoFill className='w-screen'>
-          <div className='bg-darkblue flex gap-6 text-white md:text-xl text-base font-medium overflow-clip p-2'>
-            {Array.from({ length: 4 }).map((_, i) => (
-              <p key={i}>Program Price Starts From Rs. 1 Lakh.</p>
-            ))}
+        {pathName == '/program' && <div className='w-screen bg-darkblue'>
+          <div className='bg-darkblue flex gap-6 text-white md:text-xl text-xs font-medium overflow-clip p-2 justify-center'>
+            <p>Our Program Price Range Starts From Rs. 1 Lakh to 3 Lakh.</p>
           </div>
-        </Marquee>
+        </div>}
         <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet flex items-center justify-center gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
@@ -83,15 +80,11 @@ const Header: FC = () => {
         </nav>
       </div>
       <div className='fixed md:block hidden z-[997]'>
-        <div className='w-screen bg-darkblue'>
-          <Marquee autoFill className='w-screen'>
-            <div className='bg-darkblue flex gap-6 text-white md:text-xl text-xs font-medium overflow-clip p-2'>
-              {Array.from({ length: 4 }).map((_, i) => (
-                <p key={i} className='text-base'>Program Price Starts From Rs. 1 Lakh.</p>
-              ))}
-            </div>
-          </Marquee>
-        </div>
+        {pathName == '/program' && <div className='w-screen bg-darkblue'>
+          <div className='bg-darkblue flex gap-6 text-white md:text-xl text-xs font-medium overflow-clip p-2 justify-center'>
+            <p className='text-base'>Our Program Price Range Starts From Rs. 1 Lakh to 3 Lakh.</p>
+          </div>
+        </div>}
         <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
