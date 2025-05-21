@@ -38,6 +38,7 @@ const FooterSection: FC = () => {
                                         <div className='flex flex-col'>
                                             <Link href='/terms-conditions' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Terms</Link>
                                             <Link href='/refund-policy' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Refund Policy</Link>
+                                            <Link href='/program' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Payments</Link>
                                         </div>
                                 </div>
                             </div>
