@@ -21,7 +21,7 @@ const FooterSection: FC = () => {
 
                     <div className='md:grid md:grid-cols-4 flex flex-col gap-y-9'>
                             <div className='flex flex-col text-white gap-8'>
-                                <p className='font-semibold text-2xl'>Company</p>
+                                {/* <p className='font-semibold text-2xl'>Company</p> */}
                                 <div>
                                         <div className='flex flex-col'>
                                             <Link href='/contact-us' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Contact Us</Link>
@@ -33,7 +33,7 @@ const FooterSection: FC = () => {
                             </div>
 
                             <div className='flex flex-col text-white gap-8'>
-                                <p className='font-semibold text-2xl'>Product</p>
+                                {/* <p className='font-semibold text-2xl'>Product</p> */}
                                 <div>
                                         <div className='flex flex-col'>
                                             <Link href='/terms-conditions' className='text-xl font-extralight transition-all duration-200 hover:font-bold'>Terms</Link>
