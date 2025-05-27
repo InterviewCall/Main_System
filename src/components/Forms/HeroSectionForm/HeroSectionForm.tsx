@@ -69,11 +69,13 @@ const HeroSectionForm: FC = () => {
         response = await axios.post('/api/apply/negative', requestBody);
       }
 
-      if(!response.data) {
+      if(response.data == null) {
         toast.error('Already applied');
       } else {
         toast.success('Successfully submitted your details');
       }
+      sessionStorage.setItem('isSubmitted', 'true');
+      router.push('/thank-you');
     } catch (error) {
       const err = error as AxiosError<ErrorResponse>;
       const message = err.response?.data.message || 'Something went wrong!';
@@ -210,7 +212,7 @@ const HeroSectionForm: FC = () => {
         <div className='flex gap-x-2 w-full'>
           {fromDropDowns.slice(0, 2).map((dropDown) => (
             <div key={dropDown.label} className='w-[50%]'>
-              <label className='text-white text-sm'>{dropDown.question}</label>
+              <label className='text-white text-sm max-md:text-xs'>{dropDown.question}</label>
               <Controller 
                 name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
                 control={control}
@@ -235,7 +237,7 @@ const HeroSectionForm: FC = () => {
         <div className='flex gap-x-2 w-full'>
           {fromDropDowns.slice(2, 4).map((dropDown) => (
             <div key={dropDown.label} className='w-[50%]'>
-              <label className='text-white text-sm'>{dropDown.question}</label>
+              <label className='text-white text-sm max-md:text-xs'>{dropDown.question}</label>
               <Controller 
                 name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
                 control={control}
@@ -260,7 +262,7 @@ const HeroSectionForm: FC = () => {
         <div className='flex gap-x-2 w-full'>
           {fromDropDowns.slice(4, 5).map((dropDown) => (
             <div key={dropDown.label} className='w-full'>
-              <label className='text-white text-sm'>{dropDown.question}</label>
+              <label className='text-white text-sm max-md:text-xs'>{dropDown.question}</label>
               <Controller 
                 name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
                 control={control}

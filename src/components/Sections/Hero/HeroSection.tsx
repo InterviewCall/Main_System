@@ -27,7 +27,7 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
       {showCallbackModal && <Callback />}
       {showBrochureModal && <Brochure />}
       {/* <Callback /> */}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-24 pt-24 py-4 gap-8 md:gap-[9rem]'>
+      <div className='flex flex-col px-4 md:px-20 md:flex-row bg-black md:pt-24 pt-24 py-4 gap-8 md:gap-[9rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full md:mt-9'>
           <div className='flex flex-col gap-14 w-full'>
@@ -36,6 +36,9 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
               <h1 className='text-gradient text-[1.7rem] md:text-[38px] md:leading-[60px] font-bold'>
                 {title}
               </h1>
+              <div className='md:hidden block'>
+                <HeroSectionForm />
+              </div>
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
@@ -98,7 +101,7 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
         </div>
 
         {/* Right Form */}
-        <div className='md:w-1/2 w-full'>
+        <div className='md:w-1/2 w-full max-md:hidden'>
           {/* <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' /> */}
           <HeroSectionForm />
         </div>
