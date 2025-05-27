@@ -17,7 +17,7 @@ export default function ClientThankYouPage() {
             setTimeout(() => {
                 router.push('/job-switch');
                 sessionStorage.removeItem('isSubmitted');
-            }, 3000);
+            }, 4000);
         } else {
             router.replace('/job-switch');
         }
