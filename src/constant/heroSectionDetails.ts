@@ -38,5 +38,10 @@ export const heroSectionDetails: HeroSectionPropsDetails = {
     '/fullstack-mern': {
         title: 'Get Job Ready for Top Tech Companies',
         description: '8-month structured program building all the right skills you need to get placed at top tech companies.'
+    }, 
+
+    '/': {
+        title: 'Level Up Your Career & Grab Your Dream Tech Job',
+        description: '6-month program designed by industry leaders to accelerate your switch to top product companies.'
     }
 };
