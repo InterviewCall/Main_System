@@ -49,6 +49,7 @@ const HeroSectionForm: FC = () => {
 
   const onSubmit: SubmitHandler<HeroSectionFormData> = async (data: HeroSectionFormData) => {
     try {
+      let routerPath: string;
       setIsLoading(true);
       let response: AxiosResponse<ApplyResponse>;
       const requestBody: CandidateDetails = {
@@ -65,17 +66,20 @@ const HeroSectionForm: FC = () => {
 
       if(checkPositiveLead(data)) {
         response = await axios.post('/api/apply/positive', requestBody);
+        routerPath = '/application-success';
       } else {
         response = await axios.post('/api/apply/negative', requestBody);
+        routerPath = '/submission-received';
       }
 
-      if(response.data == null) {
-        toast.error('Already applied');
+      if(response.data.data == null) {
+        toast.success('Already applied');
       } else {
         toast.success('Successfully submitted your details');
       }
+
       sessionStorage.setItem('isSubmitted', 'true');
-      router.push('/thank-you');
+      router.push(routerPath);
     } catch (error) {
       const err = error as AxiosError<ErrorResponse>;
       const message = err.response?.data.message || 'Something went wrong!';
