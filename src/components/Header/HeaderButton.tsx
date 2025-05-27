@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 import { setCallbackModal } from '@/lib/features/callback/callback';
 import { useAppDispatch } from '@/lib/hooks';
@@ -8,12 +8,11 @@ import { useAppDispatch } from '@/lib/hooks';
 const HeaderButton: FC = () => {
     const dispatch = useAppDispatch();
 
-      useEffect(() => {
-        setTimeout(() => {
-            dispatch(setCallbackModal(true));
-        }, 30000);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, []);
+      // useEffect(() => {
+      //   setTimeout(() => {
+      //       dispatch(setCallbackModal(true));
+      //   }, 30000);
+      // }, []);
     return (
       <>
 
