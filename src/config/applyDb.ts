@@ -13,24 +13,28 @@ class ApplyDBConnection {
     }
 
     public static getInstance(db_uri: string) {
-        if(!this.instance) {
-            this.instance = new ApplyDBConnection(db_uri);
-        }
-        else {
-            throw new Error('Only one connection can exist');
-        }
+        // if(!this.instance) {
+        //     this.instance = new ApplyDBConnection(db_uri);
+        // }
+        // else {
+        //     throw new Error('Only one connection can exist');
+        // }
+
+        this.instance = new ApplyDBConnection(db_uri);
 
         return this.instance;
     }
 
     async connect() {
-        if(this.isConnected) {
-            throw new Error('DB is already connected');
-        }
-        else {
-            await mongoose.connect(this.uri);
-            this.isConnected = true;
-        }
+        // if(this.isConnected) {
+        //     throw new Error('DB is already connected');
+        // }
+        // else {
+        //     await mongoose.connect(this.uri);
+        //     this.isConnected = true;
+        // }
+
+        await mongoose.connect(this.uri);
     }
 
     async disconnect() {
