@@ -82,12 +82,16 @@ export default function ClientThankYouPage() {
           <span className='font-semibold text-indigo-600'>free demo class</span>.
         </p>
 
-        <div className='text-gray-700 text-sm'>
-          Redirecting in{' '}
-          <span className='countdown font-mono text-2xl'>
-            <span style={{ '--value': mins } as React.CSSProperties}></span>:
-            <span style={{ '--value': secs } as React.CSSProperties}></span>
-          </span>
+        <div className='flex justify-center'>
+          <div className='text-gray-700 text-sm flex items-center gap-x-3'>
+            Redirecting in{' '}
+            <div>
+              <span className='countdown font-mono text-2xl'>
+                <span style={{ '--value': mins } as React.CSSProperties}></span>:
+                <span style={{ '--value': secs } as React.CSSProperties}></span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </main>
