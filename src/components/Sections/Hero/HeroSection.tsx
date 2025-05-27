@@ -27,12 +27,12 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
       {showCallbackModal && <Callback />}
       {showBrochureModal && <Brochure />}
       {/* <Callback /> */}
-      <div className='flex flex-col px-4 md:px-20 md:flex-row bg-black md:pt-24 pt-24 py-4 gap-8 md:gap-[9rem]'>
+      <div className='flex flex-col px-4 md:px-20 md:flex-row bg-black md:pt-24 pt-16 py-4 gap-8 md:gap-[9rem]'>
         {/* Left Content */}
         <div className='md:w-1/2 w-full md:mt-9'>
-          <div className='flex flex-col gap-14 w-full'>
+          <div className='flex flex-col gap-14 max-md:gap-3 w-full'>
             {/* Title and Subtitle */}
-            <div className='flex flex-col gap-10'>
+            <div className='flex flex-col gap-10 max-md:gap-6'>
               <h1 className='text-gradient text-[1.7rem] md:text-[38px] md:leading-[60px] font-bold'>
                 {title}
               </h1>
