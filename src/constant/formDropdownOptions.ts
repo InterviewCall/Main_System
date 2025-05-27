@@ -31,31 +31,31 @@ export const domainOfInterestOptions = [
 export const fromDropDowns: FromDropdown[] = [
     {
         label: 'lookingForSwitch',
-        question: 'Looking for a Job Switch?',
+        question: 'Looking for a Job Switch',
         options: yesNoOption
     },
 
     {
         label: 'willingForUpskill',
-        question: 'Willing to upskill yourself?',
+        question: 'Willing to upskill yourself',
         options: yesNoOption
     },
 
     {
         label: 'yearsOfExperience',
-        question: 'Years of Experience?',
+        question: 'Years of Experience',
         options: yearsOfExpOption
     },
 
     {
         label: 'currentCTC',
-        question: 'Current CTC?',
+        question: 'Current CTC',
         options: currentCTCOptions
     },
 
     {
         label: 'domainOfInterest',
-        question: 'Interested Domain?',
+        question: 'Interested Domain',
         options: domainOfInterestOptions
     }
 ];
