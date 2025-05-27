@@ -1,136 +1,296 @@
 'use client';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import { FC, useState } from 'react';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import OTPInput from 'react-otp-input';
 
 import Loader from '@/components/Sections/Hero/Loader';
-import Timer from '@/components/Sections/Hero/Timer';
+import SelectAnswer from '@/components/Select/Select';
+import { Input } from '@/components/ui/input';
+import { fromDropDowns } from '@/constant/formDropdownOptions';
+import useUTMTracker from '@/hooks/useUTMTracker';
 import {
-  Channel,
+  ApplyResponse,
+  CandidateDetails,
+  ErrorResponse,
   HeroSectionFormData,
-  RequestOtp,
-  ResponseOtp,
-  VerifyOtpResponse,
+  HeroSectionFormSchema,
 } from '@/types';
-import { initiateOtp, isValidMobileNumber, otpVerification } from '@/utils';
+import checkPositiveLead from '@/utils/checkPositiveLead';
 import Rocket from '~/images/Rocket.png';
 
 const HeroSectionForm: FC = () => {
-  const [stepOtp, setStepOtp] = useState(false);
-  const [otp, setOtp] = useState('');
+  const { utmData } = useUTMTracker();
   const [isLoading, setIsLoading] = useState(false);
-  const [requestId, setRequestId] = useState('');
-  const [errorNumber, setErrorNumber] = useState('');
-  const [errorOtp, setErrorOtp] = useState<string | undefined>('');
-  const [startTime, setStartTime] = useState(false);
   const router = useRouter();
-  const [page, setPage] = useState('mern');
-  const pathName = usePathname();
-  useEffect(() => {
-    if (pathName == '/fullstack-mern') {
-      setPage('/fullstack-web-development-demo-class');
-    } else if (pathName == '/job-switch') {
-        setPage('/job-switch-demo-class');
-      }
-    }, [pathName]);
 
   const {
     register,
     handleSubmit,
-    getValues,
-    reset
+    reset,
+    control,
+    formState: { errors }
   } = useForm<HeroSectionFormData>({
     defaultValues: {
       phoneNumber: '',
+      fullName: '',
+      email: '',
+      currentCTC: '',
+      yearsOfExperience: '',
+      domainOfInterest: ''
     },
+    resolver: zodResolver(HeroSectionFormSchema)
   });
 
-  const verifyOtp: SubmitHandler<HeroSectionFormData> = async () => {
-    if(otp) setIsLoading(true);
-
+  const onSubmit: SubmitHandler<HeroSectionFormData> = async (data: HeroSectionFormData) => {
     try {
-        await axios.post(
-          otpVerification(),
-          { requestId: requestId, otp: otp },
-          {
-            headers: {
-              clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-              clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-        toast.success('Verified Successfully');
-        setStepOtp(false);
-        setIsLoading(false);
-        reset();
-        router.push(page);
+      setIsLoading(true);
+      let response: AxiosResponse<ApplyResponse>;
+      const requestBody: CandidateDetails = {
+        candidateName: data.fullName,
+        candidateEmail: data.email,
+        candidatePhone: data.phoneNumber,
+        lookingForSwitch: data.lookingForSwitch,
+        willingForUpskill: data.willingForUpskill,
+        yearsOfExperience: data.yearsOfExperience,
+        currentCTC: data.currentCTC,
+        domainOfInterest: data.domainOfInterest,
+        utmData
+      };
+
+      if(checkPositiveLead(data)) {
+        response = await axios.post('/api/apply/positive', requestBody);
+      } else {
+        response = await axios.post('/api/apply/negative', requestBody);
+      }
+
+      if(!response.data) {
+        toast.error('Already applied');
+      } else {
+        toast.success('Successfully submitted your details');
+      }
     } catch (error) {
+      const err = error as AxiosError<ErrorResponse>;
+      const message = err.response?.data.message || 'Something went wrong!';
+      toast.error(message);
+    } finally {
       setIsLoading(false);
-      const otpError = error as AxiosError<VerifyOtpResponse>;
-      setErrorOtp(otpError.response?.data.description);
+      reset();
     }
   };
 
-  async function sendOtp() {
-    if(getValues('phoneNumber')) {
-      if(!isValidMobileNumber(getValues('phoneNumber'))) {
-        setErrorNumber('Request Error : Incorrect Mobile Number');
-        return;
-      }
+  // const verifyOtp: SubmitHandler<HeroSectionFormData> = async () => {
+  //   if(otp) setIsLoading(true);
 
-      setIsLoading(true);
-      setStartTime(!startTime);
-    }
-    if (stepOtp) {
-      setOtp('');
-    }
+  //   try {
+  //       await axios.post(
+  //         otpVerification(),
+  //         { requestId: requestId, otp: otp },
+  //         {
+  //           headers: {
+  //             clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+  //             clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+  //             'Content-Type': 'application/json',
+  //           },
+  //         }
+  //       );
+  //       toast.success('Verified Successfully');
+  //       setStepOtp(false);
+  //       setIsLoading(false);
+  //       reset();
+  //       router.push(page);
+  //   } catch (error) {
+  //     setIsLoading(false);
+  //     const otpError = error as AxiosError<VerifyOtpResponse>;
+  //     setErrorOtp(otpError.response?.data.description);
+  //   }
+  // };
 
-    try {
-      const response: AxiosResponse<ResponseOtp, RequestOtp> = await axios.post(
-        initiateOtp(),
-        {
-          phoneNumber: `91${getValues('phoneNumber')}`,
-          expiry: 60,
-          otpLength: 4,
-          channels: [Channel.SMS],
-        },
-        {
-          headers: {
-            clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
-            clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
-            'Content-Type': 'application/json'
-          },
-        }
-      );
-      setIsLoading(false);
-      setStepOtp(true);
-      setRequestId(response.data.requestId);
-      localStorage.setItem('requestId', response.data.requestId);
-    } catch (error) {
-      const otpError = error as AxiosError<ResponseOtp>;
-      setErrorOtp(otpError.response?.data.description);
-    }
-  }
+  // async function sendOtp() {
+  //   if(getValues('phoneNumber')) {
+  //     if(!isValidMobileNumber(getValues('phoneNumber'))) {
+  //       setErrorNumber('Request Error : Incorrect Mobile Number');
+  //       return;
+  //     }
+
+  //     setIsLoading(true);
+  //     setStartTime(!startTime);
+  //   }
+  //   if (stepOtp) {
+  //     setOtp('');
+  //   }
+
+  //   try {
+  //     const response: AxiosResponse<ResponseOtp, RequestOtp> = await axios.post(
+  //       initiateOtp(),
+  //       {
+  //         phoneNumber: `91${getValues('phoneNumber')}`,
+  //         expiry: 60,
+  //         otpLength: 4,
+  //         channels: [Channel.SMS],
+  //       },
+  //       {
+  //         headers: {
+  //           clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+  //           clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+  //           'Content-Type': 'application/json'
+  //         },
+  //       }
+  //     );
+  //     setIsLoading(false);
+  //     setStepOtp(true);
+  //     setRequestId(response.data.requestId);
+  //     localStorage.setItem('requestId', response.data.requestId);
+  //   } catch (error) {
+  //     const otpError = error as AxiosError<ResponseOtp>;
+  //     setErrorOtp(otpError.response?.data.description);
+  //   }
+  // }
 
   return (
-    <div className='w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#000] p-[3px] rounded-2xl relative'>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full max-w-md mx-auto md:max-w-lg bg-gradient-to-tr from-[#00FFE0] to-[#000] p-[3px] rounded-2xl relative'>
       {isLoading && <Loader />}
       <div
-        className={`bg-gradient-to-tr from-[#000] to-[#020304] py-6 px-4 md:py-10 md:px-10 rounded-xl flex flex-col gap-6 ${
+        className={`bg-gradient-to-tr from-[#000] to-[#020304] py-6 px-4 md:py-7 md:px-10 rounded-xl flex flex-col gap-6 ${
           isLoading ? 'blur-[3px]' : ''
         }`}
       >
         <p className='text-xl md:text-3xl text-white font-semibold text-center'>
           Book a <span className='text-teal'>Free</span> Live Demo Class
         </p>
-        <div className='flex flex-col gap-8'>
+
+        <div className='flex gap-x-2 w-full'>
+          <div className='flex flex-col w-[50%]'>
+            <Input
+              {...register('fullName')}
+              placeholder='Full Name' 
+              className='text-black placeholder:text-sm outline-none rounded-r-md p-5 rounded-xl bg-white'
+            />
+
+            {errors && errors.fullName && (
+              <p className='text-xs text-red-500'>{errors.fullName.message}</p>
+            )}
+          </div>
+
+          <div className='flex flex-col w-[50%]'>
+            <div className='flex items-center w-full'>
+              {/* <div className='text-black placeholder:text-sm text-base rounded-lg max-md:pr-4 max-md:py-2 p-2 bg-slate-200'>
+                +91
+              </div> */}
+              <Input
+                {...register('phoneNumber')}
+                placeholder='Phone Number'
+                className='text-black placeholder:text-sm outline-none rounded-r-md w-full p-5 rounded-xl bg-white'
+              />
+            </div>
+
+            {errors && errors.phoneNumber && (
+              <p className='text-xs text-red-500'>{errors.phoneNumber.message}</p>
+            )}
+          </div>
+        </div>
+
+        <div className='flex flex-col'>
+          <Input
+            {...register('email')}
+            placeholder='Email Address' 
+            className='text-black placeholder:text-sm outline-none rounded-xl p-5 bg-white'
+          />
+
+          {errors && errors.email && (
+            <p className='text-xs text-red-500'>{errors.email.message}</p>
+          )}
+        </div>
+
+        <div className='flex gap-x-2 w-full'>
+          {fromDropDowns.slice(0, 2).map((dropDown) => (
+            <div key={dropDown.label} className='w-[50%]'>
+              <label className='text-white text-sm'>{dropDown.question}</label>
+              <Controller 
+                name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
+                control={control}
+                render={({ field }) => (
+                  <SelectAnswer 
+                    options={dropDown.options} 
+                    value={field.value ?? ''}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
+
+              {errors && errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape] && (
+                <p className='text-xs text-red-500'>
+                  {errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape]?.message}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className='flex gap-x-2 w-full'>
+          {fromDropDowns.slice(2, 4).map((dropDown) => (
+            <div key={dropDown.label} className='w-[50%]'>
+              <label className='text-white text-sm'>{dropDown.question}</label>
+              <Controller 
+                name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
+                control={control}
+                render={({ field }) => (
+                  <SelectAnswer 
+                    options={dropDown.options} 
+                    value={field.value ?? ''}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
+
+              {errors && errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape] && (
+                <p className='text-xs text-red-500'>
+                  {errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape]?.message}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className='flex gap-x-2 w-full'>
+          {fromDropDowns.slice(4, 5).map((dropDown) => (
+            <div key={dropDown.label} className='w-full'>
+              <label className='text-white text-sm'>{dropDown.question}</label>
+              <Controller 
+                name={dropDown.label as keyof typeof HeroSectionFormSchema.shape}
+                control={control}
+                render={({ field }) => (
+                  <SelectAnswer 
+                    options={dropDown.options} 
+                    value={field.value ?? ''}
+                    onChange={field.onChange}
+                  />
+                )}
+              />
+
+              {errors && errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape] && (
+                <p className='text-xs text-red-500'>
+                  {errors[dropDown.label as keyof typeof HeroSectionFormSchema.shape]?.message}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <button
+          type='submit'
+          className='bg-violet rounded-md p-3 text-white text-[1rem] font-semibold flex items-center justify-center gap-3 hover:scale-95 transition-transform'
+        >
+          BOOK FREE LIVE CLASS
+          <Image src={Rocket} alt='Rocket' className=' w-10 h-10 object-contain' />
+        </button>
+        
+        {/* <div className='flex flex-col gap-8'>
           <div>
             {!stepOtp ? (
               <>
@@ -193,8 +353,8 @@ const HeroSectionForm: FC = () => {
             BOOK FREE LIVE CLASS
             <Image src={Rocket} alt='Rocket' className=' w-10 h-10 object-contain' />
           </button>
-        </div>
-        <div className='text-xs text-white hidden md:flex items-center justify-center mt-4 md:gap-x-1 gap-0'>
+        </div> */}
+        <div className='text-xs text-white hidden md:flex items-center justify-center mt-2 md:gap-x-1 gap-0'>
           <p>By continuing, you agree to{' '}</p>
           <Link href='/terms-conditions' className='group'>
             <div className='text-teal cursor-pointer'>
@@ -219,7 +379,7 @@ const HeroSectionForm: FC = () => {
           <span onClick={() => router.push('/privacy-policy')} className='text-teal cursor-pointer'>Privacy Policy</span>
         </p>
       </div>
-    </div>
+    </form>
   );
 };
 

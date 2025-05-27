@@ -1,9 +1,12 @@
-import { CountryCode } from 'libphonenumber-js';
+// import { CountryCode } from 'libphonenumber-js';
+import { Document } from 'mongoose';
 import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import { IconType } from 'react-icons/lib';
 import { z } from 'zod';
+
+import { YesNo } from '@/enums/YesNo';
 
 export interface IHeroStat {
     count: string
@@ -32,16 +35,24 @@ export type HeroSectionInputWrapper = {
 }
 
 export const HeroSectionFormSchema = z.object({
-    firstName: z.string().min(1, 'First Name is Required'),
-    lastName: z.string().min(1, 'Last Name is Required'),
+    fullName: z.string().min(1, 'Full Name is Required'),
     email: z.string().min(1, 'Email is Required').email('Invalid Email Address'),
-    phoneNumber: z.string().min(1, 'Phone Number is Required').regex(/^\+?[\d\s()-]{7,15}$/, 'Invalid Phone Number Format')
+    phoneNumber: z.string().min(1, 'Phone Number is Required').regex(/^\+?[\d\s()-]{7,15}$/, 'Invalid Phone Number Format'),
+    lookingForSwitch: z.nativeEnum(YesNo, {
+        required_error: 'Please select Yes or No for switch'
+    }),
+    willingForUpskill: z.nativeEnum(YesNo, {
+        required_error: 'Please select Yes or No for upskill'
+    }),
+    yearsOfExperience: z.string().min(1, 'Please select years of experience'),
+    currentCTC: z.string().min(1, 'Please select currect CTC'),
+    domainOfInterest: z.string().min(1, 'Please select interested domain')
 });
 
 export type HeroSectionFormData = z.infer<typeof HeroSectionFormSchema>;
 
 export interface HeroSectionInputProps {
-    name: 'firstName' | 'lastName' | 'email' | 'phoneNumber'
+    name: 'fullName' | 'email' | 'phoneNumber' | 'lookingForSwitch' | 'willingForUpskill' | 'yearsOfExperience' | 'currentCTC' | 'domainOfInterest'
     type?: string,
     placeholder: string,
     register: UseFormRegister<HeroSectionFormData>
@@ -283,7 +294,71 @@ export interface ICandidate extends Document {
 }
 
 
-export type OptionType = {
-    value: CountryCode;
-    label: string;
-};
+// export type OptionType = {
+//     value: CountryCode;
+//     label: string;
+// };
+
+export interface ApplyCandidate extends Document {
+    candidateName: string
+    candidateEmail: string
+    candidatePhone: string
+    lookingForSwitch: YesNo
+    willingForUpskill: YesNo
+    yearsOfExperience: string
+    currentCTC: string
+    domainOfInterest: string
+    utmData: UtmData
+}
+
+export interface CandidateDetails {
+    candidateName: string
+    candidateEmail: string
+    candidatePhone: string
+    lookingForSwitch: YesNo
+    willingForUpskill: YesNo
+    yearsOfExperience: string
+    currentCTC: string
+    domainOfInterest: string
+    utmData: UtmData
+}
+
+export interface FromDropdown {
+    label: string
+    question: string
+    options: string[]
+}
+
+export type UtmData = {
+    utm_source: string
+    utm_campaign: string
+    adset_name: string
+    ad_name: string
+    placement: string
+}
+
+export interface PositiveAnswers {
+    lookingForSwitch: YesNo
+    willingForUpskill: YesNo
+    yearsOfExperience: string[]
+    currentCTC: string[]
+    domainOfInterest: string[]
+}
+
+export interface ApplyResponse {
+    data: ApplyCandidate | null
+}
+
+export interface ErrorResponse {
+    success: false
+    message: string
+    data: unknown
+    error: unknown 
+}
+
+export interface HeroSectionProps {
+  title: string
+  description: string
+}
+
+export type HeroSectionPropsDetails = Record<string, HeroSectionProps>;

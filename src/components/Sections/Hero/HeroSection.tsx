@@ -1,77 +1,57 @@
 'use client';
 
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+// import Image from 'next/image';
+import { FC } from 'react';
 
 import Brochure from '@/components/Brochure/Brochure';
 import Callback from '@/components/CallBack/CallBack';
-import FormModal from '@/components/Forms/FormModal/FormModal';
-import { setShowModal } from '@/lib/features/heroSectionOtp/otpSlice';
-import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+// import FormModal from '@/components/Forms/FormModal/FormModal';
+import HeroSectionForm from '@/components/Forms/HeroSectionForm/HeroSectionForm';
+import { useAppSelector } from '@/lib/hooks';
+import { HeroSectionProps } from '@/types';
 import { HeroSectionOptions, HeroSectionStats } from '@/utils';
-import HeroSectionImage from '~/images/HeroSectionImage.png';
 
-import DownloadBrochureButton from '../Alumni/DownloadBrochureButton';
+// import HeroSectionImage from '~/images/HeroSectionImage.png';
+// import DownloadBrochureButton from '../Alumni/DownloadBrochureButton';
 import HeroOption from './HeroOption';
 import HeroStat from './HeroStat';
 
-const HeroSection: FC = () => {
-  const showModal = useAppSelector((state) => state.otpState.showModal);
+
+const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
+  // const showModal = useAppSelector((state) => state.otpState.showModal);
   const showCallbackModal = useAppSelector((state) => state.callback.showCallbackModal);
   const showBrochureModal = useAppSelector((state) => state.brochure.showBrochureModal);
-  const dispatch = useAppDispatch();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const pathName = usePathname();
-
-  useEffect(() => {
-    if (pathName == '/fullstack-mern') {
-      setTitle('Get Job Ready for Top Tech Companies');
-      setDescription(
-        '8-month structured program building all the right skills you need to get placed at top tech companies.'
-      );
-    } else if (pathName == '/job-switch' || pathName == '/program') {
-      setTitle('Level Up Your Career & Grab Your Dream Tech Job');
-      setDescription(
-        '6-month program designed by industry leaders to accelerate your switch to top product companies.'
-      );
-    } else if (pathName == '/transformer') {
-      setTitle('Upskill & Ace Your Tech Career');
-      setDescription('Program designed by industry leaders to accelerate your switch to top product companies.');
-    }
-  }, [pathName]);
   return (
     <>
-      {showModal && <FormModal />}
+      {/* {showModal && <FormModal />} */}
       {showCallbackModal && <Callback />}
       {showBrochureModal && <Brochure />}
       {/* <Callback /> */}
-      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-28 pt-24 py-4 gap-8 md:gap-[8rem]'>
+      <div className='flex flex-col px-4 md:px-28 md:flex-row bg-black md:pt-24 pt-24 py-4 gap-8 md:gap-[9rem]'>
         {/* Left Content */}
-        <div className='md:w-1/2 w-full'>
-          <div className='flex flex-col gap-8 w-full'>
+        <div className='md:w-1/2 w-full md:mt-9'>
+          <div className='flex flex-col gap-14 w-full'>
             {/* Title and Subtitle */}
-            <div className='flex flex-col gap-6'>
+            <div className='flex flex-col gap-10'>
               <h1 className='text-gradient text-[1.7rem] md:text-[38px] md:leading-[60px] font-bold'>
                 {title}
               </h1>
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
-              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-6'>
+              {/* <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-6'>
                 <button
                   className='relative md:w-[35%] w-full py-3 md:py-4 md:px-[2.2rem] uppercase font-[600] flex gap-5 bg-[#1371FF] text-white items-center justify-center overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
-                  {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
+                  <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
                   <p className='text-[18px]'>Apply Now</p>
                 </button>
                 
                 <div className='cursor-pointer'>
                   <DownloadBrochureButton />
                 </div>
-              </div>
+              </div> */}
               {/* Options - Desktop */}
               <div className='hidden md:flex flex-wrap items-start gap-2 w-full'>
                 {HeroSectionOptions.map((option, index) => (
@@ -119,7 +99,8 @@ const HeroSection: FC = () => {
 
         {/* Right Form */}
         <div className='md:w-1/2 w-full'>
-          <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' />
+          {/* <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' /> */}
+          <HeroSectionForm />
         </div>
         
       </div>

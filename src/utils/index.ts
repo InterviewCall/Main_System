@@ -1,10 +1,10 @@
-import { getCodeList } from 'country-list';
-import { CountryCode, getCountryCallingCode, isSupportedCountry } from 'libphonenumber-js';
+// import { getCodeList } from 'country-list';
+// import { CountryCode, getCountryCallingCode, isSupportedCountry } from 'libphonenumber-js';
 import { BsTwitterX } from 'react-icons/bs';
 import { FaFacebookF, FaInstagram, FaLinkedin, FaSpotify, FaYoutube } from 'react-icons/fa';
 
 import * as MainAssests from '@/assets/MainAssests';
-import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, Icon, IHeroStat, Learner, MasterClassAlumni, Mentor, OptionType } from '@/types';
+import { AlumniCard, Course, Event, FAQ, FooterSectionArrayType, Icon, IHeroStat, Learner, MasterClassAlumni, Mentor } from '@/types';
 
 export const HeroSectionOptions = [
     'Placement Assistance',
@@ -1319,41 +1319,41 @@ export const AllCompanies = [
 //   }
 // };
 
-export const getCountryOptions = () => {
-  try {
-    const countryList = getCodeList();
+// export const getCountryOptions = () => {
+//   try {
+//     const countryList = getCodeList();
 
-    if (!countryList || Object.keys(countryList).length === 0) {
-      // console.error('getCodeList() returned an empty object.');
-      return [];
-    }
+//     if (!countryList || Object.keys(countryList).length === 0) {
+//       // console.error('getCodeList() returned an empty object.');
+//       return [];
+//     }
 
-    return Object.keys(countryList)
-      .map((countryCode) => {
-        const upperCaseCode = countryCode.toUpperCase() as CountryCode;
+//     return Object.keys(countryList)
+//       .map((countryCode) => {
+//         const upperCaseCode = countryCode.toUpperCase() as CountryCode;
         
-        if (!isSupportedCountry(upperCaseCode)) {
-          // console.warn(`Skipping unsupported country code: ${upperCaseCode}`);
-          return null;
-        }
+//         if (!isSupportedCountry(upperCaseCode)) {
+//           // console.warn(`Skipping unsupported country code: ${upperCaseCode}`);
+//           return null;
+//         }
 
-        try {
-          const callingCode = getCountryCallingCode(upperCaseCode);
-          return {
-            value: upperCaseCode,
-            label: `${upperCaseCode} (+${callingCode})`,
-          };
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (error) {
-          // console.warn(`Error fetching calling code for ${upperCaseCode}:`, error);
-          return null;
-        }
-      })
-      .filter(Boolean) as OptionType[];
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (error) {
-    // console.error('Error fetching country list:', error);
-    return [];
-  }
-};
+//         try {
+//           const callingCode = getCountryCallingCode(upperCaseCode);
+//           return {
+//             value: upperCaseCode,
+//             label: `${upperCaseCode} (+${callingCode})`,
+//           };
+//         // eslint-disable-next-line @typescript-eslint/no-unused-vars
+//         } catch (error) {
+//           // console.warn(`Error fetching calling code for ${upperCaseCode}:`, error);
+//           return null;
+//         }
+//       })
+//       .filter(Boolean) as OptionType[];
+//   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+//   } catch (error) {
+//     // console.error('Error fetching country list:', error);
+//     return [];
+//   }
+// };
 

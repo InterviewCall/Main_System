@@ -1,4 +1,4 @@
-import { Document, model, models, Schema } from 'mongoose';
+import { Document, Model, model, models, Schema } from 'mongoose';
 
 export interface ICandidate extends Document {
     candidateName: string;
@@ -23,6 +23,6 @@ const applynowSchema = new Schema<ICandidate>({
 
 applynowSchema.index({ candidateEmail: 1, candidatePhone: 1 });
 
-const ApplyNow = models.ApplyNow || model<ICandidate>('ApplyNow', applynowSchema);
+const ApplyNow: Model<ICandidate> = models.ApplyNow || model<ICandidate>('ApplyNow', applynowSchema);
 
 export default ApplyNow;
