@@ -1,4 +1,5 @@
 import BrochureRepository from '@/repositories/BrochureRepository';
+import { UtmData } from '@/types';
 
 class BrochureService {
     private brochureRepository;
@@ -7,9 +8,9 @@ class BrochureService {
         this.brochureRepository = brochureRepository;
     }
 
-    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string) {
+    async createBrochure(programName: string, candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string, utmData: UtmData) {
         try {
-            const brochure = await this.brochureRepository.createBrochure(programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone);
+            const brochure = await this.brochureRepository.createBrochure(programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone, utmData);
             return brochure;
         } catch (error) {
             throw error;

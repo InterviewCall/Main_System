@@ -8,8 +8,8 @@ const brochureService = new BrochureService(new BrochureRepository());
 
 export async function POST(req: NextRequest) {
     try {
-        const { programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone } = await req.json();
-        const brochureResponse = await brochureService.createBrochure(programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone);
+        const { programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone, utmData } = await req.json();
+        const brochureResponse = await brochureService.createBrochure(programName, candidateName, candidateEmail, candidateCountryCode, candidatePhone, utmData);
 
         return NextResponse.json({
             success: true,

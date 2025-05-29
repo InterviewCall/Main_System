@@ -52,11 +52,14 @@ const Brochure: FC = () => {
       return;
     }
 
+    const storedUtmData = sessionStorage.getItem('utmData') ?? '';
+
     const requestObject = {
       programName: pathName == '/job-switch' || pathName == '/program' ? 'Job Switch' : 'Fullstack-Mern',
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
-      candidatePhone: getValues('mobileNumber')
+      candidatePhone: getValues('mobileNumber'),
+      utmData: JSON.parse(storedUtmData)
     };
 
     try {

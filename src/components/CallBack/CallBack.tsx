@@ -41,13 +41,14 @@ const Callback: FC = () => {
   });
 
   const onSubmit: SubmitHandler<CallBackForm> = async () => {
-
+    const storedUtmData = sessionStorage.getItem('utmData') ?? '';
     const requestObject = {
       experienceLevel: getValues('selectExperience'),
       programName: getValues('selectPrograms'),
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
       candidatePhone: getValues('mobileNumber'),
+      utmData: JSON.parse(storedUtmData)
     };
 
     try {
