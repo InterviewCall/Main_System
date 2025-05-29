@@ -1,33 +1,6 @@
 import { Model, model, models, Schema } from 'mongoose';
 
-import { ApplyCandidate, UtmData } from '@/types';
-
-const utmDataSchema = new Schema<UtmData>({
-    utm_source: {
-        type: String,
-        default: '',
-    },
-
-    utm_campaign: {
-        type: String,
-        default: '',
-    },
-
-    adset_name: {
-        type: String,
-        default: '',
-    },
-
-    ad_name: {
-        type: String,
-        default: '',
-    },
-    
-    placement: {
-        type: String,
-        default: '',
-    },
-}, { _id: false });
+import { ApplyCandidate } from '@/types';
 
 const applyNegativeSchema = new Schema<ApplyCandidate>({
     candidateName: {
@@ -72,7 +45,11 @@ const applyNegativeSchema = new Schema<ApplyCandidate>({
         required: true
     },
 
-    utmData: utmDataSchema
+    utmData: {
+        type: Map,
+        of: String,
+        default: {}
+    }
 }, { timestamps: true });
 
 applyNegativeSchema.index({ candidateEmail: 1, candidatePhone: 1 });

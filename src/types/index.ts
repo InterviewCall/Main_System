@@ -329,13 +329,7 @@ export interface FromDropdown {
     options: string[]
 }
 
-export type UtmData = {
-    utm_source: string
-    utm_campaign: string
-    adset_name: string
-    ad_name: string
-    placement: string
-}
+export type UtmData = Record<string, string>
 
 export interface PositiveAnswers {
     lookingForSwitch: YesNo

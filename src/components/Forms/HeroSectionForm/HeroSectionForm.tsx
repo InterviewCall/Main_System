@@ -25,7 +25,7 @@ import checkPositiveLead from '@/utils/checkPositiveLead';
 import Rocket from '~/images/Rocket.png';
 
 const HeroSectionForm: FC = () => {
-  const { utmData } = useUTMTracker();
+  useUTMTracker();
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
@@ -51,6 +51,7 @@ const HeroSectionForm: FC = () => {
     try {
       let routerPath: string;
       setIsLoading(true);
+      const storedUtmData = sessionStorage.getItem('utmData') ?? '{}';
       let response: AxiosResponse<ApplyResponse>;
       const requestBody: CandidateDetails = {
         candidateName: data.fullName,
@@ -61,7 +62,7 @@ const HeroSectionForm: FC = () => {
         yearsOfExperience: data.yearsOfExperience,
         currentCTC: data.currentCTC,
         domainOfInterest: data.domainOfInterest,
-        utmData
+        utmData: JSON.parse(storedUtmData)
       };
 
       if(checkPositiveLead(data)) {
