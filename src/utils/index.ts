@@ -822,18 +822,18 @@ export const Mentors: Mentor[] = [
     mentorLinkedinProfile: 'https://www.linkedin.com/in/singhster/'
   },
 
-  {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
-    cardHeight: mentorCardPositioning.cardHeight[1],
-    cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: MainAssests.M12,
-    mentorAlt: 'N5',
-    mentorName: 'Ankit Gupta',
-    mentorExperience: 'Software Engineer 2 @Atlassian India | Ex - Software Engineer @Decision Fiction | 5 Years of Experience | Web Dev Mentor @InterviewCall',
-    mentorLinkedinProfile: 'https://www.linkedin.com/in/i-ankit25/'
-  },
+  // {
+  //   cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+  //   cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+  //   cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+  //   cardHeight: mentorCardPositioning.cardHeight[1],
+  //   cardWidth: mentorCardPositioning.cardWidth[1],
+  //   mentorImage: MainAssests.M12,
+  //   mentorAlt: 'N5',
+  //   mentorName: 'Ankit Gupta',
+  //   mentorExperience: 'Software Engineer 2 @Atlassian India | Ex - Software Engineer @Decision Fiction | 5 Years of Experience | Web Dev Mentor @InterviewCall',
+  //   mentorLinkedinProfile: 'https://www.linkedin.com/in/i-ankit25/'
+  // },
 
   {
     cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
