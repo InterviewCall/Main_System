@@ -4,7 +4,7 @@ import { FromDropdown, PositiveAnswers } from '@/types';
 export const yesNoOption = ['Yes', 'No'];
 
 export const yearsOfExpOption = [
-    'I am a Student',
+    // 'I am a Student',
     'Less than 1 Year of Experience',
     '1 - 5 Years of Experience',
     '5 - 12 Years of Experience',
@@ -22,10 +22,10 @@ export const domainOfInterestOptions = [
     'Software Engineering',
     '⁠Full Stack Development',
     'Data Engineering',
-    'Data Science',
-    'Data Analytics',
-    'Mobile Development',
-    'Others'
+    // 'Data Science',
+    // 'Data Analytics',
+    // 'Mobile Development',
+    // 'Others'
 ];
 
 export const fromDropDowns: FromDropdown[] = [
