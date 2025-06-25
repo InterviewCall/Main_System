@@ -1,14 +1,17 @@
 
 
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
 import StoreProvider from '@/app/StoreProvider';
+import LoaderForRoute from '@/components/LoaderForRoute/LoaderForRoute';
 import MasterClass from '@/components/MasterClass/MasterClass';
 
 const Page: FC = () => {
   return (
     <StoreProvider>
-      <MasterClass />
+      <Suspense fallback={<LoaderForRoute />}>
+        <MasterClass />
+      </Suspense>
     </StoreProvider>
   );
 };
