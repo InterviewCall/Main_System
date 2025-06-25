@@ -32,7 +32,7 @@ const MasterClass: FC = () => {
   return (
     <div className={clsx(loading && 'flex justify-center items-center w-full h-full')}>
       {loading && <Loader />}
-    <div className={clsx('bg-white relative w-full')}>
+    <div className={clsx('bg-white relative w-full', loading && 'blur-sm')}>
         {/* <Loader /> */}
       {/* Top Image */}
       <div className='w-full md:pt-6'>

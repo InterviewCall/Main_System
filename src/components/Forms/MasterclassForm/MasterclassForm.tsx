@@ -10,6 +10,7 @@ import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
+import useUTMTracker from '@/hooks/useUTMTracker';
 // import { INVALID_NUMBERS } from '@/constant/checkInvalidNumbers';
 // import Select from 'react-select';
 import { setLoading } from '@/lib/features/masterclass/masterclassSlice';
@@ -27,6 +28,7 @@ import { RegisterRequest, RegisterResponse } from '@/types';
 // type OptionType = { value: CountryCode; label: string };
 
 const MasterclassForm: FC = () => {
+  useUTMTracker();
   // const webinarResponse = useAppSelector((state) => state.webinarResponse);
   const loading = useAppSelector((state) => state.masterclass.loading);
   // const [selectedCountry, setSelectedCountry] = useState<OptionType | null>(null);
@@ -182,12 +184,13 @@ const MasterclassForm: FC = () => {
     //   toast.error('Please enter a valid phone number');
     //   return;
     // }
-
+    const storedUtmData = sessionStorage.getItem('utmData') ?? '{}';
     const requestObject = {
       candidateName: getValues('fullName'),
       candidateEmail: getValues('email'),
       // candidateCountryCode: selectedCountry.label,
-      candidatePhone: getValues('phone')
+      candidatePhone: getValues('phone'),
+      utmData: JSON.parse(storedUtmData)
     };
 
     try {
@@ -304,10 +307,6 @@ const MasterclassForm: FC = () => {
                   <input
                     {...register('phone', {
                       required: 'Phone Number is Required',
-                      pattern: {
-                        value: /^[1-9]\d{1,14}$/,
-                        message: 'Invalid Phone Number',
-                      },
                     })}
                     className='w-full rounded-md focus:rounded-md border-0 p-3 ring-2 ring-[#D5DEE5] focus:ring-[#D5DEE5] focus:ring-2 placeholder:text-[#999999]'
                     placeholder='Enter Phone Number'

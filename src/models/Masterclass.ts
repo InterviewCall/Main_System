@@ -1,10 +1,12 @@
 import { Document, model, models, Schema } from 'mongoose';
 
+import { UtmData } from '@/types';
+
 export interface ICandidate extends Document {
     candidateName: string;
     candidateEmail: string;
     candidatePhone: string;
-    candidateCountryCode: string
+    utmData: UtmData
 }
 
 const masterclassSchema = new Schema<ICandidate>({
@@ -22,6 +24,11 @@ const masterclassSchema = new Schema<ICandidate>({
         required: true,
         unique: true
     },
+    utmData: {
+        type: Map,
+        of: String,
+        default: {}
+    }
 }, { timestamps: true });
 
 const Masterclass = models.Masterclass || model<ICandidate>('Masterclass', masterclassSchema);

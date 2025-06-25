@@ -1,4 +1,5 @@
 import MasterclassRepository from '@/repositories/MasterclassRepository';
+import { UtmData } from '@/types';
 
 class MasterclassService {
     private masterclassRepository;
@@ -7,9 +8,9 @@ class MasterclassService {
         this.masterclassRepository = masterclassRepository;
     }
 
-    async createRegistration(candidateName: string, candidateEmail: string, candidatePhone: string) {
+    async createRegistration(candidateName: string, candidateEmail: string, candidatePhone: string, utmData: UtmData) {
         try {
-            const registration = await this.masterclassRepository.createRegistration(candidateName, candidateEmail, candidatePhone);
+            const registration = await this.masterclassRepository.createRegistration(candidateName, candidateEmail, candidatePhone, utmData);
             return registration;
         } catch (error) {
             throw error;

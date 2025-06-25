@@ -1,5 +1,6 @@
 import applyDb from '@/config/applyDb';
 import Masterclass, { ICandidate } from '@/models/Masterclass';
+import { UtmData } from '@/types';
 
 class MasterclassRepository {
     private masterclassModel;
@@ -9,11 +10,12 @@ class MasterclassRepository {
         this.masterclassModel = Masterclass;
     }
 
-    async createRegistration(candidateName: string, candidateEmail: string, candidatePhone: string): Promise<ICandidate> {
+    async createRegistration(candidateName: string, candidateEmail: string, candidatePhone: string, utmData: UtmData): Promise<ICandidate> {
         const registration = await this.masterclassModel.create({
             candidateName,
             candidateEmail,
-            candidatePhone
+            candidatePhone,
+            utmData
         });
         return registration;
     }
