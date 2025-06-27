@@ -34,7 +34,7 @@ const MasterclassRegistration: FC = () => {
                                 <BsWhatsapp className='text-green-500 md:order-1 order-2 text-5xl xl:text-4xl' />
                                 <p className='text-[#212121] md:order-2 order-1 text-xl xl:text-2xl font-bold'>Join this event&apos;s WhatsApp Group</p>
                             </div>
-                            <button onClick={() => window.open('https://chat.whatsapp.com/CyaGIPVVkLP6p6jeZ3EGQG', '_blank')} className='bg-[#1BD742] w-full text-white px-12 py-4 md:hidden block rounded-lg xl:text-xl text-[1rem] font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
+                            <button onClick={() => window.open('https://chat.whatsapp.com/DUpa7fayyZt8oYX2HrqhFd', '_blank')} className='bg-[#1BD742] w-full text-white px-12 py-4 md:hidden block rounded-lg xl:text-xl text-[1rem] font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
 
                             <div className='flex items-center justify-center gap-x-3 w-full md:hidden'>
                                 <div className='bg-[#D1D1D1] h-[1.5px] w-[28%]'></div>
@@ -85,7 +85,7 @@ const MasterclassRegistration: FC = () => {
 
                                 <p className='flex justify-center text-[#040A0A] font-semibold'>Click here to join</p>
 
-                                <button onClick={() => window.open('https://chat.whatsapp.com/CyaGIPVVkLP6p6jeZ3EGQG', '_blank')} className='bg-[#1BD742] order-1 text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
+                                <button onClick={() => window.open('https://chat.whatsapp.com/DUpa7fayyZt8oYX2HrqhFd', '_blank')} className='bg-[#1BD742] order-1 text-white px-12 py-4 rounded-lg text-xl font-semibold shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:scale-95 duration-300'>Join WhatsApp Group</button>
                             </div>
                         </div>
                     </div>
