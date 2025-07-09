@@ -1,5 +1,6 @@
 import applyDb from '@/config/applyDb';
 import ApplyNow, { ICandidate } from '@/models/ApplyNow';
+import { UtmData } from '@/types';
 
 class ApplyRepository {
     private applynowModel;
@@ -9,7 +10,7 @@ class ApplyRepository {
         this.applynowModel = ApplyNow;
     }
 
-    async createApply(candidateName: string, candidateEmail: string, candidateCountryCode: string, candidatePhone: string): Promise<ICandidate | null> {
+    async createApply(candidateName: string, candidateEmail: string, candidatePhone: string, utmData: UtmData): Promise<ICandidate | null> {
         const apply = await this.applynowModel.findOne({
             $and: [
                 { candidateEmail },
@@ -22,8 +23,8 @@ class ApplyRepository {
         const response = await this.applynowModel.create({
             candidateName,
             candidateEmail,
-            candidateCountryCode,
-            candidatePhone
+            candidatePhone,
+            utmData
         });
         return response;
     }

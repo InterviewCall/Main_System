@@ -303,11 +303,11 @@ export interface ApplyCandidate extends Document {
     candidateName: string
     candidateEmail: string
     candidatePhone: string
-    lookingForSwitch: YesNo
-    willingForUpskill: YesNo
-    yearsOfExperience: string
-    currentCTC: string
-    domainOfInterest: string
+    // lookingForSwitch: YesNo
+    // willingForUpskill: YesNo
+    // yearsOfExperience: string
+    // currentCTC: string
+    // domainOfInterest: string
     utmData: UtmData
 }
 
@@ -315,11 +315,11 @@ export interface CandidateDetails {
     candidateName: string
     candidateEmail: string
     candidatePhone: string
-    lookingForSwitch: YesNo
-    willingForUpskill: YesNo
-    yearsOfExperience: string
-    currentCTC: string
-    domainOfInterest: string
+    // lookingForSwitch: YesNo
+    // willingForUpskill: YesNo
+    // yearsOfExperience: string
+    // currentCTC: string
+    // domainOfInterest: string
     utmData: UtmData
 }
 

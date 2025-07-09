@@ -1,29 +1,35 @@
 'use client';
 
 // import Image from 'next/image';
+import Image from 'next/image';
 import { FC } from 'react';
 
 import Brochure from '@/components/Brochure/Brochure';
 import Callback from '@/components/CallBack/CallBack';
-// import FormModal from '@/components/Forms/FormModal/FormModal';
-import HeroSectionForm from '@/components/Forms/HeroSectionForm/HeroSectionForm';
-import { useAppSelector } from '@/lib/hooks';
+import FormModal from '@/components/Forms/FormModal/FormModal';
+import useUTMTracker from '@/hooks/useUTMTracker';
+import { setShowModal } from '@/lib/features/heroSectionOtp/otpSlice';
+// import HeroSectionForm from '@/components/Forms/HeroSectionForm/HeroSectionForm';
+import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { HeroSectionProps } from '@/types';
 import { HeroSectionOptions, HeroSectionStats } from '@/utils';
+import HeroSectionImage from '~/images/HeroSectionImage.png';
 
-// import HeroSectionImage from '~/images/HeroSectionImage.png';
+import DownloadBrochureButton from '../Alumni/DownloadBrochureButton';
 // import DownloadBrochureButton from '../Alumni/DownloadBrochureButton';
 import HeroOption from './HeroOption';
 import HeroStat from './HeroStat';
 
 
 const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
-  // const showModal = useAppSelector((state) => state.otpState.showModal);
+  useUTMTracker();
+  const showModal = useAppSelector((state) => state.otpState.showModal);
+  const dispatch = useAppDispatch();
   const showCallbackModal = useAppSelector((state) => state.callback.showCallbackModal);
   const showBrochureModal = useAppSelector((state) => state.brochure.showBrochureModal);
   return (
     <>
-      {/* {showModal && <FormModal />} */}
+      {showModal && <FormModal />}
       {showCallbackModal && <Callback />}
       {showBrochureModal && <Brochure />}
       {/* <Callback /> */}
@@ -37,24 +43,24 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
                 {title}
               </h1>
               <div className='md:hidden block'>
-                <HeroSectionForm />
+                {/* <HeroSectionForm /> */}
               </div>
               <h2 className='text-base md:text-lg text-white font-light'>
                 {description}
               </h2>
-              {/* <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-6'>
+              <div className='w-full flex flex-col md:flex-row gap-y-5 md:gap-x-6'>
                 <button
                   className='relative md:w-[35%] w-full py-3 md:py-4 md:px-[2.2rem] uppercase font-[600] flex gap-5 bg-[#1371FF] text-white items-center justify-center overflow-hidden hover:scale-95 duration-300'
                   onClick={() => dispatch(setShowModal(true))}
                 >
-                  <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
+                  {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
                   <p className='text-[18px]'>Apply Now</p>
                 </button>
                 
                 <div className='cursor-pointer'>
                   <DownloadBrochureButton />
                 </div>
-              </div> */}
+              </div>
               {/* Options - Desktop */}
               <div className='hidden md:flex flex-wrap items-start gap-2 w-full'>
                 {HeroSectionOptions.map((option, index) => (
@@ -102,8 +108,8 @@ const HeroSection: FC<HeroSectionProps> = ({ title, description}) => {
 
         {/* Right Form */}
         <div className='md:w-1/2 w-full max-md:hidden'>
-          {/* <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' /> */}
-          <HeroSectionForm />
+          <Image src={HeroSectionImage} alt='HeroSectionImage' className='w-full object-cover' />
+          {/* <HeroSectionForm /> */}
         </div>
         
       </div>

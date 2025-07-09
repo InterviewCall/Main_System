@@ -2,8 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
-import { GoArrowDown } from 'react-icons/go';
 
+// import { GoArrowDown } from 'react-icons/go';
 import { setBrochureModal } from '@/lib/features/brochure/brochure';
 import { useAppDispatch } from '@/lib/hooks';
 
@@ -20,14 +20,14 @@ const DownloadBrochureButton: FC = () => {
       }
     }, [pathName]);
     return (
-      <button onClick={() => dispatch(setBrochureModal(true))} className={`${downloadBrochure} bg-black relative md:w-fit w-full py-3 md:py-4 md:px-11 flex justify-center gap-5 text-black items-center rounded-full border border-white overflow-hidden hover:scale-95 duration-300`}>
-        <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span>
-        <p className='ml-2 text-[18px] font-[600] uppercase text-white'>
+      <button onClick={() => dispatch(setBrochureModal(true))} className={`${downloadBrochure} relative md:w-fit w-full py-3 md:py-4 md:px-11 flex justify-center gap-5 bg-white text-black items-center border border-white overflow-hidden hover:scale-95 duration-300`}>
+        {/* <span className='animate-shine absolute w-full h-full bg-gradient-to-r from-transparent via-white to-transparent cursor-default'></span> */}
+        <p className='ml-2 text-[18px] font-[600] uppercase'>
           Download Syllabus
         </p>
-        <div className='p-1 rounded-full bg-black text-white flex items-center justify-center'>
+        {/* <div className='p-1 rounded-full bg-black text-white flex items-center justify-center'>
           <GoArrowDown className='w-6 h-6' />
-        </div>
+        </div> */}
       </button>
     );
 };

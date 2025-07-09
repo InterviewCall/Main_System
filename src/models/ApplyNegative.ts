@@ -18,32 +18,32 @@ const applyNegativeSchema = new Schema<ApplyCandidate>({
         required: true,
     },
 
-    lookingForSwitch: {
-        type: String,
-        enum: ['Yes', 'No'],
-        required: true
-    },
+    // lookingForSwitch: {
+    //     type: String,
+    //     enum: ['Yes', 'No'],
+    //     required: true
+    // },
 
-    willingForUpskill: {
-        type: String,
-        enum: ['Yes', 'No'],
-        required: true,
-    },
+    // willingForUpskill: {
+    //     type: String,
+    //     enum: ['Yes', 'No'],
+    //     required: true,
+    // },
 
-    yearsOfExperience: {
-        type: String,
-        required: true,
-    },
+    // yearsOfExperience: {
+    //     type: String,
+    //     required: true,
+    // },
 
-    currentCTC: {
-        type: String,
-        required: true
-    },
+    // currentCTC: {
+    //     type: String,
+    //     required: true
+    // },
 
-    domainOfInterest: {
-        type: String,
-        required: true
-    },
+    // domainOfInterest: {
+    //     type: String,
+    //     required: true
+    // },
 
     utmData: {
         type: Map,
