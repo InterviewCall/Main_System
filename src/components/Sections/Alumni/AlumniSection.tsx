@@ -114,7 +114,7 @@ const AlumniSection: FC = () => {
           <Marquee  autoFill className='w-screen'>
             <div className='bg-darkblue flex gap-6 text-white md:text-xl text-base font-medium overflow-clip p-2'>
               {Array.from({ length: 4 }).map((_, i) => (
-                <p key={i}>Batch starts in July First Week 2025.</p>
+                <p key={i}>Batch starts in July Last Week 2025.</p>
               ))}
             </div>
           </Marquee>
