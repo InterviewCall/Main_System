@@ -10,7 +10,7 @@ import Logo from '../../../public/images/Logo.png';
 const MasterClassHeader: FC = () => {
   return (
     <>
-    <nav className='w-screen py-4 justify-between flex items-center px-4 md:px-24 fixed md:hidden z-[999] h-20 bg-black'>
+    <nav className='w-screen py-4 justify-center flex items-center px-4 md:px-24 fixed md:hidden z-[999] h-20 bg-black'>
         <Link href='/job-switch'>
           <Image
             src={Logo}
@@ -29,7 +29,7 @@ const MasterClassHeader: FC = () => {
           </div>
         </div>
 
-        <HeaderButton />
+        {/* <HeaderButton /> */}
     </nav>
     <div className='fixed md:block hidden z-[999]'>
       <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
@@ -55,7 +55,9 @@ const MasterClassHeader: FC = () => {
           </div>
         </div>
 
-        <HeaderButton />
+        <div className='opacity-0'>
+          <HeaderButton />
+        </div>
       </nav>
     </div>
     </>

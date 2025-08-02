@@ -46,7 +46,7 @@ const MasterClass: FC = () => {
       <div className='w-full md:w-[67%] mt-14 px-4 md:pl-16'>
         {/* Title */}
         <p className='w-full text-[1.5rem] leading-6 md:text-[1.46rem] md:leading-[1.1] font-bold text-center md:text-left'>
-        What it takes to be a Software Engineer at Microsoft, Google, Amazon
+        How to Think in Patterns — Not Just Solve Leetcode Problems
         </p>
 
         {/* Session Details */}
@@ -54,11 +54,11 @@ const MasterClass: FC = () => {
           <div className='flex md:flex-row flex-col gap-x-3 gap-y-2 w-full'>
             <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
               <span className='font-semibold'>STARTS ON:</span>
-              <span>Saturday, July 26, 2025 6:30 PM (IST)</span>
+              <span>Saturday, 09th August, 2025 6:30 PM (IST)</span>
             </p>
             <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
               <span className='font-semibold'>ENDS ON:</span>
-              <span>Saturday, July 26, 2025 8:00 PM (IST)</span>
+              <span>Saturday, 09th August, 2025 8:00 PM (IST)</span>
             </p>
           </div>
           <p className='text-[#5a6273] flex text-[15px] md:text-[14.4px] gap-x-1'>
@@ -92,9 +92,9 @@ const MasterClass: FC = () => {
           <br />
           <br /> */}
 
-By 2026, India is expected to create over 3 million new Software Engineering positions! But what’s driving this surge in demand? Software Engineers are the backbone of technological innovation, building scalable systems, optimizing performance, solving complex challenges, and driving digital transformation across industries.
+By 2026, India is set to create over 3 million new Software Engineering roles. What&apos;s driving this boom? Tech companies are doubling down on engineers who can build scalable systems, solve complex problems, and drive real innovation.
 
-<br /> If you aspire to become a Software Engineer at top tech companies like Microsoft, Google, or Amazon, this session is for you! <br /> Join industry expert <span><b>Sunyul Hossen</b></span> on Saturday, <span><b>26th July</b></span>, from <span><b>6:30 PM</b></span> to <span><b>8:00 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
+<br /> If you’re aiming for companies like Google, Microsoft, or Amazon, just solving Leetcode won’t cut it. You need to be great at algorithms — and more importantly, sharp at recognizing patterns. <br /> This session is built to give you exactly that edge. 🔥 Master the algorithm patterns behind ₹30L–₹50L offers. <br /> Join industry expert <span><b>Sunyul Hossen — Ex-Goldman Sachs, Founder of InterviewCall —</b></span> this Saturday, <span><b>09th August</b></span>, from <span><b>6:30 PM</b></span> to <span><b>8:00 PM</b></span> as he shares insider strategies, key skills, and the mindset required to crack high-paying software engineering positions. Don’t miss out!
 
 Register now!
         </div>
@@ -108,10 +108,10 @@ Register now!
 
         <div className='mt-5'>
           <ul className='list-disc pl-3'>
-            <li>Skills required to become a Software Engineer at the world’s top companie</li>
-            <li>How top engineers approach problem-solving and tackle complex technical challenges</li>
-            <li>How to tackle interview rounds at the world’s top companies</li>
-            <li>A systematic approach to breaking down problems and optimizing solutions for real-world applications</li>
+            <li>The real patterns behind Google, Uber, and FAANG interviews</li>
+            <li> 80 Algorithms that can solve 800+ Leetcode problems </li>
+            <li>Why even good coders keep getting rejected</li>
+            <li> How to structure your preparation</li>
           </ul>
         {/* Skills required to become a Software Engineer at the world’s top companies <br />
 
