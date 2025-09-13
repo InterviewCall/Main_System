@@ -325,6 +325,12 @@ const MasterclassForm: FC = () => {
             >
               Register For Free
             </button>
+
+            {/* <button
+              className='w-full bg-[#bf4366] mt-3 p-4 rounded-lg text-white hover:scale-95 duration-300 uppercase font-bold'
+            >
+              Download AlgoMaster Sheet 
+            </button> */}
           </form>
       </div>
     );

@@ -757,25 +757,25 @@ export const Mentors: Mentor[] = [
     mentorLinkedinProfile: 'https://www.linkedin.com/in/jyotirmoydeb/'
   },
 
+  // {
+  //   cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+  //   cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+  //   cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+  //   cardHeight: mentorCardPositioning.cardHeight[2],
+  //   cardWidth: mentorCardPositioning.cardWidth[2],
+  //   mentorImage: MainAssests.M2,
+  //   mentorAlt: 'N2',
+  //   mentorName: 'Vishal Sharma',
+  //   mentorExperience: 'Senior Software Engineer @Microsoft India | Ex SWE @Rippling | Ex Senior Strats Analyst @Goldman Sachs, @Directi | 9 Years of Experience | System Design Instructor & Mentor @InterviewCall',
+  //   mentorLinkedinProfile: 'https://www.linkedin.com/in/vishal-sharma-b698326b/'
+  // },
+
   {
     cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
     cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
     cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
     cardHeight: mentorCardPositioning.cardHeight[2],
     cardWidth: mentorCardPositioning.cardWidth[2],
-    mentorImage: MainAssests.M2,
-    mentorAlt: 'N2',
-    mentorName: 'Vishal Sharma',
-    mentorExperience: 'Senior Software Engineer @Microsoft India | Ex SWE @Rippling | Ex Senior Strats Analyst @Goldman Sachs, @Directi | 9 Years of Experience | System Design Instructor & Mentor @InterviewCall',
-    mentorLinkedinProfile: 'https://www.linkedin.com/in/vishal-sharma-b698326b/'
-  },
-
-  {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
-    cardHeight: mentorCardPositioning.cardHeight[0],
-    cardWidth: mentorCardPositioning.cardWidth[0],
     mentorImage: MainAssests.M9,
     mentorAlt: 'N2',
     mentorName: 'Soham Dasgupta',
@@ -784,11 +784,11 @@ export const Mentors: Mentor[] = [
   },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
-    cardHeight: mentorCardPositioning.cardHeight[1],
-    cardWidth: mentorCardPositioning.cardWidth[1],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
+    cardHeight: mentorCardPositioning.cardHeight[0],
+    cardWidth: mentorCardPositioning.cardWidth[0],
     mentorImage: MainAssests.M10,
     mentorAlt: 'N5',
     mentorName: 'Gurtej Singh Rehal',
@@ -797,11 +797,11 @@ export const Mentors: Mentor[] = [
   },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
-    cardHeight: mentorCardPositioning.cardHeight[2],
-    cardWidth: mentorCardPositioning.cardWidth[2],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+    cardHeight: mentorCardPositioning.cardHeight[1],
+    cardWidth: mentorCardPositioning.cardWidth[1],
     mentorImage: MainAssests.M8,
     mentorAlt: 'N5',
     mentorName: 'Sumit Roy',
@@ -810,11 +810,11 @@ export const Mentors: Mentor[] = [
   },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
-    cardHeight: mentorCardPositioning.cardHeight[0],
-    cardWidth: mentorCardPositioning.cardWidth[0],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+    cardHeight: mentorCardPositioning.cardHeight[2],
+    cardWidth: mentorCardPositioning.cardWidth[2],
     mentorImage: MainAssests.M6,
     mentorAlt: 'N4',
     mentorName: 'Saurabh Singh',
@@ -835,25 +835,25 @@ export const Mentors: Mentor[] = [
   //   mentorLinkedinProfile: 'https://www.linkedin.com/in/i-ankit25/'
   // },
 
-  {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
-    cardHeight: mentorCardPositioning.cardHeight[1],
-    cardWidth: mentorCardPositioning.cardWidth[1],
-    mentorImage: MainAssests.M4,
-    mentorAlt: 'N1',
-    mentorName: 'Maria Shah',
-    mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis | 14 Years of Experience | Soft Skills Instructor & Mentor @InterviewCall',
-    mentorLinkedinProfile: 'https://www.linkedin.com/in/coachmariashah/'
-  },
+  // {
+  //   cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+  //   cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+  //   cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+  //   cardHeight: mentorCardPositioning.cardHeight[1],
+  //   cardWidth: mentorCardPositioning.cardWidth[1],
+  //   mentorImage: MainAssests.M4,
+  //   mentorAlt: 'N1',
+  //   mentorName: 'Maria Shah',
+  //   mentorExperience: 'Certified Neuro Linguistic Programming (NLP) Instructor | Ex Trainer - ICICI, HDFC, Kotak, Axis | 14 Years of Experience | Soft Skills Instructor & Mentor @InterviewCall',
+  //   mentorLinkedinProfile: 'https://www.linkedin.com/in/coachmariashah/'
+  // },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
-    cardHeight: mentorCardPositioning.cardHeight[2],
-    cardWidth: mentorCardPositioning.cardWidth[2],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
+    cardHeight: mentorCardPositioning.cardHeight[0],
+    cardWidth: mentorCardPositioning.cardWidth[0],
     mentorImage: MainAssests.M5,
     mentorAlt: 'N5',
     mentorName: 'Mostafizur Rahaman',
@@ -862,11 +862,11 @@ export const Mentors: Mentor[] = [
   },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[0],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[0],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[0],
-    cardHeight: mentorCardPositioning.cardHeight[0],
-    cardWidth: mentorCardPositioning.cardWidth[0],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
+    cardHeight: mentorCardPositioning.cardHeight[1],
+    cardWidth: mentorCardPositioning.cardWidth[1],
     mentorImage: MainAssests.M11,
     mentorAlt: 'N1',
     mentorName: 'Sunyul Hossen',
@@ -875,11 +875,11 @@ export const Mentors: Mentor[] = [
   },
 
   {
-    cardWrapperTopPosition: mentorCardPositioning.topPositions[1],
-    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[1],
-    cardWrapperZIndex: mentorCardPositioning.zIndexes[1],
-    cardHeight: mentorCardPositioning.cardHeight[1],
-    cardWidth: mentorCardPositioning.cardWidth[1],
+    cardWrapperTopPosition: mentorCardPositioning.topPositions[2],
+    cardWrapperLeftPosition: mentorCardPositioning.leftPositions[2],
+    cardWrapperZIndex: mentorCardPositioning.zIndexes[2],
+    cardHeight: mentorCardPositioning.cardHeight[2],
+    cardWidth: mentorCardPositioning.cardWidth[2],
     mentorImage: MainAssests.M7,
     mentorAlt: 'N3',
     mentorName: 'Syed Abbas',
