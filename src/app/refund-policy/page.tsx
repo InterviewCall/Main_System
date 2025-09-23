@@ -15,7 +15,7 @@ const RefundPolicy: FC = () => {
                     <br />
 
                     <p>
-                        – Candidates may opt out from the trial within the first 14 days of the program and request a full refund of their down payment.
+                        – Candidates may opt out from the trial within the first 14 days of the program and request a full refund of their entire amount.
                     </p>
 
                     <br />
