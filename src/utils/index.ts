@@ -1358,3 +1358,4 @@ export const AllCompanies = [
 // };
 
 export const whatsappCommunity = 'https://chat.whatsapp.com/FV9nhWHQfBaLdqDPwjP3Zy?';
+export const whatsappCommunity_2 = 'https://chat.whatsapp.com/ImlGSsj7jCEL8swqe9xthb';
