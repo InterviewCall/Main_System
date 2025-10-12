@@ -1357,3 +1357,4 @@ export const AllCompanies = [
 //   }
 // };
 
+export const whatsappCommunity = 'https://chat.whatsapp.com/FV9nhWHQfBaLdqDPwjP3Zy?';
