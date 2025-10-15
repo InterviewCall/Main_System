@@ -82,7 +82,7 @@ const Header: FC = () => {
       <div className='fixed md:block hidden z-[997]'>
         {pathName == '/program' && <div className='w-screen bg-darkblue'>
           <div className='bg-darkblue flex gap-6 text-white md:text-xl text-xs font-medium overflow-clip p-2 justify-center'>
-            <p className='text-lg'>Our Program Price Range Starts From Rs. 1 Lakh to 3 Lakh.</p>
+            <p className='text-lg'>Our Program Price Range Starts From Rs. 70K INR to 1 Lakh 20K INR.</p>
           </div>
         </div>}
         <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
