@@ -172,7 +172,7 @@ const FormModal: FC = () => {
               <p className='text-[#1371FF] font-semibold text-2xl'>Apply Now</p>
               
               <p className='text-black text-lg'>
-                Next Batch Starts In October First Week
+                Next Batch Starts Soon.
               </p>
             </div>
             <form
