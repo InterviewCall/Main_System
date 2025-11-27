@@ -190,10 +190,12 @@ const Callback: FC = () => {
                 />
               </div>
             </div>
+            
+            <div className='text-sm'>I authorise InterviewCall & it&apos;s representative to contact me with updates and notifications via Email/SMS/WhatsApp/Call.This will override DND/ NDNC.</div>
 
             <button
               type='submit'
-              className='bg-[#b30158] w-full text-white text-sm uppercase py-2 rounded-md hover:scale-95 duration-300'
+              className='bg-[#b30158] w-full mt-3 text-white text-sm uppercase py-2 rounded-md hover:scale-95 duration-300'
             >
               Continue
             </button>
