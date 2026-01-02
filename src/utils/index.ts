@@ -1360,3 +1360,4 @@ export const AllCompanies = [
 // export const whatsappCommunity = 'https://chat.whatsapp.com/FV9nhWHQfBaLdqDPwjP3Zy?';
 export const whatsappCommunity = 'https://chat.whatsapp.com/EPccZ0Y5pLD1zQsvdtdHYf?mode=wwt';
 export const whatsappCommunity_2 = 'https://chat.whatsapp.com/ImlGSsj7jCEL8swqe9xthb';
+export const cfaWhatsappCommunity = 'https://chat.whatsapp.com/L4burfPFnTeF3XdI1Hnse2';
