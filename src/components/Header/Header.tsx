@@ -45,7 +45,7 @@ const Header: FC = () => {
           <p className='text-white text-sm'>
             Need Help? Talk to us at{' '}
             <span className='text-lg underline'>
-              <a href='tel:7044782380'>7044782380</a>
+              <a href='tel:6295797609'>6295797609</a>
             </span>
           </p>
         </div>
@@ -88,7 +88,7 @@ const Header: FC = () => {
         <div className='w-screen h-12 bg-gradient-to-r from-[#041029] to-[#6D2E99] hover:from-violet hover:to-violet md:flex items-center justify-center hidden gap-x-3'>
           <Image src={HeaderBanner} alt='' className='w-[23px] h-[23px]' />
           <p className='text-white text-sm'>
-            Need Help? Talk to us at <span className='text-lg'>7044782380</span>{' '}
+            Need Help? Talk to us at <span className='text-lg'>6295797609</span>{' '}
             or{' '}
             <span className='advisor text-lg underline cursor-pointer'>
               Request a Call
