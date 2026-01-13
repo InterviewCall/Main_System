@@ -68,7 +68,7 @@ const FooterSection: FC = () => {
                     </p>
                     <p className='text-white font-extralight'>
                         You can also text our support team at{' '}
-                        <span className='font-bold italic'>6295797609</span> <br /> <br />
+                        <span className='font-bold italic'>7044782380</span> <br /> <br />
                         email us at{' '}
                         <span className='font-bold italic'>support@interviewcall.club</span>
                     </p>
